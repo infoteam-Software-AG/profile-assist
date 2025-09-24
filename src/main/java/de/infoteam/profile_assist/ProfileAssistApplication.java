@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ProfileAssistApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ProfileAssistApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(ProfileAssistApplication.class, args);
+  }
 }
