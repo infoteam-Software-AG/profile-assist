@@ -27,7 +27,22 @@
         <url/>
     </scm>
     <properties>
+        <!-- """"" start: version properties """"" -->
+        <asciidoctor-maven-plugin.version>3.2.0</asciidoctor-maven-plugin.version>
+        <asciidoctorj.version>3.0.0</asciidoctorj.version>
+        <asciidoctorj-diagram.version>3.0.1</asciidoctorj-diagram.version>
+        <asciidoctorj-pdf.version>2.3.19</asciidoctorj-pdf.version>
         <java.version>21</java.version>
+        <jruby.version>10.0.2.0</jruby.version>
+        <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+        <spotless-maven-plugin.version>2.46.1</spotless-maven-plugin.version>
+        <!-- """"" end: version properties """"" -->
+
+        <!-- ***** start: other properties ***** -->
+        <asciidoc.outputDirectory>target/docs</asciidoc.outputDirectory>
+        <asciidoc.sourceDirectory>src/main/docs</asciidoc.sourceDirectory>
+        <asciidoc.skipDocGeneration>false</asciidoc.skipDocGeneration>
+        <!-- ***** end: other properties ***** -->
     </properties>
     <dependencies>
 
@@ -63,22 +78,13 @@
 
         <!-- ***** start: other test dependencies ***** -->
         <!-- ***** end: other test dependencies ***** -->
+
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </path>
-                    </annotationProcessorPaths>
-                </configuration>
-            </plugin>
+
+            <!-- ***** start: Spring Boot plugins ***** -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -91,17 +97,96 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <!-- ***** end: Spring Boot plugins ***** -->
+
+            <!-- ***** start: other plugins ***** -->
             <plugin>
                 <groupId>com.diffplug.spotless</groupId>
                 <artifactId>spotless-maven-plugin</artifactId>
-                <version>2.46.1</version>
+                <version>${spotless-maven-plugin.version}</version>
                 <configuration>
                     <java>
                         <googleJavaFormat/>
                     </java>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven-resources-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>copy-asciidoc-specs</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${asciidoc.outputDirectory}/spec</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${asciidoc.sourceDirectory}</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <version>${asciidoctor-maven-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj</artifactId>
+                        <version>${asciidoctorj.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-diagram</artifactId>
+                        <version>${asciidoctorj-diagram.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-pdf</artifactId>
+                        <version>${asciidoctorj-pdf.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.jruby</groupId>
+                        <artifactId>jruby</artifactId>
+                        <version>${jruby.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <skip>${asciidoc.skipDocGeneration}</skip>
+                    <requires>
+                        <require>asciidoctor-diagram</require>
+                    </requires>
+                    <relativeBaseDir>true</relativeBaseDir>
+                    <preserveDirectories>true</preserveDirectories>
+                    <sourceDirectory>${asciidoc.sourceDirectory}</sourceDirectory>
+                    <outputDirectory>${asciidoc.outputDirectory}</outputDirectory>
+                    <backend>html5</backend>
+                </configuration>
+            </plugin>
+            <!-- ***** end: other plugins ***** -->
+
         </plugins>
     </build>
-
 </project>
