@@ -33,6 +33,7 @@
         <asciidoc.outputDirectory>target/docs</asciidoc.outputDirectory>
         <asciidoc.sourceDirectory>src/main/docs</asciidoc.sourceDirectory>
         <asciidoc.skipGeneration>true</asciidoc.skipGeneration>
+        <sonar.organization>infoteam-software-ag</sonar.organization>
     </properties>
 
     <profiles>
