@@ -1,0 +1,22 @@
+= Profile Assist
+
+== Building
+
+**Default build:**
+[source,bash]
+----
+mvn clean verify
+----
+
+**Run the application with Maven:**
+[source,bash]
+----
+mvn spring-boot:run
+----
+
+**Build the Asciidoc documentation:**
+[source,bash]
+----
+mvn clean verify -Pgenerate-docs
+----
+HTML is published in `target/docs`

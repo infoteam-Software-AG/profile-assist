@@ -1,3 +1,0 @@
-= This will be the README
-
-Please do only write useful stuff here! ;)
