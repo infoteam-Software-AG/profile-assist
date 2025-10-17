@@ -46,9 +46,15 @@
 
     <profiles>
         <profile>
-            <id>generate-docs</id>
+            <id>generateDocs</id>
             <properties>
                 <asciidoc.skipGeneration>false</asciidoc.skipGeneration>
+            </properties>
+        </profile>
+        <profile>
+            <id>qualityGates</id>
+            <properties>
+                <jacoco.ignoreQualityGates>false</jacoco.ignoreQualityGates>
             </properties>
         </profile>
         <profile>
