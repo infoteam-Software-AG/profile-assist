@@ -36,7 +36,12 @@
         <jacoco.ignoreQualityGates>true</jacoco.ignoreQualityGates>
         <jacoco.lineCoverageThreshold>0.30</jacoco.lineCoverageThreshold>
         <jacoco.branchCoverageThreshold>0.30</jacoco.branchCoverageThreshold>
+
+        <!-- sonarcloud -->
         <sonar.organization>infoteam-software-ag</sonar.organization>
+        <sonar.projectKey>infoteam-Software-AG_profile-assist</sonar.projectKey>
+        <sonar.scanner.version>5.2.0.4988</sonar.scanner.version>
+        <sonar.skip>true</sonar.skip>
     </properties>
 
     <profiles>
@@ -51,6 +56,7 @@
             <properties>
                 <jacoco.ignoreQualityGates>false</jacoco.ignoreQualityGates>
                 <asciidoc.skipGeneration>false</asciidoc.skipGeneration>
+                <sonar.skip>false</sonar.skip>
             </properties>
         </profile>
     </profiles>
@@ -97,36 +103,10 @@
             <plugin>
                 <groupId>com.diffplug.spotless</groupId>
                 <artifactId>spotless-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>check-code-spotless</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>format-code-spotless</id>
-                        <goals>
-                            <goal>apply</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <java>
-                        <includes>
-                            <include>src/main/java/**/*.java</include>
-                            <include>src/test/java/**/*.java</include>
-                        </includes>
-                        <googleJavaFormat>
-                            <style>GOOGLE</style>
-                        </googleJavaFormat>
-                        <removeUnusedImports/>
-                        <forbidWildcardImports />
-                        <importOrder/>
-                        <formatAnnotations/>
-                    </java>
-                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -158,6 +138,54 @@
                     <groupId>com.diffplug.spotless</groupId>
                     <artifactId>spotless-maven-plugin</artifactId>
                     <version>${spotless-maven-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>check-code-spotless</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>format-code-spotless</id>
+                            <goals>
+                                <goal>apply</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <java>
+                            <includes>
+                                <include>src/main/java/**/*.java</include>
+                                <include>src/test/java/**/*.java</include>
+                            </includes>
+                            <googleJavaFormat>
+                                <style>GOOGLE</style>
+                            </googleJavaFormat>
+                            <removeUnusedImports/>
+                            <forbidWildcardImports />
+                            <importOrder/>
+                            <formatAnnotations/>
+                        </java>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>${sonar.scanner.version}</version>
+                    <executions>
+                        <execution>
+                            <id>run-sonar</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>sonar</goal>
+                            </goals>
+                            <configuration>
+                                <sonar.skip>${sonar.skip}</sonar.skip>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
 
                 <plugin>
