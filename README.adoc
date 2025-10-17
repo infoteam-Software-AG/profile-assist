@@ -14,9 +14,14 @@ mvn clean verify
 mvn spring-boot:run
 ----
 
+**Build the application enforcing quality gates:**
+----
+mvn clean verify -Ppipeline
+----
+
 **Build the Asciidoc documentation:**
 [source,bash]
 ----
-mvn clean verify -Pgenerate-docs
+mvn verify -Pgenerate-docs
 ----
 HTML is published in `target/docs`
