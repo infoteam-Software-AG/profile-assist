@@ -3,7 +3,62 @@
 :toclevels: 3
 :sectnums:
 
-== Maven Cheat Sheet
+== Quality of life
+
+=== Custom Git settings for project
+If you want to use a specific real name or e-mail for the project, go to the project root folder and type:
+[source, xml]
+----
+git config --local user.email "other-email@to-be.used"
+git config --local user.name "My Other Name"
+----
+
+=== Git hook to check formatting
+As ill-formatted code will break CI/CD builds, it is a good idea to setup pre-commit hook. +
+The hook will apply the Spotless rules to the whole project.
+
+To set up the hook, create file in the project root at `.git/hooks/pre-commit` and make it executable:
+[source, bash]
+----
+touch .git/hooks/pre-commit
+chmod 664 .git/hooks/pre-commit
+----
+Open the file in your favorite text editor and add:
+[source, bash]
+----
+#!/bin/sh
+mvn spotless:apply
+----
+then save and your hook is ready.
+
+== IntelliJ IDEA recommendations
+
+=== Required plugins
+* **Lombok** by JetBrains s.r.o. +
+Homepage: https://plugins.jetbrains.com/plugin/6317-lombok +
+A plugin that adds first-class support for Project Lombok Features. Required for building within the IDE
+
+=== Recommended plugins
+* **Spotless Applier** by Dimitrii Lipiridi +
+Homepage: https://plugins.jetbrains.com/plugin/22455-spotless-applier +
+The plugin enhances your development workflow by seamlessly integrating Spotless Maven tasks directly within the IntelliJ IDE. +
++
+_**This requires the plugin's shortcuts to be redefined**_ as the original shortcuts cannot be reached with a German keyboard layout:
+
+** open "File" > "Settings"
+** go to "Keymap" in the left-hand menu
+** in the main area open the "Plugins" folder and the look for the "Spotless Applier" folder
+** in the "Spotless Applier" folder double-click each shortcut, choose "Add Keyboard Shortcut" and redefine as follows
+*** Reformat File With Spotless: CTRL+ALT+`,`
+*** Reformat Project With Spotless: CTRL+ALT+SHIFT+`,`
+
+=== Suggested plugins
+* **GitToolBox** by Łukasz Zieliński +
+Homepage: https://plugins.jetbrains.com/plugin/7499-gittoolbox +
+Improves your Git experience in IDEA, use the free version
+
+
+== Maven cheat sheet
 
 === Default build
 [source,bash]
@@ -28,32 +83,6 @@ mvn clean verify -PqualityGates
 mvn verify -PgenerateDocs
 ----
 HTML is published in `target/docs`
-
-== IntelliJ IDEA Recommendations
-
-==== Required Plugins
-* **Lombok** by JetBrains s.r.o. +
-Homepage: https://plugins.jetbrains.com/plugin/6317-lombok +
-A plugin that adds first-class support for Project Lombok Features. Required for building within the IDE
-
-=== Recommended Plugins
-* **Spotless Applier** by Dimitrii Lipiridi +
-Homepage: https://plugins.jetbrains.com/plugin/22455-spotless-applier +
-The plugin enhances your development workflow by seamlessly integrating Spotless Maven tasks directly within the IntelliJ IDE. +
-+
-_**This requires the plugin's shortcuts to be redefined**_ as the original shortcuts cannot be reached with a German keyboard layout:
-
-** open "File" > "Settings"
-** go to "Keymap" in the left-hand menu
-** in the main area open the "Plugins" folder and the look for the "Spotless Applier" folder
-** in the "Spotless Applier" folder double-click each shortcut, choose "Add Keyboard Shortcut" and redefine as follows
-*** Reformat File With Spotless: CTRL+ALT+`,`
-*** Reformat Project With Spotless: CTRL+ALT+SHIFT+`,`
-
-=== Suggested Plugins
-* **GitToolBox** by Łukasz Zieliński +
-Homepage: https://plugins.jetbrains.com/plugin/7499-gittoolbox +
-Improves your Git experience in IDEA, use the free version
 
 * **Asciidoc** by Alexander Schwartz +
 Homepage: https://plugins.jetbrains.com/plugin/7391-asciidoc +
