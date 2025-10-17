@@ -1,0 +1,145 @@
+= Architecture Document: Profile Assist
+:toc: left
+:toclevels: 3
+:sectnums:
+
+== Introduction and Objectives
+
+Profile Assist is a Java-based project that provides AI-supported assistance for matching profiles with job postings and adapting profiles accordingly. The goal is to develop an open, maintainable, and testable software solution that combines modern Java technologies and AI components.
+
+=== Background
+- Developed as an internal open-source project by a group of developers.
+- Focus on the use of AI to create and test synthetic test data, use of personas such as “full-stack developer,” “DevOps engineer,” with suitable and unsuitable matches, etc.
+- The project is open to all interested developers (including non-Java natives) on a voluntary basis.
+
+=== Project goals
+- Creation of an AI-based assistance system to support profile creation and testing.
+- Promotion of best practices in architecture, coding, and review processes within the developer group.
+
+=== Quality goals
+- High test coverage (80% branch coverage, including component integration tests).
+- Readable, maintainable, and standards-compliant code (in accordance with code guidelines and language rules).
+- Secure handling of data (synthetic test data, no real data without review).
+- Efficient code reviews and release processes.
+
+=== Stakeholders
+
+|===
+|Role |Description |Goal/Intention |Contact |Priority/Acceptance Relevance |Information Need
+
+|Technical management
+|main users
+|facilitate adapting developer profiles for different project opportunities
+|Heads of Development, COO
+|★★★★★
+|user documentation, tutorials
+
+|Team assistants
+|main users
+|help the technical management achieve their goals
+|tbd
+|★★★✰✰
+|user documentation, tutorials
+
+|Employee
+|occasional users
+|facilitate to update and maintain their own profiles
+|internal surveys
+|★★★★✰
+|tutorials, user documentation
+
+|Developer
+|occasional users, contributors
+|creating awesome software
+|project team
+|★★✰✰✰
+|developer documentation, architectureal guidance
+|===
+
+
+== Boundary conditions
+
+- Project language: English (code and documentation)
+- Development environment: IntelliJ IDEA or comparable
+- Module structure: Single module Maven project (can be modularized later if necessary)
+- Version control: Git, trunk-based branch model
+- Testing and quality tools: SonarQube/SonarCloud, ArchUnit, AssertJ
+- Documentation: Asciidoc (PlantUML support) in https://canvas.arc42.org/[Arc-42 Canvas]
+- Code formatting: spotless, Google Java format
+- Logging: slf4j
+- Infrastructure: onboarding via provided tools, open-source tool landscape
+- Technology specifications: Spring Boot, Lombok
+- Deployment: initially without Docker, later optional
+- Handling secrets: create concept
+
+== Context delimitation
+
+=== Technical context
+- Input: Synthetic data, user personas, AI-based analysis tools
+- Output: Markdown profiles, review approvals, tickets, documentation
+
+=== Technical context
+- External services: OpenAI API or comparable
+- Internal tools: Sharepoint/Markdown for collaborative editing
+- Code and documentation standards: https://canvas.arc42.org/[Arc-42 Canvas] -> Architectural decisions must be documented
+
+== Solution strategy
+
+- Microarchitecture based on hexagonal architecture (along DDD principles)
+- Best practices and coding guidelines (e.g., no two capital letters in a row, meaningful identifiers)
+- Modularization and loose coupling through use case-driven services and clearly defined domain interfaces
+- Test first and review process (multi-stage, approval required)
+- Password and secrets handling via environment variables
+
+== Building block view
+
+- Domain layer: entities, value objects, domain services
+- Application layer: use case services, process control
+- Adapters/ports: REST API (OpenAI integration if necessary), Markdown export, onboarding interfaces
+- Infrastructure: Test data management, logging, external interfaces
+
+== Runtime view
+
+- Profile upload and analysis (onboarding process)
+- Approval and review process for data and profiles
+- Automated tests and quality gates (CI/CD pipeline)
+
+== Distribution view
+
+- Single module Maven project (later optional Dockerization)
+
+== Cross-sectional concepts
+
+- Logging and monitoring concept (slf4j)
+- Test concept: Branch coverage, AssertJ, ArchUnit rules
+- Code review on demand
+- Code documentation in Asciidoc (with PlantUml support)
+- Nullability and DDD conventions
+- Security concept (handling secrets)
+
+== Architecture decisions
+
+- Spring Boot as the main framework
+- Focus on testability and maintainability (test coverage, review process)
+- Uniform code formatting and guidelines
+- Hexagonal or DDD-like architecture
+
+== Quality requirements
+
+- 80% branch coverage as a target
+- Component integration tests mandatory
+- Strict code guidelines and naming conventions
+- No unreviewed data released to the public
+
+== Risks and technical debt
+
+- AI integration and data control require clear processes
+- Openness of the project requires careful reviews
+
+== Glossary
+
+- Persona: Template for typical user roles such as full stack, DevOps, etc.
+- Approval process: Multi-stage review, always with approval from a second person
+- Onboarding: Assistance for new developers, e.g., IDE setup
+
+// (Chapter 13 Experience reports omitted as none are available yet)

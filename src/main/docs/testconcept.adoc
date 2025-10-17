@@ -1,0 +1,319 @@
+= Test Concept - Profile Assist
+:toc: left
+:toclevels: 3
+:sectnums:
+:icons: font
+
+This test concept defines binding guidelines for implementation, structure, naming, tools, and quality assurance of all automated tests in the project.
+
+== Goals and Principles
+
+Target Coverage: At least 80% branch coverage (measured via SonarQube).
+
+Follow the Test Pyramid: Focus on unit tests, followed by component/integration tests. End-to-end tests are outside the scope of this document.
+
+Readability above all: Meaningful test names and descriptions, clear Given/When/Then structure.
+
+Fast feedback: Unit tests must not load a Spring Context and must execute very quickly.
+
+== Scope
+
+Technical scope: Java 21+, Spring Boot, JUnit 5 (Jupiter), AssertJ, Mockito, ArchUnit, Testcontainers (for integration/component tests if external systems are needed).
+
+== Test Types & Boundaries
+
+=== Unit Tests
+
+*Definition:* Testing individual classes/functions in isolation (pure Java tests, no Spring Context).
+
+No Spring annotations such as `@SpringBootTest`, `@MockBean`, `@Autowired`, `@ExtendWith(SpringExtension.class)`.
+
+Isolation via mocks/stubs (e.g. Mockito) or test doubles.
+
+*Goal:* Logic, edge cases, error handling, contracts.
+
+=== Component / Integration Tests
+
+*Definition:* Testing multiple collaborating components including Spring Context (e.g. @SpringBootTest).
+
+*Goal:* Interaction, configuration, persistence, (de-)serialization, web layer, transactions.
+
+*External dependencies:* Prefer Testcontainers (e.g. PostgreSQL, Kafka). Alternatively, embedded variants.
+
+[NOTE]
+Unit tests address pure logic. Component/integration tests address Spring wiring, data, and interface behavior.
+
+== Coverage Goals and Metrics
+
+Branch coverage ≥ 80% total per module (SonarQube quality gate).
+
+Coverage includes unit + component-integration tests (tests run by Maven Failsafe are excluded).
+
+== Naming & Structure
+
+Package/directory structure mirrors production code.
+
+Unit tests, Component-integration test: Class suffix *Test (e.g. `PriceCalculatorTest`).
+
+Component-integration test: Class suffix *CT (e.g. `PriceCalculatorServiceCT`).
+
+System-integration tests: Class suffix *IT (e.g. `OrderCreationIT`).
+
+Alternatively, `@Tag` can be used for differentiation.
+
+Methods: Use `@DisplayName` and follow the pattern:
+“When … and/or … then …”
+(Examples: “When discount is valid and cart is not empty, then final price is reduced”).
+
+== Conventions for Test Cases
+
+AssertJ as the only assertion framework. JUnit-Jupiter assertions (org.junit.jupiter.api.Assertions) are forbidden (enforced by ArchUnit rule, see below).
+
+Clearly structure Given/When/Then.
+
+Use `@ParameterizedTest` where appropriate (data variants, boundary values).
+
+No Spring contexts in unit and component-itegration tests (for performance & isolation).
+
+== Examples
+
+=== Example @DisplayName & AssertJ
+
+[source, java]
+----
+@DisplayName("When discount is valid and cart is not empty, then final price is reduced")
+@Test
+void rabattWirdAngewendet() {
+    // Given
+    var calc = new PriceCalculator();
+    var cart = new Cart(List.of(new Item("A", 100)));
+    var rabatt = new Rabatt(0.2);
+
+    // When
+    var result = calc.berechneEndpreis(cart, rabatt);
+
+    // Then
+    assertThat(result).isEqualTo(80.0);
+}
+----
+
+=== Example ParameterizedTest
+[source, java]
+----
+@DisplayName("When input value is invalid, then IllegalArgumentException is thrown")
+@ParameterizedTest(name = "Case {index}: input={0}")
+@ValueSource(ints = { -1, -10, Integer.MIN_VALUE })
+void invalidInputsThrowException(int input) {
+    assertThatThrownBy(() -> Validator.checkPositive(input))
+        .isInstanceOf(IllegalArgumentException.class)
+        .hasMessageContaining("positiv");
+}
+----
+
+== Architecture Protection with ArchUnit
+
+=== Forbid JUnit-Jupiter Assertions (allow AssertJ only)
+
+[source, java]
+----
+@AnalyzeClasses(packages = "com.example")
+public class AssertionFrameworkRulesTest {
+
+  @ArchTest
+  static final ArchRule noJunitAssertions =
+      noClasses().should().dependOnClassesThat().haveNameMatching(
+              "org\\.junit\\.jupiter\\.api\\.Assertions(\\$.*)?"
+              );
+}
+----
+
+=== Enforce Naming Conventions
+
+[source, java]
+----
+@AnalyzeClasses(packages = "com.example")
+public class NamingRulesTest {
+
+  @ArchTest
+  static final ArchRule unitTestsHaveTestSuffix =
+      classes().that().resideInAPackage("..")
+          .and().areAnnotatedWith(org.junit.jupiter.api.Test.class)
+          .should().haveSimpleNameEndingWith("Test");
+
+  @ArchTest
+  static final ArchRule integrationTestsHaveITSuffix =
+      classes().that().haveSimpleNameEndingWith("IT")
+          .should().resideInAnyPackage(".."); // Placeholder – can be tightened
+}
+----
+
+[IMPORTANT]
+The above rules are examples. They should be placed in a separate module/package (e.g. architecture) within the project and be executed automatically during the build.
+
+== Spring-Specific Guidelines
+
+=== Unit Tests
+
+Not allowed: `@SpringBootTest`, `@ExtendWith(SpringExtension.class)`, `@MockBean`, `@Autowired`.
+
+Allowed: Pure JUnit/Mockito tests. Constructor injection in production code improves testability.
+
+Time budget: Aim for < 100 ms per test method.
+
+=== Component Tests (no Spring Context)
+
+Definition: Test a small cluster of collaborating classes as a unit (e.g., service + domain + mappers), without Spring. Wire collaborators manually; mock only true external collaborators (e.g., repositories, HTTP clients, messaging).
+
+Goals: Validate cross-class behavior, orchestration, contracts, edge cases, and error handling across the component.
+
+Allowed:
+
+* JUnit 5 + Mockito (mocks/stubs/spies).
+* Real implementations for in-process collaborators where feasible (keep the collaboration meaningful).
+* Test doubles for out-of-process boundaries (DB, HTTP, messaging, filesystem).
+
+Not allowed:
+
+* Any Spring context or Spring test annotations.
+* Network, filesystem, or database access.
+
+Time budget: Aim for < 150–200 ms per test method.
+
+Naming/Tagging: Suffix *CT (e.g., OrderCreationCT) and `@Tag("component")`.
+
+Structure tips:
+
+* Prefer builders/factories for test data.
+* Keep Given/When/Then explicit.
+* Avoid over-mocking: don’t mock value objects; only mock external collaborators.
+
+=== Integration Tests
+
+Definition: Test the integration of multiple components with Spring (wiring, configuration, persistence, serialization, web, transactions).
+
+Allowed:
+
+* `@SpringBootTest` (optionally webEnvironment = RANDOM_PORT)
+* Real persistence via Testcontainers (e.g., PostgreSQL) preferred; H2 optional where compatible.
+* HTTP stubbing (e.g., WireMock) for external services.
+* Test data via Liquibase/Flyway or builder/factory; rollback transactions; tests must be independent.
+
+Notable focuses: Spring wiring, configuration, DB schema, repositories, controllers, serialization, transactionality.
+
+Naming/Tagging: Suffix *IT (e.g., `OrderCreationIT`) and `@Tag("integration")`.
+
+== Build & Execution
+
+=== Maven
+
+Surefire runs unit tests and component tests(*Test and *CT).
+
+Failsafe runs integration tests (*IT) during integration-test/verify phase.
+
+[source, xml]
+----
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version>
+            <configuration>
+                <includes>
+                    <include>**/*Test.java</include>
+                    <include>**/*CT.java</include>
+                </includes>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>3.2.5</version>
+                <configuration>
+                    <includes>
+                        <include>**/*IT.java</include>
+                    </includes>
+                </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>integration-test</goal>
+                        <goal>verify</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+----
+== SonarQube & Quality Gate
+
+CI runs tests + coverage report (JaCoCo) and publishes results to SonarQube.
+
+Quality gate fails if:
+Branch coverage < 80%, new critical smells/bugs/vulnerabilities.
+
+New/modified files must not decrease coverage (“Clean as You Code”).
+
+== Style & Structure in Tests
+
+Consistently apply Arrange/Act/Assert (or Given/When/Then).
+
+One assertion framework: AssertJ (no mixed usage).
+
+Each test case should test exactly one aspect. Multiple aspects → split into separate tests.
+
+Keep test data clean: Builder/factory methods, ObjectMother pattern.
+
+Use parameterization for variants and boundary values.
+
+Time & randomness: make deterministic (Clocks, Seeds).
+
+== Negative & Error Cases
+
+For every public method: at least one error/boundary case (e.g. null, empty, invalid, overflow).
+
+Check exceptions using assertThatThrownBy/assertThatExceptionOfType.
+
+== Mocking & Stubbing
+
+Mockito for mocks/stubs/spies.
+
+No over-mocking: Only mock external collaborators, not value objects.
+
+Use verification sparingly: Verify behavior only when it ensures observable effects (e.g. “Email was sent”).
+
+== Test Data & Persistence
+
+Unit: no DB/filesystem/network access.
+
+Integration: Use Testcontainers; initialize data via migration scripts or factories; each method isolated (rollback/rebuild).
+
+== PR Checklist (Mandatory)
+
+Tests exist and pass (locally & in CI).
+
+`@DisplayName` in all test methods following the pattern “When … and/or … then …”.
+
+No usage of org.junit.jupiter.api.Assertions.
+
+No Spring contexts in unit tests.
+
+Correct suffixes: *Test (unit), *IT (integration). Alternatively, @Tag may be used for differentiation.
+
+Parameterized tests where appropriate.
+
+SonarQube quality gate met (≥ 80% branch coverage).
+
+== Appendix: Abbreviations & References
+
+AAA: Arrange–Act–Assert (Given–When–Then).
+
+IT: Integration Test.
+
+PIT: Pitest Mutation Testing.
+
+SUT: System Under Test.
+
+[ENDNOTE]
+This document is binding. Deviations must be justified and explicitly approved during code review.

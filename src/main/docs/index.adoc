@@ -1,0 +1,27 @@
+= Profile Assist
+:toc: right
+:toclevels: 3
+:sectnums:
+
+Profile Assist is a Java-based project that provides AI-supported assistance for matching profiles with job postings and adapting profiles accordingly.
+
+== User documentation
+Missing, will be added later.
+
+== Developer Documentation
+=== xref:dev-quickstart.adoc[Developer quickstart]
+Helps you to get started working with the project
+
+=== xref:architecture/architecture.adoc[Architecture documentation]
+Describes the overall architecture and principles for the software
+
+=== xref:testconcept.adoc[Test concept]
+Concept and requirements for testing the software.
+
+
+
+
+---
+Test diagram to show Asciidoc intergration works
+
+include::_includes/test.puml[graphic for testing purposes]

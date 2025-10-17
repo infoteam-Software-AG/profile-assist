@@ -1,0 +1,64 @@
+= Developer quickstart
+:toc: right
+:toclevels: 3
+:sectnums:
+
+== Maven Cheat Sheet
+
+=== Default build
+[source,bash]
+----
+mvn clean verify
+----
+
+=== Run the application with Maven
+[source,bash]
+----
+mvn spring-boot:run
+----
+
+=== Build the application enforcing quality gates
+----
+mvn clean verify -PqualityGates
+----
+
+=== Build the Asciidoc documentation:
+[source,bash]
+----
+mvn verify -PgenerateDocs
+----
+HTML is published in `target/docs`
+
+== IntelliJ IDEA Recommendations
+
+==== Required Plugins
+* **Lombok** by JetBrains s.r.o. +
+Homepage: https://plugins.jetbrains.com/plugin/6317-lombok +
+A plugin that adds first-class support for Project Lombok Features. Required for building within the IDE
+
+=== Recommended Plugins
+* **Spotless Applier** by Dimitrii Lipiridi +
+Homepage: https://plugins.jetbrains.com/plugin/22455-spotless-applier +
+The plugin enhances your development workflow by seamlessly integrating Spotless Maven tasks directly within the IntelliJ IDE. +
++
+_**This requires the plugin's shortcuts to be redefined**_ as the original shortcuts cannot be reached with a German keyboard layout:
+
+** open "File" > "Settings"
+** go to "Keymap" in the left-hand menu
+** in the main area open the "Plugins" folder and the look for the "Spotless Applier" folder
+** in the "Spotless Applier" folder double-click each shortcut, choose "Add Keyboard Shortcut" and redefine as follows
+*** Reformat File With Spotless: CTRL+ALT+`,`
+*** Reformat Project With Spotless: CTRL+ALT+SHIFT+`,`
+
+=== Suggested Plugins
+* **GitToolBox** by Łukasz Zieliński +
+Homepage: https://plugins.jetbrains.com/plugin/7499-gittoolbox +
+Improves your Git experience in IDEA, use the free version
+
+* **Asciidoc** by Alexander Schwartz +
+Homepage: https://plugins.jetbrains.com/plugin/7391-asciidoc +
+Preview Asciidoc documents within IDEA. Get support authoring Asciidoc documents
+
+* **plantuml4idea** by Vojtěch Krása +
+Homepage: https://plugins.jetbrains.com/plugin/7017-plantuml4idea +
+Preview PlantUML diagrams (*.puml) within IDEA. Get support authoring PlantUML diagrams
