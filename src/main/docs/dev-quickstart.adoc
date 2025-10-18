@@ -57,6 +57,13 @@ _**This requires the plugin's shortcuts to be redefined**_ as the original short
 Homepage: https://plugins.jetbrains.com/plugin/7499-gittoolbox +
 Improves your Git experience in IDEA, use the free version
 
+* **Asciidoc** by Alexander Schwartz +
+Homepage: https://plugins.jetbrains.com/plugin/7391-asciidoc +
+Preview Asciidoc documents within IDEA. Get support authoring Asciidoc documents
+
+* **plantuml4idea** by Vojtěch Krása +
+Homepage: https://plugins.jetbrains.com/plugin/7017-plantuml4idea +
+Preview PlantUML diagrams (*.puml) within IDEA. Get support authoring PlantUML diagrams
 
 == Maven cheat sheet
 
@@ -83,11 +90,3 @@ mvn clean verify -PqualityGates
 mvn verify -PgenerateDocs
 ----
 HTML is published in `target/docs`
-
-* **Asciidoc** by Alexander Schwartz +
-Homepage: https://plugins.jetbrains.com/plugin/7391-asciidoc +
-Preview Asciidoc documents within IDEA. Get support authoring Asciidoc documents
-
-* **plantuml4idea** by Vojtěch Krása +
-Homepage: https://plugins.jetbrains.com/plugin/7017-plantuml4idea +
-Preview PlantUML diagrams (*.puml) within IDEA. Get support authoring PlantUML diagrams
