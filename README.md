@@ -1,5 +1,5 @@
 # Profile Assist
-_Profile Assist is a Java-based project that provides AI-supported assistance for matching profiles with job postings and adapting profiles accordingly._
+_Profile Assist is a Java-based project that provides assistance for matching profiles with job postings and adapting profiles accordingly._
 
 ## Documentation
 
