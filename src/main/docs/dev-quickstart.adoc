@@ -3,6 +3,15 @@
 :toclevels: 3
 :sectnums:
 
+== Branching model
+The project uses "trunk based development" as the branching model.
+
+Trunk-based development is a Git branching model where all developers work collaboratively on a single central branch called "main," integrating their changes frequently — often multiple times per day. +
+The goal is to avoid long-lived feature branches, minimize complex merges, and keep the codebase continuously releasable through automated testing and continuous integration. +
+This approach supports rapid delivery cycles and helps teams prevent "merge hell" by making small, incremental commits instead of large, infrequent integrations.
+
+Further reading: https://trunkbaseddevelopment.com/
+
 == Quality of life
 
 === Custom Git settings for project
