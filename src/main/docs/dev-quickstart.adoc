@@ -16,7 +16,7 @@ Further reading: https://trunkbaseddevelopment.com/
 
 === Custom Git settings for project
 If you want to use a specific real name or e-mail for the project, go to the project root folder and type:
-[source, xml]
+[source, bash]
 ----
 git config --local user.email "other-email@to-be.used"
 git config --local user.name "My Other Name"
