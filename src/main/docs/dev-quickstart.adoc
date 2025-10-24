@@ -26,7 +26,7 @@ git config --local user.name "My Other Name"
 ----
 
 === Git hook to check formatting
-As ill-formatted code will break CI/CD builds, it is a good idea to setup pre-commit hook. +
+As ill-formatted code will break CI/CD builds, it is a good idea to set up pre-commit hook. +
 The hook will apply the Spotless rules to the whole project.
 
 To set up the hook, create file in the project root at `.git/hooks/pre-commit` and make it executable:
