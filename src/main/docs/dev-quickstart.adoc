@@ -6,9 +6,12 @@
 == Branching model
 The project uses "trunk based development" as the branching model.
 
-Trunk-based development is a Git branching model where all developers work collaboratively on a single central branch called "main," integrating their changes frequently — often multiple times per day. +
+Trunk-based development is a Git branching model where all developers work collaboratively on a single central branch called `main`, integrating their changes frequently — often multiple times per day. +
 The goal is to avoid long-lived feature branches, minimize complex merges, and keep the codebase continuously releasable through automated testing and continuous integration. +
 This approach supports rapid delivery cycles and helps teams prevent "merge hell" by making small, incremental commits instead of large, infrequent integrations.
+
+Each pull request requires at least 2 reviews, one of which must be done by a member of `@infoteam-Software-AG/kg-java`. +
+The `main` branch is protected, thus direct pushes to `main` are not allowed.
 
 Further reading: https://trunkbaseddevelopment.com/
 
