@@ -3,18 +3,30 @@
 :toclevels: 3
 :sectnums:
 
+== Branching model
+The project uses "trunk based development" as the branching model.
+
+Trunk-based development is a Git branching model where all developers work collaboratively on a single central branch called `main`, integrating their changes frequently — often multiple times per day. +
+The goal is to avoid long-lived feature branches, minimize complex merges, and keep the codebase continuously releasable through automated testing and continuous integration. +
+This approach supports rapid delivery cycles and helps teams prevent "merge hell" by making small, incremental commits instead of large, infrequent integrations.
+
+Each pull request requires at least 2 reviews, one of which must be done by a member of `@infoteam-Software-AG/kg-java`. +
+The `main` branch is protected, thus direct pushes to `main` are not allowed.
+
+Further reading: https://trunkbaseddevelopment.com/
+
 == Quality of life
 
 === Custom Git settings for project
 If you want to use a specific real name or e-mail for the project, go to the project root folder and type:
-[source, xml]
+[source, bash]
 ----
 git config --local user.email "other-email@to-be.used"
 git config --local user.name "My Other Name"
 ----
 
 === Git hook to check formatting
-As ill-formatted code will break CI/CD builds, it is a good idea to setup pre-commit hook. +
+As ill-formatted code will break CI/CD builds, it is a good idea to set up a pre-commit hook. +
 The hook will apply the Spotless rules to the whole project.
 
 To set up the hook, create file in the project root at `.git/hooks/pre-commit` and make it executable:
