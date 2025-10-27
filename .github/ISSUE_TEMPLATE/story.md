@@ -1,7 +1,6 @@
 ---
 name: 🧩 User Story
 about: Create a new user story to describe a feature or requirement
-title: "[Story] "
 labels: ["story"]
 assignees: ''
 ---
