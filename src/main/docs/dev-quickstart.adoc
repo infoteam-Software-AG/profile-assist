@@ -23,7 +23,7 @@ When you need a branch to resolve an issue, simply add a comment to the issue co
 The preconfigured branch prefixes are as follows:
 [source,yaml]
 ----
-include::../../../.github/issue-branches.yml[tag=branchPrefixes,indent=0]
+include::../../../.github/issue-branch.yml[tag=branchPrefixes,indent=0]
 ----
 
 == Quality of life
