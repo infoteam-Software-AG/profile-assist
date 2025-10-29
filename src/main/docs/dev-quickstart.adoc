@@ -15,6 +15,17 @@ The `main` branch is protected, thus direct pushes to `main` are not allowed.
 
 Further reading: https://trunkbaseddevelopment.com/
 
+=== Branch names
+Creating branches for issues is automated via chat messages.
+
+When you need a branch to resolve an issue, simply add a comment to the issue containing `/create-issue-branch` or `/cib`.
+
+The preconfigured branch prefixes are as follows:
+[source,yaml]
+----
+include::../../../.github/issue-branches.yml[tag=branchPrefixes,indent=0]
+----
+
 == Quality of life
 
 === Custom Git settings for project

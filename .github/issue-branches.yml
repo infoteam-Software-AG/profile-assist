@@ -1,0 +1,19 @@
+mode: chatops
+branches:
+# tag::branchPrefixes[]
+  - label: enhancement
+    prefix: feature/
+  - label: task
+    prefix: feature/
+  - label: Story
+    prefix: feature/
+  - label: bug
+    prefix: bugfix/
+  - label: documentation
+    prefix: docs/
+  - label: '*'
+    prefix: issues/
+# end::branchPrefixes[]
+branchName: '${issue.number}-${issue.title[0,64]}'
+copyIssueLabelsToPR: true
+gitSafeReplacementChar: '-'
