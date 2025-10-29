@@ -85,7 +85,8 @@ Profile Assist is a Java-based project that provides AI-supported assistance for
 
 == Solution strategy
 
-- Microarchitecture based on hexagonal architecture (along DDD principles)
+- Microarchitecture based on hexagonal architecture (along DDD principles) +
+  https://www.youtube.com/watch?v=cPH5AiqLQTo[Video explaining Hexagonal Architecture with Spring Boot]
 - Best practices and coding guidelines (e.g., no two capital letters in a row, meaningful identifiers)
 - Modularization and loose coupling through use case-driven services and clearly defined domain interfaces
 - Test first and review process (multi-stage, approval required)
