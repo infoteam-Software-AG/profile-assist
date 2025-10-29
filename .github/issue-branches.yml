@@ -12,6 +12,7 @@ branches:
     prefix: feature/
   - label: bug
     prefix: bugfix/
+    name: '${issue.number}-${issue.title[0,64]}'
   - label: documentation
     prefix: docs/
   - label: '*'
