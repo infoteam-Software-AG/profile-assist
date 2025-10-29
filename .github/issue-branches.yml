@@ -3,17 +3,22 @@ branches:
 # tag::branchPrefixes[]
   - label: enhancement
     prefix: feature/
+    branchName: '${issue.number}-${issue.title[0,64]}'
   - label: task
     prefix: feature/
+    branchName: '${issue.number}-${issue.title[0,64]}'
   - label: Story
     prefix: feature/
+    branchName: '${issue.number}-${issue.title[0,64]}'
   - label: bug
     prefix: bugfix/
+    branchName: '${issue.number}-${issue.title[0,64]}'
   - label: documentation
     prefix: docs/
+    branchName: '${issue.number}-${issue.title[0,64]}'
   - label: '*'
     prefix: issues/
+    branchName: '${issue.number}-${issue.title[0,64]}'
 # end::branchPrefixes[]
-branchName: '${issue.number}-${issue.title[0,64]}'
 copyIssueLabelsToPR: true
 gitSafeReplacementChar: '-'
