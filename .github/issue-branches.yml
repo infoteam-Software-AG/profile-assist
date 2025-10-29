@@ -1,22 +1,26 @@
 mode: chatops
-branchName: '${issue.number}-${issue.title[0,64]}'
 autoLinkIssue: true # automatically link your pull request to the issue
 autoCloseIssue: true # automaticaly close the issue after merging the pull request
 branches:
 # tag::branchPrefixes[]
   - label: enhancement
     prefix: feature/
+    name: '${issue.number}-${issue.title[0,64]}'
   - label: task
     prefix: feature/
+    name: '${issue.number}-${issue.title[0,64]}'
   - label: Story
     prefix: feature/
+    name: '${issue.number}-${issue.title[0,64]}'
   - label: bug
     prefix: bugfix/
     name: '${issue.number}-${issue.title[0,64]}'
   - label: documentation
     prefix: docs/
+    name: '${issue.number}-${issue.title[0,64]}'
   - label: '*'
     prefix: issues/
+    name: '${issue.number}-${issue.title[0,64]}'
 # end::branchPrefixes[]
 copyIssueLabelsToPR: true
 gitSafeReplacementChar: '-'
