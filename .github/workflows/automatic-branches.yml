@@ -12,6 +12,11 @@ on:
 
 jobs:
   create_issue_branch_job:
+    permissions:
+      contents: write
+      issues: write
+      metadata: read
+      pull_requests": write
     runs-on: ubuntu-latest
     steps:
       - name: Create Issue Branch
