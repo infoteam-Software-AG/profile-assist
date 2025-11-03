@@ -1,0 +1,84 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam groupInheritance 2
+left to right direction
+
+<> diamond
+
+enum JobTitle {
+  DEVELOPER
+  MANAGER
+  ANALYST
+}
+
+enum EducationLevel {
+  BACHELOR
+  MASTER
+  DOCTORATE
+}
+abstract class AbstractCatalogItem<T> {
+  - name: String
+  - catalogName: String
+  - startDate: Date
+  - endDate: Date
+
+}
+
+class EducationItem<EducationLevel> {
+
+}
+
+class JobItem<JobTitle>{
+}
+
+class Certificate{
+    - location?: String
+    - description: String
+}
+
+class GeneralExperience{
+
+}
+
+
+class Persona {
+    - name: String
+    - lastname: String
+    - educationCatalog: List<EducationItem>
+    - jobCatalog: List<JobItem>
+    - competences: List<String>
+    - certificates: List<Certificate>
+    - generalExperiences: List<GeneralExperience>
+    - projectHistory: List<Project>
+    - startingDate: Date
+    - lastUpdate: Date
+    + saveCertificates()
+    + saveVita()
+}
+
+package root <<Folder>>{
+  package vita <<Folder>>{
+  }
+
+  package certs <<Folder>>{
+  }
+
+  package bids <<Folder>>{
+  }
+}
+
+EducationItem -- diamond
+JobItem -- diamond
+diamond --|> AbstractCatalogItem
+Persona::educationCatalog *-- EducationItem
+Persona::jobCatalog *-- JobItem
+Persona::certificates *-- Certificate
+Persona -up[hidden]- root
+Persona::saveVita -up- root.vita
+Persona::saveCertificates -- root.certs
+EducationItem *-down- EducationLevel
+JobItem *-down- JobTitle
+Persona::generalExperiences *-- GeneralExperience
+Persona::projectHistory *-- Project
+
+@enduml
