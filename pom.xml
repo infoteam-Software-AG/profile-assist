@@ -28,6 +28,7 @@
         <asciidoctorj.version>3.0.0</asciidoctorj.version>
         <asciidoctorj-diagram.version>2.3.2</asciidoctorj-diagram.version>
         <jruby.version>9.4.12.0</jruby.version>
+        <archUnit.version>1.4.1</archUnit.version>
         <!-- """"" end: version properties """"" -->
 
         <asciidoc.outputDirectory>${project.basedir}/target/docs</asciidoc.outputDirectory>
@@ -97,7 +98,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!-- ***** end: Spring Boot test dependencies ***** -->
+
+        <!-- ***** start: ArchUnit dependencies***** -->
+        <dependency>
+            <groupId>com.tngtech.archunit</groupId>
+            <artifactId>archunit-junit5</artifactId>
+            <version>${archUnit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- ***** end: ArchUnit dependencies***** -->
     </dependencies>
 
     <build>
