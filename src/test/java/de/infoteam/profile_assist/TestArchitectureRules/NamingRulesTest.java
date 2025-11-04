@@ -6,7 +6,10 @@ import com.tngtech.archunit.core.importer.ImportOption;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 @AnalyzeClasses(
     packages = "de.infoteam.profile_assist",
@@ -17,9 +20,13 @@ public class NamingRulesTest {
   static final ArchRule unitTestsHaveTestSuffix =
       classes()
           .that()
-          .areNotAnnotatedWith(IntegrationTest.class)
+          .areNotAnnotatedWith(ExtendWith.class)
           .and()
           .areNotAnnotatedWith(SpringBootTest.class)
+          .and()
+          .areNotAnnotatedWith(MockitoBean.class)
+          .and()
+          .areNotAnnotatedWith(Autowired.class)
           .should()
           .haveSimpleNameEndingWith("Test");
 
@@ -27,9 +34,13 @@ public class NamingRulesTest {
   static final ArchRule integrationTestsHaveITSuffix =
       classes()
           .that()
-          .areAnnotatedWith(IntegrationTest.class)
+          .areAnnotatedWith(ExtendWith.class)
           .or()
           .areAnnotatedWith(SpringBootTest.class)
+          .or()
+          .areAnnotatedWith(MockitoBean.class)
+          .or()
+          .areAnnotatedWith(Autowired.class)
           .should()
           .haveSimpleNameEndingWith("IT");
 }

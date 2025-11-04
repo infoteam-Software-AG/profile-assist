@@ -2,10 +2,10 @@ package de.infoteam.profile_assist;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import de.infoteam.profile_assist.TestArchitectureRules.IntegrationTest;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@IntegrationTest
+@SpringBootTest
 class NamingIT {
 
   @Test
