@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
+@SuppressWarnings("removal")
 @AnalyzeClasses(
     packages = "de.infoteam.profile_assist",
     importOptions = {ImportOption.OnlyIncludeTests.class})
