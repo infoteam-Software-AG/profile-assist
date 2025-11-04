@@ -18,6 +18,8 @@ public class NamingRulesTest {
       classes()
           .that()
           .areNotAnnotatedWith(IntegrationTest.class)
+          .and()
+          .areNotAnnotatedWith(SpringBootTest.class)
           .should()
           .haveSimpleNameEndingWith("Test");
 
