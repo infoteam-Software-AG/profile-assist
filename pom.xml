@@ -136,6 +136,7 @@
             <artifactId>flexmark-ext-gfm-strikethrough</artifactId>
             <version>0.64.8</version>
         </dependency>
+        <!-- YAML front-matter parsing -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-yaml</artifactId>
