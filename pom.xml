@@ -27,7 +27,7 @@
         <asciidoctor.maven.plugin.version>3.2.0</asciidoctor.maven.plugin.version>
         <asciidoctorj.version>3.0.0</asciidoctorj.version>
         <asciidoctorj-diagram.version>2.3.2</asciidoctorj-diagram.version>
-        <jruby.version>9.4.12.0</jruby.version>
+        <jruby.version>9.4.12.1</jruby.version>
         <archUnit.version>1.4.1</archUnit.version>
         <jacoco.version>0.8.14</jacoco.version>
         <failsafe.version>3.5.3</failsafe.version>
