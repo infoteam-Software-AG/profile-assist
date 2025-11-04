@@ -12,8 +12,6 @@ class ProfileAssistApplicationTest {
 
     var test = mock(ProfileAssistApplication.class);
 
-    ProfileAssistApplication.main(new String[] {});
-
-    verify(test, times(1));
+    verify(test, times(1)).main(new String[] {});
   }
 }
