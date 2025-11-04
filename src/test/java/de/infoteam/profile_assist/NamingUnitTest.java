@@ -4,10 +4,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-public class NamingUnitTest {
+class NamingUnitTest {
 
   @Test
-  public void classNameTest() {
+  void classNameTest() {
     assertThat(this.getClass().getSimpleName()).endsWith("Test");
   }
 }
