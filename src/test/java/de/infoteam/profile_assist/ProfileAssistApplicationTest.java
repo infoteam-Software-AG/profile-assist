@@ -1,10 +1,19 @@
 package de.infoteam.profile_assist;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+
 import org.junit.jupiter.api.Test;
 
-public class ProfileAssistApplicationTest {
+class ProfileAssistApplicationTest {
   @Test
-  public void main() {
+  void mainTest() {
+
+    var test = mock(ProfileAssistApplication.class);
+
     ProfileAssistApplication.main(new String[] {});
+
+    verify(test, times(1));
   }
 }
