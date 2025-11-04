@@ -9,6 +9,7 @@ import com.tngtech.archunit.lang.ArchRule;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 @AnalyzeClasses(
@@ -26,6 +27,8 @@ public class NamingRulesTest {
           .and()
           .areNotAnnotatedWith(MockitoBean.class)
           .and()
+          .areNotAnnotatedWith(MockBean.class)
+          .and()
           .areNotAnnotatedWith(Autowired.class)
           .should()
           .haveSimpleNameEndingWith("Test");
@@ -39,6 +42,8 @@ public class NamingRulesTest {
           .areAnnotatedWith(SpringBootTest.class)
           .or()
           .areAnnotatedWith(MockitoBean.class)
+          .or()
+          .areAnnotatedWith(MockBean.class)
           .or()
           .areAnnotatedWith(Autowired.class)
           .should()
