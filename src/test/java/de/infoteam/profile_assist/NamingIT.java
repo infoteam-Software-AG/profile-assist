@@ -2,12 +2,14 @@ package de.infoteam.profile_assist;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import de.infoteam.profile_assist.TestArchitectureRules.IntegrationTest;
 import org.junit.jupiter.api.Test;
 
-public class NamingUnitTest {
+@IntegrationTest
+public class NamingIT {
 
   @Test
   public void classNameTest() {
-    assertThat(this.getClass().getSimpleName()).endsWith("Test");
+    assertThat(this.getClass().getSimpleName()).endsWith("IT");
   }
 }
