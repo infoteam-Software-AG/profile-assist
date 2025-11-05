@@ -1,0 +1,20 @@
+= Persona Concept: Profile Assist
+:toc: right
+:toclevels: 3
+:sectnums:
+:icons: font
+
+== How Personas work
+The concept behind personas is to create detailed, fictional representations of your target users to make them feel real and relatable for design and marketing teams. Instead of abstract "users," personas have names, backgrounds, goals, and behaviors, which helps teams build empathy and make user-centered decisions based on concrete data rather than assumptions.
+
+- User-centered design: Personas are a tool to keep the actual user at the center of the design process, ensuring the final product or service meets their specific needs and expectations.
+- Fictional but data-based: While fictional, personas are built on real research about user groups, including their behaviors, needs, goals, and pain points.
+- Promote empathy: Giving users a face and a personality helps teams empathize with them and understand their perspectives, leading to better design decisions.
+- Guide decision-making: They serve as a reference point for various teams, including product, design, and marketing, to ensure everyone is working toward the same user-focused goals.
+- Focus and alignment: By creating multiple personas for different user segments, teams can understand the diverse needs of their audience and align their efforts to address them effectively.
+
+== Storing the Personas
+The data to be stored is described in the link:persona.adoc[UML]. The test data based on this model should be located in our test package at src/test/resources/personas/. Later, we can add a README file to describe the characteristics of the personas.
+
+== UML
+include::../../_includes/concept/persona.puml[asdf]
