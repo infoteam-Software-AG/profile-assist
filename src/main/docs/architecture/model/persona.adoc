@@ -14,7 +14,10 @@ The concept behind personas is to create detailed, fictional representations of 
 - Focus and alignment: By creating multiple personas for different user segments, teams can understand the diverse needs of their audience and align their efforts to address them effectively.
 
 == Storing the Personas
-The data to be stored is described in the link:persona.adoc[UML]. The test data based on this model should be located in our test package at src/test/resources/personas/. Later, we can add a README file to describe the characteristics of the personas.
+The data to be stored is described in the link:persona.adoc[UML]. The test data based on this model should be located in our test folder at `src/test/resources/personas/`. The structure of the Persona folder is illustrated in the graphic below, where you can see that each Persona has its own folder.
+include::../../_includes/concept/persona-folder-structure.adoc[Persona Folder Structure]
+
+Later, we can add a README file to describe the characteristics of the personas.
 
 == UML
-include::../../_includes/concept/persona.puml[Persona UML]
+include::../../_includes/concept/persona.adoc[Persona UML]
