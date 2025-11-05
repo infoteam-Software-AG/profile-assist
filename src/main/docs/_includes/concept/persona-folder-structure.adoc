@@ -1,0 +1,11 @@
+[plantuml, format=png]
+----
+@startfiles
+/src/test/resources/personas/Jessica/Persona.yaml
+/src/test/resources/personas/Jessica/Project7.yaml
+/src/test/resources/personas/Jessica/Project42.yaml
+/src/test/resources/personas/Jürgen/Persona.yaml
+/src/test/resources/personas/Jürgen/Project1.yaml
+/src/test/resources/personas/Jürgen/Project2.yaml
+@endfiles
+----
