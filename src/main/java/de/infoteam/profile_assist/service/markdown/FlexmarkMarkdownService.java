@@ -16,16 +16,15 @@ import com.vladsch.flexmark.util.ast.NodeVisitor;
 import com.vladsch.flexmark.util.ast.VisitHandler;
 import com.vladsch.flexmark.util.data.MutableDataSet;
 import com.vladsch.flexmark.util.sequence.BasedSequence;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Safelist;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Primary
 @Service
 public class FlexmarkMarkdownService implements MarkdownService {
   private static final ObjectMapper YAML_MAPPER = new ObjectMapper(new YAMLFactory());
@@ -78,7 +77,11 @@ public class FlexmarkMarkdownService implements MarkdownService {
     String yaml = yamlBuf.toString().trim();
     if (yaml.isEmpty()) return Map.of();
 
-    return tryMapping(yaml);
+    try {
+      return tryMapping(yaml);
+    } catch (IOException e) {
+      throw new FrontMatterParseException("Invalid YAML front matter", e);
+    }
   }
 
   @Contract("_ -> new")
@@ -92,11 +95,7 @@ public class FlexmarkMarkdownService implements MarkdownService {
             }));
   }
 
-  private Map<String, Object> tryMapping(String yaml) {
-    try {
-      return YAML_MAPPER.readValue(yaml, new TypeReference<>() {});
-    } catch (java.io.IOException e) {
-      return Map.of();
-    }
+  private Map<String, Object> tryMapping(String yaml) throws IOException {
+    return YAML_MAPPER.readValue(yaml, new TypeReference<>() {});
   }
 }
