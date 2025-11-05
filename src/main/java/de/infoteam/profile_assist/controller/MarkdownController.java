@@ -1,22 +1,19 @@
-package de.infoteam.profile_assist.controller.markdown;
+package de.infoteam.profile_assist.controller;
 
-import de.infoteam.profile_assist.service.markdown.FlexmarkMarkdownService;
+import de.infoteam.profile_assist.service.markdown.MarkdownService;
 import java.util.Map;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/markdown")
 public class MarkdownController {
-
-  private final FlexmarkMarkdownService md;
-
-  public MarkdownController(FlexmarkMarkdownService md) {
-    this.md = md;
-  }
+  private final MarkdownService md;
 
   @PostMapping(
       value = "/render",
