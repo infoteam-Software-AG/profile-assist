@@ -31,6 +31,7 @@
         <archUnit.version>1.4.1</archUnit.version>
         <jacoco.version>0.8.14</jacoco.version>
         <failsafe.version>3.5.3</failsafe.version>
+        <spring-jdbc.version>6.2.12</spring-jdbc.version>
         <!-- """"" end: version properties """"" -->
 
         <asciidoc.outputDirectory>${project.basedir}/target/docs</asciidoc.outputDirectory>
@@ -83,6 +84,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring-jdbc.version}</version>
+        </dependency>
+
         <!-- ***** end: Spring Boot dependencies ***** -->
 
         <!-- ***** start: other dependencies ***** -->

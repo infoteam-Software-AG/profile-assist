@@ -11,6 +11,7 @@ import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -42,11 +43,9 @@ public class EnforceDisableAnnotationsUnitTestsArchTest {
           .andShould()
           .notBeAnnotatedWith(DirtiesContext.class)
           .andShould()
-          .notBeAnnotatedWith(WebMvcTest.class);
-
-  /* currently no Configuration for DataSource, invoking the class breaks test*/
-  // .andShould()
-  // .notBeAnnotatedWith(DataJpaTest.class);
+          .notBeAnnotatedWith(WebMvcTest.class)
+          .andShould()
+          .notBeAnnotatedWith(DataJpaTest.class);
 
   @ArchTest
   static final ArchRule unitAndComponentTestsDoNotUseExtendWithAnnotation =
