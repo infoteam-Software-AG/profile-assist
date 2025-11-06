@@ -1,12 +1,10 @@
 package de.infoteam.profile_assist.Domain;
 
+import java.util.LinkedList;
 import lombok.Data;
 
-import java.util.LinkedList;
-
 public @Data class Project {
-    private String name;
-    private String description;
-    private LinkedList<String> technologies;
-
+  private String name;
+  private String description;
+  private LinkedList<String> technologies;
 }
