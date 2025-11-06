@@ -18,8 +18,7 @@ class FlexmarkMarkdownServiceTest {
   @DisplayName("Check if a valid input gets converted into a sanitized HTML")
   @ParameterizedTest(name = "Case {index}: input={0}")
   @MethodSource("markdownToHtmlPositiveCases")
-  void renderToHtml_validInput_returnsSanitizedHtml(
-      String markdown, String expectedHtml) {
+  void renderToHtml_validInput_returnsSanitizedHtml(String markdown, String expectedHtml) {
     String html = md.renderToHtml(markdown);
     assertThat(html).contains(expectedHtml);
   }
