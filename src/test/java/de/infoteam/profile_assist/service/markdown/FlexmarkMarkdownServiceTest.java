@@ -17,11 +17,11 @@ class FlexmarkMarkdownServiceTest {
 
   public static Stream<Arguments> markdownToHtmlCases() {
     return Stream.of(
-        Arguments.of("bold", "**b**", "<strong>b</strong>"),
-        Arguments.of("italic", "*i*", "<em>i</em>"),
-        Arguments.of("strike", "~~s~~", "<del>s</del>"),
-        Arguments.of("heading", "# Title", "<h1>Title</h1>"),
-        Arguments.of("code", "`x`", "<code>x</code>"));
+        Arguments.of("**b**", "<strong>b</strong>"),
+        Arguments.of("*i*", "<em>i</em>"),
+        Arguments.of("~~s~~", "<del>s</del>"),
+        Arguments.of("# Title", "<h1>Title</h1>"),
+        Arguments.of("`x`", "<code>x</code>"));
   }
 
   @DisplayName("Check if markdown String is properly converted to HTML and sanitized")
@@ -75,8 +75,7 @@ class FlexmarkMarkdownServiceTest {
   @DisplayName("Check if a valid input gets converted into a proper HTML")
   @ParameterizedTest(name = "Case {index}: input={0}")
   @MethodSource("markdownToHtmlCases")
-  void renderToHtml_validInput_returnsConvertedHtml(
-      String caseName, String markdown, String expectedHtml) {
+  void renderToHtml_validInput_returnsConvertedHtml(String markdown, String expectedHtml) {
     String html = md.renderToHtml(markdown);
     assertThat(html).contains(expectedHtml);
   }
