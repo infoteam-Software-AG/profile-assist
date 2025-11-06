@@ -6,7 +6,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class FlexmarkMarkdownServiceTest {
+class FlexmarkMarkdownServiceTest {
   private final MarkdownService md = new FlexmarkMarkdownService();
 
   @DisplayName("Check if markdown String is properly converted to HTML and sanitized")
@@ -37,24 +37,17 @@ public class FlexmarkMarkdownServiceTest {
 
     String html = md.renderToHtml(in);
 
-    // renderer features
-    assertThat(html).contains("<h1>Title</h1>");
-    assertThat(html).contains("<strong>bold</strong>");
-    assertThat(html).contains("<em>italic</em>");
-    assertThat(html).contains("<del>strike</del>");
-    assertThat(html).contains("<table>").contains("</table>");
-    assertThat(html).contains("<td></td>");
-    assertThat(html).contains("<pre><code").contains("</code></pre>");
-
-    // task list
-    assertThat(html).contains("<input").contains("type=\"checkbox\"");
-
-    // autolink
-    assertThat(html).contains("<a href=\"https://example.com/docs?ref=markdown#section\"");
-
-    // script checking
-    assertThat(html).doesNotContain("<script>");
-    assertThat(html).doesNotContain("javascript:");
+    assertThat(html)
+        // renderer features
+        .contains("<h1>Title</h1>", "<strong>bold</strong>", "<em>italic</em>", "<del>strike</del>")
+        .contains("<table>", "</table>", "<td></td>")
+        .contains("<pre><code", "</code></pre>")
+        // task list
+        .contains("<input", "type=\"checkbox\"")
+        // autolink
+        .contains("<a href=\"https://example.com/docs?ref=markdown#section\"")
+        // script checking
+        .doesNotContain("<script>", "javascript:");
   }
 
   @DisplayName("Check if null as input returns an empty HTML")

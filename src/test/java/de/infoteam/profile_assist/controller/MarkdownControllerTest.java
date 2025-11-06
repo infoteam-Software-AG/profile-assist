@@ -22,7 +22,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 @ExtendWith(MockitoExtension.class)
 @Tag("component")
-class MarkdownControllerCT {
+class MarkdownControllerTest {
 
   @Mock MarkdownService mdService;
 
