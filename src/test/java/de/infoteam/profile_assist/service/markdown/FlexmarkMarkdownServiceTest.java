@@ -15,53 +15,21 @@ import org.junit.jupiter.params.provider.ValueSource;
 class FlexmarkMarkdownServiceTest {
   private final MarkdownService md = new FlexmarkMarkdownService();
 
-  public static Stream<Arguments> markdownToHtmlCases() {
-    return Stream.of(
-        Arguments.of("**b**", "<strong>b</strong>"),
-        Arguments.of("*i*", "<em>i</em>"),
-        Arguments.of("~~s~~", "<del>s</del>"),
-        Arguments.of("# Title", "<h1>Title</h1>"),
-        Arguments.of("`x`", "<code>x</code>"));
+  @DisplayName("Check if a valid input gets converted into a sanitized HTML")
+  @ParameterizedTest(name = "Case {index}: input={0}")
+  @MethodSource("markdownToHtmlPositiveCases")
+  void renderToHtml_validInput_returnsSanitizedHtml(
+      String markdown, String expectedHtml) {
+    String html = md.renderToHtml(markdown);
+    assertThat(html).contains(expectedHtml);
   }
 
-  @DisplayName("Check if markdown String is properly converted to HTML and sanitized")
-  @Test
-  void renderToHTML_isConvertedAndSanitized() {
-    String in =
-        """
-            # Title
-
-            **bold** *italic* ~~strike~~
-
-            - [x] done
-            - [ ] open
-
-            | A | B | C |
-            |---|---|---|
-            | A1| B1| C1|
-            | A2| B2|
-
-            Plain URL: <https://example.com/docs?ref=markdown#section>
-
-            ```java
-            class A {}
-            ```
-
-            <script>alert('x')</script>
-            """;
-
-    String html = md.renderToHtml(in);
-    assertThat(html)
-        // renderer features
-        .contains("<h1>Title</h1>", "<strong>bold</strong>", "<em>italic</em>", "<del>strike</del>")
-        .contains("<table>", "</table>", "<td></td>")
-        .contains("<pre><code", "</code></pre>")
-        // task list
-        .contains("<input", "type=\"checkbox\"")
-        // autolink
-        .contains("<a href=\"https://example.com/docs?ref=markdown#section\"")
-        // script checking
-        .doesNotContain("<script>", "javascript:");
+  @DisplayName("Check if forbidden input gets removed from converted and sanitized HTML")
+  @ParameterizedTest(name = "Case {index}: input={0}")
+  @MethodSource("markdownToHtmlNegativeCases")
+  void renderToHtml_forbiddenInput_returnsSanitizedHtml(String markdown, String forbiddenHtml) {
+    String html = md.renderToHtml(markdown);
+    assertThat(html).doesNotContain(forbiddenHtml);
   }
 
   @DisplayName("Check if null as input returns an empty HTML")
@@ -72,38 +40,31 @@ class FlexmarkMarkdownServiceTest {
     assertThat(md.renderToHtml(input)).isEmpty();
   }
 
-  @DisplayName("Check if a valid input gets converted into a proper HTML")
-  @ParameterizedTest(name = "Case {index}: input={0}")
-  @MethodSource("markdownToHtmlCases")
-  void renderToHtml_validInput_returnsConvertedHtml(String markdown, String expectedHtml) {
-    String html = md.renderToHtml(markdown);
-    assertThat(html).contains(expectedHtml);
-  }
-
-  @DisplayName("Check if front matter is correctly mapped by checking if title and draft exists")
+  @DisplayName(
+      "Check if metadata header is correctly mapped by checking if title and production exists")
   @Test
-  void extractFrontMatter_returnsMap() {
+  void extractMetadataHeader_returnsMap() {
     var fm =
-        md.extractFrontMatter(
+        md.extractMetadataHeader(
             """
                                 ---
                                 title: X
-                                draft: false
+                                production: false
                                 ---
                                 Content
                                 """);
-    assertThat(fm).containsEntry("title", "X").containsEntry("draft", false);
+    assertThat(fm).containsEntry("title", "X").containsEntry("production", false);
   }
 
-  @DisplayName("Check if front matter is an empty map when sending no YAML")
+  @DisplayName("Check if metadata header is an empty map when sending no YAML")
   @Test
-  void extractFrontMatter_noYaml_returnsEmpty() {
-    assertThat(md.extractFrontMatter("No YAML")).isEmpty();
+  void extractMetadataHeader_noYaml_returnsEmpty() {
+    assertThat(md.extractMetadataHeader("No YAML")).isEmpty();
   }
 
   @DisplayName("Check if an invalid YAML throws an error")
   @Test
-  void extractFrontMatter_invalidYaml_throwsError() {
+  void extractMetadataHeader_invalidYaml_throwsError() {
     String mdText =
         """
       ---
@@ -112,16 +73,55 @@ class FlexmarkMarkdownServiceTest {
       content
       """;
 
-    assertThatThrownBy(() -> md.extractFrontMatter(mdText))
-        .isInstanceOf(FrontMatterParseException.class)
-        .hasMessageContaining("Invalid YAML front matter");
+    assertThatThrownBy(() -> md.extractMetadataHeader(mdText))
+        .isInstanceOf(MetadataHeaderParseException.class)
+        .hasMessageContaining("Invalid YAML metadata header");
   }
 
-  @DisplayName("Check at start of extraction if markdown null or blank return an empty map")
+  @DisplayName("Check at the start of extraction if markdown null or blank returns an empty map")
   @NullAndEmptySource
   @ValueSource(strings = {" ", ""})
   @ParameterizedTest(name = "Case {index}: input={0} → empty map")
-  void extractFrontMatter_nullOrBlank_returnsEmpty(String input) {
-    assertThat(md.extractFrontMatter(input)).isEmpty();
+  void extractMetadataHeader_nullOrBlank_returnsEmpty(String input) {
+    assertThat(md.extractMetadataHeader(input)).isEmpty();
+  }
+
+  public static Stream<Arguments> markdownToHtmlNegativeCases() {
+    return Stream.of(
+        Arguments.of("<script>alert('x')</script>", "<script>"),
+        Arguments.of("[Click me](javascript:alert('XSS!'))", "javascript:"),
+        Arguments.of("<img src='x' onerror='alert(1)'>", "onerror"));
+  }
+
+  public static Stream<Arguments> markdownToHtmlPositiveCases() {
+    return Stream.of(
+        Arguments.of("**b**", "<strong>b</strong>"),
+        Arguments.of("*i*", "<em>i</em>"),
+        Arguments.of("~~s~~", "<del>s</del>"),
+        Arguments.of("# Title", "<h1>Title</h1>"),
+        Arguments.of("`x`", "<code>x</code>"),
+        Arguments.of("- [x] done", "<input"),
+        Arguments.of("- [ ] open", "type=\"checkbox\""),
+        Arguments.of(
+            """
+            | A | B | C |
+            |---|---|---|
+            | A1| B1| C1|
+            | A2| B2|
+            """,
+            "<td></td>"),
+        Arguments.of(
+            """
+            ```java
+            class A {}
+            ```
+            """,
+            "<pre><code"),
+        Arguments.of(
+            "Plain URL: <https://example.com/docs?ref=markdown#section>",
+            "<a href=\"https://example.com/docs?ref=markdown#section\""),
+        Arguments.of(
+            "Plain URL: https://example.com/docs?ref=markdown#section",
+            "<a href=\"https://example.com/docs?ref=markdown#section\""));
   }
 }
