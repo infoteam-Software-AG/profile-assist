@@ -19,7 +19,7 @@ import com.vladsch.flexmark.util.sequence.BasedSequence;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import org.jetbrains.annotations.Contract;
+import java.util.Optional;
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Safelist;
@@ -67,24 +67,30 @@ public class FlexmarkMarkdownService implements MarkdownService {
     return Jsoup.clean(unsafeHtml, safelist);
   }
 
-  public Map<String, Object> extractFrontMatter(String markdown) {
-    Document doc = parser.parse(markdown == null ? "" : markdown);
-
-    final StringBuilder yamlBuf = new StringBuilder();
-    NodeVisitor visitor = getNodeVisitor(yamlBuf);
-    visitor.visit(doc);
-
-    String yaml = yamlBuf.toString().trim();
-    if (yaml.isEmpty()) return Map.of();
-
-    try {
-      return tryMapping(yaml);
-    } catch (IOException e) {
-      throw new FrontMatterParseException("Invalid YAML front matter", e);
-    }
+  private Optional<String> extractYaml(Document doc) {
+    StringBuilder buf = new StringBuilder();
+    getNodeVisitor(buf).visit(doc);
+    String yaml = buf.toString().trim();
+    return yaml.isEmpty() ? Optional.empty() : Optional.of(yaml);
   }
 
-  @Contract("_ -> new")
+  public Map<String, Object> extractMetadataHeader(String markdown) {
+    if (markdown == null || markdown.isBlank()) {
+      return Map.of();
+    }
+    Document doc = parser.parse(markdown);
+    return extractYaml(doc)
+        .map(
+            yaml -> {
+              try {
+                return parseYamlToMap(yaml);
+              } catch (IOException e) {
+                throw new MetadataHeaderParseException("Invalid YAML metadata header", e);
+              }
+            })
+        .orElseGet(Map::of);
+  }
+
   private @NotNull NodeVisitor getNodeVisitor(StringBuilder yamlBuf) {
     return new NodeVisitor(
         new VisitHandler<>(
@@ -95,7 +101,7 @@ public class FlexmarkMarkdownService implements MarkdownService {
             }));
   }
 
-  private Map<String, Object> tryMapping(String yaml) throws IOException {
+  private Map<String, Object> parseYamlToMap(String yaml) throws IOException {
     return YAML_MAPPER.readValue(yaml, new TypeReference<>() {});
   }
 }
