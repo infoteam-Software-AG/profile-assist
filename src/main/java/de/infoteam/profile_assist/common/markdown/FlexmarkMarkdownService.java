@@ -1,4 +1,4 @@
-package de.infoteam.profile_assist.adapter.out.markdown;
+package de.infoteam.profile_assist.common.markdown;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,7 +16,7 @@ import com.vladsch.flexmark.util.ast.NodeVisitor;
 import com.vladsch.flexmark.util.ast.VisitHandler;
 import com.vladsch.flexmark.util.data.MutableDataSet;
 import com.vladsch.flexmark.util.sequence.BasedSequence;
-import de.infoteam.profile_assist.application.port.out.MarkdownPort;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -27,13 +27,13 @@ import org.jsoup.safety.Safelist;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FlexmarkMarkdownAdapter implements MarkdownPort {
+public class FlexmarkMarkdownService implements MarkdownService {
   private static final ObjectMapper YAML_MAPPER = new ObjectMapper(new YAMLFactory());
 
   private final Parser parser;
   private final HtmlRenderer renderer;
 
-  public FlexmarkMarkdownAdapter() {
+  public FlexmarkMarkdownService() {
     MutableDataSet options = getFlexMarkdownOptions();
     this.parser = Parser.builder(options).build();
     this.renderer = HtmlRenderer.builder(options).build();
