@@ -105,10 +105,30 @@ See also: https://www.youtube.com/watch?v=cPH5AiqLQTo[Video explaining Hexagonal
 
 == Building block view
 
-- Domain layer: entities, value objects, domain services
-- Application layer: use case services, process control
-- Adapters/ports: REST API (OpenAI integration if necessary), Markdown export, onboarding interfaces
-- Infrastructure: Test data management, logging, external interfaces
+=== Package Structure
+
+The codebase uses a package structure designed to emphasize domain concepts, integration boundaries, and interface technologies, supporting a clear, maintainable, and evolvable system architecture. The static package organization is as follows:
+
+* `de.infoteam.profile_assist`
+** `integration`
+*** Contains service-global or framework-specific integration utilities, such as centralized configuration objects.
+** `domain`
+*** `control`: Implements the application's use cases as small, single-purpose classes or services. Each control structure represents an independent business process, enhancing modularity and testability by adhering to the single responsibility principle. This use-case oriented approach helps to achieve a so-called "screaming architecture"—the structure and naming of our control classes make the business capabilities of the system immediately obvious, both to developers and stakeholders.
+*** `entity`: Contains domain model entities and aggregates.
+
+** `port`
+
+*** `llm`
+**** `integration` (optional): Integration adapters for LLM-specific functionality.
+**** `control`: LLM use cases and orchestration logic, organized in line with domain-centric, use-case granularity.
+**** `entity`: LLM domain-specific structures.
+
+*** `rest`
+**** `integration` (optional): REST adapters and integration code, e.g., Spring Security setup for access control.
+**** `control`: REST interface logic, with each controller mapped to a distinct business use case for clarity and separation.
+**** `entity`: Data transfer and resource representation for REST interfaces.
+
+By adhering to use-case based control classes and emphasizing domain-driven terminology and boundaries, this structure exemplifies "screaming architecture," where the organization of application code makes the system’s core domain and primary use cases explicit at a glance. This improves understanding, onboarding, maintenance, and architectural sustainability.
 
 == Runtime view
 
