@@ -1,8 +1,11 @@
-package de.infoteam.profile_assist.service.markdown;
+package de.infoteam.profile_assist.unit.adapter.out.markdown;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
+import de.infoteam.profile_assist.adapter.out.markdown.FlexmarkMarkdownAdapter;
+import de.infoteam.profile_assist.adapter.out.markdown.MetadataHeaderParseException;
+import de.infoteam.profile_assist.application.port.out.MarkdownPort;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,8 +15,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-class FlexmarkMarkdownServiceTest {
-  private final MarkdownService md = new FlexmarkMarkdownService();
+class FlexmarkMarkdownAdapterTest {
+  private final MarkdownPort md = new FlexmarkMarkdownAdapter();
 
   @DisplayName("Check if a valid input gets converted into a sanitized HTML")
   @ParameterizedTest(name = "Case {index}: input={0}")

@@ -1,4 +1,4 @@
-package de.infoteam.profile_assist.service.markdown;
+package de.infoteam.profile_assist.adapter.out.markdown;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

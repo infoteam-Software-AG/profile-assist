@@ -1,4 +1,4 @@
-package de.infoteam.profile_assist;
+package de.infoteam.profile_assist.integration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
