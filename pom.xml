@@ -28,6 +28,10 @@
         <asciidoctorj.version>3.0.0</asciidoctorj.version>
         <asciidoctorj-diagram.version>2.3.2</asciidoctorj-diagram.version>
         <jruby.version>9.4.12.1</jruby.version>
+        <archUnit.version>1.4.1</archUnit.version>
+        <jacoco.version>0.8.14</jacoco.version>
+        <failsafe.version>3.5.3</failsafe.version>
+        <spring-jdbc.version>6.2.12</spring-jdbc.version>
         <!-- """"" end: version properties """"" -->
 
         <asciidoc.outputDirectory>${project.basedir}/target/docs</asciidoc.outputDirectory>
@@ -80,6 +84,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring-jdbc.version}</version>
+        </dependency>
+
         <!-- ***** end: Spring Boot dependencies ***** -->
 
         <!-- ***** start: other dependencies ***** -->
@@ -97,7 +110,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!-- ***** end: Spring Boot test dependencies ***** -->
+
+        <!-- ***** start: ArchUnit dependencies***** -->
+        <dependency>
+            <groupId>com.tngtech.archunit</groupId>
+            <artifactId>archunit-junit5</artifactId>
+            <version>${archUnit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- ***** end: ArchUnit dependencies***** -->
     </dependencies>
 
     <build>
@@ -197,7 +220,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.14</version>
+                    <version>${jacoco.version}</version>
                     <executions>
                         <execution>
                             <id>prepare-agent</id>
@@ -277,7 +300,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>3.5.3</version>
+                    <version>${failsafe.version}</version>
                     <executions>
                         <execution>
                             <id>integration-test</id>

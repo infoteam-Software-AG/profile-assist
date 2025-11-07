@@ -1,0 +1,27 @@
+[plantuml,format=png]
+----
+@startuml
+skinparam classAttributeIconSize 0
+skinparam groupInheritance 2
+left to right direction
+
+class Project {
+    - name: String
+    - description: String
+    - technologies: List<String>
+}
+
+class Persona {
+    - id: UUID
+    - jobTitle: String
+    - skills: List<String>
+    - certificates: List<String>
+    - projectHistory: List<Project>
+    - startingDate: Date
+    - lastUpdate: Date
+}
+
+
+Persona::projectHistory *-- Project
+@enduml
+----
