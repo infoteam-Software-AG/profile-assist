@@ -4,8 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 import de.infoteam.profile_assist.common.markdown.FlexmarkMarkdownService;
-import de.infoteam.profile_assist.common.markdown.MetadataHeaderParseException;
 import de.infoteam.profile_assist.common.markdown.MarkdownService;
+import de.infoteam.profile_assist.common.markdown.MetadataHeaderParseException;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
