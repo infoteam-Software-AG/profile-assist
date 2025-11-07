@@ -83,14 +83,25 @@ Profile Assist is a Java-based project that provides AI-supported assistance for
 - Internal tools: Sharepoint/Markdown for collaborative editing
 - Code and documentation standards: https://canvas.arc42.org/[Arc-42 Canvas] -> Architectural decisions must be documented
 
-== Solution strategy
+== Solution Strategy
 
-- Microarchitecture based on hexagonal architecture (along DDD principles) +
-  https://www.youtube.com/watch?v=cPH5AiqLQTo[Video explaining Hexagonal Architecture with Spring Boot]
 - Best practices and coding guidelines (e.g., no two capital letters in a row, meaningful identifiers)
 - Modularization and loose coupling through use case-driven services and clearly defined domain interfaces
 - Test first and review process (multi-stage, approval required)
 - Password and secrets handling via environment variables
+
+=== Micro-Architecture
+
+To address the need for clear separation between business logic and external concerns, we adopt the hexagonal architecture (also known as "Ports and Adapters" pattern) as our fundamental solution strategy. This architecture ensures that core domain logic is isolated from technical details such as user interfaces, databases, messaging, and other external systems. By organizing the application around a central domain model with well-defined ports (interfaces) for interaction, and adapters that handle communication with the outside world, we achieve several strategic goals:
+
+* *Flexibility*: The decoupling of business logic and technical adapters allows for straightforward substitution or addition of external systems (e.g., switching from REST to messaging, or from one database technology to another) without impacting the core domain code.
+* *Testability*: Business logic can be tested in isolation by providing in-memory or mock adapters, fostering a robust and maintainable test strategy.
+* *Maintainability*: Clarity of boundaries supports code maintenance, modular evolution, and reduces side-effects during system changes.
+* *Adaptability*: Adapters can be extended for new protocols or integrations with minimal risk, supporting system growth and future requirements.
+
+In summary, the hexagonal architecture guides our solution strategy by providing a resilient, modular, and evolvable foundation for our system. All dependencies flow inwards to the domain model, with application logic shielded from technology-specific changes by the use of abstract ports and concrete adapters, consistent with the principles of sustainable enterprise software architecture.​
+
+See also: https://www.youtube.com/watch?v=cPH5AiqLQTo[Video explaining Hexagonal Architecture with Spring Boot]
 
 == Building block view
 
