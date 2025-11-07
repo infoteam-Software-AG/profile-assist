@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.UUID;
 
 import lombok.Data;
-
-public @Data class Persona {
+@Data
+public class Persona {
 
   private UUID id;
   private String jobTitle;

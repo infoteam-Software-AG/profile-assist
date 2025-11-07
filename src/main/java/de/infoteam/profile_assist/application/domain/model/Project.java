@@ -2,8 +2,8 @@ package de.infoteam.profile_assist.application.domain.model;
 
 import java.util.List;
 import lombok.Data;
-
-public @Data class Project {
+@Data
+public class Project {
   private String name;
   private String description;
   private List<String> technologies;
