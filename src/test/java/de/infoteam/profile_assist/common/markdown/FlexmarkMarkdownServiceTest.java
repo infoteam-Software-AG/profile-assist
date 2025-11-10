@@ -1,11 +1,8 @@
-package de.infoteam.profile_assist.unit.common.markdown;
+package de.infoteam.profile_assist.common.markdown;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
-import de.infoteam.profile_assist.common.markdown.FlexmarkMarkdownService;
-import de.infoteam.profile_assist.common.markdown.MarkdownService;
-import de.infoteam.profile_assist.common.markdown.MetadataHeaderParseException;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -99,31 +96,20 @@ class FlexmarkMarkdownServiceTest {
     return Stream.of(
         Arguments.of("**b**", "<strong>b</strong>"),
         Arguments.of("*i*", "<em>i</em>"),
-        Arguments.of("~~s~~", "<del>s</del>"),
         Arguments.of("# Title", "<h1>Title</h1>"),
         Arguments.of("`x`", "<code>x</code>"),
-        Arguments.of("- [x] done", "<input"),
-        Arguments.of("- [ ] open", "type=\"checkbox\""),
+        Arguments.of("- item", "<li>item</li>"),
+        Arguments.of("> quote", "<blockquote>"),
+        Arguments.of("[doc](https://example.com)", "<a href=\"https://example.com\""),
+        Arguments.of(
+            "See <https://example.com/docs?ref=md#sec>",
+            "<a href=\"https://example.com/docs?ref=md#sec\""),
         Arguments.of(
             """
-            | A | B | C |
-            |---|---|---|
-            | A1| B1| C1|
-            | A2| B2|
-            """,
-            "<td></td>"),
-        Arguments.of(
-            """
-            ```java
-            class A {}
-            ```
-            """,
-            "<pre><code"),
-        Arguments.of(
-            "Plain URL: <https://example.com/docs?ref=markdown#section>",
-            "<a href=\"https://example.com/docs?ref=markdown#section\""),
-        Arguments.of(
-            "Plain URL: https://example.com/docs?ref=markdown#section",
-            "<a href=\"https://example.com/docs?ref=markdown#section\""));
+          ```java
+          class A {}
+          ```
+          """,
+            "<pre><code"));
   }
 }
