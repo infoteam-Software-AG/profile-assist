@@ -3,7 +3,6 @@ package de.infoteam.profile_assist.domain.entity;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-
 import lombok.Data;
 
 @Data
