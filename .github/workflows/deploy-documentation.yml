@@ -21,6 +21,10 @@ jobs:
         with:
           java-version: 21
           distribution: 'zulu' # Alternative distribution options are available
+      - name: Build Documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mvn -B -PgenerateDocs verify
       - name: Deploy Github Pages
         uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
         with:
