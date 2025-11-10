@@ -83,21 +83,52 @@ Profile Assist is a Java-based project that provides AI-supported assistance for
 - Internal tools: Sharepoint/Markdown for collaborative editing
 - Code and documentation standards: https://canvas.arc42.org/[Arc-42 Canvas] -> Architectural decisions must be documented
 
-== Solution strategy
+== Solution Strategy
 
-- Microarchitecture based on hexagonal architecture (along DDD principles) +
-  https://www.youtube.com/watch?v=cPH5AiqLQTo[Video explaining Hexagonal Architecture with Spring Boot]
 - Best practices and coding guidelines (e.g., no two capital letters in a row, meaningful identifiers)
 - Modularization and loose coupling through use case-driven services and clearly defined domain interfaces
 - Test first and review process (multi-stage, approval required)
 - Password and secrets handling via environment variables
 
+=== Micro-Architecture
+
+To address the need for clear separation between business logic and external concerns, we adopt the hexagonal architecture (also known as "Ports and Adapters" pattern) as our fundamental solution strategy. This architecture ensures that core domain logic is isolated from technical details such as user interfaces, databases, messaging, and other external systems. By organizing the application around a central domain model with well-defined ports (interfaces) for interaction, and adapters that handle communication with the outside world, we achieve several strategic goals:
+
+* *Flexibility*: The decoupling of business logic and technical adapters allows for straightforward substitution or addition of external systems (e.g., switching from REST to messaging, or from one database technology to another) without impacting the core domain code.
+* *Testability*: Business logic can be tested in isolation by providing in-memory or mock adapters, fostering a robust and maintainable test strategy.
+* *Maintainability*: Clarity of boundaries supports code maintenance, modular evolution, and reduces side-effects during system changes.
+* *Adaptability*: Adapters can be extended for new protocols or integrations with minimal risk, supporting system growth and future requirements.
+
+In summary, the hexagonal architecture guides our solution strategy by providing a resilient, modular, and evolvable foundation for our system. All dependencies flow inwards to the domain model, with application logic shielded from technology-specific changes by the use of abstract ports and concrete adapters, consistent with the principles of sustainable enterprise software architecture.​
+
+See also: https://www.youtube.com/watch?v=cPH5AiqLQTo[Video explaining Hexagonal Architecture with Spring Boot]
+
 == Building block view
 
-- Domain layer: entities, value objects, domain services
-- Application layer: use case services, process control
-- Adapters/ports: REST API (OpenAI integration if necessary), Markdown export, onboarding interfaces
-- Infrastructure: Test data management, logging, external interfaces
+=== Package Structure
+
+The codebase uses a package structure designed to emphasize domain concepts, integration boundaries, and interface technologies, supporting a clear, maintainable, and evolvable system architecture. The static package organization is as follows:
+
+* `de.infoteam.profile_assist`
+** `integration`
+*** Contains service-global or framework-specific integration utilities, such as centralized configuration objects.
+** `domain`
+*** `control`: Implements the application's use cases as small, single-purpose classes or services. Each control structure represents an independent business process, enhancing modularity and testability by adhering to the single responsibility principle. This use-case oriented approach helps to achieve a so-called "screaming architecture"—the structure and naming of our control classes make the business capabilities of the system immediately obvious, both to developers and stakeholders.
+*** `entity`: Contains domain model entities and aggregates.
+
+** `port`
+
+*** `llm`
+**** `integration` (optional): Integration adapters for LLM-specific functionality.
+**** `control`: LLM use cases and orchestration logic, organized in line with domain-centric, use-case granularity.
+**** `entity`: LLM domain-specific structures.
+
+*** `rest`
+**** `integration` (optional): REST adapters and integration code, e.g., Spring Security setup for access control.
+**** `control`: REST interface logic, with each controller mapped to a distinct business use case for clarity and separation.
+**** `entity`: Data transfer and resource representation for REST interfaces.
+
+By adhering to use-case based control classes and emphasizing domain-driven terminology and boundaries, this structure exemplifies "screaming architecture," where the organization of application code makes the system’s core domain and primary use cases explicit at a glance. This improves understanding, onboarding, maintenance, and architectural sustainability.
 
 == Runtime view
 
