@@ -3,10 +3,6 @@ package de.infoteam.profile_assist.common.markdown;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.vladsch.flexmark.ext.autolink.AutolinkExtension;
-import com.vladsch.flexmark.ext.gfm.strikethrough.StrikethroughExtension;
-import com.vladsch.flexmark.ext.gfm.tasklist.TaskListExtension;
-import com.vladsch.flexmark.ext.tables.TablesExtension;
 import com.vladsch.flexmark.ext.yaml.front.matter.YamlFrontMatterBlock;
 import com.vladsch.flexmark.ext.yaml.front.matter.YamlFrontMatterExtension;
 import com.vladsch.flexmark.html.HtmlRenderer;
@@ -39,17 +35,7 @@ public class FlexmarkMarkdownService implements MarkdownService {
   }
 
   private @NotNull MutableDataSet getFlexMarkdownOptions() {
-    return new MutableDataSet()
-        .set(
-            Parser.EXTENSIONS,
-            List.of(
-                TablesExtension.create(),
-                AutolinkExtension.create(),
-                YamlFrontMatterExtension.create(),
-                TaskListExtension.create(),
-                StrikethroughExtension.create()))
-        .set(TablesExtension.WITH_CAPTION, false)
-        .set(TablesExtension.APPEND_MISSING_COLUMNS, true);
+    return new MutableDataSet().set(Parser.EXTENSIONS, List.of(YamlFrontMatterExtension.create()));
   }
 
   public String renderToHtml(String markdown) {
@@ -58,10 +44,24 @@ public class FlexmarkMarkdownService implements MarkdownService {
 
     Safelist safelist =
         Safelist.relaxed()
-            .addTags("table", "thead", "tbody", "tr", "th", "td", "del", "input", "label")
+            .addTags(
+                "p",
+                "h1",
+                "h2",
+                "h3",
+                "h4",
+                "h5",
+                "h6",
+                "ul",
+                "ol",
+                "li",
+                "blockquote",
+                "pre",
+                "code",
+                "em",
+                "strong",
+                "a")
             .addAttributes("a", "href", "title", "rel", "target")
-            .addAttributes("table", "class")
-            .addAttributes("input", "type", "checked", "disabled")
             .addProtocols("a", "href", "http", "https", "mailto");
 
     return Jsoup.clean(unsafeHtml, safelist);
