@@ -1,4 +1,4 @@
-package de.infoteam.profile_assist.application.domain.entity;
+package de.infoteam.profile_assist.domain.entity;
 
 import java.util.List;
 import lombok.Data;
