@@ -1,0 +1,20 @@
+name: Deploy Documentation
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mvn -B -PgenerateDocs verify
+      - name: Deploy documentation
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
