@@ -37,6 +37,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B -Ppipeline verify
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs
+          path: ./target/docs
   deploy-github-pages:
     permissions:
       contents: write
@@ -44,6 +49,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Download documentation artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: docs
+          path: ./target/docs
       - name: Deploy Github Pages on main
         if: github.ref == 'refs/heads/main' # ensure the documentation is only deployed on main
         uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
