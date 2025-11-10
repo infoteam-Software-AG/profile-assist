@@ -1,19 +1,18 @@
 name: Github Pages
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Build and analyze"]
+    types:
+      - completed
 jobs:
   deploy:
-    needs: Build_and_analyze
+    if: >
+      ${{ github.event.workflow_run.conclusion == 'success' &&
+          github.event.workflow_run.head_branch == 'main' }}
     permissions:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-
       - name: Deploy Github Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
