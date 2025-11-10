@@ -7,7 +7,13 @@
 == Storing the Bids
 The data to be stored is described in the link:bid.adoc[UML]. The test data based on this model should be located in our test package at `src/test/resources/bids/`
 
-include::../../_includes/concept/bid-folder-structure.adoc[Bid folder Structure]
+[plantuml,format=png]
+----
+include::../../_includes/concept/bid-folder-structure.puml[Bid folder Structure]
+----
 
 == UML
-include::../../_includes/concept/bid-uml.adoc[Bid UML]
+[plantuml,format=png]
+----
+include::../../_includes/concept/bid-uml.puml[Bid UML]
+----

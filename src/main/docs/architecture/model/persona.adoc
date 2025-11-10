@@ -15,9 +15,15 @@ The concept behind personas is to create detailed, fictional representations of 
 
 == Storing the Personas
 The data to be stored is described in the link:persona.adoc[UML]. The test data based on this model should be located in our test folder at `src/test/resources/personas/`. The structure of the Persona folder is illustrated in the graphic below, where you can see that each Persona has its own folder.
-include::../../_includes/concept/persona-folder-structure.adoc[Persona Folder Structure]
-
+[plantuml,format=png]
+----
+include::../../_includes/concept/persona-folder-structure.puml[Persona Folder Structure]
+----
 Later, we can add a README file to describe the characteristics of the personas.
 
 == UML
-include::../../_includes/concept/persona-uml.adoc[Persona UML]
+
+[plantuml,format=png]
+----
+include::../../_includes/concept/persona-uml.puml[Persona UML]
+----
