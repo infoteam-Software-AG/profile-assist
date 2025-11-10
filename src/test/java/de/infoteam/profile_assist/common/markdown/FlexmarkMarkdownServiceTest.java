@@ -91,11 +91,13 @@ class FlexmarkMarkdownServiceTest {
         Arguments.of("[Click me](javascript:alert('XSS!'))", "javascript:"),
         Arguments.of("~~strike~~", "<del>"),
         Arguments.of("- [x] done", "<input"),
-        Arguments.of("""
+        Arguments.of(
+            """
           | A | B |
           |---|---|
           | A1| B1|
-          """, "<table>"),
+          """,
+            "<table>"),
         Arguments.of("Bare URL: https://example.com", "<a href=\"https://example.com\""),
         Arguments.of("<img src='x' onerror='alert(1)'>", "onerror"));
   }
