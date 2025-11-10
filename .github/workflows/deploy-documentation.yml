@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   deploy:
-    needs: Build and analyze
+    needs: Build_and_analyze
     permissions:
       contents: write
     runs-on: ubuntu-latest
