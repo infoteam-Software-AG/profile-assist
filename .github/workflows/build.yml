@@ -37,3 +37,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B -Ppipeline verify
+      - name: Deploy Github Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/docs
