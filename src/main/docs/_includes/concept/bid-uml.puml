@@ -1,0 +1,12 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam groupInheritance 2
+left to right direction
+
+class Bid{
+    - id: UUID
+    - description: String
+    - mandatorySkills: List<String>
+    - optionalSkills: List<String>
+}
+@enduml
