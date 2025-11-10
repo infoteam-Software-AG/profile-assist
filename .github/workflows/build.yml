@@ -48,6 +48,7 @@ jobs:
     name: Deploy Github pages
     needs: build
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' # ensure the documentation is only deployed on main
     steps:
       - name: Download documentation artifact
         uses: actions/download-artifact@v4
@@ -55,7 +56,6 @@ jobs:
           name: docs
           path: ./target/docs
       - name: Deploy Github Pages on main
-        if: github.ref == 'refs/heads/main' # ensure the documentation is only deployed on main
         uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
