@@ -1,0 +1,5 @@
+@startfiles
+/src/test/resources/bids/bid1.yaml
+/src/test/resources/bids/bid2.yaml
+/src/test/resources/bids/bid3.yaml
+@endfiles
