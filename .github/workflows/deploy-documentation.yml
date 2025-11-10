@@ -1,22 +1,23 @@
 name: Github Pages
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["SonarQube"]
+    types:
+      - completed
 jobs:
   deploy:
+    if: >
+      ${{ github.event.workflow_run.conclusion == 'success' &&
+          github.event.workflow_run.head_branch == 'main' }}
     permissions:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Download documentation artifact
+        uses: actions/download-artifact@v4
         with:
-          fetch-depth: 0
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
-        with:
-          java-version: 21
-          distribution: 'zulu' # Alternative distribution options are available
+          name: docs
+          path: target/docs
       - name: Deploy Github Pages
         uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
         with:
