@@ -107,7 +107,7 @@
         <!-- ***** end: other dependencies ***** -->
 
         <!-- ***** start: flexmark dependencies ***** -->
-        <!-- core + metadata header extension -->
+        <!-- core + metadata header extension: https://github.com/vsch/flexmark-java/wiki/Extensions#yaml-front-matter -->
         <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark</artifactId>
