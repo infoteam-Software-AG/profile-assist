@@ -1,4 +1,4 @@
-package de.infoteam.profile_assist.application.domain;
+package de.infoteam.profile_assist.application.domain.entity;
 
 import java.util.Date;
 import java.util.List;
