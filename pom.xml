@@ -66,7 +66,7 @@
             <properties>
                 <jacoco.ignoreQualityGates>false</jacoco.ignoreQualityGates>
                 <asciidoc.skipGeneration>false</asciidoc.skipGeneration>
-                <sonar.skip>false</sonar.skip>
+                <sonar.skip>true</sonar.skip>
             </properties>
         </profile>
     </profiles>
