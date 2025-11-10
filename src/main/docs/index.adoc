@@ -17,11 +17,3 @@ Describes the overall architecture and principles for the software
 
 === xref:testconcept.adoc[Test concept]
 Concept and requirements for testing the software.
-
-
-
-
----
-Test diagram to show Asciidoc intergration works
-
-include::_includes/test.puml[graphic for testing purposes]
