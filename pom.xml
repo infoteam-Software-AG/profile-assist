@@ -320,7 +320,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <configuration>
                         <argLine>
-                            @{surefireArgLine}
+                            ${surefireArgLine}
                             -javaagent:${settings.localRepository}/org/mockito/mockito-core/${mockito.version}/mockito-core-${mockito.version}.jar
                         </argLine>
                     </configuration>
@@ -338,7 +338,8 @@
                             </goals>
                             <configuration>
                                 <argLine>
-                                    @{failsafeArgLine}
+
+                                    ${failsafeArgLine}
                                     -javaagent:${settings.localRepository}/org/mockito/mockito-core/${mockito.version}/mockito-core-${mockito.version}.jar
                                 </argLine>
                             </configuration>
