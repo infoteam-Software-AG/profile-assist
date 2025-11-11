@@ -1,4 +1,4 @@
-name: SonarQube
+name: SonarQube and Github Pages
 on:
   push:
     branches:
