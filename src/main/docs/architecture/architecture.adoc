@@ -130,6 +130,10 @@ The codebase uses a package structure designed to emphasize domain concepts, int
 
 By adhering to use-case based control classes and emphasizing domain-driven terminology and boundaries, this structure exemplifies "screaming architecture," where the organization of application code makes the system’s core domain and primary use cases explicit at a glance. This improves understanding, onboarding, maintenance, and architectural sustainability.
 
+=== File Structure
+Personas are stored in JSON format.
+It should be equal to the Model structure of the persona information.
+
 == Runtime view
 
 - Profile upload and analysis (onboarding process)
