@@ -1,4 +1,4 @@
-name: SonarQube
+name: Build, Analyse and Deploy Docs
 on:
   push:
     branches:
