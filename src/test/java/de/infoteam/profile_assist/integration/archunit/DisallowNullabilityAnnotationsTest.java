@@ -1,0 +1,53 @@
+package de.infoteam.profile_assist.integration.archunit;
+
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
+
+import com.tngtech.archunit.core.importer.ImportOption;
+import com.tngtech.archunit.junit.AnalyzeClasses;
+import com.tngtech.archunit.junit.ArchTest;
+import com.tngtech.archunit.lang.ArchRule;
+
+@AnalyzeClasses(
+    packages = "de.infoteam.profile_assist",
+    importOptions = {ImportOption.DoNotIncludeTests.class})
+public class DisallowNullabilityAnnotationsTest {
+  @ArchTest
+  static final ArchRule noNullabilityAnnotationsOtherThanJSpecify =
+      noClasses()
+          .should()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("lombok.NonNull")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("org.jetbrains.annotations.NotNull")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("org.jetbrains.annotations.Nullable")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("javax.validation.constraints.NotNull")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("jakarta.validation.constraints.NotNull")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("javax.annotation.Nonnull")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("javax.annotation.Nullable")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("jakarta.annotation.Nonnull")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("jakarta.annotation.Nullable")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("org.springframework.lang.NonNull")
+          .orShould()
+          .dependOnClassesThat()
+          .haveFullyQualifiedName("org.springframework.lang.Nullable")
+          .because("Only JSpecify (@NullMarked / @Nullable) allowed");
+
+  ;
+}
