@@ -48,6 +48,4 @@ public class DisallowNullabilityAnnotationsTest {
           .dependOnClassesThat()
           .haveFullyQualifiedName("org.springframework.lang.Nullable")
           .because("Only JSpecify (@NullMarked / @Nullable) allowed");
-
-  ;
 }
