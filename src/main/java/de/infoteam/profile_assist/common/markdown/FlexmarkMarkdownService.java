@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import org.jetbrains.annotations.NotNull;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Safelist;
 import org.springframework.stereotype.Service;
@@ -34,7 +33,7 @@ public class FlexmarkMarkdownService implements MarkdownService {
     this.renderer = HtmlRenderer.builder(options).build();
   }
 
-  private @NotNull MutableDataSet getFlexMarkdownOptions() {
+  private MutableDataSet getFlexMarkdownOptions() {
     return new MutableDataSet().set(Parser.EXTENSIONS, List.of(YamlFrontMatterExtension.create()));
   }
 
@@ -91,7 +90,7 @@ public class FlexmarkMarkdownService implements MarkdownService {
         .orElseGet(Map::of);
   }
 
-  private @NotNull NodeVisitor getNodeVisitor(StringBuilder yamlBuf) {
+  private NodeVisitor getNodeVisitor(StringBuilder yamlBuf) {
     return new NodeVisitor(
         new VisitHandler<>(
             YamlFrontMatterBlock.class,
