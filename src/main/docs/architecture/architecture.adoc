@@ -132,7 +132,7 @@ By adhering to use-case based control classes and emphasizing domain-driven term
 
 === File Structure
 Personas are stored in JSON format.
-It should be equal to the Model structure of the persona information.
+It should be equal to the Model structure of the persona information so it's readable for a JSON parser.
 
 == Runtime view
 
