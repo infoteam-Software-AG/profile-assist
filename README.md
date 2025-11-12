@@ -3,7 +3,8 @@ _Profile Assist is a Java-based project that provides assistance for matching pr
 
 ## Documentation
 
-The documentation can be found in [`src/main/docs`](src/main/docs/index.adoc).
+The documentation can be found in [`src/main/docs`](src/main/docs/index.adoc) 
+& on the GitHub-Pages instance: [`github.io/profile-assist/`](https://infoteam-software-ag.github.io/profile-assist/)
 
 ## Sonarcloud
 <img src="https://sonarcloud.io/api/project_badges/quality_gate?project=infoteam-Software-AG_profile-assist&branch=main" alt="Quality Gate badge"> 
