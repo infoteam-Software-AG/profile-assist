@@ -172,6 +172,7 @@ This means that unannotated types are treated as non-null unless explicitly anno
 Parameters, return types, and fields that may be null must be annotated with `@Nullable`.
 
 Furthermore, we have decided that we will not use nullness annotations from other sources (e.g. JetBrains).
+
 ArchUnit tests should enforce these rules to ensure compliance and maintain consistency.
 
 == Architecture decisions
