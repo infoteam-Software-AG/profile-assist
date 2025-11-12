@@ -32,6 +32,7 @@
         <jacoco.version>0.8.14</jacoco.version>
         <failsafe.version>3.5.3</failsafe.version>
         <spring-jdbc.version>6.2.12</spring-jdbc.version>
+        <jspecify.version>1.0.0</jspecify.version>
         <!-- """"" end: version properties """"" -->
 
         <asciidoc.outputDirectory>${project.basedir}/target/docs</asciidoc.outputDirectory>
@@ -100,6 +101,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jspecify</groupId>
+            <artifactId>jspecify</artifactId>
+            <version>${jspecify.version}</version>
         </dependency>
         <!-- ***** end: other dependencies ***** -->
 
