@@ -1,0 +1,37 @@
+{
+  "id": "123e4567-e89b-12d3-a456-426614174000",
+  "jobTitle": "Software Engineer",
+  "skills": [
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Flutter",
+    "Dart"
+  ],
+  "certificates": [
+    "Certificate A",
+    "Certificate B",
+    "Certificate C"
+  ],
+  "projectHistory": [
+    {
+      "name": "E-commerce Platform",
+      "description": "Developed a web application for e-commerce.",
+      "technologies": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ]
+    },
+    {
+      "name": "Fitness Tracker App",
+      "description": "Created a mobile application for fitness tracking.",
+      "technologies": [
+        "Flutter",
+        "Dart"
+      ]
+    }
+  ],
+  "startingDate": "2021-01-15T09:00:00.000+00:00",
+  "lastUpdate": "2023-10-01T12:00:00.000+00:00"
+}
