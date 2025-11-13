@@ -1,9 +1,6 @@
 package de.infoteam.profile_assist.domain.control;
 
 import de.infoteam.profile_assist.domain.entity.Persona;
-import de.infoteam.profile_assist.port.llm.control.PromptForPersonaOptimizationPort;
-import de.infoteam.profile_assist.port.llm.control.PromptForSimpleQuestionPort;
-import de.infoteam.profile_assist.port.llm.control.PromptForTestPersonaPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
