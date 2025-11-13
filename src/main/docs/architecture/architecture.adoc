@@ -5,18 +5,22 @@
 
 == Introduction and Objectives
 
-Profile Assist is a Java-based project that provides AI-supported assistance for matching profiles with job postings and adapting profiles accordingly. The goal is to develop an open, maintainable, and testable software solution that combines modern Java technologies and AI components.
+Profile Assist is a Java-based project that provides AI-supported assistance for matching profiles with job postings and adapting profiles accordingly.
+The goal is to develop an open, maintainable, and testable software solution that combines modern Java technologies and AI components.
 
 === Background
+
 - Developed as an internal open-source project by a group of developers.
 - Focus on the use of AI to create and test synthetic test data, use of personas such as “full-stack developer,” “DevOps engineer,” with suitable and unsuitable matches, etc.
 - The project is open to all interested developers (including non-Java natives) on a voluntary basis.
 
 === Project goals
+
 - Creation of an AI-based assistance system to support profile creation and testing.
 - Promotion of best practices in architecture, coding, and review processes within the developer group.
 
 === Quality goals
+
 - High test coverage (80% branch coverage, including component integration tests).
 - Readable, maintainable, and standards-compliant code (in accordance with code guidelines and language rules).
 - Secure handling of data (synthetic test data, no real data without review).
@@ -56,7 +60,6 @@ Profile Assist is a Java-based project that provides AI-supported assistance for
 |developer documentation, architectureal guidance
 |===
 
-
 == Boundary conditions
 
 - Project language: English (code and documentation)
@@ -75,10 +78,12 @@ Profile Assist is a Java-based project that provides AI-supported assistance for
 == Context delimitation
 
 === Technical context
+
 - Input: Synthetic data, user personas, AI-based analysis tools
 - Output: Markdown profiles, review approvals, tickets, documentation
 
 === Technical context
+
 - External services: OpenAI API or comparable
 - Internal tools: Sharepoint/Markdown for collaborative editing
 - Code and documentation standards: https://canvas.arc42.org/[Arc-42 Canvas] -> Architectural decisions must be documented
@@ -92,14 +97,17 @@ Profile Assist is a Java-based project that provides AI-supported assistance for
 
 === Micro-Architecture
 
-To address the need for clear separation between business logic and external concerns, we adopt the hexagonal architecture (also known as "Ports and Adapters" pattern) as our fundamental solution strategy. This architecture ensures that core domain logic is isolated from technical details such as user interfaces, databases, messaging, and other external systems. By organizing the application around a central domain model with well-defined ports (interfaces) for interaction, and adapters that handle communication with the outside world, we achieve several strategic goals:
+To address the need for clear separation between business logic and external concerns, we adopt the hexagonal architecture (also known as "Ports and Adapters" pattern) as our fundamental solution strategy.
+This architecture ensures that core domain logic is isolated from technical details such as user interfaces, databases, messaging, and other external systems.
+By organizing the application around a central domain model with well-defined ports (interfaces) for interaction, and adapters that handle communication with the outside world, we achieve several strategic goals:
 
 * *Flexibility*: The decoupling of business logic and technical adapters allows for straightforward substitution or addition of external systems (e.g., switching from REST to messaging, or from one database technology to another) without impacting the core domain code.
 * *Testability*: Business logic can be tested in isolation by providing in-memory or mock adapters, fostering a robust and maintainable test strategy.
 * *Maintainability*: Clarity of boundaries supports code maintenance, modular evolution, and reduces side-effects during system changes.
 * *Adaptability*: Adapters can be extended for new protocols or integrations with minimal risk, supporting system growth and future requirements.
 
-In summary, the hexagonal architecture guides our solution strategy by providing a resilient, modular, and evolvable foundation for our system. All dependencies flow inwards to the domain model, with application logic shielded from technology-specific changes by the use of abstract ports and concrete adapters, consistent with the principles of sustainable enterprise software architecture.​
+In summary, the hexagonal architecture guides our solution strategy by providing a resilient, modular, and evolvable foundation for our system.
+All dependencies flow inwards to the domain model, with application logic shielded from technology-specific changes by the use of abstract ports and concrete adapters, consistent with the principles of sustainable enterprise software architecture.​
 
 See also: https://www.youtube.com/watch?v=cPH5AiqLQTo[Video explaining Hexagonal Architecture with Spring Boot]
 
@@ -107,13 +115,16 @@ See also: https://www.youtube.com/watch?v=cPH5AiqLQTo[Video explaining Hexagonal
 
 === Package Structure
 
-The codebase uses a package structure designed to emphasize domain concepts, integration boundaries, and interface technologies, supporting a clear, maintainable, and evolvable system architecture. The static package organization is as follows:
+The codebase uses a package structure designed to emphasize domain concepts, integration boundaries, and interface technologies, supporting a clear, maintainable, and evolvable system architecture.
+The static package organization is as follows:
 
 * `de.infoteam.profile_assist`
 ** `integration`
 *** Contains service-global or framework-specific integration utilities, such as centralized configuration objects.
 ** `domain`
-*** `control`: Implements the application's use cases as small, single-purpose classes or services. Each control structure represents an independent business process, enhancing modularity and testability by adhering to the single responsibility principle. This use-case oriented approach helps to achieve a so-called "screaming architecture"—the structure and naming of our control classes make the business capabilities of the system immediately obvious, both to developers and stakeholders.
+*** `control`: Implements the application's use cases as small, single-purpose classes or services.
+Each control structure represents an independent business process, enhancing modularity and testability by adhering to the single responsibility principle.
+This use-case oriented approach helps to achieve a so-called "screaming architecture"—the structure and naming of our control classes make the business capabilities of the system immediately obvious, both to developers and stakeholders.
 *** `entity`: Contains domain model entities and aggregates.
 
 ** `port`
@@ -128,7 +139,8 @@ The codebase uses a package structure designed to emphasize domain concepts, int
 **** `control`: REST interface logic, with each controller mapped to a distinct business use case for clarity and separation.
 **** `entity`: Data transfer and resource representation for REST interfaces.
 
-By adhering to use-case based control classes and emphasizing domain-driven terminology and boundaries, this structure exemplifies "screaming architecture," where the organization of application code makes the system’s core domain and primary use cases explicit at a glance. This improves understanding, onboarding, maintenance, and architectural sustainability.
+By adhering to use-case based control classes and emphasizing domain-driven terminology and boundaries, this structure exemplifies "screaming architecture," where the organization of application code makes the system’s core domain and primary use cases explicit at a glance.
+This improves understanding, onboarding, maintenance, and architectural sustainability.
 
 === File Structure
 Personas are stored in JSON format.
@@ -158,6 +170,20 @@ This is documented here: `src/main/docs/_includes/concept/persona-folder-structu
 - Nullability and DDD conventions
 - Security concept (handling secrets)
 
+=== Nullability and DDD conventions
+
+To reduce NullPointerExceptions, we annotate Java code with link:https://jspecify.dev/[JSpecify] nullness annotations.
+This ensures that the nullability of types is clear to both developers and tools,
+improving code safety, readability, and consistency across the system.
+
+We have decided, that all packages should be declared as `@NullMarked` by default.
+This means that unannotated types are treated as non-null unless explicitly annotated with `@Nullable`.
+Parameters, return types, and fields that may be null must be annotated with `@Nullable`.
+
+Furthermore, we have decided that we will not use nullness annotations from other sources (e.g. JetBrains).
+
+ArchUnit tests should enforce these rules to ensure compliance and maintain consistency.
+
 == Architecture decisions
 
 - Spring Boot as the main framework
@@ -178,9 +204,12 @@ This is documented here: `src/main/docs/_includes/concept/persona-folder-structu
 - Openness of the project requires careful reviews
 
 == Glossary
-
-- Persona: Template for typical user roles such as full stack, DevOps, etc.
-- Approval process: Multi-stage review, always with approval from a second person
-- Onboarding: Assistance for new developers, e.g., IDE setup
+|===
+|Term|Description
+|Persona| Template for typical user roles such as full stack, DevOps, etc.
+|CallForBids / Call for Bids| A formal public notice inviting contractors to submit sealed bids.
+|Approval process| Multi-stage review, always with approval from a second person
+|Onboarding| Assistance for new developers, e.g., IDE setup
+|===
 
 // (Chapter 13 Experience reports omitted as none are available yet)
