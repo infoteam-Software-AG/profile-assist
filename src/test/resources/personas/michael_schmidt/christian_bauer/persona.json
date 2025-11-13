@@ -1,0 +1,36 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440600",
+  "jobTitle": "Backend Developer",
+  "skills": [
+    "Java",
+    "Python",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
+    "GraphQL",
+    "REST APIs"
+  ],
+  "certificates": [
+    "Oracle Certified Associate Java Programmer",
+    "MongoDB Certified Associate"
+  ],
+  "projectHistory": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440601",
+      "name": "API Gateway Entwicklung",
+      "startDate": "2022-02-01",
+      "endDate": "2024-01-15",
+      "description": "Entwicklung eines skalierbaren API Gateways mit GraphQL und Node.js"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440602",
+      "name": "Datenbankoptimierung",
+      "startDate": "2020-04-01",
+      "endDate": "2022-01-31",
+      "description": "Optimierung und Migration von Legacy PostgreSQL Datenbanken"
+    }
+  ],
+  "startingDate": "2026-03-15",
+  "lastUpdate": "2025-01-13"
+}
+

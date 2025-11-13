@@ -1,0 +1,36 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440400",
+  "jobTitle": "QA Engineer",
+  "skills": [
+    "Test Automation",
+    "Selenium",
+    "JUnit",
+    "Cucumber",
+    "API Testing",
+    "Performance Testing",
+    "Java"
+  ],
+  "certificates": [
+    "ISTQB Certified Tester",
+    "Agile Tester Certification"
+  ],
+  "projectHistory": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440401",
+      "name": "Automatisiertes Testsuite",
+      "startDate": "2020-08-01",
+      "endDate": "2023-07-31",
+      "description": "Aufbau einer umfassenden Testsuite mit Selenium und Cucumber für Web-Apps"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440402",
+      "name": "Performance Testing",
+      "startDate": "2019-05-15",
+      "endDate": "2020-07-31",
+      "description": "Durchführung von Last- und Performancetests mit Apache JMeter"
+    }
+  ],
+  "startingDate": "2026-02-20",
+  "lastUpdate": "2025-01-13"
+}
+
