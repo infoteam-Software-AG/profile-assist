@@ -463,6 +463,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_building_block_view">5. Building block view</a>
 <ul class="sectlevel2">
 <li><a href="#_package_structure">5.1. Package Structure</a></li>
+<li><a href="#_file_structure">5.2. File Structure</a></li>
 </ul>
 </li>
 <li><a href="#_runtime_view">6. Runtime view</a></li>
@@ -814,6 +815,21 @@ This use-case oriented approach helps to achieve a so-called "screaming architec
 This improves understanding, onboarding, maintenance, and architectural sustainability.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_file_structure">5.2. File Structure</h3>
+<div class="paragraph">
+<p>Personas are stored in JSON format.</p>
+</div>
+<div class="paragraph">
+<p>It should be equal to the Model structure of the persona information so it&#8217;s readable for a JSON parser.</p>
+</div>
+<div class="paragraph">
+<p>Additional Files/Certificates can be stored in the same directory as the JSON file.</p>
+</div>
+<div class="paragraph">
+<p>This is documented here: <code>src/main/docs/_includes/concept/persona-folder-structure.puml</code></p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -985,7 +1001,7 @@ Parameters, return types, and fields that may be null must be annotated with <co
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-11-13 10:09:38 UTC
+Last updated 2025-11-13 13:12:42 UTC
 </div>
 </div>
 </body>
