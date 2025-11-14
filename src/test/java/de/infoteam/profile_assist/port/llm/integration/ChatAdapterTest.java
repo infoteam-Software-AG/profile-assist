@@ -4,8 +4,8 @@ import static org.mockito.Answers.RETURNS_DEEP_STUBS;
 
 import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
+import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -19,16 +19,12 @@ class ChatAdapterTest {
 
   private ChatAdapter chatAdapter;
 
-  private ChatClient chatClient;
-
   private Persona unoptPersona = new Persona();
-
-  private ChatClient.Builder chatClientBuilderMock;
 
   @BeforeEach
   void beforeEach() {
-    chatClientBuilderMock = Mockito.mock(ChatClient.Builder.class);
-    chatClient = Mockito.mock(ChatClient.class, RETURNS_DEEP_STUBS);
+    ChatClient.Builder chatClientBuilderMock = Mockito.mock(ChatClient.Builder.class);
+    ChatClient chatClient = Mockito.mock(ChatClient.class, RETURNS_DEEP_STUBS);
 
     Mockito.when(chatClientBuilderMock.build()).thenReturn(chatClient);
 
@@ -53,8 +49,8 @@ class ChatAdapterTest {
     unoptPersona.setSkills(techStack);
     unoptPersona.setCertificates(certificates);
     unoptPersona.setProjectHistory(projects);
-    unoptPersona.setStartingDate(new Date(2001, Calendar.SEPTEMBER, 11));
-    unoptPersona.setLastUpdate(new Date(2025, Calendar.SEPTEMBER, 9));
+    unoptPersona.setStartingDate(Date.from(Instant.parse("11.09.2001")));
+    unoptPersona.setLastUpdate(Date.from(Instant.parse("30.09.2001")));
 
     Mockito.when(
             chatClient
@@ -97,8 +93,8 @@ class ChatAdapterTest {
     unoptPersona.setSkills(techStack);
     unoptPersona.setCertificates(certificates);
     unoptPersona.setProjectHistory(projects);
-    unoptPersona.setStartingDate(new Date(2001, Calendar.SEPTEMBER, 11));
-    unoptPersona.setLastUpdate(new Date(2025, Calendar.SEPTEMBER, 9));
+    unoptPersona.setStartingDate(Date.from(Instant.parse("11.09.2001")));
+    unoptPersona.setLastUpdate(Date.from(Instant.parse("30.09.2001")));
     // action
     Persona optPersona = chatAdapter.promptForPersonaOptimization(unoptPersona);
     // assertion
