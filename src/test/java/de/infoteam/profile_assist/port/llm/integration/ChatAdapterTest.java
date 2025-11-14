@@ -7,12 +7,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 @Slf4j
 class ChatAdapterTest {
@@ -49,8 +45,8 @@ class ChatAdapterTest {
         unoptPersona.setSkills(techStack);
         unoptPersona.setCertificates(certificates);
         unoptPersona.setProjectHistory(projects);
-        unoptPersona.setStartingDate(new Date(2001,9,11));
-        unoptPersona.setLastUpdate(new Date(2025,9,9));
+        unoptPersona.setStartingDate(new Date(2001,Calendar.SEPTEMBER,11));
+        unoptPersona.setLastUpdate(new Date(2025,Calendar.SEPTEMBER,9));
         //action
         Persona optPersona = chatAdapter.promptForPersonaOptimization(unoptPersona);
         //assertion
