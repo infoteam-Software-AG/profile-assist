@@ -142,6 +142,15 @@ This use-case oriented approach helps to achieve a so-called "screaming architec
 By adhering to use-case based control classes and emphasizing domain-driven terminology and boundaries, this structure exemplifies "screaming architecture," where the organization of application code makes the system’s core domain and primary use cases explicit at a glance.
 This improves understanding, onboarding, maintenance, and architectural sustainability.
 
+=== File Structure
+Personas are stored in JSON format.
+
+It should be equal to the Model structure of the persona information so it's readable for a JSON parser.
+
+Additional Files/Certificates can be stored in the same directory as the JSON file.
+
+This is documented here: `src/main/docs/_includes/concept/persona-folder-structure.puml`
+
 == Runtime view
 
 - Profile upload and analysis (onboarding process)
@@ -160,6 +169,20 @@ This improves understanding, onboarding, maintenance, and architectural sustaina
 - Code documentation in Asciidoc (with PlantUml support)
 - Nullability and DDD conventions
 - Security concept (handling secrets)
+
+=== Nullability and DDD conventions
+
+To reduce NullPointerExceptions, we annotate Java code with link:https://jspecify.dev/[JSpecify] nullness annotations.
+This ensures that the nullability of types is clear to both developers and tools,
+improving code safety, readability, and consistency across the system.
+
+We have decided, that all packages should be declared as `@NullMarked` by default.
+This means that unannotated types are treated as non-null unless explicitly annotated with `@Nullable`.
+Parameters, return types, and fields that may be null must be annotated with `@Nullable`.
+
+Furthermore, we have decided that we will not use nullness annotations from other sources (e.g. JetBrains).
+
+ArchUnit tests should enforce these rules to ensure compliance and maintain consistency.
 
 == Architecture decisions
 
