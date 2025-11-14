@@ -1,0 +1,4 @@
+Project details:
+- name:  {name}
+- description: {description}
+- technologies: {technologies}
