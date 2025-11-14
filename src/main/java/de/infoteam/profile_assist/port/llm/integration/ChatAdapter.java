@@ -44,8 +44,6 @@ public class ChatAdapter implements PromptForPersonaOptimizationUseCase {
 
   private PromptTemplate createPersonaOptimizationPromptTemplate() {
     return PromptTemplate.builder()
-        .renderer(
-            StTemplateRenderer.builder().startDelimiterToken('<').endDelimiterToken('>').build())
         .template(
             """
                             Persona details:
