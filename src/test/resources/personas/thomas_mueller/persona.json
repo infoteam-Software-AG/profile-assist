@@ -16,17 +16,11 @@
   ],
   "projectHistory": [
     {
-      "id": "550e8400-e29b-41d4-a716-446655440201",
       "name": "Cloud Migration",
-      "startDate": "2022-01-01",
-      "endDate": "2023-11-30",
       "description": "Migration von On-Premise zu AWS Cloud mit Kubernetes Orchestration"
     },
     {
-      "id": "550e8400-e29b-41d4-a716-446655440202",
       "name": "Infrastructure Automation",
-      "startDate": "2020-09-01",
-      "endDate": "2021-12-31",
       "description": "Automatisierung der gesamten Infrastruktur mit Terraform und Ansible"
     }
   ],

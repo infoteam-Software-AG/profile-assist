@@ -15,17 +15,11 @@
   ],
   "projectHistory": [
     {
-      "id": "550e8400-e29b-41d4-a716-446655440701",
       "name": "Security Audit",
-      "startDate": "2022-06-01",
-      "endDate": "2023-12-31",
       "description": "Umfassender Security Audit und Penetrationstesting für kritische Systeme"
     },
     {
-      "id": "550e8400-e29b-41d4-a716-446655440702",
       "name": "Compliance Implementierung",
-      "startDate": "2020-11-01",
-      "endDate": "2022-05-31",
       "description": "Implementierung von GDPR und ISO 27001 Compliance Anforderungen"
     }
   ],

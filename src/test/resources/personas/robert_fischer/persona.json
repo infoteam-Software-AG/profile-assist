@@ -15,17 +15,11 @@
   ],
   "projectHistory": [
     {
-      "id": "550e8400-e29b-41d4-a716-446655440501",
       "name": "Enterprise System Redesign",
-      "startDate": "2021-09-01",
-      "endDate": "2024-01-31",
       "description": "Architektur-Neuausrichtung eines großen Enterprise Systems zu Microservices"
     },
     {
-      "id": "550e8400-e29b-41d4-a716-446655440502",
       "name": "Digitalisierungsprojekt",
-      "startDate": "2019-01-15",
-      "endDate": "2021-08-31",
       "description": "Gestaltung einer Digitalisierungsstrategie für ein Finanzunternehmen"
     }
   ],

@@ -16,17 +16,11 @@
   ],
   "projectHistory": [
     {
-      "id": "550e8400-e29b-41d4-a716-446655440001",
       "name": "E-Commerce Plattform",
-      "startDate": "2021-01-15",
-      "endDate": "2023-06-30",
       "description": "Entwicklung einer skalierbaren E-Commerce Plattform mit Spring Boot und Microservices"
     },
     {
-      "id": "550e8400-e29b-41d4-a716-446655440002",
       "name": "Datenmigrationsproject",
-      "startDate": "2020-06-01",
-      "endDate": "2021-01-14",
       "description": "Migration von Legacy-Systemen zu modernen Cloud-Infrastrukturen"
     }
   ],
