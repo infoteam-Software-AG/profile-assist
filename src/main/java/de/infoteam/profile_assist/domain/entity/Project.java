@@ -1,11 +1,11 @@
 package de.infoteam.profile_assist.domain.entity;
 
 import java.util.List;
-import lombok.Data;
+import lombok.Builder;
 
-@Data
-public class Project {
-  private String name;
-  private String description;
-  private List<String> technologies;
+@Builder(toBuilder = true)
+public record Project(String name, String description, List<String> technologies)
+    implements BuilderSupport<Project> {
+
+  public static class ProjectBuilder implements BuilderSupport.Builder<Project> {}
 }
