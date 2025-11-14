@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-import org.junit.jupiter.api.Assertions;
+
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -98,6 +99,6 @@ class ChatAdapterTest {
     // action
     Persona optPersona = chatAdapter.promptForPersonaOptimization(unoptPersona);
     // assertion
-    Assertions.assertEquals(unoptPersona, optPersona);
+    Assertions.assertThat(unoptPersona).isEqualTo(optPersona);
   }
 }
