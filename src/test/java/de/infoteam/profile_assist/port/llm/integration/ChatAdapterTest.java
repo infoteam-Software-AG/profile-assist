@@ -24,7 +24,7 @@ class ChatAdapterTest {
 
   @BeforeEach
   void beforeEach() {
-    Builder chatClientBuilderMock = Mockito.mock(ChatClient.Builder.class);
+    Builder chatClientBuilderMock = Mockito.mock(Builder.class);
     ChatClient chatClient = Mockito.mock(ChatClient.class, RETURNS_DEEP_STUBS);
 
     Mockito.when(chatClientBuilderMock.build()).thenReturn(chatClient);
