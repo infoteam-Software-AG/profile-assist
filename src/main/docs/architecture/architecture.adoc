@@ -142,6 +142,15 @@ This use-case oriented approach helps to achieve a so-called "screaming architec
 By adhering to use-case based control classes and emphasizing domain-driven terminology and boundaries, this structure exemplifies "screaming architecture," where the organization of application code makes the system’s core domain and primary use cases explicit at a glance.
 This improves understanding, onboarding, maintenance, and architectural sustainability.
 
+=== File Structure
+Personas are stored in JSON format.
+
+It should be equal to the Model structure of the persona information so it's readable for a JSON parser.
+
+Additional Files/Certificates can be stored in the same directory as the JSON file.
+
+This is documented here: `src/main/docs/_includes/concept/persona-folder-structure.puml`
+
 == Runtime view
 
 - Profile upload and analysis (onboarding process)

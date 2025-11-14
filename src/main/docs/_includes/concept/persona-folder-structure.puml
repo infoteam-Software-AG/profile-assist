@@ -1,8 +1,8 @@
 @startfiles
-/src/test/resources/personas/Jessica/Persona.yaml
-/src/test/resources/personas/Jessica/Project7.yaml
-/src/test/resources/personas/Jessica/Project42.yaml
-/src/test/resources/personas/Jürgen/Persona.yaml
-/src/test/resources/personas/Jürgen/Project1.yaml
-/src/test/resources/personas/Jürgen/Project2.yaml
+/src/test/resources/personas/UUID1/Persona.json
+/src/test/resources/personas/UUID1/Certificate1.pdf
+/src/test/resources/personas/UUID1/Certificate2.pdf
+/src/test/resources/personas/UUID2/Persona.json
+/src/test/resources/personas/UUID2/Certificate1.pdf
+/src/test/resources/personas/UUID2/Certificate2.pdf
 @endfiles
