@@ -1,0 +1,14 @@
+Persona details:
+- id:  {id}
+- Job title: {jobTitle}
+- Skills: {skills}
+- Certificates: {certificates}
+- Project history: {projectHistory}
+- Starting Date: {startingDate}
+- Last Update: {lastUpdate}
+Please provide:
+1. Professionalize the project descriptions, if needed.
+2. Add missing skills from projects to the skills list.
+3. Rename the job title to something meaningful.
+4. Do not remove any information provided.
+5. Set the lastUpdate Date to the current date.

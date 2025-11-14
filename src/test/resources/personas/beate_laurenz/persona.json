@@ -16,7 +16,7 @@
     "Agile"
   ],
   "certificates": [
-    "Java SE 8 Programmer – 06/2017",
+    "Java SE 8 Programmer – -  06/2017",
     "Spring Professional – 09/2019",
     "Kubernetes Administrator – 03/2020",
     "AWS Certified Solutions Architect – 11/2021"
@@ -36,7 +36,7 @@
     },
     {
       "name": "Mobile Banking App für FinTech",
-      "description": "Projektbeschreibung: Entwicklung einer Cross‑Platform Mobile Banking App unter Verwendung von React Native. Das Ziel war, sichere Transaktionen und Echtzeit‑Benachrichtigungen zu ermöglichen. Wir implementierten OAuth2.0 und JWT zur Authentifizierung. Die App unterstützt Push‑Benachrichtigungen über Firebase Cloud Messaging. Integration von Stripe für Zahlungsabwicklung wurde erfolgreich abgeschlossen. Das Projekt lief von 02/2020 bis 05/2021 mit einem sechsköpfigen Team. Wir nutzten Agile Scrum mit zweiwöchigen Sprints. Tests wurden mit Jest und Detox durchgeführt. Durch automatisierte UI‑Tests reduzierten wir Regressionen. Der Kunde konnte die App innerhalb von vier Monaten im App Store veröffentlichen. Nutzerzahlen stiegen im ersten Quartal um 25 %. Der Projektabschluss erfolgte ohne kritische Bugs.",
+      "description": "Projektbeschreibung: Entwicklung einer Cross‑Platform Mobile Banking App unter Verwendung von React Native. Das Ziel war, sichere Transaktionen und Echtzeit‑Benachrichtigungen zu ermöglichen. Wir implementierten OAuth2.0 und JWT zur Authentifizierung. Die App unterstützt Push‑Benachrichtigungen über Firebase Cloud Messaging. Integration von Stripe für Zahlungsabwicklung wurde erfolgreich abgeschlossen. Das Projekt lief von 02/2020 bis 05/2021 mit einem sechsköpfigen Team. Wir nutzten Agile Scrum mit zweiwöchigen Sprints. Tests wurden mit Jest und Detox durchgeführt. Durch automatisierte UI-Tests reduzierten wir Regressionen. Der Kunde konnte die App innerhalb von vier Monaten im App Store veröffentlichen. Nutzerzahlen stiegen im ersten Quartal um 25 %. Der Projektabschluss erfolgte ohne kritische Bugs.",
       "technologies": [
         "React Native",
         "TypeScript",
@@ -61,6 +61,6 @@
       ]
     }
   ],
-  "startingDate": "2018-01-01T00:00:00.000+00:00",
-  "lastUpdate": "2025-11-13T14:24:52.000+00:00"
+  "startingDate": "2018-01-01",
+  "lastUpdate": "2025-11-13"
 }

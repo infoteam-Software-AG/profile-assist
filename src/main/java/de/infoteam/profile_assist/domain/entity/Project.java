@@ -1,11 +1,11 @@
 package de.infoteam.profile_assist.domain.entity;
 
+import java.util.ArrayList;
 import java.util.List;
-import lombok.Data;
+import java.util.Objects;
 
-@Data
-public class Project {
-  private String name;
-  private String description;
-  private List<String> technologies;
+public record Project(String name, String description, List<String> technologies) {
+  public Project {
+    technologies = Objects.requireNonNullElseGet(technologies, ArrayList::new);
+  }
 }
