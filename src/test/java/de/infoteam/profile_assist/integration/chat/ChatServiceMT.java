@@ -7,6 +7,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.infoteam.profile_assist.domain.control.ChatService;
 import de.infoteam.profile_assist.domain.entity.Persona;
 import lombok.extern.slf4j.Slf4j;
+import org.jspecify.annotations.NullMarked;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,17 +22,6 @@ public class ChatServiceMT {
   @Autowired private ObjectMapper objectMapper;
 
   private final Persona unoptimizedPersona = PersonaParser.readPersonaJson();
-
-  @Test
-  public void askForPersonaOptimization_shouldOptimizeTheProfile() throws JsonProcessingException {
-    // Arrange
-    log.info("Unoptimized persona: {}", this.objectMapper.writeValueAsString(unoptimizedPersona));
-
-    // Act
-    Persona optimizedPersona = chatService.askForPersonaOptimization(unoptimizedPersona);
-
-    log.info("Optimized Persona: {}", this.objectMapper.writeValueAsString(optimizedPersona));
-  }
 
   @Test
   public void askForPersonaOptimization_shouldUpdateUpdateTimestamp()

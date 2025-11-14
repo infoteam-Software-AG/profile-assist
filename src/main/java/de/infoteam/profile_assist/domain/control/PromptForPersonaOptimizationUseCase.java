@@ -1,8 +1,8 @@
-package de.infoteam.profile_assist.port.llm.control;
+package de.infoteam.profile_assist.domain.control;
 
 import de.infoteam.profile_assist.domain.entity.Persona;
 
-public interface PromptForPersonaOptimizationPort {
+public interface PromptForPersonaOptimizationUseCase {
 
   Persona promptForPersonaOptimization(Persona originPersona);
 }

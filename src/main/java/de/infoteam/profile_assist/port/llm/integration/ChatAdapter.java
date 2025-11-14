@@ -1,8 +1,8 @@
 package de.infoteam.profile_assist.port.llm.integration;
 
+import de.infoteam.profile_assist.domain.control.PromptForPersonaOptimizationUseCase;
 import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.port.llm.control.DateTimeTools;
-import de.infoteam.profile_assist.port.llm.control.PromptForPersonaOptimizationPort;
 import java.util.Map;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.prompt.PromptTemplate;
@@ -10,7 +10,7 @@ import org.springframework.ai.template.st.StTemplateRenderer;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ChatAdapter implements PromptForPersonaOptimizationPort {
+public class ChatAdapter implements PromptForPersonaOptimizationUseCase {
 
   private final ChatClient chatClient;
 
