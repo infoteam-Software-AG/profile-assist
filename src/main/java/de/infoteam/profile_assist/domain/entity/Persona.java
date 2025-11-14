@@ -4,8 +4,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import lombok.Data;
+import org.jspecify.annotations.NullMarked;
 
 @Data
+@NullMarked
 public class Persona {
 
   private UUID id;
