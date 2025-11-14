@@ -14,6 +14,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.ChatClient.Builder;
 
 class ChatAdapterTest {
 
@@ -23,7 +24,7 @@ class ChatAdapterTest {
 
   @BeforeEach
   void beforeEach() {
-    ChatClient.Builder chatClientBuilderMock = Mockito.mock(ChatClient.Builder.class);
+    Builder chatClientBuilderMock = Mockito.mock(ChatClient.Builder.class);
     ChatClient chatClient = Mockito.mock(ChatClient.class, RETURNS_DEEP_STUBS);
 
     Mockito.when(chatClientBuilderMock.build()).thenReturn(chatClient);
