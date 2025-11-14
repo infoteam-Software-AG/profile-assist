@@ -2,7 +2,7 @@ package de.infoteam.profile_assist.port.llm.control;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import org.junit.jupiter.api.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class DateTimeToolsTest {
@@ -15,6 +15,6 @@ class DateTimeToolsTest {
     // action
     String toolOutputTime = dateTimeTools.getCurrentDateTime();
     // assertion
-    Assertions.assertEquals(localTime, toolOutputTime);
+    Assertions.assertThat(localTime).isEqualTo(toolOutputTime);
   }
 }

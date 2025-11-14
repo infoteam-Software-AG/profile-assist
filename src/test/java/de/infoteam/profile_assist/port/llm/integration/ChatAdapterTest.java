@@ -49,8 +49,8 @@ class ChatAdapterTest {
     unoptPersona.setSkills(techStack);
     unoptPersona.setCertificates(certificates);
     unoptPersona.setProjectHistory(projects);
-    unoptPersona.setStartingDate(Date.from(Instant.parse("11.09.2001")));
-    unoptPersona.setLastUpdate(Date.from(Instant.parse("30.09.2001")));
+    unoptPersona.setStartingDate(Date.from(Instant.parse("2001-09-11T00:00:00Z")));
+    unoptPersona.setLastUpdate(Date.from(Instant.parse("2001-09-30T00:00:00Z")));
 
     Mockito.when(
             chatClient
@@ -93,8 +93,8 @@ class ChatAdapterTest {
     unoptPersona.setSkills(techStack);
     unoptPersona.setCertificates(certificates);
     unoptPersona.setProjectHistory(projects);
-    unoptPersona.setStartingDate(Date.from(Instant.parse("11.09.2001")));
-    unoptPersona.setLastUpdate(Date.from(Instant.parse("30.09.2001")));
+    unoptPersona.setStartingDate(Date.from(Instant.parse("2001-09-11T00:00:00Z")));
+    unoptPersona.setLastUpdate(Date.from(Instant.parse("2001-09-30T00:00:00Z")));
     // action
     Persona optPersona = chatAdapter.promptForPersonaOptimization(unoptPersona);
     // assertion
