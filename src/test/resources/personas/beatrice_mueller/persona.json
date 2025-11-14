@@ -1,0 +1,30 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440900",
+  "jobTitle": "Machine Learning Engineer",
+  "skills": [
+    "Python",
+    "TensorFlow",
+    "PyTorch",
+    "Data Science",
+    "NLP",
+    "Computer Vision",
+    "MLOps"
+  ],
+  "certificates": [
+    "TensorFlow Developer Certified",
+    "AWS Machine Learning Specialist"
+  ],
+  "projectHistory": [
+    {
+      "name": "NLP Pipeline",
+      "description": "Entwicklung einer NLP Pipeline für Dokumentenklassifizierung mit BERT"
+    },
+    {
+      "name": "Computer Vision System",
+      "description": "Implementierung eines Computer Vision Systems zur Bildanalyse und Objekterkennung"
+    }
+  ],
+  "startingDate": "2026-03-01",
+  "lastUpdate": "2025-01-13"
+}
+

@@ -1,0 +1,68 @@
+{
+  "id": "3f0a1c2e-4d5b-7f6a-8c9d-0e1f2a3b4c5d",
+  "jobTitle": "Software Developer",
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "Hibernate",
+    "REST",
+    "Microservices",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "AWS",
+    "Scrum",
+    "Git",
+    "CI/CD"
+  ],
+  "certificates": [
+    "AWS Certified Solutions Architect – Associate 05/2022",
+    "Oracle Certified Professional, Java SE 8 Programmer 07/2021",
+    "Scrum Master Certified 12/2019"
+  ],
+  "projectHistory": [
+    {
+      "name": "Entwicklung einer Microservice-Architektur für ein E-Commerce-Portal",
+      "description": "Von 01/2020 bis 03/2020 leitete ich als Teamlead die Entwicklung einer skalierbaren Microservice-Architektur für ein neues E-Commerce-Portal. Das Projekt zielte darauf ab, die Benutzererfahrung zu verbessern und die Systemperformance zu steigern, indem jede Geschäftsdomäne in eigenständige, isolierte Services verlagert wurde.\n\nWir setzten Java 11 in Verbindung mit Spring Boot und Hibernate ein, um robuste REST‑APIs zu erstellen. Durch die Integration von Docker‑Containern konnten wir die lokale Entwicklung vereinfachen und die Bereitstellung auf Kubernetes‑Clustern optimieren. Zudem wurden End-to-End Tests mit JUnit und MockMvc entwickelt, um die Qualität sicherzustellen.\n\nDas Team bestand aus vier Entwicklern, einem QA-Engineer und einem DevOps-Spezialisten. Wir nutzten GitLab CI/CD für automatisierte Builds, Tests und Deployments. Am Ende des Projekts erreichten wir eine 30 %ige Verbesserung der Ladezeiten und eine 25 %ige Erhöhung der Transaktionsrate.\n\nDer Erfolg wurde durch ein internes Hackathon-Event gefeiert, bei dem weitere Features wie ein Echtzeit-Tracking der Bestellstatus in Echtzeit implementiert wurden.",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Hibernate",
+        "REST",
+        "Docker",
+        "Kubernetes",
+        "PostgreSQL",
+        "GitLab CI/CD"
+      ]
+    },
+    {
+      "name": "Implementierung einer datenbankgestützten Analyseplattform für FinTech",
+      "description": "Im Zeitraum von 06/2020 bis 12/2020 war ich Teil eines fünfköpfigen Teams, das eine Analyseplattform für ein FinTech-Unternehmen entwickelte. Die Plattform sollte komplexe Finanzdaten verarbeiten, analysieren und visualisieren, um Entscheidungsprozesse zu unterstützen.\n\nWir nutzten PostgreSQL als Hauptdatenbank und entwickelten ETL-Pipelines in Java, um Daten aus externen Quellen zu extrahieren, zu transformieren und zu laden. Durch den Einsatz von Spring Batch konnten wir große Datenmengen effizient verarbeiten. Für die Visualisierung implementierten wir ein React‑Frontend, das REST‑Services konsumiert.\n\nEin besonderer Fokus lag auf der Sicherheit: Wir integrierten OAuth 2.0 für die Authentifizierung und Autorisierung. Zusätzlich führten wir regelmäßige Penetrationstests durch, um Schwachstellen zu identifizieren.\n\nDas Projekt zeigte, wie man mit agilen Methoden komplexe Datenprojekte steuert, wobei wir zwei Sprints pro Monat durchführten. Die Plattform wurde innerhalb von 12 Wochen live geschaltet und ermöglicht heute die Analyse von über 5 Mio. Transaktionen pro Tag.",
+      "technologies": [
+        "Java",
+        "Spring Batch",
+        "PostgreSQL",
+        "React",
+        "OAuth 2.0",
+        "REST",
+        "Git"
+      ]
+    },
+    {
+      "name": "Automatisierung des CI/CD-Pipelines mit Kubernetes und Docker",
+      "description": "Von 02/2021 bis 11/2021 arbeitete ich an einem Projekt zur Automatisierung des CI/CD‑Workflows für ein großes SaaS-Unternehmen. Ziel war es, die Bereitstellung von Microservices in Produktions- und Staging-Umgebungen zu beschleunigen und Fehlerquellen zu reduzieren.\n\nWir implementierten Helm-Charts, um Kubernetes-Deployments zu verwalten, und setzten ArgoCD ein, um deklarative Bereitstellungen zu ermöglichen. Docker‑Images wurden mittels Docker‑BuildKit erstellt, wobei Multistage‑Builds genutzt wurden, um schlanke Images zu erhalten.\n\nDas Projekt umfasste sechs Entwickler und drei DevOps-Ingenieure. Wir führten automatisierte Sicherheitsscans mit Trivy durch und nutzten Snyk für die Identifikation von Schwachstellen. Durch diese Maßnahmen konnten wir die Deploy‑Time um 40 % reduzieren und die Fehlerquote um 15 % senken.\n\nZusätzlich entwickelten wir ein Monitoring‑Dashboard in Grafana, das Metriken wie Latenz, Durchsatz und Fehlerraten in Echtzeit anzeigt, was die Reaktionszeiten des Support-Teams deutlich verbesserte.",
+      "technologies": [
+        "Docker",
+        "Kubernetes",
+        "Helm",
+        "ArgoCD",
+        "Trivy",
+        "Snyk",
+        "Grafana",
+        "Git"
+      ]
+    }
+  ],
+  "startingDate": "2020-01-01T00:00:00.000+00:00",
+  "lastUpdate": "2025-11-13T14:54:38.000+00:00"
+}
