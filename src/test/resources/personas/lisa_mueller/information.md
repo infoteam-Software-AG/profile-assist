@@ -1,25 +1,25 @@
 ## Lisa Müller - Software Developer
 
-**Hintergrund:**
+### Background: ###
 
 Lisa is a coder who loves messy code and coffee.
 She has worked on small apps and big databases.
 She likes to break things to fix them.
 
-**Ziele:**
+### Goals: ###
 
-- Mehr Performance
-- Bessere CI/CD
-- Mehr Cloud
-- Weniger Bugs
+- More performance
+- Better CI/CD
+- More cloud
+- Fewer bugs
 - Happy clients
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
 - Code review is optional
-- Team meeting in 5 min
+- Team meeting in 5 minutes
 - Bugs are just feature requests
 - Testing is for when we have time
 - Documentation is nice but not required
 
-**Startdatum:** 2020-01-01
+**Start date:** 2020-01-01

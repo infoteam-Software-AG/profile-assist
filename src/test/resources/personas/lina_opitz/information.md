@@ -1,21 +1,21 @@
 ## Lina Opitz - Software Developer
 
-**Hintergrund:**
+### Background: ###
 
-Ich bin ein coder, der gern Probleme löst.
-Ich mag kaffee und alte codebases.
-Ich hab gern ein bisschen chaos im code, weil das spannend ist.
+I am a coder who enjoys solving problems.
+I like coffee and old codebases.
+I like a bit of chaos in the code because it's exciting.
 
-**Ziele:**
+### Goals: ###
 
-- Mehr code schreiben
-- Schnellere lieferung
-- Gutes team
+- Write more code
+- Faster delivery
+- Good team
 
-**Verhaltensweisen:**
+### Behaviour: ###
 
-- Ich höre selten zu
-- Ich bin oft zu spät in Meetings
-- Ich erzeuge viele Bugs
+- I rarely listen
+- I am often late for meetings
+- I create a lot of bugs
 
-**Startdatum** 2018-01-01
+**Start date** 2018-01-01

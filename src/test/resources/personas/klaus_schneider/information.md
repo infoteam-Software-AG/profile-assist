@@ -1,21 +1,22 @@
 ## Klaus Schneider - Tech Lead
 
-**Hintergrund:**
-Klaus ist ein erfahrener Technologie-Führungskraft mit 11+ Jahren in der Softwareentwicklung. Er hat sich von Entwickler
-zu Tech Lead entwickelt und hat erfolgreich mehrere Teams gebaut und geführt. Er verfügt über tiefes Wissen in
-Agile-Methodologien und Teamdynamiken.
+### Background: ###
 
-**Ziele:**
+Klaus is an experienced technology executive with 11+ years in software development. He has progressed from developer
+to tech lead and has successfully built and led multiple teams. He has deep knowledge of
+agile methodologies and team dynamics.
 
-- Ein hochperformendes Engineering-Team aufbauen und führen
-- Technische Excellence und schnelle Delivery balancieren
-- Karriere-Entwicklung seiner Team-Mitglieder unterstützen
+### Goals: ###
 
-**Verhaltensweisen:**
+- Build and lead a high-performing engineering team
+- Balance technical excellence and rapid delivery
+- Support the career development of his team members
 
-- Servant-Leadership Ansatz
-- Fokus auf Team-Empowerment und Ownership
-- Regelmäßige 1-on-1s und Feedback-Sessions
-- Aktive Teilnahme in technischen Entscheidungsfindungen
+### Behaviours: ###
 
-**Startdatum:** 2026-04-15
+- Servant leadership approach
+- Focus on team empowerment and ownership
+- Regular 1-on-1s and feedback sessions
+- Active participation in technical decision-making
+
+**Start date:** 2026-04-15

@@ -1,24 +1,27 @@
 ## Elena Kowalski - Software Engineer
 
-**Hintergrund:**
+### Background: ###
 
-Elena hat ihren Bachelor in Informatik an der TU München absolviert und arbeitet seit über sieben Jahren in der
-Softwareentwicklung, wobei sie sich auf skalierbare Cloud‑Native‑Architekturen spezialisiert hat. Sie liebt komplexe
-Systeme und setzt sich leidenschaftlich für Clean Architecture und DevOps-Praktiken ein. Ihr Ziel ist es, mit
-innovativen Lösungen die digitale Transformation von Unternehmen voranzutreiben.
+Elena completed her bachelor's degree in computer science at the Technical University of Munich and has been working in
+software development for over seven years, specialising in scalable cloud-native architectures. She loves complex
+systems and is passionate about clean architecture and DevOps practices.
 
-**Ziele:**
+Her goal is to drive the digital transformation of companies with innovative solutions. Her goal is to drive the digital
+transformation of companies with
+innovative solutions.
 
-- Aufbau hochverfügbarer, cloud‑native Microservices‑Architekturen
-- Förderung agiler Teams durch kontinuierliche Verbesserung und Mentoring
-- Implementierung automatisierter CI/CD‑Pipelines für schnellere Releases
-- Kontinuierliche Weiterbildung in den Bereichen Cloud‑Security und Observability
+### Goals: ###
 
-**Verhaltensweisen:**
+- Building highly available, cloud-native microservices architectures
+- Promoting agile teams through continuous improvement and mentoring
+- Implementing automated CI/CD pipelines for faster releases
+- Continuous training in cloud security and observability
 
-- Proaktives Identifizieren von Engpässen und Verbesserungspotenzialen
-- Offenes Teilen von Wissen und Best Practices im Team
-- Systematisches Arbeiten mit Test‑Driven Development und Pair Programming
-- Fokus auf Benutzer‑ und Kundenorientierung bei Architekturentscheidungen
+### Behaviours: ###
 
-**Startdatum:** 2019-01-01
+- Proactively identifying bottlenecks and potential for improvement
+- Openly sharing knowledge and best practices within the team
+- Working systematically with test-driven development and pair programming
+- Focusing on user and customer orientation in architectural decisions
+
+**Start date:** 2019-01-01

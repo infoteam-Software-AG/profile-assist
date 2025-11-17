@@ -1,21 +1,22 @@
-## Anna Müller - Senior Java Entwickler
+## Anna Müller - Senior Java Developer
 
-**Hintergrund:**
-Anna ist eine erfahrene Softwareentwicklerin mit über 7 Jahren Berufserfahrung. Sie spezialisiert sich auf
-Backend-Entwicklung mit Java und hat bereits mehrere große Projekte von Grund auf geleitet. Sie verfügt über tiefes
-Wissen in Microservices-Architekturen und Cloud-Technologien.
+### Background: ###
 
-**Ziele:**
+Anna is an experienced software developer with over 7 years of professional experience. She specialises in
+backend development with Java and has already managed several large projects from scratch. She has in-depth
+knowledge of microservices architectures and cloud technologies.
 
-- Ihr Team durch Best Practices und Code-Quality führen
-- Skalierbare und wartbare Systeme entwickeln
-- Ihre Expertise in Cloud-Native Technologien erweitern
+### Goals: ###
 
-**Verhaltensweisen:**
+- Lead your team through best practices and code quality
+- Develop scalable and maintainable systems
+- Expand her expertise in cloud-native technologies
 
-- Fokussiert auf Codequalität und Architektur
-- Mentoring von Junior-Entwicklern
-- Proaktive Problemlösung und Design-Reviews
-- Starker Fokus auf Testing und automatisierte Prozesse
+### Behaviours: ###
 
-**Startdatum:** 2026-02-01
+- Focused on code quality and architecture
+- Mentoring junior developers
+- Proactive problem solving and design reviews
+- Strong focus on testing and automated processes
+
+**Start date:** 1 February 2026

@@ -1,25 +1,25 @@
 ## Beate Laurenz - Software Developer
 
-**Hintergrund:**
+### Background: ###
 
-- 7 Jahre Erfahrung in der Backend-Entwicklung
-- Expertise in Java und Microservices
-- Erfolgreiche Umsetzung von skalierbaren E‑Commerce‑Lösungen
-- Starke Kenntnisse in Cloud‑Infrastruktur
-- Teamleitung in agilen Projekten
-- Leidenschaft für sauberen Code
+- 7 years of experience in backend development
+- Expertise in Java and microservices
+- Successful implementation of scalable e-commerce solutions
+- Strong knowledge of cloud infrastructure
+- Team leadership in agile projects
+- Passion for clean code
 
-**Ziele:**
+### Goals: ###
 
-- keine Angabe
+- Not specified
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Detailorientiert und lösungsfokussiert
-- Offener Kommunikationsstil
-- Schnelle Anpassung an neue Technologien
-- Teamorientiert mit kollaborativem Ansatz
-- Zielstrebig und ergebnisorientiert
-- Kontinuierliche Lernbereitschaft
+- Detail-oriented and solution-focused
+- Open communication style
+- Quick adaptation to new technologies
+- Team-oriented with a collaborative approach
+- Determined and results-oriented
+- Continuous willingness to learn
 
-**Startdatum** 2018-01-01"
+**Start date** 2018-01-01

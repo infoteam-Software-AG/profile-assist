@@ -1,21 +1,22 @@
 ## Jessica Koch - QA Engineer
 
-**Hintergrund:**
-Jessica ist eine Detail-orientierte QA-Profesionalistin mit 6+ Jahren Erfahrung in Test-Automation und Quality
-Assurance. Sie hat umfangreiche Testsuite für komplexe Web- und Mobile-Anwendungen aufgebaut und verfügt über tiefes
-Wissen in Automation-Frameworks.
+### Background: ###
 
-**Ziele:**
+Jessica is a detail-oriented QA professional with 6+ years of experience in test automation and quality
+assurance. She has built extensive test suites for complex web and mobile applications and has in-depth
+knowledge of automation frameworks.
 
-- Höchste Qualitätsstandards für alle Releases durchsetzen
-- Test-Automatisierung maximieren und manuelle Tests minimieren
-- Risk-basiertes Testing und Qualitätsmetriken etablieren
+### Goals: ###
 
-**Verhaltensweisen:**
+- Enforce the highest quality standards for all releases
+- Maximise test automation and minimise manual testing
+- Establish risk-based testing and quality metrics
 
-- Akribisch bei Bug-Reproduktion und Reporting
-- Proaktiv bei der Identifikation von Testlücken
-- Starke Kommunikation mit Development-Teams
-- Regelmäßige Verbesserung der Test-Strategien
+### Behaviours: ###
 
-**Startdatum:** 2026-02-20
+- Meticulous in bug reproduction and reporting
+- Proactive in identifying test gaps
+- Strong communication with development teams
+- Regular improvement of test strategies
+
+**Start date:** 2026-02-20

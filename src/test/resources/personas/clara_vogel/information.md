@@ -1,25 +1,24 @@
 ## Clara Vogel - Data Scientist
 
-**Hintergrund:**
+### Background: ###
 
-Clara Vogel ist eine datengetriebene Analystin mit Schwerpunkt Machine Learning und einer Leidenschaft für die
-Optimierung von Geschäftsprozessen. Nach ihrem Master in Data Science an der TU München hat sie in verschiedenen
-Branchen wertvolle Insights generiert. Ihr Ziel ist es, datenbasierte Entscheidungen für nachhaltiges Wachstum zu
-ermöglichen.
+Clara Vogel is a data-driven analyst with a focus on machine learning and a passion for optimising business processes.
+After completing her master's degree in data science at the Technical University of Munich, she has generated valuable
+insights in various industries. Her goal is to enable data-driven decisions for sustainable growth.
 
-**Ziele:**
+### Goals: ###
 
-- Effiziente ML‑Modelle für Echtzeit‑Analyse entwickeln
-- Datenqualität in großen Unternehmen steigern
-- Interdisziplinäre Teams führen und inspirieren
-- Forschungsergebnisse in praxisnahe Lösungen übertragen
+- Develop efficient ML models for real-time analysis
+- Improve data quality in large companies
+- Lead and inspire interdisciplinary teams
+- Transfer research results into practical solutions
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Proaktive Problemlösung mit Fokus auf Skalierbarkeit
-- Kontinuierliche Weiterbildung durch Zertifikate und Konferenzen
-- Transparente Kommunikation von Modellen und Ergebnissen
-- Datenethik und Fairness als Grundprinzipien
-- Agile Arbeitsmethoden anwenden
+- Proactive problem-solving with a focus on scalability
+- Continuous professional development through certifications and conferences
+- Transparent communication of models and results
+- Data ethics and fairness as fundamental principles
+- Application of agile working methods
 
-**Startdatum:** 2018-05-01
+**Start date:** 2018-05-01

@@ -1,21 +1,22 @@
 ## Thomas Müller - DevOps Engineer
 
-**Hintergrund:**
-Thomas hat sich von einem System Administrator zu einem vollständigen DevOps-Profi entwickelt. Mit 6+ Jahren Erfahrung
-hat er mehrere große Cloud-Migrationen und Infrastruktur-Transformationen durchgeführt. Er ist ein Experte in Kubernetes
-und Container-Orchestrierung.
+### Background: ###
 
-**Ziele:**
+Thomas has evolved from a system administrator to a full-fledged DevOps professional. With 6+ years of experience,
+he has executed several large-scale cloud migrations and infrastructure transformations. He is an expert in Kubernetes
+and container orchestration.
 
-- Hochverfügbare und sichere Infrastrukturen aufbauen
-- Automatisierung und CI/CD-Pipelines optimieren
-- Operational Excellence erreichen
+### Goals: ###
 
-**Verhaltensweisen:**
+- Build highly available and secure infrastructures
+- Optimise automation and CI/CD pipelines
+- Achieve operational excellence
 
-- Obsessed mit Monitoring und Alerting
-- Proaktive Fehlerprävention und Disaster-Recovery
-- Starker Fokus auf Dokumentation und Runbooks
-- Regelmäßige Infrastruktur-Reviews und Optimierungen
+### Behaviours: ###
 
-**Startdatum:** 2026-03-01
+- Obsessed with monitoring and alerting
+- Proactive error prevention and disaster recovery
+- Strong focus on documentation and runbooks
+- Regular infrastructure reviews and optimisations
+
+**Start date:** 2026-03-01

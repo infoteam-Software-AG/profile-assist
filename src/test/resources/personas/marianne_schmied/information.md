@@ -1,27 +1,27 @@
 ## Marianne Schmied - Requirements Engineer
 
-**Hintergrund:**
+### Background: ###
 
-Marianne ist eine erfahrene Requirements Engineer mit mehr als acht Jahren Erfahrung in der Analyse und Umsetzung
-komplexer Geschäftsprozesse. Sie hat einen Hintergrund in Informatik und Wirtschaftsinformatik und arbeitet
-leidenschaftlich daran, technische Lösungen nahtlos an die Bedürfnisse von Unternehmen anzupassen. In ihrer Freizeit
-genießt sie das Wandern in den Alpen und das Experimentieren mit neuen Programmiersprachen.
+Marianne is an experienced requirements engineer with more than eight years of experience in analysing and implementing
+complex business processes. She has a background in computer science and business informatics and is passionate about
+seamlessly adapting technical solutions to the needs of businesses. In her free time, she enjoys hiking in the Alps and
+experimenting with new programming languages.
 
-**Ziele:**
+### Goals: ###
 
-- Ermittlung klarer, messbarer Geschäftsanforderungen
-- Sicherstellung der Einhaltung von regulatorischen Vorgaben
-- Förderung der Zusammenarbeit zwischen Technik und Geschäftsbereichen
-- Kontinuierliche Verbesserung der Anforderungsdokumentation
-- Nutzung agiler Methoden zur schnellen Wertschöpfung
+- Identifying clear, measurable business requirements
+- Ensuring compliance with regulatory requirements
+- Promoting collaboration between technology and business units
+- Continuously improving requirements documentation
+- Using agile methods to deliver value quickly
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Proaktive Kommunikation mit Stakeholdern
-- Detailorientierte Analyse von Prozessen und Datenflüssen
-- Einsatz von Visualisierungstools zur Transparenz
-- Bereitschaft, neue Technologien zu evaluieren
-- Fokus auf lösungsorientiertes Denken
+- Proactive communication with stakeholders
+- Detail-oriented analysis of processes and data flows
+- Use of visualisation tools for transparency
+- Willingness to evaluate new technologies
+- Focus on solution-oriented thinking
 
-**Startdatum:** 2016-03-01
+**Start date:** 2016-03-01
   

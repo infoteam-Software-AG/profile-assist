@@ -1,16 +1,21 @@
 ## Michael Schmidt - Frontend-Entwickler
-**Hintergrund:**
-Michael ist ein leidenschaftlicher Frontend-Entwickler mit 5+ Jahren Erfahrung in modernen JavaScript-Frameworks. Er hat sich spezialisiert auf React und TypeScript und interessiert sich stark für UX/UI-Design und Accessibility.
 
-**Ziele:**
-- Benutzerfreundliche und responsive Web-Anwendungen erstellen
-- State Management und Performance-Optimierung meistern
-- Ein Experte in modernen Frontend-Technologien werden
+### Background: ###
 
-**Verhaltensweisen:**
-- Kreativ bei der Problemlösung von UI-Herausforderungen
-- Fokus auf Browser-Kompatibilität und Performance
-- Engagement in Design- und UX-Diskussionen
-- Regelmäßige Teilnahme an Frontend-Community-Events
+Michael is a passionate front-end developer with 5+ years of experience in modern JavaScript frameworks. He specialises
+in React and TypeScript and has a keen interest in UX/UI design and accessibility.
 
-**Startdatum:** 2026-02-15
+### Goals: ###
+
+- Create user-friendly and responsive web applications
+- Master state management and performance optimisation
+- Become an expert in modern front-end technologies
+
+### Behaviours: ###
+
+- Creative in solving UI challenges
+- Focus on browser compatibility and performance
+- Engagement in design and UX discussions
+- Regular participation in front-end community events
+
+**Start date:** 2026-02-15
