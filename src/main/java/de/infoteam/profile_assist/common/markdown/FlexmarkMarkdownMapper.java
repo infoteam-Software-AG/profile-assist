@@ -20,7 +20,8 @@ public class FlexmarkMarkdownMapper implements MarkdownMapper {
 
   @Override
   public Document toAst(String markdown) {
-    com.vladsch.flexmark.util.ast.Document doc = parser.parse(markdown == null ? "" : markdown);
+    if (markdown == null) return new Document(List.of());
+    com.vladsch.flexmark.util.ast.Document doc = parser.parse(markdown);
     return mapDocument(doc);
   }
 
@@ -31,7 +32,7 @@ public class FlexmarkMarkdownMapper implements MarkdownMapper {
     return formatter.render(doc).trim();
   }
 
-  // Markdown mapping
+  // -------- Markdown mapping -------- //
   private MarkdownNode mapNode(Node node) {
     return switch (node) {
       case com.vladsch.flexmark.util.ast.Document doc -> mapDocument(doc);
@@ -95,7 +96,7 @@ public class FlexmarkMarkdownMapper implements MarkdownMapper {
     return new ListItem(children);
   }
 
-  // AST mapping
+  // -------- AST mapping -------- //
   private Node toFlexmarkNode(MarkdownNode node) {
     return switch (node) {
       case Paragraph p -> toFlexmarkParagraph(p);
