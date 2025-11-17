@@ -1,0 +1,78 @@
+{
+  "id": "b6f4c8e2-5d3b-4a9f-9c2a-1e9b8a5c4d3f",
+  "jobTitle": "Azure Cloud Engineer",
+  "skills": [
+    "Azure Virtual Machines",
+    "Azure Kubernetes Service",
+    "Azure Functions",
+    "Azure App Service",
+    "Azure Container Registry",
+    "Terraform",
+    "Bicep",
+    "ARM Templates",
+    "Azure DevOps",
+    "GitHub Actions",
+    "Helm",
+    "Azure Monitor",
+    "Azure Policy",
+    "Azure Sentinel",
+    "Azure Key Vault",
+    "Azure SQL Database",
+    "Azure Data Factory",
+    "PowerShell",
+    "Ansible"
+  ],
+  "certificates": [
+    "Microsoft Certified: Azure Solutions Architect Expert (05/2022)",
+    "Microsoft Certified: Azure DevOps Engineer Expert (08/2021)",
+    "Microsoft Certified: Azure Security Engineer Associate (02/2023)",
+    "Microsoft Certified: Azure Administrator Associate (11/2020)",
+    "Microsoft Certified: Azure AI Engineer Associate (07/2022)",
+    "Microsoft Certified: Data Analyst Associate (09/2021)"
+  ],
+  "projectHistory": [
+    {
+      "name": "2023-01/2023-06 – Azure-Optimierung für E-Commerce-Plattform – Teamgröße 5",
+      "description": "Die Aufgabe bestand darin, die bestehende E-Commerce-Plattform auf Azure zu optimieren und die Skalierbarkeit sowie die Ausfallsicherheit zu erhöhen.\nWir migrierten die Container-basierte Architektur in Azure Kubernetes Service (AKS) und nutzten Azure Container Registry für die Images.\nDurch die Implementierung von Helm Charts und GitHub Actions als CI/CD Pipeline konnten Deployments automatisiert und beschleunigt werden.\nZusätzlich wurden Azure Monitor und Application Insights zur Echtzeit-Überwachung und Performance-Analyse integriert.\nDie finale Lösung reduzierte die Latenz um 30 % und senkte die Betriebskosten um 20 %.\nDie Teamgröße betrug fünf Entwickler und ein DevOps Engineer, die eng mit dem Product Owner zusammenarbeiteten.\n\nDurch die enge Zusammenarbeit mit dem Security-Team wurden Sicherheitsrichtlinien in Azure Policy definiert und in CI/CD Pipeline integriert.\n\nDie Lösung beinhaltete auch die Nutzung von Azure Front Door für globale CDN-Funktionalität und Lastverteilung.\n\nZiel war es, die Plattform für zukünftiges Wachstum vorzubereiten, ohne dabei die Betriebssicherheit zu gefährden.",
+      "technologies": [
+        "Azure Kubernetes Service",
+        "Azure Container Registry",
+        "Terraform",
+        "GitHub Actions",
+        "Helm",
+        "Azure Monitor",
+        "Azure Policy",
+        "Azure Front Door"
+      ]
+    },
+    {
+      "name": "2022-02/2022-12 – Aufbau einer Hybrid-Cloud-Lösung – Teamgröße 7",
+      "description": "Dieses Projekt zielte darauf ab, eine hybride Cloud-Architektur für ein mittelständisches Unternehmen zu implementieren, das sowohl On-Premises- als auch Cloud-Ressourcen nutzt.\nWir setzten Azure Arc ein, um Ressourcen im eigenen Rechenzentrum in die Azure Management Layer zu integrieren.\nAzure Site Recovery wurde zur reibungslosen Replikation kritischer Workloads verwendet.\nFür Datenresilienz nutzten wir Azure Backup in Kombination mit lokalen Backup-Strategien.\nDie Implementierung von Azure Key Vault sorgte für einheitliches Schlüsselmanagement.\n\nDer Entwicklungsprozess wurde mit Azure DevOps verwaltet, wobei PowerShell-Skripte zur Automatisierung von Bereitstellungen eingesetzt wurden.\n\nDie Teamgröße umfasste sieben Fachleute, darunter Infrastrukturarchitekten, DevOps-Engineers und Sicherheitsanalysten.\n\nDas Projekt schuf eine nahtlose Integration zwischen lokalen Systemen und Azure, wodurch die Betriebsabläufe optimiert wurden.\n\nDie Lösung ermöglichte es dem Unternehmen, seine Daten und Anwendungen flexibel zwischen On-Premises und Cloud zu verschieben.",
+      "technologies": [
+        "Azure Arc",
+        "Azure Site Recovery",
+        "Azure Backup",
+        "Azure Key Vault",
+        "Azure DevOps",
+        "PowerShell",
+        "Terraform",
+        "Azure Monitor"
+      ]
+    },
+    {
+      "name": "2021-04/2021-12 – Migration legacy Applikationen nach Azure – Teamgröße 4",
+      "description": "Die Herausforderung bestand darin, mehrere Legacy-Apps in eine moderne Azure-Umgebung zu migrieren.\nWir nutzten Azure Migrate, um die Zielinfrastruktur zu identifizieren und die Abhängigkeiten zu analysieren.\nDie Applikationen wurden in Azure App Service bereitgestellt und durch Azure SQL Database als Datenbanklösung unterstützt.\nAzure Key Vault sicherte die sensiblen Konfigurationsdaten.\n\nEin CI/CD Prozess wurde mit Azure DevOps eingerichtet, um die schnelle Bereitstellung und das Rollback von Änderungen zu ermöglichen.\n\nDas Team bestand aus vier Personen, darunter ein Cloud-Architekt, ein Entwickler, ein DBA und ein DevOps Engineer.\n\nDie Migration reduzierte die Wartungskosten und ermöglichte es dem Kunden, neue Funktionen schneller zu entwickeln.\n\nDurch die Nutzung von Azure Monitor wurden die Leistungsmetriken in Echtzeit verfolgt.",
+      "technologies": [
+        "Azure Migrate",
+        "Azure App Service",
+        "Azure SQL Database",
+        "Azure Key Vault",
+        "Azure DevOps",
+        "Azure Monitor",
+        "Terraform"
+      ]
+    }
+  ],
+  "startingDate": "2021-03-31T23:00:00.000+00:00",
+  "lastUpdate": "2025-11-13T15:35:49.590+00:00"
+}
