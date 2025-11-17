@@ -45,7 +45,8 @@ public class FlexmarkMarkdownMapper implements MarkdownMapper {
   }
 
   private com.vladsch.flexmark.util.ast.Document toFlexmarkDocument(Document ast) {
-    var document = new com.vladsch.flexmark.util.ast.Document(parser.getOptions(), BasedSequence.NULL);
+    var document =
+        new com.vladsch.flexmark.util.ast.Document(parser.getOptions(), BasedSequence.NULL);
     for (MarkdownNode child : ast.children()) {
       document.appendChild(toFlexmarkNode(child));
     }
@@ -97,10 +98,10 @@ public class FlexmarkMarkdownMapper implements MarkdownMapper {
   // AST mapping
   private Node toFlexmarkNode(MarkdownNode node) {
     return switch (node) {
-      case Paragraph p   -> toFlexmarkParagraph(p);
-      case Heading h     -> toFlexmarkHeading(h);
-      case Text t        -> new com.vladsch.flexmark.ast.Text(t.text());
-      case BulletList l  -> toFlexmarkBulletList(l);
+      case Paragraph p -> toFlexmarkParagraph(p);
+      case Heading h -> toFlexmarkHeading(h);
+      case Text t -> new com.vladsch.flexmark.ast.Text(t.text());
+      case BulletList l -> toFlexmarkBulletList(l);
       case ListItem item -> toFlexmarkListItem(item);
       default -> throw new IllegalStateException("Unexpected markdown type: " + node);
     };
