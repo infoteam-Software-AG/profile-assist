@@ -143,13 +143,44 @@ By adhering to use-case based control classes and emphasizing domain-driven term
 This improves understanding, onboarding, maintenance, and architectural sustainability.
 
 === File Structure
+
+==== Persona
 Personas are stored in JSON format.
 
 It should be equal to the Model structure of the persona information so it's readable for a JSON parser.
 
 Additional Files/Certificates can be stored in the same directory as the JSON file.
 
-This is documented here: `src/main/docs/_includes/concept/persona-folder-structure.puml`
+This is documented here:
+
+[plantuml,format=png]
+----
+include::../_includes/concept/persona-folder-structure.puml[Persona Folder Structure]
+----
+
+==== Call for Bids
+Call For Bids are stored in JSON format.
+
+It should be equal to the Model structure of the persona information so it's readable for a JSON parser.
+
+The folder structure is as following:
+[plantuml,format=png]
+----
+include::../_includes/concept/bid-folder-structure.puml[Persona Folder Structure]
+----
+
+=== Model Structure
+==== Persona
+[plantuml,format=png]
+----
+include::../_includes/concept/persona-uml.puml[Persona Model Structure]
+----
+
+==== Call for Bids
+[plantuml,format=png]
+----
+include::../_includes/concept/bid-uml.puml[Bid Model Structure]
+----
 
 == Runtime view
 
@@ -173,8 +204,7 @@ This is documented here: `src/main/docs/_includes/concept/persona-folder-structu
 === Nullability and DDD conventions
 
 To reduce NullPointerExceptions, we annotate Java code with link:https://jspecify.dev/[JSpecify] nullness annotations.
-This ensures that the nullability of types is clear to both developers and tools,
-improving code safety, readability, and consistency across the system.
+This ensures that the nullability of types is clear to both developers and tools, improving code safety, readability, and consistency across the system.
 
 We have decided, that all packages should be declared as `@NullMarked` by default.
 This means that unannotated types are treated as non-null unless explicitly annotated with `@Nullable`.
@@ -204,6 +234,7 @@ ArchUnit tests should enforce these rules to ensure compliance and maintain cons
 - Openness of the project requires careful reviews
 
 == Glossary
+
 |===
 |Term|Description
 |Persona| Template for typical user roles such as full stack, DevOps, etc.
