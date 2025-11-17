@@ -1,6 +1,7 @@
 ## Beatrice Müller - Machine Learning Engineer
 
 **Hintergrund:**
+
 Beatrice ist eine spezialisierte ML-Ingenieurin mit 5+ Jahren Erfahrung in Data Science und Machine Learning. Sie hat
 komplexe NLP- und Computer Vision-Modelle entwickelt und deployed. Sie hat Expertise in Modern ML-Tools und MLOps.
 
@@ -27,6 +28,6 @@ Assigned Group:
 - [ ] B – Average Personas
 - [ ] C – High-Quality Personas
 
-| Skill Extraction Accuracy | Gap Filling Quality | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------- | ------------------- | ----------- | ---------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2                         | 1                   | 2           | 1                      | 3           | Extremely shallow information. Project descriptions are one-liners with no duration, team size, methodology, or personal contribution. Skills listed as keywords only, not fully reflected in projects. Certificates lack dates or context. No measurable impact, no narrative detail. Minimal content for enrichment. Some formatting consistency, but overall very poor quality. |
+| Skill Extraction Accuracy | Gap Filling Quality         | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                                                                                                                                                                                                                       |
+|---------------------------|-----------------------------|-------------|------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2                         | evaluate after optimisation | 2           | 1                      | 3           | Extremely shallow information. Project descriptions are one-liners with no duration, team size, methodology, or personal contribution. Skills listed as keywords only, not fully reflected in projects. Certificates lack dates or context. No measurable impact, no narrative detail. Minimal content for enrichment. Some formatting consistency, but overall very poor quality. |

@@ -28,6 +28,6 @@ Assigned Group:
 - [ ] B – Average Personas
 - [ ] C – High-Quality Personas
 
-| Skill Extraction Accuracy | Gap Filling Quality | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                  |
-|---------------------------|---------------------|-------------|------------------------|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 3                         | 1                   | 3           | 1                      | 3           | Skills and certifications are clear, but projects only have titles and a one-line vague description. No metrics, no workflow, no team context. Very low enrichment potential. |
+| Skill Extraction Accuracy | Gap Filling Quality         | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                  |
+|---------------------------|-----------------------------|-------------|------------------------|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 3                         | evaluate after optimisation | 3           | 1                      | 3           | Skills and certifications are clear, but projects only have titles and a one-line vague description. No metrics, no workflow, no team context. Very low enrichment potential. |

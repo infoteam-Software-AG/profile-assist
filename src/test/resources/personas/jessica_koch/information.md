@@ -1,6 +1,7 @@
 ## Jessica Koch - QA Engineer
 
 **Hintergrund:**
+
 Jessica ist eine Detail-orientierte QA-Profesionalistin mit 6+ Jahren Erfahrung in Test-Automation und Quality
 Assurance. Sie hat umfangreiche Testsuite für komplexe Web- und Mobile-Anwendungen aufgebaut und verfügt über tiefes
 Wissen in Automation-Frameworks.
@@ -28,6 +29,6 @@ Assigned Group:
 - [ ] B – Average Personas
 - [ ] C – High-Quality Personas
 
-| Skill Extraction Accuracy | Gap Filling Quality | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                                                                                                                                                                       |
-|---------------------------|---------------------|-------------|------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2                         | 1                   | 2           | 1                      | 3           | Projects are one-line descriptions without duration, team size, or methodology. Skills partially reflected, with some mismatches (e.g., JMeter not in skills list). Certificates undated. No measurable outcomes or personal contributions. Minimal content for enrichment. Consistent formatting but very poor narrative quality. |
+| Skill Extraction Accuracy | Gap Filling Quality         | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                                                                                                                                                                       |
+|---------------------------|-----------------------------|-------------|------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2                         | evaluate after optimisation | 2           | 1                      | 3           | Projects are one-line descriptions without duration, team size, or methodology. Skills partially reflected, with some mismatches (e.g., JMeter not in skills list). Certificates undated. No measurable outcomes or personal contributions. Minimal content for enrichment. Consistent formatting but very poor narrative quality. |

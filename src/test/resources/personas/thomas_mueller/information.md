@@ -1,6 +1,7 @@
 ## Thomas Müller - DevOps Engineer
 
 **Hintergrund:**
+
 Thomas hat sich von einem System Administrator zu einem vollständigen DevOps-Profi entwickelt. Mit 6+ Jahren Erfahrung
 hat er mehrere große Cloud-Migrationen und Infrastruktur-Transformationen durchgeführt. Er ist ein Experte in Kubernetes
 und Container-Orchestrierung.
@@ -28,6 +29,6 @@ Assigned Group:
 - [ ] B – Average Personas
 - [ ] C – High-Quality Personas
 
-| Skill Extraction Accuracy | Gap Filling Quality | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                                                                                                                                                                            |
-|---------------------------|---------------------|-------------|------------------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 4                         | 2                   | 3           | 1                      | 3           | Skills and certificates are accurate and extractable. However, project history is minimal, with no elaboration on actual work, outcomes, or impact. There’s no narrative on candidate contribution, making enrichment difficult. Consistency is okay internally, but overall value is low due to brevity and lack of meaningful detail. |
+| Skill Extraction Accuracy | Gap Filling Quality         | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                                                                                                                                                                            |
+|---------------------------|-----------------------------|-------------|------------------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 4                         | evaluate after optimisation | 3           | 1                      | 3           | Skills and certificates are accurate and extractable. However, project history is minimal, with no elaboration on actual work, outcomes, or impact. There’s no narrative on candidate contribution, making enrichment difficult. Consistency is okay internally, but overall value is low due to brevity and lack of meaningful detail. |

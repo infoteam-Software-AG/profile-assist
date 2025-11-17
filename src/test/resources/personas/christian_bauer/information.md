@@ -1,6 +1,7 @@
 ## Christian Bauer - Backend Developer
 
 **Hintergrund:**
+
 Christian ist ein versatiler Backend-Entwickler mit 5+ Jahren Erfahrung in mehreren Technologie-Stacks. Er hat sich
 spezialisiert auf API-Development, Datenbankdesign und hat Erfahrung mit relationalen und NoSQL-Datenbanken.
 
@@ -27,6 +28,6 @@ Assigned Group:
 - [ ] B – Average Personas
 - [ ] C – High-Quality Personas
 
-| Skill Extraction Accuracy | Gap Filling Quality | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                                                                                                                                                                                                          |
-|---------------------------|---------------------|-------------|------------------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2                         | 1                   | 2           | 1                      | 3           | Projects are one-line descriptions with no duration, team size, methodology, or personal contribution. Skills partially represented in project technologies; some listed skills not mentioned anywhere. Certificates lack dates or context. No measurable impact. Very minimal content for enrichment. Overall structure consistent but very low-quality information. |
+| Skill Extraction Accuracy | Gap Filling Quality         | Readability | Creativity / Value Add | Consistency | Tester Notes                                                                                                                                                                                                                                                                                                                                                          |
+|---------------------------|-----------------------------|-------------|------------------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2                         | evaluate after optimisation | 2           | 1                      | 3           | Projects are one-line descriptions with no duration, team size, methodology, or personal contribution. Skills partially represented in project technologies; some listed skills not mentioned anywhere. Certificates lack dates or context. No measurable impact. Very minimal content for enrichment. Overall structure consistent but very low-quality information. |
