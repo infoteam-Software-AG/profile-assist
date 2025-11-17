@@ -1,0 +1,29 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440700",
+  "jobTitle": "Security Engineer",
+  "skills": [
+    "Application Security",
+    "Network Security",
+    "Penetration Testing",
+    "OWASP",
+    "Cryptography",
+    "Incident Response"
+  ],
+  "certificates": [
+    "Certified Ethical Hacker",
+    "CISSP"
+  ],
+  "projectHistory": [
+    {
+      "name": "Security Audit",
+      "description": "Umfassender Security Audit und Penetrationstesting für kritische Systeme"
+    },
+    {
+      "name": "Compliance Implementierung",
+      "description": "Implementierung von GDPR und ISO 27001 Compliance Anforderungen"
+    }
+  ],
+  "startingDate": "2026-06-01",
+  "lastUpdate": "2025-01-13"
+}
+

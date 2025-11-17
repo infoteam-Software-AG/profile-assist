@@ -1,0 +1,74 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "jobTitle": "Data Scientist",
+  "skills": [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Scikit-learn",
+    "TensorFlow",
+    "PyTorch",
+    "SQL",
+    "Apache Spark",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "Google Cloud Platform",
+    "Data Modeling",
+    "Feature Engineering",
+    "Model Deployment",
+    "Agile Scrum"
+  ],
+  "certificates": [
+    "AWS Certified Machine Learning – Specialty 06/2020",
+    "TensorFlow Developer Certificate 08/2019",
+    "Certified Analytics Professional (CAP) 12/2020",
+    "Google Cloud Professional Data Engineer 07/2021"
+  ],
+  "projectHistory": [
+    {
+      "name": "Predictive Maintenance für Fertigungsstraßen",
+      "description": "In diesem Projekt entwickelte ich ein Echtzeit-Monitoring-System zur Vorhersage von Ausfallzeiten.\n\nDer Kunde hatte ein umfangreiches Sensor-Netzwerk an Produktionslinien, das große Mengen an Zeitreihendaten erzeugte. Wir nutzten Apache Spark für die Datenaufbereitung und Python-Scikit‑learn für die Feature‑Engineering‑Schritte.\n\nZur Modellierung wurden Gradient Boosting und ein Recurrent Neural Network eingesetzt, um sowohl lineare als auch nichtlineare Zusammenhänge zu erfassen. Das Modell erreichte eine Präzision von 92 % bei der Vorhersage von Wartungsbedarf.\n\nNach der Validierung wurde das System in die bestehende Manufacturing Execution System (MES) integriert. Die Implementierung erfolgte via Docker-Container und orchestriert mit Kubernetes auf AWS.\n\nDurch die Umsetzung konnte der Kunde die ungeplante Ausfallzeit um 35 % reduzieren und die Wartungskosten um 20 % senken.",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "TensorFlow",
+        "Apache Spark",
+        "Docker",
+        "Kubernetes",
+        "AWS"
+      ]
+    },
+    {
+      "name": "Customer Churn Prediction für Telekommunikationsanbieter",
+      "description": "Ziel war die Entwicklung eines prädiktiven Modells zur Identifikation von churn‑risikobasierten Kunden.\n\nWir sammelten Kundendaten aus CRM-Systemen, Netzwerk‑Logs und sozialen Medien. Die Daten wurden bereinigt, fehlende Werte interpoliert und als strukturiertes Data Lake in GCP gespeichert.\n\nFür das Feature‑Engineering wurden sowohl klassische statistische Kennzahlen als auch komplexe Zeitreihenmerkmale generiert. Anschließend evaluierte ich verschiedene Modelle: Random Forest, XGBoost und ein tiefes neuronales Netzwerk.\n\nDas XGBoost‑Modell erreichte eine F1‑Score von 0,88, was die Entscheidungsfindung in der Marketingabteilung deutlich verbesserte. Das Modell wurde als REST‑API mit FastAPI bereitgestellt.\n\nDurch die Einbindung in das Kunden‑Relationship‑Management (CRM) konnte das Unternehmen gezielte Retention‑Aktionen umsetzen und die Abwanderungsrate um 12 % senken.",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "XGBoost",
+        "Google Cloud Platform",
+        "FastAPI",
+        "Docker"
+      ]
+    },
+    {
+      "name": "Supply Chain Optimization using Reinforcement Learning",
+      "description": "Die Aufgabe bestand darin, Lieferkettenprozesse mithilfe von Reinforcement Learning zu optimieren.\n\nWir modellierten den Lieferkettenprozess als Markov Decision Process (MDP) und verwendeten OpenAI Gym als Simulationsumgebung. Das Agenten‑Modell wurde in TensorFlow implementiert und auf GPU beschleunigt.\n\nDurch kontinuierliche Schulung des Agenten erreichten wir eine Reduktion der Lagerbestände um 18 % und eine Erhöhung der Lieferpünktlichkeit um 23 %. Die Ergebnisse wurden mit einem Dashboard visualisiert, das Echtzeit‑Einblicke in die Optimierungspunkte bietet.\n\nDie Implementierung erfolgte in einer serverlosen Architektur mit Google Cloud Functions und wurde mittels Terraform als Infrastruktur-as-Code bereitgestellt. Die Lösung wird seitdem von mehreren Abteilungen genutzt, um die Gesamtlogistik zu verbessern.",
+      "technologies": [
+        "Python",
+        "NumPy",
+        "TensorFlow",
+        "OpenAI Gym",
+        "Docker",
+        "Google Cloud Platform",
+        "Terraform"
+      ]
+    }
+  ],
+  "startingDate": "2019-03-01T00:00:00.000+00:00",
+  "lastUpdate": "2025-11-13T15:46:42.682+00:00"
+}
