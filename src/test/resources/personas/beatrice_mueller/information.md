@@ -1,26 +1,26 @@
 ## Beatrice Müller - Machine Learning Engineer
 
-**Hintergrund:**
+### Background: ###
 
-Beatrice ist eine spezialisierte ML-Ingenieurin mit 5+ Jahren Erfahrung in Data Science und Machine Learning. Sie hat
-komplexe NLP- und Computer Vision-Modelle entwickelt und deployed. Sie hat Expertise in Modern ML-Tools und MLOps.
+Beatrice is a specialised ML engineer with 5+ years of experience in data science and machine learning. She has
+developed and deployed complex NLP and computer vision models. She has expertise in modern ML tools and MLOps.
 
-**Ziele:**
+### Goals: ###
 
-- State-of-the-Art ML-Modelle entwickeln und in Production gehen
-- ML-Infrastruktur und MLOps-Prozesse optimieren
-- KI-getriebene Lösungen für Business-Probleme schaffen
+- Develop state-of-the-art ML models and put them into production
+- Optimise ML infrastructure and MLOps processes
+- Create AI-driven solutions for business problems
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Experimentierfreudig und forschungsorientiert
-- Fokus auf Model-Performance und Generalisierung
-- Starke Datenanalyse- und Visualisierungsfähigkeiten
-- Regelmäßige Teilnahme an ML-Konferenzen und Workshops
+- Keen to experiment and research-oriented
+- Focus on model performance and generalisation
+- Strong data analysis and visualisation skills
+- Regular participation in ML conferences and workshops
 
-**Startdatum:** 2026-03-01
+**Start date:** 2026-03-01
 
-**Initial evaluation:**
+### Initial evaluation: ###
 
 Assigned Group:
 

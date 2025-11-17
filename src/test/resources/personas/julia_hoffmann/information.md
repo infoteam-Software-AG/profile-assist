@@ -1,27 +1,27 @@
 ## Julia Hoffmann - Security Engineer
 
-**Hintergrund:**
+### Background: ###
 
-Julia ist eine dedizierte Security-Fachfrau mit 8+ Jahren Erfahrung in Cybersecurity. Sie hat Penetrationstests
-durchgeführt, Compliance-Standards implementiert und Sicherheits-Infrastrukturen aufgebaut. Sie hat Zertifizierungen als
-Ethical Hacker und CISSP.
+Julia is a dedicated security professional with over 8 years of experience in cybersecurity. She has conducted
+penetration tests, implemented compliance standards and built security infrastructures. She is certified as an
+ethical hacker and CISSP.
 
-**Ziele:**
+### Goals: ###
 
-- Organisationen vor Cyber-Bedrohungen schützen
-- Sicherheits-Awareness in der Organisation erhöhen
-- Compliance und regulatorische Anforderungen erfüllen
+- Protect organisations from cyber threats
+- Increase security awareness within the organisation
+- Meet compliance and regulatory requirements
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Proaktiv bei der Threat-Identifikation
-- Starker Fokus auf Security-Best-Practices
-- Regelmäßige Audits und Penetrationstests durchführen
-- Enge Zusammenarbeit mit Development- und Operations-Teams
+- Proactive in threat identification
+- Strong focus on security best practices
+- Conduct regular audits and penetration tests
+- Work closely with development and operations teams
 
-**Startdatum:** 2026-06-01
+**Start date:** 2026-06-01
 
-**Initial evaluation:**
+### Initial evaluation: ###
 
 Assigned Group:
 

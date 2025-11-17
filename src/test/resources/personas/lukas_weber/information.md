@@ -1,32 +1,32 @@
 ## Lukas Weber - Software Developer
 
-**Hintergrund:**
+### Background: ###
 
-Lukas ist ein leidenschaftlicher Entwickler mit Schwerpunkt auf Microservices und Cloud‑Native Architekturen.
-Er liebt es, komplexe Systeme zu entwerfen, die gleichzeitig skalierbar, sicher und wartbar sind.
-Seine Motivation liegt in der kontinuierlichen Verbesserung von Prozessen und der Förderung von Teamkultur durch agile
-Methoden.
+Lukas is a passionate developer with a focus on microservices and cloud-native architectures.
+He loves designing complex systems that are scalable, secure and maintainable.
+He is motivated by the continuous improvement of processes and the promotion of team culture through agile
+methods.
 
-**Ziele:**
+### Goals: ###
 
-- Weiterführende Zertifizierung in Kubernetes (CKS) innerhalb des nächsten Jahres
-- Aufbau einer internen Wissensdatenbank für Best Practices in CI/CD
-- Mitwirkung an Open‑Source‑Projekten zur Förderung von Entwicklergemeinschaften
-- Ausbau der Fachkompetenz im Bereich Cloud‑Security
-- Verbesserung der Code‑Review‑Effizienz durch automatisierte Analysewerkzeuge
+- Advanced certification in Kubernetes (CKS) within the next year
+- Building an internal knowledge base for best practices in CI/CD
+- Participating in open-source projects to promote developer communities
+- Expanding expertise in the area of cloud security
+- Improving code review efficiency through automated analysis tools
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Regelmäßige Teilnahme an Code‑Review‑Sessions und Peer‑Coding
-- Proaktive Kommunikation von Risiken und möglichen Optimierungen
-- Förderung von Knowledge‑Sharing durch interne Workshops
-- Streben nach Clean‑Code‑Praktiken und Refactoring
-- Aktive Nutzung von DevOps‑Tools zur Automatisierung
-- Empathisches Leadership bei der Teamkoordination
+- Regular participation in code review sessions and peer coding
+- Proactive communication of risks and potential optimisations
+- Promotion of knowledge sharing through internal workshops
+- Pursuit of clean code practices and refactoring
+- Active use of DevOps tools for automation
+- Empathetic leadership in team coordination
 
-**Startdatum** 2020-01-01
+**Start date** 2020-01-01
 
-**Initial evaluation:**
+### Initial evaluation: ###
 
 Assigned Group:
 

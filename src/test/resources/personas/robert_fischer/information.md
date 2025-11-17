@@ -1,26 +1,26 @@
 ## Robert Fischer - Solutions Architect
 
-**Hintergrund:**
-Robert ist ein erfahrener Lösungsarchitekt mit 10+ Jahren im Softwaresektor. Er hat große Enterprise-Systeme und
-komplexe digitale Transformationen geleitet. Er verfügt über tiefes Verständnis für Geschäftsanforderungen und
-Technologie-Stack.
+### Background: ###
 
-**Ziele:**
+Robert is an experienced solutions architect with over 10 years in the software sector. He has managed large enterprise
+systems and complex digital transformations. He has a deep understanding of business requirements and technology stacks.
 
-- Strategische technische Visionen für Unternehmen entwickeln
-- Komplexe Geschäftsprobleme mit eleganten technischen Lösungen adressieren
-- Technische und geschäftliche Teams bridgen
+### Goals: ###
 
-**Verhaltensweisen:**
+- Develop strategic technical visions for companies
+- Address complex business problems with elegant technical solutions
+- Bridge technical and business teams
 
-- Strategischer und holistic Denkansatz
-- Starke Stakeholder-Kommunikation
-- Fokus auf Scalability und Future-Proofness
-- Mentoring von technischen Teams und anderen Architekten
+### Behaviours: ###
 
-**Startdatum:** 2026-05-01
+- Strategic and holistic approach
+- Strong stakeholder communication
+- Focus on scalability and future-proofness
+- Mentoring technical teams and other architects
 
-**Initial evaluation:**
+**Start date:** 2026-05-01
+
+### Initial evaluation: ###
 
 Assigned Group:
 

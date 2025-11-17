@@ -1,26 +1,27 @@
 ## Sandra Weber - Data Engineer
 
-**Hintergrund:**
+### Background: ###
 
-Sandra hat einen technischen Hintergrund mit Fokus auf Big Data und Analytics. Mit 7+ Jahren Erfahrung hat sie komplexe
-Data Pipelines und Data Lake Infrastrukturen aufgebaut. Sie ist profund in Apache Spark, Kafka und Modern Data Stack.
+Sandra has a technical background with a focus on big data and analytics. With over seven years of experience, she has
+built complex data pipelines and data lake infrastructures. She has in-depth knowledge of Apache Spark, Kafka and modern
+data stacks.
 
-**Ziele:**
+### Goals: ###
 
-- Zuverlässige und skalierbare Datenplattformen schaffen
-- Datenqualität und Datensicherheit gewährleisten
-- Datengetriebene Entscheidungen im Unternehmen ermöglichen
+- Create reliable and scalable data platforms
+- Ensure data quality and data security
+- Enable data-driven decisions within the company
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Analytischer und datenorientierter Ansatz
-- Fokus auf Performance und Skalierbarkeit
-- Enge Zusammenarbeit mit Data Scientists und Analytics-Teams
-- Proaktive Optimierung von ETL-Prozessen
+- Analytical and data-oriented approach
+- Focus on performance and scalability
+- Close collaboration with data scientists and analytics teams
+- Proactive optimisation of ETL processes
 
-**Startdatum:** 2026-04-01
+**Start date:** 2026-04-01
 
-**Initial evaluation:**
+### Initial evaluation: ###
 
 Assigned Group:
 

@@ -1,30 +1,30 @@
 ## Samuel Drechsel - Lead Software Architect
 
-**Hintergrund:**
+### Background: ###
 
-Samuel ist seit über zehn Jahren in der Softwarearchitektur tätig und hat sich auf cloud-native Lösungen spezialisiert.
-Sie arbeitet gern mit interdisziplinären Teams und setzt moderne Architekturprinzipien um. In ihrer Freizeit
-experimentiert sie mit Open-Source-Projekten und hält Konferenzen.
+Samuel has been working in software architecture for over ten years and specialises in cloud-native solutions.
+She enjoys working with interdisciplinary teams and implementing modern architectural principles. In her spare time,
+she experiments with open source projects and gives talks at conferences.
 
-**Ziele:**
+### Goals: ###
 
-- Skalierbare, wartbare Systeme für komplexe Geschäftsprozesse entwickeln
-- Architekturentscheidungen durch technische Vision und ROI-Analyse steuern
-- Agile Prozesse in großen Organisationen etablieren
-- Wissenstransfer durch Workshops und Code Reviews fördern
-- Nachhaltige Technologiestacks durch Evaluation neuer Tools sichern
+- Develop scalable, maintainable systems for complex business processes
+- Guide architectural decisions through technical vision and ROI analysis
+- Establish agile processes in large organisations
+- Promote knowledge transfer through workshops and code reviews
+- Ensure sustainable technology stacks by evaluating new tools
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Proaktiver Problemlöser, der frühzeitig Risiken adressiert
-- Teamorientiert mit Fokus auf Mentoring und Zusammenarbeit
-- Datengetriebene Entscheidungen unter Beachtung von Performance
-- Klare Kommunikation, sowohl im Team als auch bei Stakeholdern
-- Kontinuierliche Weiterbildung in Cloud- und DevOps-Bereichen
+- Proactive problem solver who addresses risks early on
+- Team-oriented with a focus on mentoring and collaboration
+- Data-driven decisions with consideration for performance
+- Clear communication, both within the team and with stakeholders
+- Continuous professional development in cloud and DevOps areas
 
-**Startdatum:** 2019-01-01
+**Start date:** 2019-01-01
 
-**Initial evaluation:**
+### Initial evaluation: ###
 
 Assigned Group:
 

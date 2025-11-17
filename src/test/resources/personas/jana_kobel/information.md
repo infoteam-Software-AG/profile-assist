@@ -1,31 +1,30 @@
 ## Jana Kobel – Azure Cloud Engineer
 
-**Hintergrund:**
+### Background: ###
 
-Jana ist seit über zehn Jahren im Bereich Cloud Computing tätig und hat sich auf Microsoft Azure spezialisiert. Sie hat
-mehrere Unternehmen dabei unterstützt, ihre IT-Infrastruktur zu modernisieren und in die Cloud zu migrieren. Ihre
-Leidenschaft gilt dabei vor allem der Schaffung von skalierbaren und sicheren Architekturen.
+Jana has been working in cloud computing for over ten years and specialises in Microsoft Azure. She has
+helped several companies modernise their IT infrastructure and migrate to the cloud. Her
+passion lies above all in creating scalable and secure architectures.
 
-**Ziele:**
+### Goals: ###
 
--Skalierbare, sichere Cloud‑Infrastrukturen designen
+- Design scalable, secure cloud infrastructures
+- Maximise cost optimisation and resource utilisation
+- Establish continuous delivery pipelines
+- Equip teams with best-practice cloud solutions
+- Promote a security-first mindset
 
-- Kostenoptimierung und Ressourcennutzung maximieren
-- Continuous Delivery Pipelines etablieren
-- Teams mit best‑practice Cloud‑Lösungen ausstatten
-- Security‑First‑Mindset fördern
+### Behaviours: ###
 
-**Verhaltensweisen:**
+- Make data-driven decisions
+- Proactively identify and fix security gaps
+- Promote knowledge sharing within the team
+- Consistently apply agile methods
+- Always look for improvements
 
-- Datengetriebene Entscheidungen treffen
-- Proaktiv Sicherheitslücken identifizieren und beheben
-- Wissensaustausch im Team fördern
-- Agile Methoden konsequent anwenden
-- Stets nach Verbesserungen suchen
+**Start date:** 2021-04-01
 
-**Startdatum:** 2021-04-01
-
-**Initial evaluation:**
+### Initial evaluation: ###
 
 Assigned Group:
 

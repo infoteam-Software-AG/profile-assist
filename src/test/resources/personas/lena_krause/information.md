@@ -1,30 +1,30 @@
 ## Lena Krause - Software Developer
 
-**Hintergrund:**
+### Background: ###
 
-Lena ist eine leidenschaftliche Softwareentwicklerin mit Fokus auf skalierbare Backend‑Lösungen und moderner
-Cloud‑Architektur. Sie hat einen Hintergrund in Informatik und arbeitet seit fünf Jahren in agilen Teams, wo sie
-komplexe Systeme von der Konzeption bis zur Produktion betreut.
+Lena is a passionate software developer with a focus on scalable backend solutions and modern
+cloud architecture. She has a background in computer science and has been working in agile teams for five years, where
+she manages complex systems from conception to production.
 
-**Ziele:**
+### Goals: ###
 
-- Skalierbare Microservices entwickeln
-- Kontinuierliche Integration und Deployment optimieren
-- Technologische Führungsrolle übernehmen
-- Fachwissen in Kubernetes vertiefen
-- Teammitglieder coachen
+- Develop scalable microservices
+- Optimise continuous integration and deployment
+- Take on a technological leadership role
+- Deepen expertise in Kubernetes
+- Coach team members
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Code‑Reviews proaktiv durchführen
-- Best Practices teilen
-- Lernbereitschaft zeigen
-- Effiziente Kommunikation mit Product Owner
-- Agile Prinzipien leben
+- Proactively perform code reviews
+- Share best practices
+- Demonstrate willingness to learn
+- Communicate efficiently with product owners
+- Live agile principles
 
-**Startdatum:** 2018-05-01
+**Start date:** 2018-05-01
 
-**Initial evaluation:**
+### Initial evaluation: ###
 
 Assigned Group:
 

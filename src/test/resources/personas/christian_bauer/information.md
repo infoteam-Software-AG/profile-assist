@@ -1,24 +1,24 @@
 ## Christian Bauer - Backend Developer
 
-**Hintergrund:**
+### Background: ###
 
-Christian ist ein versatiler Backend-Entwickler mit 5+ Jahren Erfahrung in mehreren Technologie-Stacks. Er hat sich
-spezialisiert auf API-Development, Datenbankdesign und hat Erfahrung mit relationalen und NoSQL-Datenbanken.
+Christian is a versatile backend developer with 5+ years of experience in multiple technology stacks. He specialises
+in API development and database design and has experience with relational and NoSQL databases.
 
-**Ziele:**
+### Goals: ###
 
-- Robuste und performante Backend-Systeme entwickeln
-- API-Design-Best-Practices etablieren
-- Datenmodellierung und Datenbankoptimierung meistern
+- Develop robust and high-performance backend systems
+- Establish API design best practices
+- Master data modelling and database optimisation
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Pragmatischer und lösungsorientierter Ansatz
-- Fokus auf Code-Performance und Effizienz
-- Regelmäßige Teilnahme an Code-Reviews
-- Engagement in technischen Diskussionen über Architecture Decisions
+- Pragmatic and solution-oriented approach
+- Focus on code performance and efficiency
+- Regular participation in code reviews
+- Engagement in technical discussions about architecture decisions
 
-**Startdatum:** 2026-03-15
+**Start date:** 2026-03-15
 
 **Initial evaluation:**
 

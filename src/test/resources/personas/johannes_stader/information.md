@@ -1,29 +1,29 @@
 ## Johannes Stader - Software Developer
 
-**Hintergrund:**
+### Background: ###
 
-- 7 Jahre Erfahrung in der Entwicklung skalierbarer Backend-Systeme
-- Fokus auf Java, Microservices und Cloud-native Architekturen
-- Führungsaufgaben in multidisziplinären Entwicklungs­teams
-- Expertise in CI/CD, Automatisierung und DevOps-Praktiken
-- Nachgewiesene Erfolge in E‑Commerce, FinTech und Analytics‑Anwendungen
+- 7 years of experience in developing scalable backend systems
+- Focus on Java, microservices and cloud-native architectures
+- Leadership roles in multidisciplinary development teams
+- Expertise in CI/CD, automation and DevOps practices
+- Proven track record in e-commerce, FinTech and analytics applications
 
-**Ziele:**
+### Goals: ###
 
-- keine näher definierten Ziele vorhanden
-- lebt den Moment
+- No specific goals defined
+- Lives in the moment
 
-**Verhaltensweisen:**
+### Behaviours: ###
 
-- Proaktiver Problemlöser, stets bestrebt, technische Exzellenz zu liefern
-- Teamorientiert, fördert Wissensaustausch und agile Methoden
-- Detailverliebt, legt großen Wert auf Code‑Qualität und Wartbarkeit
-- Stets lernwillig, hält sich über aktuelle Trends in Cloud & DevOps auf dem Laufenden
-- Zielorientiert, liefert Projekte termingerecht und im Rahmen des Budgets
+- Proactive problem solver, always striving to deliver technical excellence
+- Team-oriented, promotes knowledge sharing and agile methods
+- Attention to detail, attaches great importance to code quality and maintainability
+- Always eager to learn, keeps up to date with current trends in cloud and DevOps
+- Goal-oriented, delivers projects on time and within budget
 
-**Startdatum** 2018-01-01
+**Start date** 2018-01-01
 
-**Initial evaluation:**
+### Initial evaluation: ###
 
 Assigned Group:
 
