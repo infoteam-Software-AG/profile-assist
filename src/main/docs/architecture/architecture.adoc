@@ -161,7 +161,7 @@ include::../_includes/concept/persona-folder-structure.puml[Persona Folder Struc
 ==== Call for Bids
 Call For Bids are stored in JSON format.
 
-It should be equal to the Model structure of the persona information so it's readable for a JSON parser.
+It should be equal to the Model structure of the call for bids information so it's readable for a JSON parser.
 
 The folder structure is as following:
 [plantuml,format=png]
