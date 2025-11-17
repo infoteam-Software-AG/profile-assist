@@ -1,10 +1,6 @@
 @startfiles
 /src/test/resources/personas/jennifer_jansen/persona.json
 /src/test/resources/personas/jennifer_jansen/information.md
-/src/test/resources/personas/jennifer_jansen/certificate1.pdf
-/src/test/resources/personas/jennifer_jansen/certificate2.pdf
 /src/test/resources/personas/juergen_peter/persona.json
 /src/test/resources/personas/juergen_peter/information.md
-/src/test/resources/personas/juergen_peter/certificate1.pdf
-/src/test/resources/personas/juergen_peter/certificate2.pdf
 @endfiles
