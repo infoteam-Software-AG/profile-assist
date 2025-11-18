@@ -374,7 +374,7 @@ Initially, the testers save their evaluations locally until it has been clarifie
 The results could be stored in the following structure:
 
 * **<persona_surname_name> ** (replaced with persona name, e.g.: 'anna_mueller')
-** **<prompt_evaluation_date_and_tester_abbreviation> ** (replaced with e.g.: '2025-11-18_Fse')
+** **<prompt_evaluation_date_time_and_tester_abbreviation> ** (replaced with e.g.: '2025-11-18-14-57-06_FSe' (YYYY-MM-DD-HH-mm-SS_XXx)
 *** **input**
 **** _**persona.json** (*optional*, because it already exists under src/test/resources/personas/<persona_surname_name> in the repository)_
 **** _**information.md** (*optional*, because it already exists under src/test/resources/personas/<persona_surname_name> in the repository)_
