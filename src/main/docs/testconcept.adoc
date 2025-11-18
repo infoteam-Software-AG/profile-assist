@@ -54,7 +54,7 @@ The results, the prompts and parameters used and some meta information are colle
 
 *Goal:* Improve response quality, standardize prompt design, measure performance, measure costs (tokens), standardize configuration (e.g.: selected model, temperature...)
 
-More information can be found in the prompt evaluation section.
+More information can be found in the xref:_prompt_evaluation_concept[prompt evaluation concept section].
 
 == Coverage Goals and Metrics
 
@@ -325,6 +325,7 @@ Parameterized tests where appropriate.
 
 SonarQube quality gate met (≥ 80% branch coverage).
 
+[#_prompt_evaluation_concept]
 == Prompt Evaluation
 
 === Introduction
