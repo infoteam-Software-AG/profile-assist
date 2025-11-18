@@ -369,6 +369,7 @@ The tester uses a persona evaluation template to categorise and evaluate the res
 This part defines how all inputs, outputs and evaluations for the prompt evaluation tests are stored in a structured way.
 
 Where we will store the results has not yet been decided, but one possibility would be in the test directory in the repository or in the project directory in SharePoint.
+Initially, the testers save their evaluations locally until it has been clarified where the data will be stored.
 
 The results could be stored in the following structure:
 
@@ -382,7 +383,7 @@ The results could be stored in the following structure:
 **** **configuration.json** (model, temperature, etc.)
 *** **output**
 **** **persona.json** (optimized persona)
-**** **metadata.json** (some metadata like used tokens, response time, etc.)
+**** **metadata.json** (*optional:* some metadata like used tokens, response time, etc.)
 *** **evaluation**
 **** **persona-evaluation-template.md ** (contains the evaluation and categorization of the tester, copied from 'test/resources/persona-evaluation-template.md')
 
