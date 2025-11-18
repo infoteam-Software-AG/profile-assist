@@ -376,14 +376,14 @@ The results could be stored in the following structure:
 * **<persona_surname_name> ** (replaced with persona name, e.g.: 'anna_mueller')
 ** **<prompt_evaluation_date_and_tester_abbreviation> ** (replaced with e.g.: '2025-11-18_Fse')
 *** **input**
-**** **persona.json** (copied or linked from 'test/resources/personas/<persona-name>')
-**** **information.md** (copied or linked from 'test/resources/personas/<persona-name>')
+**** _**persona.json** (*optional*, because it already exists under src/test/resources/personas/<persona_surname_name> in the repository)_
+**** _**information.md** (*optional*, because it already exists under src/test/resources/personas/<persona_surname_name> in the repository)_
 **** **system-prompt.txt**
 **** **user-prompt.txt**
 **** **configuration.json** (model, temperature, etc.)
 *** **output**
 **** **persona.json** (optimized persona)
-**** **metadata.json** (*optional:* some metadata like used tokens, response time, etc.)
+**** _**metadata.json** (*optional:* some metadata like used tokens, response time, etc.)_
 *** **evaluation**
 **** **persona-evaluation-template.md ** (contains the evaluation and categorization of the tester, copied from 'test/resources/persona-evaluation-template.md')
 
