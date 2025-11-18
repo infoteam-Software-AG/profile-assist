@@ -372,18 +372,19 @@ Where we will store the results has not yet been decided, but one possibility wo
 
 The results could be stored in the following structure:
 
-* **prompt_evaluation **
-** **input**
-*** **persona.json** (copied or linked from 'test/resources/personas/<persona-name>')
-*** **information.md** (copied or linked from 'test/resources/personas/<persona-name>')
-*** **system-prompt.txt**
-*** **user-prompt.txt**
-*** **configuration.json** (model, temperature, etc.)
-** **output**
-*** **persona.json** (optimized persona)
-*** **metadata.json** (some metadata like used tokens, response time, etc.)
-** **evaluation**
-*** **persona-evaluation-template.md ** (contains the evaluation and categorization of the tester, copied from 'test/resources/persona-evaluation-template.md'))
+* **<_persona_surname_name> ** (replaced with persona name, e.g.: 'anna_mueller')
+** **<prompt_evaluation_date_and_tester_abbreviation> ** (replaced with e.g.: '2025-11-18_Fse')
+*** **input**
+**** **persona.json** (copied or linked from 'test/resources/personas/<persona-name>')
+**** **information.md** (copied or linked from 'test/resources/personas/<persona-name>')
+**** **system-prompt.txt**
+**** **user-prompt.txt**
+**** **configuration.json** (model, temperature, etc.)
+*** **output**
+**** **persona.json** (optimized persona)
+**** **metadata.json** (some metadata like used tokens, response time, etc.)
+*** **evaluation**
+**** **persona-evaluation-template.md ** (contains the evaluation and categorization of the tester, copied from 'test/resources/persona-evaluation-template.md'))
 
 == Appendix: Abbreviations & References
 
