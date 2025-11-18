@@ -386,6 +386,8 @@ The results could be stored in the following structure:
 *** **evaluation**
 **** **persona-evaluation-template.md ** (contains the evaluation and categorization of the tester, copied from 'test/resources/persona-evaluation-template.md'))
 
+In addition, a concept must be developed to record and analyse all results in a structured form.
+
 == Appendix: Abbreviations & References
 
 AAA: Arrange–Act–Assert (Given–When–Then).
