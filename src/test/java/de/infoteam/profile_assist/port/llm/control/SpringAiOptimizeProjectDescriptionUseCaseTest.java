@@ -1,4 +1,4 @@
-package de.infoteam.profile_assist.port.llm.integration;
+package de.infoteam.profile_assist.port.llm.control;
 
 import static org.mockito.Answers.RETURNS_DEEP_STUBS;
 
@@ -6,6 +6,7 @@ import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 import org.assertj.core.api.Assertions;
@@ -16,9 +17,9 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.ChatClient.Builder;
 import org.springframework.ai.chat.client.advisor.api.Advisor;
 
-class ChatAdapterTest {
+class SpringAiOptimizeProjectDescriptionUseCaseTest {
 
-  private ChatAdapter chatAdapter;
+  private SpringAiOptimizeProjectDescriptionUseCase springAiOptimizeProjectDescriptionUseCase;
 
   private Persona unoptimizedPersona;
 
@@ -53,14 +54,16 @@ class ChatAdapterTest {
                 .call()
                 .entity(Persona.class))
         .thenReturn(unoptimizedPersona);
-    chatAdapter = new ChatAdapter(chatClientBuilderMock);
+    springAiOptimizeProjectDescriptionUseCase =
+        new SpringAiOptimizeProjectDescriptionUseCase(chatClientBuilderMock);
   }
 
   @Test
   void optimizePersona() {
     // action
     Persona optimizedPersona =
-        chatAdapter.optimizePersona(unoptimizedPersona, "systempromot", "userprompt");
+        springAiOptimizeProjectDescriptionUseCase.optimizeProject(
+            new Project("", "", Collections.emptyList()), "systempromot", "userprompt");
     // assertion
     Assertions.assertThat(optimizedPersona).isEqualTo(unoptimizedPersona);
   }

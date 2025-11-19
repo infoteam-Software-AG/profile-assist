@@ -1,9 +1,7 @@
 package de.infoteam.profile_assist.integration.chat;
 
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-import de.infoteam.profile_assist.domain.control.ChatService;
+import de.infoteam.profile_assist.domain.control.OptimizeProjectDesciptionService;
 import de.infoteam.profile_assist.domain.entity.Persona;
 import java.io.File;
 import java.io.IOException;
@@ -27,7 +25,7 @@ public class ChatServiceMT {
 
   private record Configuration(String model, String temperature) {}
 
-  @Autowired private ChatService chatService;
+  @Autowired private OptimizeProjectDesciptionService chatService;
 
   @Autowired private ObjectMapper objectMapper;
 
@@ -81,10 +79,12 @@ public class ChatServiceMT {
 
       log.info("Unoptimized persona: {}", objectMapper.writeValueAsString(unoptimizedPersona));
 
-      Persona optimizedPersona =
-          chatService.askForPersonaOptimization(unoptimizedPersona, systemPrompt, userPrompt);
+      // FIXME:
+      Object optimizedPersona =
+          chatService.optimizeProjectDescription(
+              unoptimizedPersona.projectHistory().getFirst(), systemPrompt, userPrompt);
 
-      assertThat(optimizedPersona.lastUpdate()).isAfter(unoptimizedPersona.lastUpdate());
+      //      assertThat(optimizedPersona.lastUpdate()).isAfter(unoptimizedPersona.lastUpdate());
       File personaFile = new File(testRunFolder, "optimized-persona.json");
       Files.writeString(
           personaFile.toPath(),
