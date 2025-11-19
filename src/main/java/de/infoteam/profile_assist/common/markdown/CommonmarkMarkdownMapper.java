@@ -99,7 +99,7 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
     return switch (node) {
       case Paragraph p -> toCommonmarkParagraph(p);
       case Heading h -> toCommonmarkHeading(h);
-      case Text t -> new org.commonmark.node.Text(t.text());
+      case Text(String text) -> new org.commonmark.node.Text(text);
       case BulletList l -> toCommonmarkBulletList(l);
       case ListItem item -> toCommonmarkListItem(item);
       case StrongEmphasis se -> toCommonmarkStrongEmphasis(se);
@@ -149,9 +149,12 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
 
   private org.commonmark.node.ListItem toCommonmarkListItem(ListItem item) {
     var li = new org.commonmark.node.ListItem();
+    var paragraph = new org.commonmark.node.Paragraph();
     for (MarkdownNode child : item.children()) {
-      li.appendChild(toCommonmarkNode(child));
+      Node commonmarkChild = toCommonmarkNode(child);
+      paragraph.appendChild(commonmarkChild);
     }
+    li.appendChild(paragraph);
     return li;
   }
 }
