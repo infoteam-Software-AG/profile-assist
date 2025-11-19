@@ -1,0 +1,66 @@
+{
+  "id": "e7a4c3b8-5f6d-4c2a-9b3e-7d8f1c9a2b4c",
+  "jobTitle": "Software Developer",
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "REST",
+    "Microservices",
+    "Kubernetes",
+    "Docker",
+    "PostgreSQL",
+    "React",
+    "TypeScript",
+    "CI/CD",
+    "Git",
+    "Agile"
+  ],
+  "certificates": [
+    "Java SE 8 Programmer – 06/2017",
+    "Spring Professional – 09/2019",
+    "Kubernetes Administrator – 03/2020",
+    "AWS Certified Solutions Architect – 11/2021"
+  ],
+  "projectHistory": [
+    {
+      "name": "E-Commerce Plattform Optimierung",
+      "description": "Projektbeschreibung: Die Aufgabe bestand darin, eine bestehende E-Commerce-Plattform zu analysieren und die Performance zu steigern. Das Team entwickelte ein neu strukturiertes Backend unter Verwendung von Spring Boot und Docker. Durch die Implementierung eines Caching-Mechanismus in Redis konnten die Ladezeiten um 35 % reduziert werden. Zusätzlich wurden Microservices für die Zahlungsabwicklung eingeführt, um Skalierbarkeit zu gewährleisten. Das Projekt dauerte von 01/2018 bis 12/2019 und umfasste ein Team von vier Entwicklern. Der Kunde konnte seine Conversion‑Rate um 12 % erhöhen. Die Anwendung zeigte eine höhere Ausfallsicherheit bei hohem Traffic. Wir nutzten CI/CD-Pipelines mit GitLab CI, um kontinuierliche Bereitstellung zu ermöglichen. Die Sicherheitsanforderungen wurden durch OWASP‑Standards erfüllt. Endanwender profitierten von einer verbesserten Nutzererfahrung. Das Projekt wurde mit hoher Kundenzufriedenheit abgeschlossen.",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Docker",
+        "Redis",
+        "PostgreSQL",
+        "GitLab CI"
+      ]
+    },
+    {
+      "name": "Mobile Banking App für FinTech",
+      "description": "Projektbeschreibung: Entwicklung einer Cross‑Platform Mobile Banking App unter Verwendung von React Native. Das Ziel war, sichere Transaktionen und Echtzeit‑Benachrichtigungen zu ermöglichen. Wir implementierten OAuth2.0 und JWT zur Authentifizierung. Die App unterstützt Push‑Benachrichtigungen über Firebase Cloud Messaging. Integration von Stripe für Zahlungsabwicklung wurde erfolgreich abgeschlossen. Das Projekt lief von 02/2020 bis 05/2021 mit einem sechsköpfigen Team. Wir nutzten Agile Scrum mit zweiwöchigen Sprints. Tests wurden mit Jest und Detox durchgeführt. Durch automatisierte UI‑Tests reduzierten wir Regressionen. Der Kunde konnte die App innerhalb von vier Monaten im App Store veröffentlichen. Nutzerzahlen stiegen im ersten Quartal um 25 %. Der Projektabschluss erfolgte ohne kritische Bugs.",
+      "technologies": [
+        "React Native",
+        "TypeScript",
+        "Firebase",
+        "Stripe",
+        "Jest",
+        "Detox"
+      ]
+    },
+    {
+      "name": "Microservices Architektur für Logistik",
+      "description": "Projektbeschreibung: Umstellung einer monolithischen Logistiksoftware auf eine Microservices‑Architektur. Wir entwickelten Services für Auftragsverwaltung, Lagerbestand und Routenplanung. Kubernetes wurde für die Orchestrierung genutzt, während Helm Charts die Deployment‑Konsistenz sicherstellten. Ist‑Monitoring wurde mit Prometheus und Grafana implementiert. Sicherheitsmaßnahmen umfassten TLS‑Verschlüsselung und Network Policies. Das Projekt erstreckte sich von 07/2021 bis 08/2022 und das Team bestand aus drei Entwicklern. Durch die neue Architektur erreichten wir eine verbesserte Skalierbarkeit bei Spitzenlasten. Die Verfügbarkeit stieg von 99,2 % auf 99,9 %. Wir führten automatisierte Tests mit JUnit und Postman aus. Der Kunde zeigte sich zufrieden mit der Performance. Das Projekt schloss mit einer Dokumentation aller Services ab.",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Kubernetes",
+        "Helm",
+        "Prometheus",
+        "Grafana",
+        "JUnit",
+        "Postman"
+      ]
+    }
+  ],
+  "startingDate": "2018-01-01T00:00:00.000+00:00",
+  "lastUpdate": "2025-11-13T14:24:52.000+00:00"
+}

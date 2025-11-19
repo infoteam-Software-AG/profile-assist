@@ -1,8 +1,6 @@
 @startfiles
-/src/test/resources/personas/UUID1/Persona.json
-/src/test/resources/personas/UUID1/Certificate1.pdf
-/src/test/resources/personas/UUID1/Certificate2.pdf
-/src/test/resources/personas/UUID2/Persona.json
-/src/test/resources/personas/UUID2/Certificate1.pdf
-/src/test/resources/personas/UUID2/Certificate2.pdf
+/src/test/resources/personas/jennifer_jansen/persona.json
+/src/test/resources/personas/jennifer_jansen/information.md
+/src/test/resources/personas/juergen_peter/persona.json
+/src/test/resources/personas/juergen_peter/information.md
 @endfiles
