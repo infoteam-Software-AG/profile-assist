@@ -1,5 +1,8 @@
 package de.infoteam.profile_assist.common.markdown;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.List;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.markdown.MarkdownRenderer;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,10 +10,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
-
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("FlexmarkMarkdownMapperTest")
 class CommonmarkMarkdownMapperTest {
@@ -116,7 +115,7 @@ class CommonmarkMarkdownMapperTest {
         Some **bold** text.
 
         - first item
-        
+
         - second item
         """;
 
@@ -132,7 +131,7 @@ class CommonmarkMarkdownMapperTest {
         Some **bold** text.
 
         - first item
-        
+
         - second item
         """;
     assertThat(result).isEqualTo(expected);

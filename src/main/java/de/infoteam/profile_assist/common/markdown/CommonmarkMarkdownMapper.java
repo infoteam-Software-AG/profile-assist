@@ -1,11 +1,10 @@
 package de.infoteam.profile_assist.common.markdown;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.markdown.MarkdownRenderer;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CommonmarkMarkdownMapper implements MarkdownMapper {
   private final Parser parser;
@@ -53,18 +52,15 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
 
     return new StrongEmphasis(se.getOpeningDelimiter(), newText.getLiteral());
 
-
-
-
-//    String text = "";
-//    StringBuilder stringBuilder = new StringBuilder();
-//    stringBuilder
-//        .append("** ")
-//        .append(newText.getLiteral())
-//        .append(" **");
-//    text = stringBuilder.toString();
-//    Text commonmarkText = new Text(text);
-//    return commonmarkText;
+    //    String text = "";
+    //    StringBuilder stringBuilder = new StringBuilder();
+    //    stringBuilder
+    //        .append("** ")
+    //        .append(newText.getLiteral())
+    //        .append(" **");
+    //    text = stringBuilder.toString();
+    //    Text commonmarkText = new Text(text);
+    //    return commonmarkText;
   }
 
   private Document toASTDocument(Node doc) {
