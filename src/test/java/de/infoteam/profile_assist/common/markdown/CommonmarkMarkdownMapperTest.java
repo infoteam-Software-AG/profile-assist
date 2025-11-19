@@ -1,27 +1,28 @@
 package de.infoteam.profile_assist.common.markdown;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import com.vladsch.flexmark.formatter.Formatter;
-import com.vladsch.flexmark.parser.Parser;
-import java.util.List;
+import org.commonmark.parser.Parser;
+import org.commonmark.renderer.markdown.MarkdownRenderer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
 
-@DisplayName("FlexmarkMarkdownMapperTest")
-class FlexmarkMarkdownMapperTest {
+import java.util.List;
 
-  private FlexmarkMarkdownMapper mapper;
+import static org.assertj.core.api.Assertions.assertThat;
+
+@DisplayName("FlexmarkMarkdownMapperTest")
+class CommonmarkMarkdownMapperTest {
+
+  private CommonmarkMarkdownMapper mapper;
 
   @BeforeEach
   void setUp() {
     // Given (common)
     Parser parser = Parser.builder().build();
-    Formatter formatter = Formatter.builder().build();
-    mapper = new FlexmarkMarkdownMapper(parser, formatter);
+    MarkdownRenderer renderer = MarkdownRenderer.builder().build();
+    mapper = new CommonmarkMarkdownMapper(parser, renderer);
   }
 
   @DisplayName("When markdown is null or empty, then Document has no children")
@@ -115,6 +116,7 @@ class FlexmarkMarkdownMapperTest {
         Some **bold** text.
 
         - first item
+        
         - second item
         """;
 
@@ -130,7 +132,9 @@ class FlexmarkMarkdownMapperTest {
         Some **bold** text.
 
         - first item
-        - second item""";
+        
+        - second item
+        """;
     assertThat(result).isEqualTo(expected);
   }
 
