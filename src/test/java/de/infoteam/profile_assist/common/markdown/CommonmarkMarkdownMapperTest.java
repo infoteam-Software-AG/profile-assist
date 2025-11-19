@@ -115,7 +115,6 @@ class CommonmarkMarkdownMapperTest {
         Some **bold** text.
 
         - first item
-
         - second item
         """;
 
@@ -131,7 +130,6 @@ class CommonmarkMarkdownMapperTest {
         Some **bold** text.
 
         - first item
-
         - second item
         """;
     assertThat(result).isEqualTo(expected);

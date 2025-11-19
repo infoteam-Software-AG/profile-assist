@@ -49,18 +49,7 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
 
   private StrongEmphasis mapStrongEmphasis(org.commonmark.node.StrongEmphasis se) {
     org.commonmark.node.Text newText = (org.commonmark.node.Text) se.getFirstChild();
-
     return new StrongEmphasis(se.getOpeningDelimiter(), newText.getLiteral());
-
-    //    String text = "";
-    //    StringBuilder stringBuilder = new StringBuilder();
-    //    stringBuilder
-    //        .append("** ")
-    //        .append(newText.getLiteral())
-    //        .append(" **");
-    //    text = stringBuilder.toString();
-    //    Text commonmarkText = new Text(text);
-    //    return commonmarkText;
   }
 
   private Document toASTDocument(Node doc) {
@@ -151,8 +140,9 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
 
   private org.commonmark.node.BulletList toCommonmarkBulletList(BulletList list) {
     var bulletList = new org.commonmark.node.BulletList();
+    bulletList.setTight(true);
     for (ListItem item : list.items()) {
-      bulletList.appendChild(toCommonmarkNode(item)); // ruft unten ListItem-Case auf
+      bulletList.appendChild(toCommonmarkNode(item));
     }
     return bulletList;
   }
