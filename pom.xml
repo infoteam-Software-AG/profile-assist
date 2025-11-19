@@ -34,6 +34,7 @@
         <spring-jdbc.version>6.2.12</spring-jdbc.version>
         <jspecify.version>1.0.0</jspecify.version>
         <flexmark.version>0.64.8</flexmark.version>
+        <commonmark.version>0.27.0</commonmark.version>
         <!-- """"" end: version properties """"" -->
 
         <asciidoc.outputDirectory>${project.basedir}/target/docs</asciidoc.outputDirectory>
@@ -112,6 +113,11 @@
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark</artifactId>
             <version>${flexmark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.commonmark</groupId>
+            <artifactId>commonmark</artifactId>
+            <version>${commonmark.version}</version>
         </dependency>
         <!-- ***** end: other dependencies ***** -->
 
