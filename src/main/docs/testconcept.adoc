@@ -10,7 +10,8 @@ This test concept defines binding guidelines for implementation, structure, nami
 
 Target Coverage: At least 80% branch coverage (measured via SonarQube).
 
-Follow the Test Pyramid: Focus on unit tests, followed by component/integration tests. End-to-end tests are outside the scope of this document.
+Follow the Test Pyramid: Focus on unit tests, followed by component/integration tests.
+End-to-end tests are outside the scope of this document.
 
 Readability above all: Meaningful test names and descriptions, clear Given/When/Then structure.
 
@@ -38,10 +39,22 @@ Isolation via mocks/stubs (e.g. Mockito) or test doubles.
 
 *Goal:* Interaction, configuration, persistence, (de-)serialization, web layer, transactions.
 
-*External dependencies:* Prefer Testcontainers (e.g. PostgreSQL, Kafka). Alternatively, embedded variants.
+*External dependencies:* Prefer Testcontainers (e.g. PostgreSQL, Kafka).
+Alternatively, embedded variants.
 
 [NOTE]
-Unit tests address pure logic. Component/integration tests address Spring wiring, data, and interface behavior.
+Unit tests address pure logic.
+Component/integration tests address Spring wiring, data, and interface behavior.
+
+=== Prompt Evaluation
+
+*Definition:* Human-assisted test in which developers run various prompts against an AI chatbot and evaluate the results.
+
+The results, the prompts and parameters used and some meta information are collected, stored and evaluated in order to achieve the best results.
+
+*Goal:* Improve response quality, standardize prompt design, measure performance, measure costs (tokens), standardize configuration (e.g.: selected model, temperature...)
+
+More information can be found in the xref:_prompt_evaluation_concept[prompt evaluation concept section].
 
 == Coverage Goals and Metrics
 
@@ -62,12 +75,12 @@ System-integration tests: Class suffix *IT (e.g. `OrderCreationIT`).
 Alternatively, `@Tag` can be used for differentiation.
 
 Methods: Use `@DisplayName` and follow the pattern:
-“When … and/or … then …”
-(Examples: “When discount is valid and cart is not empty, then final price is reduced”).
+“When … and/or … then …” (Examples: “When discount is valid and cart is not empty, then final price is reduced”).
 
 == Conventions for Test Cases
 
-AssertJ as the only assertion framework. JUnit-Jupiter assertions (org.junit.jupiter.api.Assertions) are forbidden (enforced by ArchUnit rule, see below).
+AssertJ as the only assertion framework.
+JUnit-Jupiter assertions (org.junit.jupiter.api.Assertions) are forbidden (enforced by ArchUnit rule, see below).
 
 Clearly structure Given/When/Then.
 
@@ -79,7 +92,7 @@ No Spring contexts in unit and component-itegration tests (for performance & iso
 
 === Example @DisplayName & AssertJ
 
-[source, java]
+[source,java]
 ----
 @DisplayName("When discount is valid and cart is not empty, then final price is reduced")
 @Test
@@ -98,7 +111,8 @@ void rabattWirdAngewendet() {
 ----
 
 === Example ParameterizedTest
-[source, java]
+
+[source,java]
 ----
 @DisplayName("When input value is invalid, then IllegalArgumentException is thrown")
 @ParameterizedTest(name = "Case {index}: input={0}")
@@ -114,7 +128,7 @@ void invalidInputsThrowException(int input) {
 
 === Forbid JUnit-Jupiter Assertions (allow AssertJ only)
 
-[source, java]
+[source,java]
 ----
 @AnalyzeClasses(packages = "com.example")
 public class AssertionFrameworkRulesTest {
@@ -129,7 +143,7 @@ public class AssertionFrameworkRulesTest {
 
 === Enforce Naming Conventions
 
-[source, java]
+[source,java]
 ----
 @AnalyzeClasses(packages = "com.example")
 public class NamingRulesTest {
@@ -148,7 +162,8 @@ public class NamingRulesTest {
 ----
 
 [IMPORTANT]
-The above rules are examples. They should be placed in a separate module/package (e.g. architecture) within the project and be executed automatically during the build.
+The above rules are examples.
+They should be placed in a separate module/package (e.g. architecture) within the project and be executed automatically during the build.
 
 == Spring-Specific Guidelines
 
@@ -156,13 +171,15 @@ The above rules are examples. They should be placed in a separate module/package
 
 Not allowed: `@SpringBootTest`, `@ExtendWith(SpringExtension.class)`, `@MockBean`, `@Autowired`.
 
-Allowed: Pure JUnit/Mockito tests. Constructor injection in production code improves testability.
+Allowed: Pure JUnit/Mockito tests.
+Constructor injection in production code improves testability.
 
 Time budget: Aim for < 100 ms per test method.
 
 === Component Tests (no Spring Context)
 
-Definition: Test a small cluster of collaborating classes as a unit (e.g., service + domain + mappers), without Spring. Wire collaborators manually; mock only true external collaborators (e.g., repositories, HTTP clients, messaging).
+Definition: Test a small cluster of collaborating classes as a unit (e.g., service + domain + mappers), without Spring.
+Wire collaborators manually; mock only true external collaborators (e.g., repositories, HTTP clients, messaging).
 
 Goals: Validate cross-class behavior, orchestration, contracts, edge cases, and error handling across the component.
 
@@ -210,7 +227,7 @@ Surefire runs unit tests and component tests(*Test and *CT).
 
 Failsafe runs integration tests (*IT) during integration-test/verify phase.
 
-[source, xml]
+[source,xml]
 ----
 <build>
     <plugins>
@@ -246,6 +263,7 @@ Failsafe runs integration tests (*IT) during integration-test/verify phase.
     </plugins>
 </build>
 ----
+
 == SonarQube & Quality Gate
 
 CI runs tests + coverage report (JaCoCo) and publishes results to SonarQube.
@@ -261,7 +279,8 @@ Consistently apply Arrange/Act/Assert (or Given/When/Then).
 
 One assertion framework: AssertJ (no mixed usage).
 
-Each test case should test exactly one aspect. Multiple aspects → split into separate tests.
+Each test case should test exactly one aspect.
+Multiple aspects → split into separate tests.
 
 Keep test data clean: Builder/factory methods, ObjectMother pattern.
 
@@ -299,11 +318,76 @@ No usage of org.junit.jupiter.api.Assertions.
 
 No Spring contexts in unit tests.
 
-Correct suffixes: *Test (unit), *IT (integration). Alternatively, @Tag may be used for differentiation.
+Correct suffixes: *Test (unit), *IT (integration).
+Alternatively, @Tag may be used for differentiation.
 
 Parameterized tests where appropriate.
 
 SonarQube quality gate met (≥ 80% branch coverage).
+
+[#_prompt_evaluation_concept]
+== Prompt Evaluation
+
+=== Introduction
+
+Prompt evaluation is a human-assigned testing approach in which developers run various prompts against an AI chatbot to improve results.
+All results, including prompts, model parameters, created entities and relevant metadata are collected, stored and analyzed to continuously refine prompt design and model configuration.
+
+This process ensures that the prompt interactions become more predictable, cost-efficient (tokens) and aligned with the project goals.
+
+=== Goals
+
+- Improve response quality
+- Standardize prompt design
+- Measure model performance
+- Measure costs (token usage)
+- Standardize configuration (e.g., model selection, temperature)
+- Enable reproducible results from prompt experiments
+- provide a structured dataset for analysis and refinement (results, prompts, configuration, evaluation)
+- optimization of the existing personas
+
+=== Test protocol
+
+Each tester uses their own setup of
+
+* **Tester Name**
+* **Date**
+* **Model Version: ** selected LLM (default: GPT 5 Standard)
+* **System role: ** Provides overall instruction context
+* **Pre-prompt: ** Provides the input data (persona) and the user instruction
+* **Temperature: ** Indicates creativity or determination
+** 0.2 means low creativity and high determination
+** 0.8 means high creativity and low determination
+* **Notes on Setup: ** Additional user notes for the test setup
+
+The tester uses a persona evaluation template to categorise and evaluate the resulting optimised persona in the context of the original input persona.
+
+==== xref:_includes/evaluation/persona-evaluation-template.adoc[Persona Evaluation Template]
+
+=== Result Storage Concepts
+
+This part defines how all inputs, outputs and evaluations for the prompt evaluation tests are stored in a structured way.
+
+Where we will store the results has not yet been decided, but one possibility would be in the test directory in the repository or in the project directory in SharePoint.
+Initially, the testers save their evaluations locally until it has been clarified where the data will be stored.
+
+The results could be stored in the following structure:
+
+* **<persona_surname_name> ** (replaced with persona name, e.g.: 'anna_mueller')
+** **<prompt_evaluation_date_time_and_tester_abbreviation> ** (replaced with e.g.: '2025-11-18-14-57-06_FSe' (YYYY-MM-DD-HH-mm-SS_XXx)
+*** **input**
+**** _**persona.json** (*optional*, because it already exists under src/test/resources/personas/<persona_surname_name> in the repository)_
+**** _**information.md** (*optional*, because it already exists under src/test/resources/personas/<persona_surname_name> in the repository)_
+**** **system-prompt.txt**
+**** **user-prompt.txt**
+**** **configuration.json** (model, temperature, etc.)
+*** **output**
+**** **persona.json** (optimized persona)
+**** _**metadata.json** (*optional:* some metadata like used tokens, response time, etc.)_
+*** **evaluation**
+**** **persona-evaluation-template.md ** (contains the evaluation and categorization of the tester, copied from 'test/resources/persona-evaluation-template.md')
+
+In addition, a concept must be developed to record and analyse all results in a structured form.
 
 == Appendix: Abbreviations & References
 
@@ -316,4 +400,5 @@ PIT: Pitest Mutation Testing.
 SUT: System Under Test.
 
 [ENDNOTE]
-This document is binding. Deviations must be justified and explicitly approved during code review.
+This document is binding.
+Deviations must be justified and explicitly approved during code review.
