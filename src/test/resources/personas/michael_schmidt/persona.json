@@ -1,0 +1,30 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440100",
+  "jobTitle": "Frontend-Entwickler",
+  "skills": [
+    "React",
+    "TypeScript",
+    "CSS",
+    "JavaScript",
+    "Vue.js",
+    "Responsive Design",
+    "Accessibility"
+  ],
+  "certificates": [
+    "Certified Web Developer",
+    "Google Cloud Associate"
+  ],
+  "projectHistory": [
+    {
+      "name": "Web-Anwendung Redesign",
+      "description": "Kompletter Redesign einer Legacy Web-Anwendung mit React und TypeScript"
+    },
+    {
+      "name": "Mobile App Entwicklung",
+      "description": "Entwicklung einer responsiven Mobile-First Applikation"
+    }
+  ],
+  "startingDate": "2026-02-15",
+  "lastUpdate": "2025-01-13"
+}
+

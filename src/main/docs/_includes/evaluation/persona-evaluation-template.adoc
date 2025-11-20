@@ -1,0 +1,130 @@
+= Test Protocol
+
+== 1. Test Groups Overview
+
+[cols="1,1,1",options="header"]
+|===
+| Group | Description | Goal of Evaluation
+
+| *A – Poor / Incomplete Personas*
+| Minimal or inconsistent data, missing skills, vague project descriptions
+| Evaluate robustness: can the model infer missing context, fill gaps, and produce coherent enriched output?
+
+| *B – Average Personas*
+| Plausible but generic skills and projects, moderate detail
+| Evaluate enrichment quality: can the model polish, enrich, and extract skills accurately without hallucination?
+
+| *C – High-Quality Personas*
+| Already detailed, structured, and consistent
+| Evaluate refinement: does the model enhance without redundancy or distortion?
+|===
+
+== 2. Tester Configuration Fields (per session)
+
+Each tester fills these once per run or per persona batch.
+
+[cols="1,1",options="header"]
+|===
+| Field | Example / Notes
+
+| *Tester Name* |
+| *Date* |
+| *Model Version* | GPT 5 Standard
+| *System Role* |
+| *Pre-prompt* |
+| *Temperature* |
+| *Notes on Setup* |
+|===
+
+== 3. Test Matrix
+
+=== Group A – Poor / Incomplete Personas
+
+[cols="1,1,1,1,1,1",options="header"]
+|===
+| Skill Extraction Accuracy
+| Gap Filling Quality
+| Readability
+| Creativity / Value Add
+| Consistency
+| Tester Notes
+
+|
+|
+|
+|
+|
+|
+|===
+
+=== Group B – Average Personas
+
+[cols="1,1,1,1,1,1",options="header"]
+|===
+| Skill Extraction Accuracy
+| Enrichment / Enhancement Quality
+| Readability
+| Precision / Factual Correctness
+| Consistency
+| Tester Notes
+
+|
+|
+|
+|
+|
+|
+|===
+
+=== Group C – High-Quality Personas
+
+[cols="1,1,1,1,1,1",options="header"]
+|===
+| Skill Extraction Accuracy
+| Value Preservation
+| Creativity / Value Add
+| Consistency
+| Precision / Factual Correctness
+| Tester Notes
+
+|
+|
+|
+|
+|
+|
+|===
+
+== 4. Evaluation Criteria Reference (for all groups)
+
+[cols="1,2",options="header"]
+|===
+| Criteria | Meaning
+
+| *Skill Extraction Accuracy*
+| Were relevant skills correctly recognized and categorized?
+
+| *Gap Filling Quality*
+| Did the model intelligently infer missing info? (Group A focus)
+
+| *Enrichment Quality*
+| Did the model meaningfully add relevant, realistic detail? (Group B focus)
+
+| *Value Preservation*
+| Did the model maintain the integrity of strong input? (Group C focus)
+
+| *Readability*
+| Is the text fluent, natural, and professional?
+
+| *Consistency*
+| Are similar inputs treated similarly in tone and structure?
+
+| *Creativity / Value Add*
+| Did the model enhance with useful, believable detail?
+
+| *Precision / Factual Correctness*
+| No hallucinations, coherent domain logic
+|===
+
+All criteria should be valued between 1 (=poorly done) and 5 (=excellent).
+Notable points go to *Tester Notes*.
