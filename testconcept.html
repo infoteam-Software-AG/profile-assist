@@ -447,6 +447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_unit_tests">3.1. Unit Tests</a></li>
 <li><a href="#_component_integration_tests">3.2. Component / Integration Tests</a></li>
+<li><a href="#_prompt_evaluation">3.3. Prompt Evaluation</a></li>
 </ul>
 </li>
 <li><a href="#_coverage_goals_and_metrics">4. Coverage Goals and Metrics</a></li>
@@ -482,7 +483,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_mocking_stubbing">14. Mocking &amp; Stubbing</a></li>
 <li><a href="#_test_data_persistence">15. Test Data &amp; Persistence</a></li>
 <li><a href="#_pr_checklist_mandatory">16. PR Checklist (Mandatory)</a></li>
-<li><a href="#_appendix_abbreviations_references">17. Appendix: Abbreviations &amp; References</a></li>
+<li><a href="#_prompt_evaluation_concept">17. Prompt Evaluation</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction">17.1. Introduction</a></li>
+<li><a href="#_goals">17.2. Goals</a></li>
+<li><a href="#_test_protocol">17.3. Test protocol</a>
+<ul class="sectlevel3">
+<li><a href="#_persona_evaluation_template">17.3.1. Persona Evaluation Template</a></li>
+</ul>
+</li>
+<li><a href="#_result_storage_concepts">17.4. Result Storage Concepts</a></li>
+</ul>
+</li>
+<li><a href="#_appendix_abbreviations_references">18. Appendix: Abbreviations &amp; References</a></li>
 </ul>
 </div>
 </div>
@@ -501,7 +514,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Target Coverage: At least 80% branch coverage (measured via SonarQube).</p>
 </div>
 <div class="paragraph">
-<p>Follow the Test Pyramid: Focus on unit tests, followed by component/integration tests. End-to-end tests are outside the scope of this document.</p>
+<p>Follow the Test Pyramid: Focus on unit tests, followed by component/integration tests.
+End-to-end tests are outside the scope of this document.</p>
 </div>
 <div class="paragraph">
 <p>Readability above all: Meaningful test names and descriptions, clear Given/When/Then structure.</p>
@@ -546,7 +560,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><strong>Goal:</strong> Interaction, configuration, persistence, (de-)serialization, web layer, transactions.</p>
 </div>
 <div class="paragraph">
-<p><strong>External dependencies:</strong> Prefer Testcontainers (e.g. PostgreSQL, Kafka). Alternatively, embedded variants.</p>
+<p><strong>External dependencies:</strong> Prefer Testcontainers (e.g. PostgreSQL, Kafka).
+Alternatively, embedded variants.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -555,10 +570,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Unit tests address pure logic. Component/integration tests address Spring wiring, data, and interface behavior.
+Unit tests address pure logic.
+Component/integration tests address Spring wiring, data, and interface behavior.
 </td>
 </tr>
 </table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prompt_evaluation">3.3. Prompt Evaluation</h3>
+<div class="paragraph">
+<p><strong>Definition:</strong> Human-assisted test in which developers run various prompts against an AI chatbot and evaluate the results.</p>
+</div>
+<div class="paragraph">
+<p>The results, the prompts and parameters used and some meta information are collected, stored and evaluated in order to achieve the best results.</p>
+</div>
+<div class="paragraph">
+<p><strong>Goal:</strong> Improve response quality, standardize prompt design, measure performance, measure costs (tokens), standardize configuration (e.g.: selected model, temperature&#8230;&#8203;)</p>
+</div>
+<div class="paragraph">
+<p>More information can be found in the <a href="#_prompt_evaluation_concept">prompt evaluation concept section</a>.</p>
 </div>
 </div>
 </div>
@@ -594,8 +625,7 @@ Unit tests address pure logic. Component/integration tests address Spring wiring
 </div>
 <div class="paragraph">
 <p>Methods: Use <code>@DisplayName</code> and follow the pattern:
-“When … and/or … then …”
-(Examples: “When discount is valid and cart is not empty, then final price is reduced”).</p>
+“When … and/or … then …” (Examples: “When discount is valid and cart is not empty, then final price is reduced”).</p>
 </div>
 </div>
 </div>
@@ -603,7 +633,8 @@ Unit tests address pure logic. Component/integration tests address Spring wiring
 <h2 id="_conventions_for_test_cases">6. Conventions for Test Cases</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AssertJ as the only assertion framework. JUnit-Jupiter assertions (org.junit.jupiter.api.Assertions) are forbidden (enforced by ArchUnit rule, see below).</p>
+<p>AssertJ as the only assertion framework.
+JUnit-Jupiter assertions (org.junit.jupiter.api.Assertions) are forbidden (enforced by ArchUnit rule, see below).</p>
 </div>
 <div class="paragraph">
 <p>Clearly structure Given/When/Then.</p>
@@ -703,7 +734,8 @@ public class NamingRulesTest {
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-The above rules are examples. They should be placed in a separate module/package (e.g. architecture) within the project and be executed automatically during the build.
+The above rules are examples.
+They should be placed in a separate module/package (e.g. architecture) within the project and be executed automatically during the build.
 </td>
 </tr>
 </table>
@@ -720,7 +752,8 @@ The above rules are examples. They should be placed in a separate module/package
 <p>Not allowed: <code>@SpringBootTest</code>, <code>@ExtendWith(SpringExtension.class)</code>, <code>@MockBean</code>, <code>@Autowired</code>.</p>
 </div>
 <div class="paragraph">
-<p>Allowed: Pure JUnit/Mockito tests. Constructor injection in production code improves testability.</p>
+<p>Allowed: Pure JUnit/Mockito tests.
+Constructor injection in production code improves testability.</p>
 </div>
 <div class="paragraph">
 <p>Time budget: Aim for &lt; 100 ms per test method.</p>
@@ -729,7 +762,8 @@ The above rules are examples. They should be placed in a separate module/package
 <div class="sect2">
 <h3 id="_component_tests_no_spring_context">9.2. Component Tests (no Spring Context)</h3>
 <div class="paragraph">
-<p>Definition: Test a small cluster of collaborating classes as a unit (e.g., service + domain + mappers), without Spring. Wire collaborators manually; mock only true external collaborators (e.g., repositories, HTTP clients, messaging).</p>
+<p>Definition: Test a small cluster of collaborating classes as a unit (e.g., service + domain + mappers), without Spring.
+Wire collaborators manually; mock only true external collaborators (e.g., repositories, HTTP clients, messaging).</p>
 </div>
 <div class="paragraph">
 <p>Goals: Validate cross-class behavior, orchestration, contracts, edge cases, and error handling across the component.</p>
@@ -895,7 +929,8 @@ Branch coverage &lt; 80%, new critical smells/bugs/vulnerabilities.</p>
 <p>One assertion framework: AssertJ (no mixed usage).</p>
 </div>
 <div class="paragraph">
-<p>Each test case should test exactly one aspect. Multiple aspects → split into separate tests.</p>
+<p>Each test case should test exactly one aspect.
+Multiple aspects → split into separate tests.</p>
 </div>
 <div class="paragraph">
 <p>Keep test data clean: Builder/factory methods, ObjectMother pattern.</p>
@@ -960,7 +995,8 @@ Branch coverage &lt; 80%, new critical smells/bugs/vulnerabilities.</p>
 <p>No Spring contexts in unit tests.</p>
 </div>
 <div class="paragraph">
-<p>Correct suffixes: *Test (unit), *IT (integration). Alternatively, @Tag may be used for differentiation.</p>
+<p>Correct suffixes: *Test (unit), *IT (integration).
+Alternatively, @Tag may be used for differentiation.</p>
 </div>
 <div class="paragraph">
 <p>Parameterized tests where appropriate.</p>
@@ -971,7 +1007,180 @@ Branch coverage &lt; 80%, new critical smells/bugs/vulnerabilities.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_appendix_abbreviations_references">17. Appendix: Abbreviations &amp; References</h2>
+<h2 id="_prompt_evaluation_concept">17. Prompt Evaluation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction">17.1. Introduction</h3>
+<div class="paragraph">
+<p>Prompt evaluation is a human-assigned testing approach in which developers run various prompts against an AI chatbot to improve results.
+All results, including prompts, model parameters, created entities and relevant metadata are collected, stored and analyzed to continuously refine prompt design and model configuration.</p>
+</div>
+<div class="paragraph">
+<p>This process ensures that the prompt interactions become more predictable, cost-efficient (tokens) and aligned with the project goals.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_goals">17.2. Goals</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Improve response quality</p>
+</li>
+<li>
+<p>Standardize prompt design</p>
+</li>
+<li>
+<p>Measure model performance</p>
+</li>
+<li>
+<p>Measure costs (token usage)</p>
+</li>
+<li>
+<p>Standardize configuration (e.g., model selection, temperature)</p>
+</li>
+<li>
+<p>Enable reproducible results from prompt experiments</p>
+</li>
+<li>
+<p>provide a structured dataset for analysis and refinement (results, prompts, configuration, evaluation)</p>
+</li>
+<li>
+<p>optimization of the existing personas</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_test_protocol">17.3. Test protocol</h3>
+<div class="paragraph">
+<p>Each tester uses their own setup of</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Tester Name</strong></p>
+</li>
+<li>
+<p><strong>Date</strong></p>
+</li>
+<li>
+<p><strong>Model Version: </strong> selected LLM (default: GPT 5 Standard)</p>
+</li>
+<li>
+<p><strong>System role: </strong> Provides overall instruction context</p>
+</li>
+<li>
+<p><strong>Pre-prompt: </strong> Provides the input data (persona) and the user instruction</p>
+</li>
+<li>
+<p><strong>Temperature: </strong> Indicates creativity or determination</p>
+<div class="ulist">
+<ul>
+<li>
+<p>0.2 means low creativity and high determination</p>
+</li>
+<li>
+<p>0.8 means high creativity and low determination</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Notes on Setup: </strong> Additional user notes for the test setup</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The tester uses a persona evaluation template to categorise and evaluate the resulting optimised persona in the context of the original input persona.</p>
+</div>
+<div class="sect3">
+<h4 id="_persona_evaluation_template">17.3.1. <a href="_includes/evaluation/persona-evaluation-template.html">Persona Evaluation Template</a></h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_result_storage_concepts">17.4. Result Storage Concepts</h3>
+<div class="paragraph">
+<p>This part defines how all inputs, outputs and evaluations for the prompt evaluation tests are stored in a structured way.</p>
+</div>
+<div class="paragraph">
+<p>Where we will store the results has not yet been decided, but one possibility would be in the test directory in the repository or in the project directory in SharePoint.
+Initially, the testers save their evaluations locally until it has been clarified where the data will be stored.</p>
+</div>
+<div class="paragraph">
+<p>The results could be stored in the following structure:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>&lt;persona_surname_name&gt; </strong> (replaced with persona name, e.g.: 'anna_mueller')</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>&lt;prompt_evaluation_date_time_and_tester_abbreviation&gt; </strong> (replaced with e.g.: '2025-11-18-14-57-06_FSe' (YYYY-MM-DD-HH-mm-SS_XXx)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>input</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><em><strong>persona.json</strong> (<strong>optional</strong>, because it already exists under src/test/resources/personas/&lt;persona_surname_name&gt; in the repository)</em></p>
+</li>
+<li>
+<p><em><strong>information.md</strong> (<strong>optional</strong>, because it already exists under src/test/resources/personas/&lt;persona_surname_name&gt; in the repository)</em></p>
+</li>
+<li>
+<p><strong>system-prompt.txt</strong></p>
+</li>
+<li>
+<p><strong>user-prompt.txt</strong></p>
+</li>
+<li>
+<p><strong>configuration.json</strong> (model, temperature, etc.)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>output</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>persona.json</strong> (optimized persona)</p>
+</li>
+<li>
+<p><em><strong>metadata.json</strong> (<strong>optional:</strong> some metadata like used tokens, response time, etc.)</em></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>evaluation</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>persona-evaluation-template.md </strong> (contains the evaluation and categorization of the tester, copied from 'test/resources/persona-evaluation-template.md')</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition, a concept must be developed to record and analyse all results in a structured form.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_appendix_abbreviations_references">18. Appendix: Abbreviations &amp; References</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>AAA: Arrange–Act–Assert (Given–When–Then).</p>
@@ -986,14 +1195,15 @@ Branch coverage &lt; 80%, new critical smells/bugs/vulnerabilities.</p>
 <p>SUT: System Under Test.</p>
 </div>
 <div class="paragraph">
-<p>This document is binding. Deviations must be justified and explicitly approved during code review.</p>
+<p>This document is binding.
+Deviations must be justified and explicitly approved during code review.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-11-19 14:06:39 UTC
+Last updated 2025-11-20 07:07:35 UTC
 </div>
 </div>
 </body>
