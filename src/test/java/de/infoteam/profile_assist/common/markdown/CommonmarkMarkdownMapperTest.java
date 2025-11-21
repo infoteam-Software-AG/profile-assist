@@ -2,7 +2,6 @@ package de.infoteam.profile_assist.common.markdown;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.List;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.markdown.MarkdownRenderer;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
 
-@DisplayName("FlexmarkMarkdownMapperTest")
+@DisplayName("CommonmarkMarkdownMapperTest")
 class CommonmarkMarkdownMapperTest {
 
   private CommonmarkMarkdownMapper mapper;
@@ -136,40 +135,40 @@ class CommonmarkMarkdownMapperTest {
   }
 
   @DisplayName(
-      "When AST is created manually and mapped to markdown and back, then structure stays intact")
+      "When document is created manually and mapped to markdown and back, then structure stays intact")
   @Test
-  void whenAstRoundTripsThroughMarkdown_thenStructureIsPreserved() {
+  void whenDocumentRoundTripsThroughMarkdown_thenStructureIsPreserved() {
     // Given
-    Document originalAst =
-        new Document(
-            List.of(
-                new Heading(1, List.of(new Text("Title"))),
-                new Paragraph(List.of(new Text("Some text."))),
-                new BulletList(
-                    List.of(
-                        new ListItem(List.of(new Paragraph(List.of(new Text("first item"))))),
-                        new ListItem(List.of(new Paragraph(List.of(new Text("second item")))))))));
+    Document newDocument =
+        MarkdownBuilder.document()
+            .addHeading(1, "Title")
+            .addParagraph("Some text.")
+            .addBulletList()
+            .addListItem("first item")
+            .addListItem("second item")
+            .endBulletList()
+            .build();
 
     // When
-    String markdown = mapper.toMarkdown(originalAst);
-    Document parsedAst = mapper.toAst(markdown);
+    String markdown = mapper.toMarkdown(newDocument);
+    Document parsedDocument = mapper.toAst(markdown);
 
     // Then
-    assertThat(parsedAst.children()).hasSize(3);
+    assertThat(parsedDocument.children()).hasSize(3);
 
     // Heading
-    Heading heading = (Heading) parsedAst.children().get(0);
+    Heading heading = (Heading) parsedDocument.children().get(0);
     assertThat(heading).isInstanceOf(Heading.class);
     assertThat(heading.level()).isEqualTo(1);
     assertThat(((Text) heading.children().get(0)).text()).isEqualTo("Title");
 
     // Paragraph
-    Paragraph paragraph = (Paragraph) parsedAst.children().get(1);
+    Paragraph paragraph = (Paragraph) parsedDocument.children().get(1);
     assertThat(paragraph).isInstanceOf(Paragraph.class);
     assertThat(((Text) paragraph.children().get(0)).text()).isEqualTo("Some text.");
 
     // Bullet list
-    BulletList list = (BulletList) parsedAst.children().get(2);
+    BulletList list = (BulletList) parsedDocument.children().get(2);
     assertThat(list).isInstanceOf(BulletList.class);
     assertThat(list.items()).hasSize(2);
     assertThat(
@@ -178,5 +177,38 @@ class CommonmarkMarkdownMapperTest {
     assertThat(
             ((Text) ((Paragraph) list.items().get(1).children().get(0)).children().get(0)).text())
         .isEqualTo("second item");
+  }
+
+  @Test
+  void roundtripWithBoldInline_preservesStructure() {
+    String md = "Some **bold** text.";
+
+    Document ast = mapper.toAst(md);
+    String result = mapper.toMarkdown(ast);
+
+    assertThat(result).contains("**bold**");
+  }
+
+  @Test
+  void buildsBulletList_includingParagraphWithStrongInline() {
+    // Given
+    Document doc =
+        MarkdownBuilder.document()
+            .addBulletList()
+            .addListItem(in -> in.text("Some ").strong("bold").text(" text."))
+            .endBulletList()
+            .addParagraph(in -> in.text("Some more ").strong("bold").text(" text."))
+            .build();
+
+    // When
+    BulletList bulletList = (BulletList) doc.children().get(0);
+    Paragraph bulletListParagraph = (Paragraph) bulletList.items().get(0).children().get(0);
+    Paragraph paragraph = (Paragraph) doc.children().get(1);
+
+    // Then
+    assertThat(paragraph.children()).hasSize(3);
+    assertThat(paragraph.children().get(1)).isInstanceOf(StrongEmphasis.class);
+
+    assertThat(bulletListParagraph.children().get(1)).isInstanceOf(StrongEmphasis.class);
   }
 }

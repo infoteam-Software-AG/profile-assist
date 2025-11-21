@@ -13,11 +13,7 @@ public final class MarkdownBuilder {
     private final Document.DocumentBuilder builder = Document.builder();
 
     public DocumentBuilder addParagraph(String text) {
-      builder.child(
-        Paragraph.builder()
-          .child(Text.builder().text(text).build())
-          .build()
-      );
+      builder.child(Paragraph.builder().child(Text.builder().text(text).build()).build());
       return this;
     }
 
@@ -25,21 +21,13 @@ public final class MarkdownBuilder {
       InlineBuilder inlineBuilder = new InlineBuilder();
       inlineConfig.accept(inlineBuilder);
 
-      builder.child(
-        Paragraph.builder()
-          .children(inlineBuilder.buildChildren())
-          .build()
-      );
+      builder.child(Paragraph.builder().children(inlineBuilder.buildChildren()).build());
       return this;
     }
 
     public DocumentBuilder addHeading(int level, String text) {
       builder.child(
-        Heading.builder()
-          .level(level)
-          .child(Text.builder().text(text).build())
-          .build()
-      );
+          Heading.builder().level(level).child(Text.builder().text(text).build()).build());
       return this;
     }
 
@@ -62,29 +50,20 @@ public final class MarkdownBuilder {
 
     public BulletListBuilder addListItem(String text) {
       builder.item(
-        ListItem.builder()
-          .child(
-            Paragraph.builder()
-              .child(Text.builder().text(text).build())
-              .build()
-          ).build()
-      );
+          ListItem.builder()
+              .child(Paragraph.builder().child(Text.builder().text(text).build()).build())
+              .build());
       return this;
     }
 
     public BulletListBuilder addListItem(Consumer<InlineBuilder> inlineConfig) {
-      InlineBuilder inlineDsl = new InlineBuilder();
-      inlineConfig.accept(inlineDsl);
+      InlineBuilder inlineBuilder = new InlineBuilder();
+      inlineConfig.accept(inlineBuilder);
 
       builder.item(
-        ListItem.builder()
-          .child(
-            Paragraph.builder()
-              .children(inlineDsl.buildChildren())
-              .build()
-          )
-          .build()
-      );
+          ListItem.builder()
+              .child(Paragraph.builder().children(inlineBuilder.buildChildren()).build())
+              .build());
       return this;
     }
 
@@ -103,10 +82,7 @@ public final class MarkdownBuilder {
     }
 
     public InlineBuilder strong(String text) {
-      children.add(StrongEmphasis.builder()
-        .delimiter("**")
-        .text(text)
-        .build());
+      children.add(StrongEmphasis.builder().delimiter("**").text(text).build());
       return this;
     }
 
