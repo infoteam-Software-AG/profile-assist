@@ -1,5 +1,12 @@
-package de.infoteam.profile_assist.common.markdown;
+package de.infoteam.profile_assist.common.markdown.mapping;
 
+import de.infoteam.profile_assist.common.markdown.BulletList;
+import de.infoteam.profile_assist.common.markdown.Heading;
+import de.infoteam.profile_assist.common.markdown.ListItem;
+import de.infoteam.profile_assist.common.markdown.MarkdownNode;
+import de.infoteam.profile_assist.common.markdown.Paragraph;
+import de.infoteam.profile_assist.common.markdown.StrongEmphasis;
+import de.infoteam.profile_assist.common.markdown.Text;
 import org.commonmark.node.Node;
 
 public interface MappingStrategy {
@@ -8,7 +15,7 @@ public interface MappingStrategy {
 
   Node mapToCommonMark(MarkdownNode node);
 
-  default MappingStrategy getASTChildStrategy(MarkdownNode node) {
+  default MappingStrategy getChildStrategy(MarkdownNode node) {
     return switch (node) {
       case Paragraph p -> new ParagraphStrategy();
       case Heading h -> new HeadingStrategy();
@@ -20,7 +27,7 @@ public interface MappingStrategy {
     };
   }
 
-  default MappingStrategy getCommonMarkChildStrategy(Node node) {
+  default MappingStrategy getChildStrategy(Node node) {
     return switch (node) {
       case org.commonmark.node.Document doc -> new DocumentStrategy();
       case org.commonmark.node.Paragraph p -> new ParagraphStrategy();
