@@ -1,0 +1,479 @@
+{
+  "id": "23641c58-053d-4f5b-bcc4-583ef1ee44f6",
+  "jobTitle": "System Engineer",
+  "name": "Audrey Hepburn",
+  "educations": [
+    {
+      "from": "1920",
+      "to": "1916",
+      "name": "Medieninformatik, M. Sc.",
+      "location": "Technische Hochschule"
+    },
+    {
+      "from": "1916",
+      "to": "1920",
+      "name": "Medieninformatik, B.Sc.",
+      "location": "Technische Hochschule"
+    },
+    {
+      "from": "1913",
+      "to": "1916",
+      "name": "Ausbildung zum Fachinformatiker (Anwendungsentwicklung)",
+      "location": "Staatliche Berufsschule"
+    }
+  ],
+  "yearsOfExperience": 0,
+  "jobHistory": [
+    {
+      "from": "1923",
+      "to": "heute",
+      "name": "Team- und technischer Projektleiter"
+    },
+    {
+      "from": "1922",
+      "to": "1923",
+      "name": "Technischer Projektleiter"
+    },
+    {
+      "from": "1921",
+      "to": "1922",
+      "name": "Softwareentwickler"
+    },
+    {
+      "from": "1916",
+      "to": "1921",
+      "name": "Duales Studium B. Sc. und M. Sc. Softwareentwicklung"
+    },
+    {
+      "from": "1916",
+      "to": "1916",
+      "name": "Softwareentwickler"
+    },
+    {
+      "from": "1913",
+      "to": "1916",
+      "name": "Duale Ausbildung"
+    }
+  ],
+  "coreCompetencies": [
+    "App-Entwicklung",
+    "Desktop-Entwicklung",
+    "Projektmanagement"
+  ],
+  "certificates": [
+    "ASQF® Certified Professional for Project Management"
+  ],
+  "skills": {
+    "businessSectors": [
+      "Medizintechnik",
+      "Laborautomatisierung"
+    ],
+    "languages": [
+      "Deutsch (Muttersprache)",
+      "Englisch (Fließend)"
+    ],
+    "programmingLanguages": [
+      "C#",
+      "Python",
+      "Java",
+      "Dart",
+      "C++",
+      "SQL",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "methodicalExpertise": [
+      "Klassische Softwareentwicklung (Wasserfall- und V-Modell)",
+      "Scrum (inkl. Skalierbare Modelle wie z.B. Nexus)",
+      "Software Design Patterns",
+      "Clean Code"
+    ],
+    "tools": [
+      "Visual Studio",
+      "Vistual Studio Code",
+      "Eclipse",
+      "Git",
+      "Azure DevOps Services/Server",
+      "JIRA",
+      "IntelliJ",
+      "Unity",
+      "PyCharm",
+      "Xamarin.Forms",
+      "Flutter",
+      "Gitlab",
+      "Confluence",
+      "Angular",
+      "React",
+      ".NET",
+      ".NET MAUI",
+      "MVVM",
+      "WPF",
+      "Spring",
+      "Flask",
+      "AWS",
+      "Jenkins",
+      "App Center",
+      "Unit Tests",
+      "UI-Tests",
+      "Testautomatisierung",
+      "QF-Test",
+      "Keras",
+      "TensorFlow",
+      "Ray"
+    ],
+    "operatingSystems": [
+      "Windows",
+      "Android",
+      "iOS",
+      "MacOS",
+      "Amazon Linux 2/Ubuntu"
+    ],
+    "databases": [
+      "mySQL",
+      "SQlite",
+      "PostgreSQL"
+    ]
+  },
+  "projectHistory": [
+    {
+      "name": "Toolentwicklung für eine Cloud-Anwendung",
+      "description": "Automatisierung, Erstellung und Portierung verschiedener Tools zur Datenverarbeitung in die Cloud",
+      "technologies": [
+        "Python",
+        "AWS",
+        "Visual Studio Code",
+        "Git",
+        "Azure DevOps",
+        "SQL-Datenbanken"
+      ],
+      "from": "1924",
+      "to": "heute",
+      "businessSector": "Laborautomatisierung",
+      "teamSize": "2-4",
+      "role": "Technischer Projektleiter, Leadentwickler",
+      "specializedFocus": "",
+      "contribution": [
+        "Technische Projektleitung",
+        "Erstellung von Anforderungen",
+        "Implementierung verschiedener Tools mit Python und Integration in eine AWS-Umgebung"
+      ],
+      "methodologies": [
+        "Scrum",
+        "Clean Code"
+      ]
+    },
+    {
+      "name": "Datenanalysetool für Augenheilkunde",
+      "description": "Datenanalyse und grafische Darstellung von Augenvorderabschnittsparametern",
+      "technologies": [
+        "C#",
+        "Visual Studio",
+        "WPF",
+        "Git",
+        "Azure DevOps",
+        "Testautomatisierung"
+      ],
+      "from": "1923",
+      "to": "1924",
+      "businessSector": "Medizintechnik",
+      "teamSize": "4",
+      "role": "Technische Projektleitung, Leadentwickler",
+      "specializedFocus": "",
+      "contribution": [
+        "Projektleitung",
+        "Erarbeiten von Anforderungen",
+        "Implementierung einer Desktopanwendung",
+        "Automatisiertes und manuelles Testen"
+      ],
+      "methodologies": [
+        "Scrum",
+        "Clean Code",
+        "Design Pattern",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Medical App",
+      "description": "Erfassung und Visualisierung von Gesundheitsdaten",
+      "technologies": [
+        "C#",
+        "Visual Studio",
+        "Xamarin.Forms",
+        ".NET MAUI",
+        "MVVM",
+        "Testautomatisierung",
+        "Azure DevOps",
+        "App Center",
+        "Android",
+        "iOS",
+        "Bluetooth",
+        "Git"
+      ],
+      "from": "1921",
+      "to": "heute",
+      "businessSector": "Medizintechnik",
+      "teamSize": "2-4",
+      "role": "Technischer Projektleiter, Architekt",
+      "specializedFocus": "",
+      "contribution": [
+        "Erarbeiten von Anforderungen",
+        "Konzeption der technischen Realisierung (inkl. Architektur)",
+        "Implementierung der Anforderungen",
+        "Automatisiertes und manuelles Testen",
+        "Aufsetzen CI/CD zum Test und Bereitstellung der App"
+      ],
+      "methodologies": [
+        "Scrum",
+        "Clean Code",
+        "Design Patterns",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Medical App Blueprint",
+      "description": "Finden von optimalem Tooling/Vorgehen zur App-Entwicklung im Medizinbereich",
+      "technologies": [
+        "Flutter",
+        "Xamarin.Forms",
+        "Dart",
+        "C#",
+        "Azure DevOps",
+        "UI‑Tests",
+        "Android",
+        "iOS"
+      ],
+      "from": "1921",
+      "to": "1921",
+      "businessSector": "Medizintechnik",
+      "teamSize": "2-3",
+      "role": "Einsatz in Semesterferien im Bereich Softwareentwicklung",
+      "specializedFocus": "",
+      "contribution": [
+        "Entwicklung von Demo-Apps",
+        "Recherche zu und Einrichtung von CI/CD-Pipelines",
+        "Aufbau von App-Knowhow"
+      ],
+      "methodologies": [
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Masterarbeit: Lösung von Optimierungsproblemen mittels Reinforcement Learning",
+      "description": "Entwicklung eines Frameworks zur Lösung von kombinatorischen Optimierungsproblemen mittels Reinforcement Learning im Style von AlphaGo Zero",
+      "technologies": [
+        "Python",
+        "PyCharm",
+        "Keras",
+        "Tensorflow",
+        "Ray"
+      ],
+      "from": "1921",
+      "to": "1921",
+      "businessSector": "Data Science",
+      "teamSize": "2",
+      "role": "Student",
+      "specializedFocus": "",
+      "contribution": [
+        "Erstellung von Anforderungen",
+        "Erstellung der Masterarbeit",
+        "Implementierung von Reinforcement Learning mittels Python"
+      ],
+      "methodologies": [
+        "Design Patterns"
+      ]
+    },
+    {
+      "name": "Messe App",
+      "description": "Entwicklung einer App mit Datenbankanbindung und Verarbeitung von Bluetooth-Sensordaten",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Visual Studio Code",
+        "Positionsbestimmung mit Bluetooth-Beacons",
+        "SQL-Datenbank",
+        "Android",
+        "iOS",
+        "Flask (Backend)",
+        "Python",
+        "Azure DevOps"
+      ],
+      "from": "1919",
+      "to": "1920",
+      "businessSector": "Hochschule",
+      "teamSize": "4",
+      "role": "Entwickler",
+      "specializedFocus": "",
+      "contribution": [
+        "Entwicklung der Flutter-App",
+        "Anbindung einer Remotedatenbank",
+        "Koordination von Arbeitspaketen"
+      ],
+      "methodologies": [
+        "Scrum",
+        "Design Patterns"
+      ]
+    },
+    {
+      "name": "Medical App",
+      "description": "Darstellung von Übungen, um den eigenen Gesundheitszustand zu verbessern.",
+      "technologies": [
+        "C#",
+        "Visual Studio",
+        "Xamarin.Forms",
+        "MVVM",
+        "Unit Tests",
+        "Jenkins",
+        "UI-Tests",
+        "App Center (UI-Testautomatisierung)",
+        "Android",
+        "iOS",
+        "Git",
+        "Azure DevOps"
+      ],
+      "from": "1918",
+      "to": "1919",
+      "businessSector": "Medizintechnik",
+      "teamSize": "4-7",
+      "role": "Einsatz in Semesterferien im Bereich Softwareentwicklung",
+      "specializedFocus": "",
+      "contribution": [
+        "Automatisiertes und manuelles Testen",
+        "Implementieren von Anforderungen",
+        "Bereitstellung der Anwendung für Endanwender über die AppStores",
+        "Bereitstellung Anwendung für Tester über AppCenter"
+      ],
+      "methodologies": [
+        "Scrum",
+        "Clean Code",
+        "Design Pattern",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Backend-Entwicklung",
+      "description": "Verwaltung von Personen- und Organisationsdaten und Visualisierung ",
+      "technologies": [
+        "Java",
+        "Eclipse",
+        "Spring",
+        "SQL",
+        "QF-Test"
+      ],
+      "from": "1916",
+      "to": "1916",
+      "businessSector": "Informationsverdichtung",
+      "teamSize": "8",
+      "role": "Softwareentwickler",
+      "specializedFocus": "",
+      "contribution": [
+        "Bereitstellung einer API für Webapplikation",
+        "Datenbankanbindung (SQL und Graph-Datenbanken)",
+        "Testautomatisierung",
+        "Erstellung von Anforderungen"
+      ],
+      "methodologies": [
+        "Scrum",
+        "Design Patterns",
+        "Clean Code",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Volume Renderer",
+      "description": "",
+      "technologies": [
+        ""
+      ],
+      "from": "1921",
+      "to": "1921",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "contribution": [
+        "3-dimensionale Darstellung von Volumendaten"
+      ],
+      "methodologies": [
+        ""
+      ]
+    },
+    {
+      "name": "Bildcluster",
+      "description": "",
+      "technologies": [
+        ""
+      ],
+      "from": "1920",
+      "to": "1921",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "contribution": [
+        "Visualisierung von Bildclustern im Browser"
+      ],
+      "methodologies": [
+        ""
+      ]
+    },
+    {
+      "name": "OpenSceneGraph-Editor",
+      "description": "",
+      "technologies": [
+        ""
+      ],
+      "from": "1920",
+      "to": "1921",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "contribution": [
+        "3-dimensionales Rendering"
+      ],
+      "methodologies": [
+        ""
+      ]
+    },
+    {
+      "name": "Bachelorarbeit",
+      "description": "",
+      "technologies": [
+        ""
+      ],
+      "from": "1919",
+      "to": "1920",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "contribution": [
+        "3D Rendering von medizinischen Bilddaten und Streaming der gerenderten Bilder"
+      ],
+      "methodologies": [
+        ""
+      ]
+    },
+    {
+      "name": "Spieleentwicklung",
+      "description": "",
+      "technologies": [
+        ""
+      ],
+      "from": "1918",
+      "to": "1921",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "contribution": [
+        "Entwicklung von Spielen für Smartphones"
+      ],
+      "methodologies": [
+        ""
+      ]
+    }
+  ],
+  "startingDate": "Nach Vereinbarung",
+  "lastUpdate": "28.02.1925"
+}
