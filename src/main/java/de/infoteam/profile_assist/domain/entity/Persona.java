@@ -1,18 +1,26 @@
 package de.infoteam.profile_assist.domain.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
-import lombok.Data;
+import lombok.Builder;
+import lombok.NonNull;
 
-@Data
-public class Persona {
+@Builder(toBuilder = true)
+public record Persona(
+    @NonNull UUID id,
+    @NonNull String jobTitle,
+    @NonNull String name,
+    @NonNull List<Education> educations,
+    @NonNull Long yearsOfExperience,
+    @NonNull List<Job> jobHistory,
+    @NonNull List<String> coreCompetencies,
+    @NonNull List<String> certificates,
+    @NonNull List<Skills> skills,
+    @NonNull List<Project> projectHistory,
+    @NonNull LocalDate startingDate,
+    @NonNull LocalDate lastUpdate)
+    implements BuilderSupport<Persona> {
 
-  private UUID id;
-  private String jobTitle;
-  private List<String> skills;
-  private List<String> certificates;
-  private List<Project> projectHistory;
-  private Date startingDate;
-  private Date lastUpdate;
+  public static class PersonaBuilder implements BuilderSupport.Builder<Persona> {}
 }

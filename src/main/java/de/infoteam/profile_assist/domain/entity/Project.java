@@ -6,7 +6,17 @@ import lombok.NonNull;
 
 @Builder(toBuilder = true)
 public record Project(
-    @NonNull String name, @NonNull String description, @NonNull List<String> technologies)
+    @NonNull String name,
+    @NonNull String description,
+    @NonNull List<String> technologies,
+    @NonNull String from,
+    @NonNull String to,
+    @NonNull String businessSector,
+    @NonNull String teamSize,
+    @NonNull String role,
+    @NonNull String specializedFocus,
+    @NonNull List<String> contribution,
+    @NonNull List<String> methodologies)
     implements BuilderSupport<Project> {
 
   public static class ProjectBuilder implements BuilderSupport.Builder<Project> {}
