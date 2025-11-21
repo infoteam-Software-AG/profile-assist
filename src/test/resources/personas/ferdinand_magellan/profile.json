@@ -1,0 +1,528 @@
+{
+  "id": "e04bb26e-758c-48a6-810b-b6cfb0ba17bc",
+  "jobTitle": "Senior Engineer",
+  "name": "Ferdinand Magellan",
+  "educations": [
+    {
+      "from": "1867",
+      "to": "1870",
+      "name": "Bürokauffrau",
+      "location": "Industrie- und Handelskammer Süd Italien"
+    }
+  ],
+  "yearsOfExperience": 0,
+  "jobHistory": [
+    {
+      "from": "05/1921",
+      "to": "heute",
+      "name": "Cybersecurity-Spezialist"
+    },
+    {
+      "from": "07/1920",
+      "to": "heute",
+      "name": "SW-Architekt und Senior Softwareentwickler im Bereich Life Science"
+    },
+    {
+      "from": "05/1917",
+      "to": "12/1920",
+      "name": "Softwareentwickler und Projektleiter für Safety Projekte"
+    },
+    {
+      "from": "02/1909",
+      "to": "11/1917",
+      "name": "Geschäftsführer und freiberuflicher Systemarchitekt im Be-reich industrielle Automatisierung"
+    },
+    {
+      "from": "1896",
+      "to": "1908",
+      "name": "Softwareentwickler und SW-Architekt für Frontend- und Backend-Entwicklung"
+    }
+  ],
+  "coreCompetencies": [
+    "Software-Architektur",
+    "Cybersecurity nach EU-MDR / EU-IVDR, IEC 62443 und IEC 81001-5-1",
+    "Relationale Datenbanken",
+    "Embedded Entwicklung"
+  ],
+  "certificates": [
+    "Certified Professional for Requirements Engineering Foun-dation Level",
+    "Certified Professional for Project Management Foundation Level",
+    "Developing on AWS",
+    "Die komplette JavaScript Masterclass: Vom Anfänger zum Profi",
+    "R komplett: Data Science, Machine Learning & Neuronale Netze",
+    "VectorCAST Workshop",
+    "Workshop Norm 61508",
+    "Workshop ISA/IEC 62443"
+  ],
+  "skills": {
+    "businessSectors": [
+      "Life Science (Medizintechnik, Laborautomatis-ierung)",
+      "Industry",
+      "Mobility"
+    ],
+    "languages": [
+      "Deutsch (Muttersprache)",
+      "Englisch (B1)"
+    ],
+    "programmingLanguages": [
+      "C / C++17",
+      "C#",
+      "JavaScript",
+      "KOP (SPS)",
+      "Lua",
+      "R",
+      "Shell-Programmierung (Bash)",
+      "SQL",
+      "Strukturierter Text (SPS)",
+      "TypeScript",
+      "Vue.js"
+    ],
+    "methodicalExpertise": [
+      "Agile Softwareentwicklung\no\tExtreme Programming\no\tFeature Driven Development (FDD)\no\tKanban\no\tPair Programming\no\tRefactoring\no\tScrum\no\tTestgetriebene Entwicklung (TDD)\n",
+      "Datenmodellierung",
+      "Normierte Programmierung",
+      "Objektorientierte Analyse und Design (OOAD)",
+      "Objektorientierte Programmierung",
+      "Prototyping",
+      "Reengineering",
+      "Reverse Engineering",
+      "Requirements Engineering",
+      "V-Modell",
+      "Wasserfallmodell"
+    ],
+    "tools": [
+      "Atmel AVR Studio",
+      "Automation Studio (B&R)",
+      "Blender",
+      "CAE (ePLAN Electric P8)",
+      "Dependency Track (Vulnerability surveillance)",
+      "Eclipse",
+      "GNU Compiler",
+      "Groupware-Server (Exchange, Kopano)",
+      "Microsoft Office (Word, Excel, PowerPoint, Outlook)",
+      "Microsoft Team Foundation Server / Azure DevOps",
+      "Microsoft Visual Studio u. Visual Code",
+      "OPC UA",
+      "Projektmanagementsoftware (Confluence, Jira, OpenProject, Redmine, DevOps)",
+      "SafeDesigner 4 (B&R)",
+      "STM32CubeIDE",
+      "Threat Dragon",
+      "Unified Modeling Language (UML)",
+      "VectorCAST",
+      "Versionsverwaltung (z.B. Subversion, Git)",
+      "Virtualisierungstechnik (VMware, Virtualbox, KVM, Docker)",
+      "Yocto"
+    ],
+    "operatingSystems": [
+      "Windows",
+      "Linux"
+    ],
+    "databases": []
+  },
+  "projectHistory": [
+    {
+      "name": "Cybersecurity Beratung und Analyse",
+      "description": "Beratung und Analyse",
+      "technologies": [
+        "C/C++",
+        "C#",
+        "Java",
+        "R",
+        "JavaScript",
+        "Dependency Track"
+      ],
+      "from": "08/1992",
+      "to": "jetzt",
+      "businessSector": "Medizintechnik",
+      "teamSize": "",
+      "role": "Cybersecurity-Spezialist",
+      "specializedFocus": "Cybersecurity-Analyse und Beratung",
+      "contribution": [
+        "Cybersecurity Risikoanalyse und Risikobewertung",
+        "Analyse der Architektur und der Software",
+        "Beratung für Entwicklungsprozesse",
+        "Erstellung und Prozessintegration von SBOM"
+      ],
+      "methodologies": [
+        "Cybersecurity nach EU-MDR / EU-IVDR, IEC 62443 und IEC 81001-5-1"
+      ]
+    },
+    {
+      "name": "Full Stack-Entwicklung medizinische Webapplikation",
+      "description": "Erweiterung, Aktualisierung u. Fehlerbereinigung einer medizinischen Webapplikation",
+      "technologies": [
+        "ASP.NET",
+        "C#",
+        "Nginx",
+        "JavaScript",
+        "Vue.js"
+      ],
+      "from": "1923",
+      "to": "1926",
+      "businessSector": "Medizintechnik",
+      "teamSize": "",
+      "role": "Entwickler",
+      "specializedFocus": "Analyse und Entwicklung",
+      "contribution": [
+        "Fehleranalyse",
+        "Erarbeitung der Requirements",
+        "Umsetzung der Requirements",
+        "Durchführung von Tests",
+        "Ergänzung der Dokumentation"
+      ],
+      "methodologies": [
+        "Software für Medizinprodukte nach IEC 62304"
+      ]
+    },
+    {
+      "name": "Integration von Gerätetreiber inkl. Testsoftware",
+      "description": "Treiber für neue Hardware inkl. Testsoftware",
+      "technologies": [
+        "Yocto",
+        "C/C++",
+        "Python",
+        "Django",
+        "Linux"
+      ],
+      "from": "1922",
+      "to": "1924",
+      "businessSector": "Industrie",
+      "teamSize": "",
+      "role": "Entwickler",
+      "specializedFocus": "Erstellung von Yocto Rezepten für die Integration von Treibern und Tools. Entwicklung von Testtools.",
+      "contribution": [
+        "Treiber angepasst",
+        "Yocto Rezepte erstellt für Treiber, Test- u. Anwen-dungssoftware",
+        "Webapplikation für Testsoftware erstellt (Front-end/Backend)",
+        "Testsoftware erstellt"
+      ],
+      "methodologies": [
+        "Prototyping"
+      ]
+    },
+    {
+      "name": "Portierung einer Embedded Software zur Elementanalyse",
+      "description": "Alte Hardware wurde ersetzt",
+      "technologies": [
+        "C/C++",
+        "STM32"
+      ],
+      "from": "1923",
+      "to": "1923",
+      "businessSector": "Laborautomatisierung",
+      "teamSize": "",
+      "role": "Entwickler",
+      "specializedFocus": "Portierung von Legacy C Code auf STM32",
+      "contribution": [
+        "Portierung von Legacy C Code auf STM32",
+        "Anpassung der Schnittstellentreiber",
+        "Inbetriebnahme auf der neuen Hardware"
+      ],
+      "methodologies": [
+        "Legacy-Portierung"
+      ]
+    },
+    {
+      "name": "Webentwicklung für mobiles Terminal",
+      "description": "Mobiles Terminal für Baumaschinen",
+      "technologies": [
+        "C/C++",
+        "OPC-UA"
+      ],
+      "from": "1923",
+      "to": "1923",
+      "businessSector": "Industrie",
+      "teamSize": "",
+      "role": "Entwickler",
+      "specializedFocus": "Entwicklung der Backend Kommunikation",
+      "contribution": [
+        "Planung und Architektur",
+        "Umsetzung des Backend in C/C++ unter Linux",
+        "Anbindung an OPC-UA Server"
+      ],
+      "methodologies": [
+        "Prototyping"
+      ]
+    },
+    {
+      "name": "Software zur Auswertung von Labordaten",
+      "description": "Unterstützung bei der Zulassung einer medizinischen An-wendung",
+      "technologies": [
+        "R"
+      ],
+      "from": "1923",
+      "to": "1923",
+      "businessSector": "Medizintechnik",
+      "teamSize": "",
+      "role": "Berater, Cybersecurity-Spezialist",
+      "specializedFocus": "Analyse der Software und Cybersecurity-Beratung",
+      "contribution": [
+        "Analyse der KI-Datenbasis",
+        "Analyse der Architektur",
+        "Requirement Engineering",
+        "SW-Dokumentaton für eine inhouse IVD",
+        "Unterstützung bei der Risikobewertung"
+      ],
+      "methodologies": [
+        "Cybersecurity nach EU-MDR / EU-IVDR, IEC 62443 und IEC 81001-5-1",
+        "Software für Medizinprodukte nach IEC 62304"
+      ]
+    },
+    {
+      "name": "Software Bill of Materials (SBOM)",
+      "description": "Plattform für Vulnerability Monitoring",
+      "technologies": [
+        "Docker",
+        "JavaScript",
+        "Linux"
+      ],
+      "from": "1922",
+      "to": "1923",
+      "businessSector": "Medizintechnik",
+      "teamSize": "",
+      "role": "Architekt",
+      "specializedFocus": "Schwachstellen-Management",
+      "contribution": [
+        "Einrichtung eines Vulnerability Management Tools",
+        "Erarbeitung und Dokumentation der Prozesse",
+        "Initialisierung der Prozesse",
+        "Pflege und Wartung der Tools und Dokumentation"
+      ],
+      "methodologies": [
+        "Cybersecurity nach EU-MDR / EU-IVDR, IEC 62443 und IEC 81001-5-1"
+      ]
+    },
+    {
+      "name": "Automatische Datenseparation in zwei Datenbanken",
+      "description": "Trennung Datenbestand in Non-GxP und GxP-Daten",
+      "technologies": [
+        "Bash",
+        "PostgreSQL"
+      ],
+      "from": "1922",
+      "to": "192022",
+      "businessSector": "Laborautomatisierung",
+      "teamSize": "",
+      "role": "Entwickler",
+      "specializedFocus": "Datenbank-Spezialist",
+      "contribution": [
+        "Erarbeitung technischer Möglichkeiten und Prozesse",
+        "Erstellung der Skripte für die Datenseparation",
+        "Durchführen von Tests",
+        "Dokumentation der Prozesse und der Skripte"
+      ],
+      "methodologies": [
+        "GxP"
+      ]
+    },
+    {
+      "name": "Full Stack Software Entwickler",
+      "description": "Update/Bugfixing einer medizinischen Webapplikation",
+      "technologies": [
+        "ASP.NET",
+        "C#",
+        "Microsoft SQL"
+      ],
+      "from": "1922",
+      "to": "1922",
+      "businessSector": "Medizintechnik",
+      "teamSize": "",
+      "role": "Entwickler",
+      "specializedFocus": "Analyse, Umsetzung und Cybersecurity",
+      "contribution": [
+        "Fehleranalyse",
+        "Erarbeitung der Requirements",
+        "Umsetzung der Requirements",
+        "Durchführung und Dokumentation von Tests",
+        "Ergänzung der Dokumentation"
+      ],
+      "methodologies": [
+        "Cybersecurity nach EU-MDR / EU-IVDR, IEC 62443 und IEC 81001-5-1",
+        "Software für Medizinprodukte nach IEC 62304"
+      ]
+    },
+    {
+      "name": "Prüfung und Erweiterung einer Systemarchitektur",
+      "description": "Evaluierung Umbau einer Singlehost-Plattform in eine ska-lierbare Multihost-Plattform",
+      "technologies": [
+        "C#",
+        "gRPC",
+        "RabbitMQ"
+      ],
+      "from": "1922",
+      "to": "1922",
+      "businessSector": "Laborbereich",
+      "teamSize": "",
+      "role": "Architekt",
+      "specializedFocus": "Analyse, Konzeption und Architektur",
+      "contribution": [
+        "Bestandsanalyse der Architektur",
+        "Konzeptentwicklung, um Architektur multihostfähig zu machen",
+        "Proof of Concept erarbeitet und getestet"
+      ],
+      "methodologies": [
+        "Architekturanalyse"
+      ]
+    },
+    {
+      "name": "Architekt und stellvertretende Projektleitung für eine me-dizinische Webapplikation",
+      "description": "Entwicklung einer medizinischen Webapplikation",
+      "technologies": [
+        "C#",
+        "ASP.NET",
+        "TypeScript",
+        "Angular",
+        "PostgreSQL",
+        "Balsamiq"
+      ],
+      "from": "1921",
+      "to": "1922",
+      "businessSector": "Medizintechnik",
+      "teamSize": "",
+      "role": "Architekt",
+      "specializedFocus": "Konzeption, Architektur, Datenbank-Spezialist und Cyber-security-Spezialist",
+      "contribution": [
+        "Erstellung des Anforderungskataloges",
+        "Erarbeitung eines Mockups",
+        "Erstellung und Dokumentation des Entwicklungsprozesses",
+        "Planung der Architektur und deren Dokumentation: Frontend, Backend und der Datenbankstruktur",
+        "Projektplanung und Kalkulation",
+        "Aufbau einer Entwicklungsumgebung inkl. Skripte",
+        "Entwicklung der Software für das Backend ",
+        "Erstellung Datenbank inkl. Stored Proce-dures/Functions und Entwicklung Skripte für den Build-Prozess",
+        "Beteiligung an Cybersecurity-Bewertung"
+      ],
+      "methodologies": [
+        "Cybersecurity nach EU-MDR / EU-IVDR, IEC 62443 und IEC 81001-5-1",
+        "Software für Medizinprodukte nach IEC 62304"
+      ]
+    },
+    {
+      "name": "Medizingerät mit Linux-Plattform auf Yocto-Basis",
+      "description": "",
+      "technologies": [],
+      "from": "1921",
+      "to": "1921",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "Linux Plattform auf Yocto Basis erstellt, Integration und Testen der Anwendung",
+      "contribution": [],
+      "methodologies": []
+    },
+    {
+      "name": "Safety-Projekt dokumentiert und geprüft für Zulassung",
+      "description": "",
+      "technologies": [],
+      "from": "1920",
+      "to": "1920",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "Dokumentation",
+      "contribution": [],
+      "methodologies": []
+    },
+    {
+      "name": "System-Migration und Projektleitung",
+      "description": "",
+      "technologies": [
+        ""
+      ],
+      "from": "1920",
+      "to": "1920",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "Architektur",
+      "contribution": [],
+      "methodologies": []
+    },
+    {
+      "name": "Architekt",
+      "description": "",
+      "technologies": [
+        ""
+      ],
+      "from": "1919",
+      "to": "1919",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "Entwicklung einer Toolchain und eines Testkonzeptes für Safety CPUs von B&R nach IEC 61508",
+      "contribution": [],
+      "methodologies": []
+    },
+    {
+      "name": "Softwareentwickler und Projektleiter",
+      "description": "",
+      "technologies": [],
+      "from": "1917",
+      "to": "1919",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "Softwareentwicklung und Projektleiter für mehrere Pro-jekte",
+      "contribution": [],
+      "methodologies": []
+    },
+    {
+      "name": "Systemarchitekt freiberuflich/Geschäftsführer",
+      "description": "",
+      "technologies": [],
+      "from": "1909",
+      "to": "1917",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "Planung, Entwicklung von Konzepten und Unterstützung bei Software- u. Hardwareprojekten. Softwareentwicklung, Beratung und Schulung in Automatisierungs-, Energie- u. Trocknungstechnik",
+      "contribution": [],
+      "methodologies": []
+    },
+    {
+      "name": "Softwareentwickler",
+      "description": "",
+      "technologies": [
+        ""
+      ],
+      "from": "1907",
+      "to": "1909",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "Architektur, Planung und Entwicklung von Front- und Ba-ckend Software inkl. Cybersecurity Betrachtung",
+      "contribution": [],
+      "methodologies": []
+    },
+    {
+      "name": "Softwareentwickler",
+      "description": "",
+      "technologies": [],
+      "from": "1901",
+      "to": "1906",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "Architektur, Entwicklung und Support von Echtzeitsyste-men auf Linux Basis. Planung u. Entwicklung von Embed-ded Software und Datenbank-gestützten Anwendungen",
+      "contribution": [],
+      "methodologies": []
+    },
+    {
+      "name": "Softwareentwickler und Abteilungsleiter",
+      "description": "",
+      "technologies": [
+        ""
+      ],
+      "from": "1896",
+      "to": "1900",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "Architektur, Planung, Entwicklung und Wartung von inter-nen Anwendungen und Tools. IT-Support und Pflege.",
+      "contribution": [],
+      "methodologies": []
+    }
+  ],
+  "startingDate": "TBD",
+  "lastUpdate": ""
+}
