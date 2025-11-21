@@ -22,7 +22,7 @@ class BuilderSupportTest {
   @Test
   void verifyBuilderImplementsInterface() {
     var builder = TestRecord.builder();
-    assertThat(builder instanceof BuilderSupport.Builder).isTrue();
+    assertThat(builder).isInstanceOf(BuilderSupport.Builder.class);
   }
 
   /**
