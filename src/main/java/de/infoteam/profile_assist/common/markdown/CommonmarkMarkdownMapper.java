@@ -1,5 +1,6 @@
 package de.infoteam.profile_assist.common.markdown;
 
+import de.infoteam.profile_assist.common.markdown.mapping.DocumentStrategy;
 import java.util.ArrayList;
 import java.util.List;
 import org.commonmark.node.Node;
@@ -21,7 +22,8 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
       return new Document(List.of());
     }
     Node node = parser.parse(markdown);
-    return toASTDocument(node);
+
+    return (Document) new DocumentStrategy().mapToAST(node);
   }
 
   @Override
@@ -29,8 +31,12 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
     if (ast == null) {
       return "";
     }
-    var doc = toCommonmarkDocument(ast);
+    var doc = new DocumentStrategy().mapToCommonMark(ast);
     return renderer.render(doc);
+  }
+
+  private MarkdownNode executeMapToASTStrategy(Node node) {
+    return null;
   }
 
   // -------- Markdown -> AST Document mapping -------- //
