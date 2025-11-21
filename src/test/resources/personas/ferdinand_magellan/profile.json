@@ -131,13 +131,12 @@
         "JavaScript",
         "Dependency Track"
       ],
-      "from": "08/1992",
-      "to": "jetzt",
+      "timePeriod": "08/1992 – jetzt",
       "businessSector": "Medizintechnik",
       "teamSize": "",
       "role": "Cybersecurity-Spezialist",
       "specializedFocus": "Cybersecurity-Analyse und Beratung",
-      "contribution": [
+      "personalContribution": [
         "Cybersecurity Risikoanalyse und Risikobewertung",
         "Analyse der Architektur und der Software",
         "Beratung für Entwicklungsprozesse",
@@ -157,13 +156,12 @@
         "JavaScript",
         "Vue.js"
       ],
-      "from": "1923",
-      "to": "1926",
+      "timePeriod": "1923 – 1926",
       "businessSector": "Medizintechnik",
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Analyse und Entwicklung",
-      "contribution": [
+      "personalContribution": [
         "Fehleranalyse",
         "Erarbeitung der Requirements",
         "Umsetzung der Requirements",
@@ -184,13 +182,12 @@
         "Django",
         "Linux"
       ],
-      "from": "1922",
-      "to": "1924",
+      "timePeriod": "1922 – 1924",
       "businessSector": "Industrie",
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Erstellung von Yocto Rezepten für die Integration von Treibern und Tools. Entwicklung von Testtools.",
-      "contribution": [
+      "personalContribution": [
         "Treiber angepasst",
         "Yocto Rezepte erstellt für Treiber, Test- u. Anwen-dungssoftware",
         "Webapplikation für Testsoftware erstellt (Front-end/Backend)",
@@ -207,13 +204,12 @@
         "C/C++",
         "STM32"
       ],
-      "from": "1923",
-      "to": "1923",
+      "timePeriod": "1923 – 1923",
       "businessSector": "Laborautomatisierung",
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Portierung von Legacy C Code auf STM32",
-      "contribution": [
+      "personalContribution": [
         "Portierung von Legacy C Code auf STM32",
         "Anpassung der Schnittstellentreiber",
         "Inbetriebnahme auf der neuen Hardware"
@@ -229,13 +225,12 @@
         "C/C++",
         "OPC-UA"
       ],
-      "from": "1923",
-      "to": "1923",
+      "timePeriod": "1923 – 1923",
       "businessSector": "Industrie",
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Entwicklung der Backend Kommunikation",
-      "contribution": [
+      "personalContribution": [
         "Planung und Architektur",
         "Umsetzung des Backend in C/C++ unter Linux",
         "Anbindung an OPC-UA Server"
@@ -250,13 +245,12 @@
       "technologies": [
         "R"
       ],
-      "from": "1923",
-      "to": "1923",
+      "timePeriod": "1923 – 1923",
       "businessSector": "Medizintechnik",
       "teamSize": "",
       "role": "Berater, Cybersecurity-Spezialist",
       "specializedFocus": "Analyse der Software und Cybersecurity-Beratung",
-      "contribution": [
+      "personalContribution": [
         "Analyse der KI-Datenbasis",
         "Analyse der Architektur",
         "Requirement Engineering",
@@ -276,13 +270,12 @@
         "JavaScript",
         "Linux"
       ],
-      "from": "1922",
-      "to": "1923",
+      "timePeriod": "1922 – 1923",
       "businessSector": "Medizintechnik",
       "teamSize": "",
       "role": "Architekt",
       "specializedFocus": "Schwachstellen-Management",
-      "contribution": [
+      "personalContribution": [
         "Einrichtung eines Vulnerability Management Tools",
         "Erarbeitung und Dokumentation der Prozesse",
         "Initialisierung der Prozesse",
@@ -299,13 +292,12 @@
         "Bash",
         "PostgreSQL"
       ],
-      "from": "1922",
-      "to": "192022",
+      "timePeriod": "1922 – 192022",
       "businessSector": "Laborautomatisierung",
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Datenbank-Spezialist",
-      "contribution": [
+      "personalContribution": [
         "Erarbeitung technischer Möglichkeiten und Prozesse",
         "Erstellung der Skripte für die Datenseparation",
         "Durchführen von Tests",
@@ -323,13 +315,12 @@
         "C#",
         "Microsoft SQL"
       ],
-      "from": "1922",
-      "to": "1922",
+      "timePeriod": "1922 – 1922",
       "businessSector": "Medizintechnik",
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Analyse, Umsetzung und Cybersecurity",
-      "contribution": [
+      "personalContribution": [
         "Fehleranalyse",
         "Erarbeitung der Requirements",
         "Umsetzung der Requirements",
@@ -349,13 +340,12 @@
         "gRPC",
         "RabbitMQ"
       ],
-      "from": "1922",
-      "to": "1922",
+      "timePeriod": "",
       "businessSector": "Laborbereich",
       "teamSize": "",
       "role": "Architekt",
       "specializedFocus": "Analyse, Konzeption und Architektur",
-      "contribution": [
+      "personalContribution": [
         "Bestandsanalyse der Architektur",
         "Konzeptentwicklung, um Architektur multihostfähig zu machen",
         "Proof of Concept erarbeitet und getestet"
@@ -375,13 +365,12 @@
         "PostgreSQL",
         "Balsamiq"
       ],
-      "from": "1921",
-      "to": "1922",
+      "timePeriod": "1922 – 1922",
       "businessSector": "Medizintechnik",
       "teamSize": "",
       "role": "Architekt",
       "specializedFocus": "Konzeption, Architektur, Datenbank-Spezialist und Cyber-security-Spezialist",
-      "contribution": [
+      "personalContribution": [
         "Erstellung des Anforderungskataloges",
         "Erarbeitung eines Mockups",
         "Erstellung und Dokumentation des Entwicklungsprozesses",
@@ -401,26 +390,24 @@
       "name": "Medizingerät mit Linux-Plattform auf Yocto-Basis",
       "description": "",
       "technologies": [],
-      "from": "1921",
-      "to": "1921",
+      "timePeriod": "1920 – 1921",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "Linux Plattform auf Yocto Basis erstellt, Integration und Testen der Anwendung",
-      "contribution": [],
+      "personalContribution": [],
       "methodologies": []
     },
     {
       "name": "Safety-Projekt dokumentiert und geprüft für Zulassung",
       "description": "",
       "technologies": [],
-      "from": "1920",
-      "to": "1920",
+      "timePeriod": "1920 – 1920",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "Dokumentation",
-      "contribution": [],
+      "personalContribution": [],
       "methodologies": []
     },
     {
@@ -429,13 +416,12 @@
       "technologies": [
         ""
       ],
-      "from": "1920",
-      "to": "1920",
+      "timePeriod": "1920 – 1920",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "Architektur",
-      "contribution": [],
+      "personalContribution": [],
       "methodologies": []
     },
     {
@@ -444,39 +430,36 @@
       "technologies": [
         ""
       ],
-      "from": "1919",
-      "to": "1919",
+      "timePeriod": "1919 – 1919",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "Entwicklung einer Toolchain und eines Testkonzeptes für Safety CPUs von B&R nach IEC 61508",
-      "contribution": [],
+      "personalContribution": [],
       "methodologies": []
     },
     {
       "name": "Softwareentwickler und Projektleiter",
       "description": "",
       "technologies": [],
-      "from": "1917",
-      "to": "1919",
+      "timePeriod": "1917 – 1919",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "Softwareentwicklung und Projektleiter für mehrere Pro-jekte",
-      "contribution": [],
+      "personalContribution": [],
       "methodologies": []
     },
     {
       "name": "Systemarchitekt freiberuflich/Geschäftsführer",
       "description": "",
       "technologies": [],
-      "from": "1909",
-      "to": "1917",
+      "timePeriod": "1909 – 1917",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "Planung, Entwicklung von Konzepten und Unterstützung bei Software- u. Hardwareprojekten. Softwareentwicklung, Beratung und Schulung in Automatisierungs-, Energie- u. Trocknungstechnik",
-      "contribution": [],
+      "personalContribution": [],
       "methodologies": []
     },
     {
@@ -485,26 +468,24 @@
       "technologies": [
         ""
       ],
-      "from": "1907",
-      "to": "1909",
+      "timePeriod": "1907 - 1909",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "Architektur, Planung und Entwicklung von Front- und Ba-ckend Software inkl. Cybersecurity Betrachtung",
-      "contribution": [],
+      "personalContribution": [],
       "methodologies": []
     },
     {
       "name": "Softwareentwickler",
       "description": "",
       "technologies": [],
-      "from": "1901",
-      "to": "1906",
+      "timePeriod": "1901 – 1906",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "Architektur, Entwicklung und Support von Echtzeitsyste-men auf Linux Basis. Planung u. Entwicklung von Embed-ded Software und Datenbank-gestützten Anwendungen",
-      "contribution": [],
+      "personalContribution": [],
       "methodologies": []
     },
     {
@@ -513,13 +494,12 @@
       "technologies": [
         ""
       ],
-      "from": "1896",
-      "to": "1900",
+      "timePeriod": "1896 – 1900",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "Architektur, Planung, Entwicklung und Wartung von inter-nen Anwendungen und Tools. IT-Support und Pflege.",
-      "contribution": [],
+      "personalContribution": [],
       "methodologies": []
     }
   ],

@@ -9,13 +9,12 @@ public record Project(
     @NonNull String name,
     @NonNull String description,
     @NonNull List<String> technologies,
-    @NonNull String from,
-    @NonNull String to,
+    @NonNull String timePeriod,
     @NonNull String businessSector,
     @NonNull String teamSize,
     @NonNull String role,
     @NonNull String specializedFocus,
-    @NonNull List<String> contribution,
+    @NonNull List<String> personalContributions,
     @NonNull List<String> methodologies)
     implements BuilderSupport<Project> {
 

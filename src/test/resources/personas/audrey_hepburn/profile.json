@@ -146,13 +146,12 @@
         "Azure DevOps",
         "SQL-Datenbanken"
       ],
-      "from": "1924",
-      "to": "heute",
+      "timePeriod": "1924 – heute",
       "businessSector": "Laborautomatisierung",
       "teamSize": "2-4",
       "role": "Technischer Projektleiter, Leadentwickler",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Technische Projektleitung",
         "Erstellung von Anforderungen",
         "Implementierung verschiedener Tools mit Python und Integration in eine AWS-Umgebung"
@@ -173,13 +172,12 @@
         "Azure DevOps",
         "Testautomatisierung"
       ],
-      "from": "1923",
-      "to": "1924",
+      "timePeriod": "1923 – 1924",
       "businessSector": "Medizintechnik",
       "teamSize": "4",
       "role": "Technische Projektleitung, Leadentwickler",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Projektleitung",
         "Erarbeiten von Anforderungen",
         "Implementierung einer Desktopanwendung",
@@ -209,13 +207,12 @@
         "Bluetooth",
         "Git"
       ],
-      "from": "1921",
-      "to": "heute",
+      "timePeriod": "1921 - heute",
       "businessSector": "Medizintechnik",
       "teamSize": "2-4",
       "role": "Technischer Projektleiter, Architekt",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Erarbeiten von Anforderungen",
         "Konzeption der technischen Realisierung (inkl. Architektur)",
         "Implementierung der Anforderungen",
@@ -242,13 +239,12 @@
         "Android",
         "iOS"
       ],
-      "from": "1921",
-      "to": "1921",
+      "timePeriod": "1921 – 1921",
       "businessSector": "Medizintechnik",
       "teamSize": "2-3",
       "role": "Einsatz in Semesterferien im Bereich Softwareentwicklung",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Entwicklung von Demo-Apps",
         "Recherche zu und Einrichtung von CI/CD-Pipelines",
         "Aufbau von App-Knowhow"
@@ -267,13 +263,12 @@
         "Tensorflow",
         "Ray"
       ],
-      "from": "1921",
-      "to": "1921",
+      "timePeriod": "1921 – 1921",
       "businessSector": "Data Science",
       "teamSize": "2",
       "role": "Student",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Erstellung von Anforderungen",
         "Erstellung der Masterarbeit",
         "Implementierung von Reinforcement Learning mittels Python"
@@ -297,13 +292,12 @@
         "Python",
         "Azure DevOps"
       ],
-      "from": "1919",
-      "to": "1920",
+      "timePeriod": "1919 – 1920",
       "businessSector": "Hochschule",
       "teamSize": "4",
       "role": "Entwickler",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Entwicklung der Flutter-App",
         "Anbindung einer Remotedatenbank",
         "Koordination von Arbeitspaketen"
@@ -330,13 +324,12 @@
         "Git",
         "Azure DevOps"
       ],
-      "from": "1918",
-      "to": "1919",
+      "timePeriod": "1918 – 1919",
       "businessSector": "Medizintechnik",
       "teamSize": "4-7",
       "role": "Einsatz in Semesterferien im Bereich Softwareentwicklung",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Automatisiertes und manuelles Testen",
         "Implementieren von Anforderungen",
         "Bereitstellung der Anwendung für Endanwender über die AppStores",
@@ -359,13 +352,12 @@
         "SQL",
         "QF-Test"
       ],
-      "from": "1916",
-      "to": "1916",
+      "timePeriod": "1916 – 1916",
       "businessSector": "Informationsverdichtung",
       "teamSize": "8",
       "role": "Softwareentwickler",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Bereitstellung einer API für Webapplikation",
         "Datenbankanbindung (SQL und Graph-Datenbanken)",
         "Testautomatisierung",
@@ -384,13 +376,12 @@
       "technologies": [
         ""
       ],
-      "from": "1921",
-      "to": "1921",
+      "timePeriod": "1921 – 1921",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "3-dimensionale Darstellung von Volumendaten"
       ],
       "methodologies": [
@@ -403,13 +394,12 @@
       "technologies": [
         ""
       ],
-      "from": "1920",
-      "to": "1921",
+      "timePeriod": "1920 – 1921",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Visualisierung von Bildclustern im Browser"
       ],
       "methodologies": [
@@ -422,13 +412,12 @@
       "technologies": [
         ""
       ],
-      "from": "1920",
-      "to": "1921",
+      "timePeriod": "1920 – 1921",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "3-dimensionales Rendering"
       ],
       "methodologies": [
@@ -441,13 +430,12 @@
       "technologies": [
         ""
       ],
-      "from": "1919",
-      "to": "1920",
+      "timePeriod": "1919 – 1920",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "3D Rendering von medizinischen Bilddaten und Streaming der gerenderten Bilder"
       ],
       "methodologies": [
@@ -460,13 +448,12 @@
       "technologies": [
         ""
       ],
-      "from": "1918",
-      "to": "1921",
+      "timePeriod": "1918 – 1921",
       "businessSector": "",
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "contribution": [
+      "personalContribution": [
         "Entwicklung von Spielen für Smartphones"
       ],
       "methodologies": [
