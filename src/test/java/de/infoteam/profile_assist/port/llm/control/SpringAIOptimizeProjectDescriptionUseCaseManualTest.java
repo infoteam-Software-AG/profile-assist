@@ -55,7 +55,9 @@ public class SpringAIOptimizeProjectDescriptionUseCaseManualTest {
 
       File testRunFolder =
           new File(
-              "results"
+              "target"
+                  + File.separator
+                  + "manualTestResults"
                   + File.separator
                   + personaName
                   + File.separator
