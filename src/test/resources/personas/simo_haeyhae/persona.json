@@ -1,7 +1,7 @@
 {
   "id": "e04bb26e-758c-48a6-810b-b6cfb0ba17bc",
-  "jobTitle": "Simo Häyhä",
-  "name": "Senior Engineer",
+  "jobTitle": "Senior Engineer",
+  "name": "Simo Häyhä",
   "educations": [
     {
       "from": "1899",
@@ -107,7 +107,7 @@
       "teamSize": "",
       "role": "Software Entwickler / Projektleiter",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Requirements Engineering",
         "Entwicklung der Treiber",
         "Tests der Treiber"
@@ -127,7 +127,7 @@
       "teamSize": "",
       "role": "Software Entwickler / Stellv. Projektleiter",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Betrieb und Betreuung",
         "Pflege der Legacy Anwendung"
       ],
@@ -146,7 +146,7 @@
       "teamSize": "",
       "role": "Software Entwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Entwicklung des Backends",
         "Erstellung der Build Pipeline",
         "Erstellung der Deploy Pipeline"
@@ -173,7 +173,7 @@
       "teamSize": "",
       "role": "Software Entwickler / Stellv. Projektleiter",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Betrieb und Betreuung",
         "Weiterentwicklung und Pflege der Legacy Anwendung",
         "Neuentwicklung"
@@ -194,7 +194,7 @@
       "teamSize": "",
       "role": "Software Entwickler / Projektleitung",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Erstellung eines Windows Services",
         "Berechnung der Fahrpläne",
         "Kommunikation mit ICONICS"
@@ -214,7 +214,7 @@
       "teamSize": "",
       "role": "Software Entwickler / Projektleitung",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Neuentwicklung eines Expertensystems für Motorenprüfstände"
       ],
       "methodologies": []
@@ -232,7 +232,7 @@
       "teamSize": "",
       "role": "Software Entwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Entwicklung des Backends",
         "Erstellung und Pflege der Infrastruktur mittels Docker"
       ],
@@ -249,7 +249,7 @@
       "teamSize": "",
       "role": "DevOp",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Erstellung von Images und Deployment einzelner Software-komponenten"
       ],
       "methodologies": []
@@ -265,7 +265,7 @@
       "teamSize": "",
       "role": "Software Entwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Erstellung eines Konzepts für den erleichterten Zugzutritt mittels Smartphone und RFID."
       ],
       "methodologies": [
@@ -283,7 +283,7 @@
       "teamSize": "",
       "role": "Software Entwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Erstellung eines Konzepts für die Datenmodellierung und -normalisierung eines Fahrgastinformationssystems"
       ],
       "methodologies": [
@@ -302,7 +302,7 @@
       "teamSize": "",
       "role": "Software Entwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         ""
       ],
       "methodologies": [
@@ -322,7 +322,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Neuerstellung einer Oberfläche und Middleware eines Haus-automatisierungsprodukts",
         "Softwareseitige Vernetzung von Sensoren und Aktoren mit-tels eines softwaregestützten Schaltplanes"
       ],
@@ -342,7 +342,7 @@
       "teamSize": "",
       "role": "Software Entwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         ""
       ],
       "methodologies": [
@@ -361,7 +361,7 @@
       "teamSize": "",
       "role": "Software Entwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         ""
       ],
       "methodologies": [
@@ -381,7 +381,7 @@
       "teamSize": "",
       "role": "Software Entwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Neuentwicklung eines nativen Wikis für ein bereichsorientiertes Innovationsmanagement"
       ],
       "methodologies": [

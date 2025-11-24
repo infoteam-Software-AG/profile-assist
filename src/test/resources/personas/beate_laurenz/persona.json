@@ -1,26 +1,42 @@
 {
   "id": "e7a4c3b8-5f6d-4c2a-9b3e-7d8f1c9a2b4c",
   "jobTitle": "Software Developer",
-  "skills": [
-    "Java",
-    "Spring Boot",
-    "REST",
-    "Microservices",
-    "Kubernetes",
-    "Docker",
-    "PostgreSQL",
-    "React",
-    "TypeScript",
-    "CI/CD",
-    "Git",
-    "Agile"
-  ],
+  "name": "Beate Laurenz",
+  "educations": [],
+  "yearsOfExperience": 5,
+  "jobHistory": [],
+  "coreCompetencies": [],
   "certificates": [
     "Java SE 8 Programmer – 06/2017",
     "Spring Professional – 09/2019",
     "Kubernetes Administrator – 03/2020",
     "AWS Certified Solutions Architect – 11/2021"
   ],
+  "skills": {
+    "businessSectors": [],
+    "languages": [],
+    "programmingLanguages": [
+      "Java",
+      "TypeScript"
+    ],
+    "methodicalExpertise": [
+      "REST",
+      "Microservices",
+      "Agile",
+      "CI/CD"
+    ],
+    "tools": [
+      "Spring Boot",
+      "Kubernetes",
+      "Docker",
+      "Git",
+      "React"
+    ],
+    "operatingSystems": [],
+    "databases": [
+      "PostgreSQL"
+    ]
+  },
   "projectHistory": [
     {
       "name": "E-Commerce Plattform Optimierung",
@@ -32,7 +48,14 @@
         "Redis",
         "PostgreSQL",
         "GitLab CI"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     },
     {
       "name": "Mobile Banking App für FinTech",
@@ -44,7 +67,14 @@
         "Stripe",
         "Jest",
         "Detox"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     },
     {
       "name": "Microservices Architektur für Logistik",
@@ -58,7 +88,14 @@
         "Grafana",
         "JUnit",
         "Postman"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     }
   ],
   "startingDate": "2018-01-01T00:00:00.000+00:00",

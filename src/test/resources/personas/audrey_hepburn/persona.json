@@ -151,7 +151,7 @@
       "teamSize": "2-4",
       "role": "Technischer Projektleiter, Leadentwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Technische Projektleitung",
         "Erstellung von Anforderungen",
         "Implementierung verschiedener Tools mit Python und Integration in eine AWS-Umgebung"
@@ -177,7 +177,7 @@
       "teamSize": "4",
       "role": "Technische Projektleitung, Leadentwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Projektleitung",
         "Erarbeiten von Anforderungen",
         "Implementierung einer Desktopanwendung",
@@ -212,7 +212,7 @@
       "teamSize": "2-4",
       "role": "Technischer Projektleiter, Architekt",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Erarbeiten von Anforderungen",
         "Konzeption der technischen Realisierung (inkl. Architektur)",
         "Implementierung der Anforderungen",
@@ -244,7 +244,7 @@
       "teamSize": "2-3",
       "role": "Einsatz in Semesterferien im Bereich Softwareentwicklung",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Entwicklung von Demo-Apps",
         "Recherche zu und Einrichtung von CI/CD-Pipelines",
         "Aufbau von App-Knowhow"
@@ -268,7 +268,7 @@
       "teamSize": "2",
       "role": "Student",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Erstellung von Anforderungen",
         "Erstellung der Masterarbeit",
         "Implementierung von Reinforcement Learning mittels Python"
@@ -297,7 +297,7 @@
       "teamSize": "4",
       "role": "Entwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Entwicklung der Flutter-App",
         "Anbindung einer Remotedatenbank",
         "Koordination von Arbeitspaketen"
@@ -329,7 +329,7 @@
       "teamSize": "4-7",
       "role": "Einsatz in Semesterferien im Bereich Softwareentwicklung",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Automatisiertes und manuelles Testen",
         "Implementieren von Anforderungen",
         "Bereitstellung der Anwendung für Endanwender über die AppStores",
@@ -357,7 +357,7 @@
       "teamSize": "8",
       "role": "Softwareentwickler",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Bereitstellung einer API für Webapplikation",
         "Datenbankanbindung (SQL und Graph-Datenbanken)",
         "Testautomatisierung",
@@ -381,7 +381,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "3-dimensionale Darstellung von Volumendaten"
       ],
       "methodologies": [
@@ -399,7 +399,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Visualisierung von Bildclustern im Browser"
       ],
       "methodologies": [
@@ -417,7 +417,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "3-dimensionales Rendering"
       ],
       "methodologies": [
@@ -435,7 +435,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "3D Rendering von medizinischen Bilddaten und Streaming der gerenderten Bilder"
       ],
       "methodologies": [
@@ -453,7 +453,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "",
-      "personalContribution": [
+      "personalContributions": [
         "Entwicklung von Spielen für Smartphones"
       ],
       "methodologies": [

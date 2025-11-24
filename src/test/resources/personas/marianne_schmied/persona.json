@@ -1,22 +1,36 @@
 {
   "id": "c2e6d4f6-8b5d-4e4c-9d8f-123456789abc",
   "jobTitle": "Requirements Engineer",
+  "name": "Marianne Schmied",
+  "educations": [],
+  "yearsOfExperience": 5,
+  "jobHistory": [],
+  "coreCompetencies": [],
   "certificates": [
     "Certified Business Analysis Professional (CBAP) – 08/2018",
     "Professional Scrum Master I (PSM I) – 05/2019",
     "ITIL Foundation – 12/2020"
   ],
-  "skills": [
-    "Business Analysis",
-    "Requirements Elicitation",
-    "Use Case Modeling",
-    "Agile Scrum",
-    "Stakeholder Management",
-    "Process Modeling",
-    "UML",
-    "German",
-    "English"
-  ],
+  "skills": {
+    "businessSectors": [],
+    "languages": [
+      "German",
+      "English"
+    ],
+    "programmingLanguages": [],
+    "methodicalExpertise": [
+      "Business Analysis",
+      "Requirements Elicitation",
+      "Use Case Modeling",
+      "Agile Scrum",
+      "Stakeholder Management",
+      "Process Modeling",
+      "UML"
+    ],
+    "tools": [],
+    "operatingSystems": [],
+    "databases": []
+  },
   "projectHistory": [
     {
       "name": "Entwicklung eines E-Commerce-Systems für einen Einzelhändler",
@@ -30,7 +44,14 @@
         "Confluence",
         "UML",
         "Git"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     },
     {
       "name": "Optimierung des Ticket-Management-Systems bei einem Telekommunikationsanbieter",
@@ -41,7 +62,14 @@
         "BPMN",
         "Python",
         "REST APIs"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     },
     {
       "name": "Implementierung einer agilen Anforderungsmanagement-Software für ein Finanzinstitut",
@@ -54,7 +82,14 @@
         "Git",
         "Jira",
         "Confluence"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     },
     {
       "name": "Migration von Legacy-Anforderungen in ein cloudbasiertes System im Gesundheitswesen",
@@ -67,7 +102,14 @@
         "Git",
         "Jira",
         "Confluence"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     }
   ],
   "startingDate": "2016-03-01T00:00:00Z",

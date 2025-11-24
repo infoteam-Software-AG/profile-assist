@@ -136,7 +136,7 @@
       "teamSize": "",
       "role": "Cybersecurity-Spezialist",
       "specializedFocus": "Cybersecurity-Analyse und Beratung",
-      "personalContribution": [
+      "personalContributions": [
         "Cybersecurity Risikoanalyse und Risikobewertung",
         "Analyse der Architektur und der Software",
         "Beratung für Entwicklungsprozesse",
@@ -161,7 +161,7 @@
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Analyse und Entwicklung",
-      "personalContribution": [
+      "personalContributions": [
         "Fehleranalyse",
         "Erarbeitung der Requirements",
         "Umsetzung der Requirements",
@@ -187,7 +187,7 @@
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Erstellung von Yocto Rezepten für die Integration von Treibern und Tools. Entwicklung von Testtools.",
-      "personalContribution": [
+      "personalContributions": [
         "Treiber angepasst",
         "Yocto Rezepte erstellt für Treiber, Test- u. Anwen-dungssoftware",
         "Webapplikation für Testsoftware erstellt (Front-end/Backend)",
@@ -209,7 +209,7 @@
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Portierung von Legacy C Code auf STM32",
-      "personalContribution": [
+      "personalContributions": [
         "Portierung von Legacy C Code auf STM32",
         "Anpassung der Schnittstellentreiber",
         "Inbetriebnahme auf der neuen Hardware"
@@ -230,7 +230,7 @@
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Entwicklung der Backend Kommunikation",
-      "personalContribution": [
+      "personalContributions": [
         "Planung und Architektur",
         "Umsetzung des Backend in C/C++ unter Linux",
         "Anbindung an OPC-UA Server"
@@ -250,7 +250,7 @@
       "teamSize": "",
       "role": "Berater, Cybersecurity-Spezialist",
       "specializedFocus": "Analyse der Software und Cybersecurity-Beratung",
-      "personalContribution": [
+      "personalContributions": [
         "Analyse der KI-Datenbasis",
         "Analyse der Architektur",
         "Requirement Engineering",
@@ -275,7 +275,7 @@
       "teamSize": "",
       "role": "Architekt",
       "specializedFocus": "Schwachstellen-Management",
-      "personalContribution": [
+      "personalContributions": [
         "Einrichtung eines Vulnerability Management Tools",
         "Erarbeitung und Dokumentation der Prozesse",
         "Initialisierung der Prozesse",
@@ -297,7 +297,7 @@
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Datenbank-Spezialist",
-      "personalContribution": [
+      "personalContributions": [
         "Erarbeitung technischer Möglichkeiten und Prozesse",
         "Erstellung der Skripte für die Datenseparation",
         "Durchführen von Tests",
@@ -320,7 +320,7 @@
       "teamSize": "",
       "role": "Entwickler",
       "specializedFocus": "Analyse, Umsetzung und Cybersecurity",
-      "personalContribution": [
+      "personalContributions": [
         "Fehleranalyse",
         "Erarbeitung der Requirements",
         "Umsetzung der Requirements",
@@ -345,7 +345,7 @@
       "teamSize": "",
       "role": "Architekt",
       "specializedFocus": "Analyse, Konzeption und Architektur",
-      "personalContribution": [
+      "personalContributions": [
         "Bestandsanalyse der Architektur",
         "Konzeptentwicklung, um Architektur multihostfähig zu machen",
         "Proof of Concept erarbeitet und getestet"
@@ -370,7 +370,7 @@
       "teamSize": "",
       "role": "Architekt",
       "specializedFocus": "Konzeption, Architektur, Datenbank-Spezialist und Cyber-security-Spezialist",
-      "personalContribution": [
+      "personalContributions": [
         "Erstellung des Anforderungskataloges",
         "Erarbeitung eines Mockups",
         "Erstellung und Dokumentation des Entwicklungsprozesses",
@@ -395,7 +395,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "Linux Plattform auf Yocto Basis erstellt, Integration und Testen der Anwendung",
-      "personalContribution": [],
+      "personalContributions": [],
       "methodologies": []
     },
     {
@@ -407,7 +407,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "Dokumentation",
-      "personalContribution": [],
+      "personalContributions": [],
       "methodologies": []
     },
     {
@@ -421,7 +421,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "Architektur",
-      "personalContribution": [],
+      "personalContributions": [],
       "methodologies": []
     },
     {
@@ -435,7 +435,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "Entwicklung einer Toolchain und eines Testkonzeptes für Safety CPUs von B&R nach IEC 61508",
-      "personalContribution": [],
+      "personalContributions": [],
       "methodologies": []
     },
     {
@@ -447,7 +447,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "Softwareentwicklung und Projektleiter für mehrere Pro-jekte",
-      "personalContribution": [],
+      "personalContributions": [],
       "methodologies": []
     },
     {
@@ -459,7 +459,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "Planung, Entwicklung von Konzepten und Unterstützung bei Software- u. Hardwareprojekten. Softwareentwicklung, Beratung und Schulung in Automatisierungs-, Energie- u. Trocknungstechnik",
-      "personalContribution": [],
+      "personalContributions": [],
       "methodologies": []
     },
     {
@@ -473,7 +473,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "Architektur, Planung und Entwicklung von Front- und Ba-ckend Software inkl. Cybersecurity Betrachtung",
-      "personalContribution": [],
+      "personalContributions": [],
       "methodologies": []
     },
     {
@@ -485,7 +485,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "Architektur, Entwicklung und Support von Echtzeitsyste-men auf Linux Basis. Planung u. Entwicklung von Embed-ded Software und Datenbank-gestützten Anwendungen",
-      "personalContribution": [],
+      "personalContributions": [],
       "methodologies": []
     },
     {
@@ -499,7 +499,7 @@
       "teamSize": "",
       "role": "",
       "specializedFocus": "Architektur, Planung, Entwicklung und Wartung von inter-nen Anwendungen und Tools. IT-Support und Pflege.",
-      "personalContribution": [],
+      "personalContributions": [],
       "methodologies": []
     }
   ],

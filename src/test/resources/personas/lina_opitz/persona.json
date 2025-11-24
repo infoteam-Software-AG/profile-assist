@@ -1,16 +1,31 @@
 {
   "id": "123e4567-e89b-12d3-a456-426614174000",
   "jobTitle": "Software Developer",
-  "skills": [
-    "Java",
-    "SQL",
-    "Git",
-    "Bash"
-  ],
+  "name": "Lina Opitz",
+  "educations": [],
+  "yearsOfExperience": 5,
+  "jobHistory": [],
+  "coreCompetencies": [],
   "certificates": [
     "Basic Java Cert 01/2019",
     "Git Basics 05/2018"
   ],
+  "skills": {
+    "businessSectors": [],
+    "languages": [],
+    "programmingLanguages": [
+      "Java",
+      "Bash"
+    ],
+    "methodicalExpertise": [],
+    "tools": [
+      "Git"
+    ],
+    "operatingSystems": [],
+    "databases": [
+      "SQL"
+    ]
+  },
   "projectHistory": [
     {
       "name": "E-Commerce Website",
@@ -19,7 +34,14 @@
         "Java",
         "Spring Boot",
         "MySQL"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     },
     {
       "name": "Mobile App",
@@ -28,7 +50,14 @@
         "Kotlin",
         "Android",
         "SQLite"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     }
   ],
   "startingDate": "2018-01-01T00:00:00.000+00:00",
