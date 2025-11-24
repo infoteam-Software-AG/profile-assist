@@ -11,10 +11,8 @@ public class DocumentStrategy implements MappingStrategy {
   @Override
   public MarkdownNode mapToAST(Node commonMarkNode) {
     List<MarkdownNode> documentChildNodes = new ArrayList<>();
-    for (var commonMarkChild = commonMarkNode.getFirstChild();
-        commonMarkChild != null;
-        commonMarkChild = commonMarkChild.getNext()) {
-      documentChildNodes.add(MappingStrategyFactory.executeStrategy(commonMarkChild));
+    for (var child = commonMarkNode.getFirstChild(); child != null; child = child.getNext()) {
+      documentChildNodes.add(NodeMappingFactory.mapNode(child));
     }
     return new Document(documentChildNodes);
   }
@@ -25,8 +23,8 @@ public class DocumentStrategy implements MappingStrategy {
     Document documentNode = (Document) node;
 
     var resultDocument = new org.commonmark.node.Document();
-    for (MarkdownNode astChild : documentNode.children()) {
-      resultDocument.appendChild(MappingStrategyFactory.executeStrategy(astChild));
+    for (MarkdownNode child : documentNode.children()) {
+      resultDocument.appendChild(NodeMappingFactory.mapNode(child));
     }
     return resultDocument;
   }

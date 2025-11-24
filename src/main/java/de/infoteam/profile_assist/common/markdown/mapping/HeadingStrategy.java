@@ -12,7 +12,7 @@ public class HeadingStrategy implements MappingStrategy {
     int headingLevel = ((org.commonmark.node.Heading) node).getLevel();
     List<MarkdownNode> children = new ArrayList<>();
     for (var child = node.getFirstChild(); child != null; child = child.getNext()) {
-      children.add(MappingStrategyFactory.executeStrategy(child));
+      children.add(NodeMappingFactory.mapNode(child));
     }
 
     return new Heading(headingLevel, children);
@@ -25,7 +25,7 @@ public class HeadingStrategy implements MappingStrategy {
     resultHeading.setLevel(((Heading) node).level());
 
     for (MarkdownNode child : (((Heading) node).children())) {
-      resultHeading.appendChild(MappingStrategyFactory.executeStrategy(child));
+      resultHeading.appendChild(NodeMappingFactory.mapNode(child));
     }
     return resultHeading;
   }

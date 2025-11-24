@@ -10,9 +10,11 @@ import de.infoteam.profile_assist.common.markdown.StrongEmphasis;
 import de.infoteam.profile_assist.common.markdown.Text;
 import org.commonmark.node.Node;
 
-public class MappingStrategyFactory {
+public class NodeMappingFactory {
 
-  public static Node executeStrategy(MarkdownNode node) {
+  private NodeMappingFactory() {}
+
+  public static Node mapNode(MarkdownNode node) {
     return switch (node) {
       case Document doc -> new DocumentStrategy().mapToCommonMark(node);
       case Paragraph p -> new ParagraphStrategy().mapToCommonMark(node);
@@ -25,7 +27,7 @@ public class MappingStrategyFactory {
     };
   }
 
-  public static MarkdownNode executeStrategy(Node node) {
+  public static MarkdownNode mapNode(Node node) {
     return switch (node) {
       case org.commonmark.node.Document doc -> new DocumentStrategy().mapToAST(node);
       case org.commonmark.node.Paragraph p -> new ParagraphStrategy().mapToAST(node);

@@ -13,7 +13,7 @@ public class ListItemStrategy implements MappingStrategy {
 
     List<MarkdownNode> children = new ArrayList<>();
     for (var child = node.getFirstChild(); child != null; child = child.getNext()) {
-      children.add(MappingStrategyFactory.executeStrategy(child));
+      children.add(NodeMappingFactory.mapNode(child));
     }
     return new ListItem(children);
   }
@@ -23,7 +23,7 @@ public class ListItemStrategy implements MappingStrategy {
     var resultListItem = new org.commonmark.node.ListItem();
     var listItemParagraph = new org.commonmark.node.Paragraph();
     for (MarkdownNode child : ((ListItem) node).children()) {
-      Node commonmarkChild = MappingStrategyFactory.executeStrategy(child);
+      Node commonmarkChild = NodeMappingFactory.mapNode(child);
       listItemParagraph.appendChild(commonmarkChild);
     }
     resultListItem.appendChild(listItemParagraph);

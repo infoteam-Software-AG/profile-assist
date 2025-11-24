@@ -11,7 +11,7 @@ public class ParagraphStrategy implements MappingStrategy {
   public MarkdownNode mapToAST(Node node) {
     List<MarkdownNode> children = new ArrayList<>();
     for (var child = node.getFirstChild(); child != null; child = child.getNext()) {
-      children.add(MappingStrategyFactory.executeStrategy(child));
+      children.add(NodeMappingFactory.mapNode(child));
     }
     return new Paragraph(children);
   }
@@ -20,7 +20,7 @@ public class ParagraphStrategy implements MappingStrategy {
   public Node mapToCommonMark(MarkdownNode node) {
     var paragraph = new org.commonmark.node.Paragraph();
     for (MarkdownNode child : ((Paragraph) node).children()) {
-      paragraph.appendChild(MappingStrategyFactory.executeStrategy(child));
+      paragraph.appendChild(NodeMappingFactory.mapNode(child));
     }
     return paragraph;
   }
