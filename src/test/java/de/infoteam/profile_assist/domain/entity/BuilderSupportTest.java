@@ -22,7 +22,7 @@ class BuilderSupportTest {
   @Test
   void verifyBuilderImplementsInterface() {
     var builder = TestRecord.builder();
-    assertThat(builder.getClass().isInstance(BuilderSupport.Builder.class));
+    assertThat(builder).isInstanceOf(BuilderSupport.Builder.class);
   }
 
   /**
@@ -35,6 +35,7 @@ class BuilderSupportTest {
 
     // this is required to add the interface to the builder
     // other overrides and additional methods may be added here as well
+    @SuppressWarnings("unused")
     public static class TestRecordBuilder implements BuilderSupport.Builder<TestRecord> {}
   }
 }
