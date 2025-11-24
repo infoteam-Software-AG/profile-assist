@@ -1,6 +1,5 @@
 package de.infoteam.profile_assist.domain.entity;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 import lombok.Builder;
@@ -12,14 +11,14 @@ public record Persona(
     @NonNull String jobTitle,
     @NonNull String name,
     @NonNull List<Education> educations,
-    @NonNull Long yearsOfExperience,
+    @NonNull Integer yearsOfExperience,
     @NonNull List<Job> jobHistory,
     @NonNull List<String> coreCompetencies,
     @NonNull List<String> certificates,
-    @NonNull List<Skills> skills,
+    @NonNull Skills skills,
     @NonNull List<Project> projectHistory,
-    @NonNull LocalDate startingDate,
-    @NonNull LocalDate lastUpdate)
+    @NonNull String startingDate,
+    @NonNull String lastUpdate)
     implements BuilderSupport<Persona> {
 
   public static class PersonaBuilder implements BuilderSupport.Builder<Persona> {}
