@@ -12,6 +12,7 @@ import java.nio.file.Files;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,8 @@ import org.springframework.core.env.Environment;
 
 @SpringBootTest
 @Slf4j
-public class SpringAIOptimizeProjectDiscriptionUseCaseMT {
+@Disabled
+public class SpringAIOptimizeProjectDescriptionUseCaseManualTest {
 
   private record Configuration(String model, String temperature) {}
 
