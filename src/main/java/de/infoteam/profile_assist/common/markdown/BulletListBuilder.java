@@ -13,14 +13,9 @@ public final class BulletListBuilder {
 
   public BulletListBuilder addListItem(String text) {
     builder.item(
-      ListItem.builder()
-        .child(
-          Paragraph.builder()
-            .child(Text.builder().text(text).build())
-            .build()
-        )
-        .build()
-    );
+        ListItem.builder()
+            .child(Paragraph.builder().child(Text.builder().text(text).build()).build())
+            .build());
     return this;
   }
 
@@ -29,14 +24,9 @@ public final class BulletListBuilder {
     inlineConfig.accept(inlineBuilder);
 
     builder.item(
-      ListItem.builder()
-        .child(
-          Paragraph.builder()
-            .children(inlineBuilder.buildChildren())
-            .build()
-        )
-        .build()
-    );
+        ListItem.builder()
+            .child(Paragraph.builder().children(inlineBuilder.buildChildren()).build())
+            .build());
     return this;
   }
 

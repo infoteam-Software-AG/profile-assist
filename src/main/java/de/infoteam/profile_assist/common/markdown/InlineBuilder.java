@@ -13,12 +13,7 @@ final class InlineBuilder {
   }
 
   public InlineBuilder strong(String text) {
-    children.add(
-      StrongEmphasis.builder()
-        .delimiter("**")
-        .text(text)
-        .build()
-    );
+    children.add(StrongEmphasis.builder().delimiter("**").text(text).build());
     return this;
   }
 
