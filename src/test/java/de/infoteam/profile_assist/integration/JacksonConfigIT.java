@@ -23,7 +23,7 @@ public class JacksonConfigIT {
   JavaDateWrapper JAVA_DATE_WRAPPER = new JavaDateWrapper(LOCAL_DATE_NOW);
   String JAVA_DATE_WRAPPER_JSON = "{\"localDate\":\"" + LOCAL_DATE_NOW.toString() + "\"}";
 
-  @DisplayName("When autowiredObjectMapper is used, java time types must be serializable.")
+  @DisplayName("When autowiredObjectMapper is used, java date types must be serializable.")
   @Test
   void autowiredObjectMapperSerializeJavaDataTypes() throws JsonProcessingException {
     // Act
@@ -33,7 +33,7 @@ public class JacksonConfigIT {
     assertThat(actual).isEqualTo(JAVA_DATE_WRAPPER_JSON);
   }
 
-  @DisplayName("When manualObjectMapper is used, java time types must be serializable.")
+  @DisplayName("When manualObjectMapper is used, java date types must be serializable.")
   @Test
   void manualObjectMapperSerializeJavaDataTypes() throws JsonProcessingException {
     // Act
@@ -43,7 +43,7 @@ public class JacksonConfigIT {
     assertThat(actual).isEqualTo(JAVA_DATE_WRAPPER_JSON);
   }
 
-  @DisplayName("When autowiredObjectMapper is used, java time types must be deserializable.")
+  @DisplayName("When autowiredObjectMapper is used, java date types must be deserializable.")
   @Test
   void autowiredObjectMapperDeserializeJavaDataTypes() throws JsonProcessingException {
     // Act
@@ -54,7 +54,7 @@ public class JacksonConfigIT {
     assertThat(actual.localDate()).isEqualTo(JAVA_DATE_WRAPPER.localDate());
   }
 
-  @DisplayName("When manualObjectMapper is used, java time types must be deserializable.")
+  @DisplayName("When manualObjectMapper is used, java date types must be deserializable.")
   @Test
   void manualObjectMapperDeserializeJavaDataTypes() throws JsonProcessingException {
     // Act
