@@ -22,7 +22,7 @@ import org.springframework.core.env.Environment;
 @SpringBootTest
 @Slf4j
 @Disabled
-public class SpringAIOptimizeProjectDescriptionUseCaseManualTest {
+class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
 
   private record Configuration(String model, String temperature) {}
 
@@ -44,8 +44,7 @@ public class SpringAIOptimizeProjectDescriptionUseCaseManualTest {
 
   @ParameterizedTest
   @ValueSource(strings = {"anna_mueller", "beate_laurenz"})
-  public void askForPersonaProjectDiscriptionOptimization_shouldUpdateUpdateTimestamp(
-      String personaName) {
+  void askForPersonaProjectDiscriptionOptimization_shouldUpdateUpdateTimestamp(String personaName) {
 
     String temperature = environment.getProperty("spring.ai.openai.chat.options.temperature", "-");
     String model = environment.getProperty("spring.ai.openai.chat.options.model", "-");
