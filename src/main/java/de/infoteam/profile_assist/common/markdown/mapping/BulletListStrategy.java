@@ -14,7 +14,7 @@ public class BulletListStrategy implements MappingStrategy {
     List<ListItem> items = new ArrayList<>();
     for (var child = node.getFirstChild(); child != null; child = child.getNext()) {
       if (child instanceof org.commonmark.node.ListItem childNode) {
-        items.add((ListItem) getChildStrategy(childNode).mapToAST(childNode));
+        items.add((ListItem) MappingStrategyFactory.executeStrategy(childNode));
       }
     }
     return new BulletList(items);
@@ -25,7 +25,7 @@ public class BulletListStrategy implements MappingStrategy {
     var bulletList = new org.commonmark.node.BulletList();
     bulletList.setTight(true);
     for (ListItem child : ((BulletList) node).items()) {
-      bulletList.appendChild(getChildStrategy(child).mapToCommonMark(child));
+      bulletList.appendChild(MappingStrategyFactory.executeStrategy(child));
     }
     return bulletList;
   }

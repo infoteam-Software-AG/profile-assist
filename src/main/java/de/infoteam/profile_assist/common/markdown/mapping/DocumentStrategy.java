@@ -14,7 +14,7 @@ public class DocumentStrategy implements MappingStrategy {
     for (var commonMarkChild = commonMarkNode.getFirstChild();
         commonMarkChild != null;
         commonMarkChild = commonMarkChild.getNext()) {
-      documentChildNodes.add(getChildStrategy(commonMarkChild).mapToAST(commonMarkChild));
+      documentChildNodes.add(MappingStrategyFactory.executeStrategy(commonMarkChild));
     }
     return new Document(documentChildNodes);
   }
@@ -26,7 +26,7 @@ public class DocumentStrategy implements MappingStrategy {
 
     var resultDocument = new org.commonmark.node.Document();
     for (MarkdownNode astChild : documentNode.children()) {
-      resultDocument.appendChild(getChildStrategy(astChild).mapToCommonMark(astChild));
+      resultDocument.appendChild(MappingStrategyFactory.executeStrategy(astChild));
     }
     return resultDocument;
   }

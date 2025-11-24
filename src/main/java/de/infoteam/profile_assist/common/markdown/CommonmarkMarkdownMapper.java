@@ -1,6 +1,6 @@
 package de.infoteam.profile_assist.common.markdown;
 
-import de.infoteam.profile_assist.common.markdown.mapping.DocumentStrategy;
+import de.infoteam.profile_assist.common.markdown.mapping.MappingStrategyFactory;
 import java.util.List;
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
@@ -22,7 +22,7 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
     }
     Node node = parser.parse(markdown);
 
-    return (Document) new DocumentStrategy().mapToAST(node);
+    return (Document) MappingStrategyFactory.executeStrategy(node);
   }
 
   @Override
@@ -30,7 +30,7 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
     if (ast == null) {
       return "";
     }
-    var doc = new DocumentStrategy().mapToCommonMark(ast);
+    var doc = MappingStrategyFactory.executeStrategy(ast);
     return renderer.render(doc);
   }
 }
