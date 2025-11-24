@@ -4,20 +4,17 @@
   "name": "Audrey Hepburn",
   "educations": [
     {
-      "from": "1920",
-      "to": "1916",
+      "timePeriod": "1920 - 1916",
       "name": "Medieninformatik, M. Sc.",
       "location": "Technische Hochschule"
     },
     {
-      "from": "1916",
-      "to": "1920",
+      "timePeriod": "1916 - 1920",
       "name": "Medieninformatik, B.Sc.",
       "location": "Technische Hochschule"
     },
     {
-      "from": "1913",
-      "to": "1916",
+      "timePeriod": "1913 - 1916",
       "name": "Ausbildung zum Fachinformatiker (Anwendungsentwicklung)",
       "location": "Staatliche Berufsschule"
     }
@@ -25,33 +22,27 @@
   "yearsOfExperience": 0,
   "jobHistory": [
     {
-      "from": "1923",
-      "to": "heute",
+      "timePeriod": "1923 - heute",
       "name": "Team- und technischer Projektleiter"
     },
     {
-      "from": "1922",
-      "to": "1923",
+      "timePeriod": "1922 - 1923",
       "name": "Technischer Projektleiter"
     },
     {
-      "from": "1921",
-      "to": "1922",
+      "timePeriod": "1921 - 1922",
       "name": "Softwareentwickler"
     },
     {
-      "from": "1916",
-      "to": "1921",
+      "timePeriod": "1916 - 1921",
       "name": "Duales Studium B. Sc. und M. Sc. Softwareentwicklung"
     },
     {
-      "from": "1916",
-      "to": "1916",
+      "timePeriod": "1916 - 1916",
       "name": "Softwareentwickler"
     },
     {
-      "from": "1913",
-      "to": "1916",
+      "timePeriod": "1913 - 1916",
       "name": "Duale Ausbildung"
     }
   ],

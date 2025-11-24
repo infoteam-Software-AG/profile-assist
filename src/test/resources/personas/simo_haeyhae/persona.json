@@ -4,8 +4,7 @@
   "name": "Simo Häyhä",
   "educations": [
     {
-      "from": "1899",
-      "to": "1902",
+      "timePeriod": "1899 - 1902",
       "name": "Ausbildung zum Fachinformatiker für Anwendungsentwicklung",
       "location": ""
     }
@@ -13,18 +12,15 @@
   "yearsOfExperience": 22,
   "jobHistory": [
     {
-      "from": "1916",
-      "to": "heute",
+      "timePeriod": "1916 - heute",
       "name": "Software Entwickler / Requirements Engineer / Stellv. Projektleiter / Projektleiter"
     },
     {
-      "from": "1911",
-      "to": "1916",
+      "timePeriod": "1911 - 1916",
       "name": "Software Entwickler / Requirements Engineer / Stellv. Projektleiter"
     },
     {
-      "from": "1912",
-      "to": "1911",
+      "timePeriod": "1902 - 1911",
       "name": "Software Entwickler / Requirements Engineer"
     }
   ],

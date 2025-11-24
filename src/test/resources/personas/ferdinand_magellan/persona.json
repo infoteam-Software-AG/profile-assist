@@ -4,8 +4,7 @@
   "name": "Ferdinand Magellan",
   "educations": [
     {
-      "from": "1867",
-      "to": "1870",
+      "timePeriod": "1867 - 1870",
       "name": "Bürokauffrau",
       "location": "Industrie- und Handelskammer Süd Italien"
     }
@@ -13,28 +12,23 @@
   "yearsOfExperience": 0,
   "jobHistory": [
     {
-      "from": "05/1921",
-      "to": "heute",
+      "timePeriod": "05/1921 - heute",
       "name": "Cybersecurity-Spezialist"
     },
     {
-      "from": "07/1920",
-      "to": "heute",
+      "timePeriod": "07/1920 - heute",
       "name": "SW-Architekt und Senior Softwareentwickler im Bereich Life Science"
     },
     {
-      "from": "05/1917",
-      "to": "12/1920",
+      "timePeriod": "05/1917 - 12/1920",
       "name": "Softwareentwickler und Projektleiter für Safety Projekte"
     },
     {
-      "from": "02/1909",
-      "to": "11/1917",
+      "timePeriod": "02/1909 - 11/1917",
       "name": "Geschäftsführer und freiberuflicher Systemarchitekt im Be-reich industrielle Automatisierung"
     },
     {
-      "from": "1896",
-      "to": "1908",
+      "timePeriod": "1896 - 1908",
       "name": "Softwareentwickler und SW-Architekt für Frontend- und Backend-Entwicklung"
     }
   ],

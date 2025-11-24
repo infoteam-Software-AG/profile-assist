@@ -4,8 +4,7 @@ import lombok.Builder;
 import lombok.NonNull;
 
 @Builder(toBuilder = true)
-public record Education(
-    @NonNull String from, @NonNull String to, @NonNull String name, @NonNull String location)
+public record Education(@NonNull String timePeriod, @NonNull String name, @NonNull String location)
     implements BuilderSupport<Education> {
 
   public static class EducationBuilder implements BuilderSupport.Builder<Education> {}
