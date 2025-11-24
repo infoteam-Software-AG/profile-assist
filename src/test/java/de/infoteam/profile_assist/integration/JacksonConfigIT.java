@@ -11,17 +11,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class JacksonConfigIT {
+class JacksonConfigIT {
 
   // Autowired ObjectMapper for IT
   @Autowired ObjectMapper autowiredObjectMapper;
 
   // Manually created ObjectMapper for Test
-  ObjectMapper manualObjectMapper = new JacksonConfig().objectMapper();
+  static final ObjectMapper MANUAL_OBJECT_MAPPER = new JacksonConfig().objectMapper();
 
-  LocalDate LOCAL_DATE_NOW = LocalDate.now();
-  JavaDateWrapper JAVA_DATE_WRAPPER = new JavaDateWrapper(LOCAL_DATE_NOW);
-  String JAVA_DATE_WRAPPER_JSON = "{\"localDate\":\"" + LOCAL_DATE_NOW.toString() + "\"}";
+  static final LocalDate LOCAL_DATE_NOW = LocalDate.now();
+  static final JavaDateWrapper JAVA_DATE_WRAPPER = new JavaDateWrapper(LOCAL_DATE_NOW);
+  static final String JAVA_DATE_WRAPPER_JSON = "{\"localDate\":\"" + LOCAL_DATE_NOW + "\"}";
 
   @DisplayName("When autowiredObjectMapper is used, java date types must be serializable.")
   @Test
@@ -37,7 +37,7 @@ public class JacksonConfigIT {
   @Test
   void manualObjectMapperSerializeJavaDataTypes() throws JsonProcessingException {
     // Act
-    String actual = manualObjectMapper.writeValueAsString(JAVA_DATE_WRAPPER);
+    String actual = MANUAL_OBJECT_MAPPER.writeValueAsString(JAVA_DATE_WRAPPER);
 
     // Assert
     assertThat(actual).isEqualTo(JAVA_DATE_WRAPPER_JSON);
@@ -59,7 +59,7 @@ public class JacksonConfigIT {
   void manualObjectMapperDeserializeJavaDataTypes() throws JsonProcessingException {
     // Act
     JavaDateWrapper actual =
-        manualObjectMapper.readValue(JAVA_DATE_WRAPPER_JSON, JavaDateWrapper.class);
+        MANUAL_OBJECT_MAPPER.readValue(JAVA_DATE_WRAPPER_JSON, JavaDateWrapper.class);
 
     // Assert
     assertThat(actual.localDate()).isEqualTo(JAVA_DATE_WRAPPER.localDate());
