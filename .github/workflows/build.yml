@@ -53,6 +53,7 @@ jobs:
     name: Generate SBOM HTML
     needs: build
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' # ensure the sbom is only deployed on main
     steps:
       - name: Checkout Sunshine repository
         uses: actions/checkout@v4
