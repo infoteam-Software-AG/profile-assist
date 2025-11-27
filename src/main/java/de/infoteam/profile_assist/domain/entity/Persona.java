@@ -1,18 +1,14 @@
 package de.infoteam.profile_assist.domain.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
-import lombok.Data;
 
-@Data
-public class Persona {
-
-  private UUID id;
-  private String jobTitle;
-  private List<String> skills;
-  private List<String> certificates;
-  private List<Project> projectHistory;
-  private Date startingDate;
-  private Date lastUpdate;
-}
+public record Persona(
+    UUID id,
+    String jobTitle,
+    List<String> skills,
+    List<String> certificates,
+    List<Project> projectHistory,
+    LocalDate startingDate,
+    LocalDate lastUpdate) {}

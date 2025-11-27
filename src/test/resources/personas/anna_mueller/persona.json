@@ -17,11 +17,13 @@
   "projectHistory": [
     {
       "name": "E-Commerce Plattform",
-      "description": "Entwicklung einer skalierbaren E-Commerce Plattform mit Spring Boot und Microservices"
+      "description": "Entwicklung einer skalierbaren E-Commerce Plattform mit Spring Boot und Microservices",
+      "technologies": []
     },
     {
       "name": "Datenmigrationsproject",
-      "description": "Migration von Legacy-Systemen zu modernen Cloud-Infrastrukturen"
+      "description": "Migration von Legacy-Systemen zu modernen Cloud-Infrastrukturen",
+      "technologies": []
     }
   ],
   "startingDate": "2026-02-01",
