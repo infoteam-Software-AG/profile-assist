@@ -34,7 +34,6 @@
         <spring-jdbc.version>6.2.12</spring-jdbc.version>
         <jspecify.version>1.0.0</jspecify.version>
         <commonmark.version>0.27.0</commonmark.version>
-        <cyclonedx.maven.plugin.version>2.9.1</cyclonedx.maven.plugin.version>
         <!-- """"" end: version properties """"" -->
 
         <asciidoc.outputDirectory>${project.basedir}/target/docs</asciidoc.outputDirectory>
@@ -421,7 +420,6 @@
                 <plugin>
                     <groupId>org.cyclonedx</groupId>
                     <artifactId>cyclonedx-maven-plugin</artifactId>
-                    <version>${cyclonedx.maven.plugin.version}</version>
                     <executions>
                         <execution>
                             <phase>verify</phase>
@@ -430,27 +428,13 @@
                             </goals>
                             <configuration>
                                 <projectType>application</projectType>
-                                <schemaVersion>1.6</schemaVersion>
-                                <includeBomSerialNumber>true</includeBomSerialNumber>
-                                <includeCompileScope>true</includeCompileScope>
-                                <includeProvidedScope>true</includeProvidedScope>
-                                <includeRuntimeScope>true</includeRuntimeScope>
-                                <includeSystemScope>true</includeSystemScope>
-                                <includeTestScope>false</includeTestScope>
-                                <includeLicenseText>false</includeLicenseText>
                                 <outputFormat>json</outputFormat>
-                                <outputName>bom</outputName>
-                                <outputDirectory>${project.build.directory}
-                                </outputDirectory><!-- usually target, if not redefined in pom.xml -->
-                                <verbose>false</verbose><!-- = ${cyclonedx.verbose} -->
                             </configuration>
                         </execution>
                     </executions>
                 </plugin>
                 <!-- ***** end: sbom related plugins ***** -->
-
             </plugins>
         </pluginManagement>
     </build>
-
 </project>
