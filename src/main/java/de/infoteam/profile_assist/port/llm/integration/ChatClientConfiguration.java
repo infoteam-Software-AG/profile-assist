@@ -1,4 +1,4 @@
-package de.infoteam.profile_assist.integration;
+package de.infoteam.profile_assist.port.llm.integration;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;

@@ -8,7 +8,7 @@ import static org.mockito.Mockito.when;
 
 import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
-import de.infoteam.profile_assist.port.llm.entity.OptimizationResult;
+import de.infoteam.profile_assist.port.llm.entity.OptimizationResultImpl;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Collections;
@@ -41,8 +41,8 @@ class SpringAiClientTest {
     when(chatClient.prompt().system(anyString()).user(anyString()).call().entity(Persona.class))
         .thenReturn(unoptimizedPersona);
 
-    OptimizationResult<Persona> optimizedPersona =
-        springAiClient.sendPrompt(Persona.class, "systempromot", "userprompt");
+    OptimizationResultImpl<Persona> optimizedPersona =
+        springAiClient.sendPrompt(Persona.class, "systemprompt", "userprompt");
 
     then(optimizedPersona.result()).isNotNull();
   }

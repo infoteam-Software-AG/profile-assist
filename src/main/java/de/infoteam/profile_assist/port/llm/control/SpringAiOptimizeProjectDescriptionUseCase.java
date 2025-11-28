@@ -1,6 +1,7 @@
 package de.infoteam.profile_assist.port.llm.control;
 
 import de.infoteam.profile_assist.domain.control.OptimizeProjectDescriptionUseCase;
+import de.infoteam.profile_assist.domain.entity.OptimizationResult;
 import de.infoteam.profile_assist.domain.entity.Project;
 import de.infoteam.profile_assist.port.llm.integration.PromptParsingException;
 import de.infoteam.profile_assist.port.llm.integration.SpringAiClient;
@@ -39,7 +40,7 @@ public class SpringAiOptimizeProjectDescriptionUseCase
   }
 
   @Override
-  public Project optimizeProjectDescription(Project project) {
+  public OptimizationResult<Project> optimizeProjectDescription(Project project) {
     var variables =
         Map.of(
             "name", project.name(),
@@ -47,7 +48,6 @@ public class SpringAiOptimizeProjectDescriptionUseCase
             "technologies", project.technologies());
     var renderedUserPrompt =
         PromptTemplate.builder().template(userPrompt).build().render(variables);
-    var result = springAiClient.sendPrompt(Project.class, systemPrompt, renderedUserPrompt);
-    return result.result();
+    return springAiClient.sendPrompt(Project.class, systemPrompt, renderedUserPrompt);
   }
 }
