@@ -1,5 +1,8 @@
 package de.infoteam.profile_assist.common.markdown;
 
 import java.util.List;
+import lombok.Builder;
+import lombok.Singular;
 
-public record Paragraph(List<MarkdownNode> children) implements MarkdownNode {}
+@Builder
+public record Paragraph(@Singular("child") List<MarkdownNode> children) implements MarkdownNode {}

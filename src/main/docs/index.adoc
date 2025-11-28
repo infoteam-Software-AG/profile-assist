@@ -17,3 +17,6 @@ Describes the overall architecture and principles for the software
 
 === xref:testconcept.adoc[Test concept]
 Concept and requirements for testing the software.
+
+=== link:bom.html[SBOM Report]
+Detailed Overview of Software Components and Dependencies

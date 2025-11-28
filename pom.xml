@@ -185,6 +185,10 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.cyclonedx</groupId>
+                <artifactId>cyclonedx-maven-plugin</artifactId>
+            </plugin>
         </plugins>
 
         <pluginManagement>
@@ -232,7 +236,7 @@
                                 <style>GOOGLE</style>
                             </googleJavaFormat>
                             <removeUnusedImports/>
-                            <forbidWildcardImports />
+                            <forbidWildcardImports/>
                             <importOrder/>
                             <formatAnnotations/>
                         </java>
@@ -429,8 +433,26 @@
                     </executions>
                 </plugin>
                 <!-- ***** end: asciidoc related plugins ***** -->
+
+                <!-- ***** start: sbom related plugins ***** -->
+                <plugin>
+                    <groupId>org.cyclonedx</groupId>
+                    <artifactId>cyclonedx-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>makeBom</goal>
+                            </goals>
+                            <configuration>
+                                <projectType>application</projectType>
+                                <outputFormat>json</outputFormat>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!-- ***** end: sbom related plugins ***** -->
             </plugins>
         </pluginManagement>
     </build>
-
 </project>
