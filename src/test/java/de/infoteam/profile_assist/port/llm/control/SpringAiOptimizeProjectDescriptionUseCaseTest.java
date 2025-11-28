@@ -15,12 +15,17 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 class SpringAiOptimizeProjectDescriptionUseCaseTest {
 
   @InjectMocks SpringAiOptimizeProjectDescriptionUseCase springAiOptimizeProjectDescriptionUseCase;
+
+  @Spy
+  OptimizeProjectDescriptionPromptProvider promptProvider =
+      new OptimizeProjectDescriptionPromptProvider();
 
   @Mock SpringAiClient springAiClient;
 
