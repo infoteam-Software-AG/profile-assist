@@ -1,5 +1,8 @@
 ## Lukas Weber - Software Developer
 
+This is a purely fictional test persona, it has no connection to any real person and is the product of the creator's
+imagination.
+
 ### Background: ###
 
 Lukas is a passionate developer with a focus on microservices and cloud-native architectures.

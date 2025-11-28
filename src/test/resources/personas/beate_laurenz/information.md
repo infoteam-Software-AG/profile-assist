@@ -1,5 +1,8 @@
 ## Beate Laurenz - Software Developer
 
+This is a purely fictional test persona, it has no connection to any real person and is the product of the creator's
+imagination.
+
 ### Background: ###
 
 - 7 years of experience in backend development

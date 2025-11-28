@@ -1,5 +1,8 @@
 ## Marianne Schmied - Requirements Engineer
 
+This is a purely fictional test persona, it has no connection to any real person and is the product of the creator's
+imagination.
+
 ### Background: ###
 
 Marianne is an experienced requirements engineer with more than eight years of experience in analysing and implementing
