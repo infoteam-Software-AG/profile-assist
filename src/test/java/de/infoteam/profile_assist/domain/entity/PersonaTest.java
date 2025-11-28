@@ -31,8 +31,8 @@ class PersonaTest {
           .databases(Collections.emptyList())
           .build();
   static final List<Project> PROJECT_HISTORY = Collections.emptyList();
-  static final String STARTING_DATE = LocalDate.now().toString();
-  static final String LAST_UPDATE = LocalDate.now().toString();
+  static final LocalDate STARTING_DATE = LocalDate.now();
+  static final LocalDate LAST_UPDATE = LocalDate.now();
 
   @DisplayName("When values are valid, then record should be created")
   @Test
