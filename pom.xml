@@ -30,7 +30,6 @@
         <jruby.version>9.4.12.1</jruby.version>
         <archUnit.version>1.4.1</archUnit.version>
         <jacoco.version>0.8.14</jacoco.version>
-        <failsafe.version>3.5.3</failsafe.version>
         <spring-jdbc.version>6.2.12</spring-jdbc.version>
         <jspecify.version>1.0.0</jspecify.version>
         <commonmark.version>0.27.0</commonmark.version>
@@ -73,6 +72,18 @@
         </profile>
     </profiles>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.ai</groupId>
+                <artifactId>spring-ai-bom</artifactId>
+                <version>1.0.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <!-- ***** start: Spring Boot dependencies ***** -->
         <dependency>
@@ -93,6 +104,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${spring-jdbc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-openai</artifactId>
         </dependency>
 
         <!-- ***** end: Spring Boot dependencies ***** -->
@@ -156,6 +172,18 @@
             <plugin>
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.cyclonedx</groupId>
@@ -316,22 +344,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>${failsafe.version}</version>
-                    <executions>
-                        <execution>
-                            <id>integration-test</id>
-                            <goals>
-                                <goal>integration-test</goal>
-                                <goal>verify</goal>
-                            </goals>
-                            <configuration>
-                                <argLine>
-                                    ${failsafeArgLine}
-                                    -javaagent:${settings.localRepository}/org/mockito/mockito-core/${mockito.version}/mockito-core-${mockito.version}.jar
-                                </argLine>
-                            </configuration>
-                        </execution>
-                    </executions>
+                    <configuration>
+                        <argLine>
+                            ${failsafeArgLine}
+                            -javaagent:${settings.localRepository}/org/mockito/mockito-core/${mockito.version}/mockito-core-${mockito.version}.jar
+                        </argLine>
+                    </configuration>
                 </plugin>
 
                 <!-- ***** start: asciidoc related plugins ***** -->
