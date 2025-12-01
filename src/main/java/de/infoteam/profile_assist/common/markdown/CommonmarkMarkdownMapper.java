@@ -1,9 +1,7 @@
 package de.infoteam.profile_assist.common.markdown;
 
 import de.infoteam.profile_assist.common.markdown.mapping.NodeMappingFactory;
-
 import java.util.List;
-
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.markdown.MarkdownRenderer;
@@ -18,7 +16,8 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
 
   private final NodeMappingFactory nodeMappingFactory;
 
-  public CommonmarkMarkdownMapper(Parser parser, MarkdownRenderer renderer, NodeMappingFactory nodeMappingFactory) {
+  public CommonmarkMarkdownMapper(
+      Parser parser, MarkdownRenderer renderer, NodeMappingFactory nodeMappingFactory) {
     this.parser = parser;
     this.renderer = renderer;
     this.nodeMappingFactory = nodeMappingFactory;

@@ -12,7 +12,8 @@ public class StrongEmphasisStrategy implements MappingStrategy {
   public MarkdownNode map(Node node, NodeMappingFactory nodeMappingFactory) {
     org.commonmark.node.Text newText = (org.commonmark.node.Text) node.getFirstChild();
     return new StrongEmphasis(
-        ((org.commonmark.node.StrongEmphasis) node).getOpeningDelimiter(), newText.getLiteral()); // todo: passt das?
+        ((org.commonmark.node.StrongEmphasis) node).getOpeningDelimiter(),
+        newText.getLiteral()); // todo: passt das?
   }
 
   @Override

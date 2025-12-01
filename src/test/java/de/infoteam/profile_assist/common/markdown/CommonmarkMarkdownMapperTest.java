@@ -3,6 +3,7 @@ package de.infoteam.profile_assist.common.markdown;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import de.infoteam.profile_assist.common.markdown.mapping.*;
+import java.util.List;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.markdown.MarkdownRenderer;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,8 +11,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
-
-import java.util.List;
 
 @DisplayName("CommonmarkMarkdownMapperTest")
 class CommonmarkMarkdownMapperTest {
@@ -23,7 +22,20 @@ class CommonmarkMarkdownMapperTest {
     // Given (common)
     Parser parser = Parser.builder().build();
     MarkdownRenderer renderer = MarkdownRenderer.builder().build();
-    mapper = new CommonmarkMarkdownMapper(parser, renderer, new NodeMappingFactory(List.of(new HeadingStrategy(), new BulletListStrategy(), new ParagraphStrategy(), new ListItemStrategy(), new DocumentStrategy(), new ParagraphStrategy(), new StrongEmphasisStrategy(), new TextStrategy())));
+    mapper =
+        new CommonmarkMarkdownMapper(
+            parser,
+            renderer,
+            new NodeMappingFactory(
+                List.of(
+                    new HeadingStrategy(),
+                    new BulletListStrategy(),
+                    new ParagraphStrategy(),
+                    new ListItemStrategy(),
+                    new DocumentStrategy(),
+                    new ParagraphStrategy(),
+                    new StrongEmphasisStrategy(),
+                    new TextStrategy())));
   }
 
   @DisplayName("When markdown is null or empty, then Document has no children")
@@ -35,16 +47,20 @@ class CommonmarkMarkdownMapperTest {
 
     // Then
     assertThat(document).as("Document for null/empty markdown must not be null").isNotNull();
-    assertThat(document.children()).as("Document for null/empty markdown must have no children").isEmpty();
+    assertThat(document.children())
+        .as("Document for null/empty markdown must have no children")
+        .isEmpty();
   }
 
-  @DisplayName("When markdown contains heading and paragraph, then AST contains Heading and Paragraph nodes")
+  @DisplayName(
+      "When markdown contains heading and paragraph, then AST contains Heading and Paragraph nodes")
   @Test
   void whenMarkdownContainsHeadingAndParagraph_thenAstContainsHeadingAndParagraph() {
     // Given
-    String markdown = """
+    String markdown =
+        """
       # Title
-      
+
       Some text.
       """;
 
@@ -72,7 +88,8 @@ class CommonmarkMarkdownMapperTest {
   @Test
   void whenMarkdownContainsBulletList_thenAstContainsBulletListAndItems() {
     // Given
-    String markdown = """
+    String markdown =
+        """
       - first item
       - second item
       """;
@@ -105,11 +122,12 @@ class CommonmarkMarkdownMapperTest {
   @Test
   void whenMarkdownRoundTripsThroughAst_thenContentIsPreserved() {
     // Given
-    String markdown = """
+    String markdown =
+        """
       # Title
-      
+
       Some **bold** text.
-      
+
       - first item
       - second item
       """;
@@ -119,22 +137,32 @@ class CommonmarkMarkdownMapperTest {
     String result = mapper.toMarkdown(ast);
 
     // Then
-    String expected = """
+    String expected =
+        """
       # Title
-      
+
       Some **bold** text.
-      
+
       - first item
       - second item
       """;
     assertThat(result).isEqualTo(expected);
   }
 
-  @DisplayName("When document is created manually and mapped to markdown and back, then structure stays intact")
+  @DisplayName(
+      "When document is created manually and mapped to markdown and back, then structure stays intact")
   @Test
   void whenDocumentRoundTripsThroughMarkdown_thenStructureIsPreserved() {
     // Given
-    Document newDocument = MarkdownBuilder.document().addHeading(1, "Title").addParagraph("Some text.").addBulletList().addListItem("first item").addListItem("second item").endBulletList().build();
+    Document newDocument =
+        MarkdownBuilder.document()
+            .addHeading(1, "Title")
+            .addParagraph("Some text.")
+            .addBulletList()
+            .addListItem("first item")
+            .addListItem("second item")
+            .endBulletList()
+            .build();
 
     // When
     String markdown = mapper.toMarkdown(newDocument);
@@ -158,8 +186,14 @@ class CommonmarkMarkdownMapperTest {
     BulletList list = (BulletList) parsedDocument.children().get(2);
     assertThat(list).isInstanceOf(BulletList.class);
     assertThat(list.items()).hasSize(2);
-    assertThat(((Text) ((Paragraph) list.items().get(0).children().getFirst()).children().getFirst()).text()).isEqualTo("first item");
-    assertThat(((Text) ((Paragraph) list.items().get(1).children().getFirst()).children().getFirst()).text()).isEqualTo("second item");
+    assertThat(
+            ((Text) ((Paragraph) list.items().get(0).children().getFirst()).children().getFirst())
+                .text())
+        .isEqualTo("first item");
+    assertThat(
+            ((Text) ((Paragraph) list.items().get(1).children().getFirst()).children().getFirst())
+                .text())
+        .isEqualTo("second item");
   }
 
   @Test
@@ -175,7 +209,13 @@ class CommonmarkMarkdownMapperTest {
   @Test
   void buildsBulletList_includingParagraphWithStrongInline() {
     // Given
-    Document doc = MarkdownBuilder.document().addBulletList().addListItem(in -> in.text("Some ").strong("bold").text(" text.")).endBulletList().addParagraph(in -> in.text("Some more ").strong("bold").text(" text.")).build();
+    Document doc =
+        MarkdownBuilder.document()
+            .addBulletList()
+            .addListItem(in -> in.text("Some ").strong("bold").text(" text."))
+            .endBulletList()
+            .addParagraph(in -> in.text("Some more ").strong("bold").text(" text."))
+            .build();
 
     // When
     BulletList bulletList = (BulletList) doc.children().get(0);

@@ -39,6 +39,6 @@ public class ListItemStrategy implements MappingStrategy {
 
   @Override
   public boolean canMap(MarkdownNode markdownNode) {
-    return markdownNode  instanceof ListItem;
+    return markdownNode instanceof ListItem;
   }
 }
