@@ -2,7 +2,14 @@ package de.infoteam.profile_assist.common.markdown;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import de.infoteam.profile_assist.common.markdown.mapping.*;
+import de.infoteam.profile_assist.common.markdown.mapping.BulletListStrategy;
+import de.infoteam.profile_assist.common.markdown.mapping.DocumentStrategy;
+import de.infoteam.profile_assist.common.markdown.mapping.HeadingStrategy;
+import de.infoteam.profile_assist.common.markdown.mapping.ListItemStrategy;
+import de.infoteam.profile_assist.common.markdown.mapping.NodeMappingFactory;
+import de.infoteam.profile_assist.common.markdown.mapping.ParagraphStrategy;
+import de.infoteam.profile_assist.common.markdown.mapping.StrongEmphasisStrategy;
+import de.infoteam.profile_assist.common.markdown.mapping.TextStrategy;
 import java.util.List;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.markdown.MarkdownRenderer;
@@ -59,10 +66,10 @@ class CommonmarkMarkdownMapperTest {
     // Given
     String markdown =
         """
-      # Title
+        # Title
 
-      Some text.
-      """;
+        Some text.
+        """;
 
     // When
     Document document = mapper.toAst(markdown);
@@ -90,9 +97,9 @@ class CommonmarkMarkdownMapperTest {
     // Given
     String markdown =
         """
-      - first item
-      - second item
-      """;
+        - first item
+        - second item
+        """;
 
     // When
     Document document = mapper.toAst(markdown);
@@ -124,13 +131,13 @@ class CommonmarkMarkdownMapperTest {
     // Given
     String markdown =
         """
-      # Title
+        # Title
 
-      Some **bold** text.
+        Some **bold** text.
 
-      - first item
-      - second item
-      """;
+        - first item
+        - second item
+        """;
 
     // When
     Document ast = mapper.toAst(markdown);
@@ -139,13 +146,13 @@ class CommonmarkMarkdownMapperTest {
     // Then
     String expected =
         """
-      # Title
+        # Title
 
-      Some **bold** text.
+        Some **bold** text.
 
-      - first item
-      - second item
-      """;
+        - first item
+        - second item
+        """;
     assertThat(result).isEqualTo(expected);
   }
 
