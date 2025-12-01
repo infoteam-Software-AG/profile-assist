@@ -1,18 +1,27 @@
 package de.infoteam.profile_assist.common.markdown;
 
 import de.infoteam.profile_assist.common.markdown.mapping.NodeMappingFactory;
+
 import java.util.List;
+
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.markdown.MarkdownRenderer;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CommonmarkMarkdownMapper implements MarkdownMapper {
+
   private final Parser parser;
+
   private final MarkdownRenderer renderer;
 
-  public CommonmarkMarkdownMapper(Parser parser, MarkdownRenderer renderer) {
+  private final NodeMappingFactory nodeMappingFactory;
+
+  public CommonmarkMarkdownMapper(Parser parser, MarkdownRenderer renderer, NodeMappingFactory nodeMappingFactory) {
     this.parser = parser;
     this.renderer = renderer;
+    this.nodeMappingFactory = nodeMappingFactory;
   }
 
   @Override
@@ -21,8 +30,7 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
       return new Document(List.of());
     }
     Node node = parser.parse(markdown);
-
-    return (Document) NodeMappingFactory.mapNode(node);
+    return (Document) nodeMappingFactory.mapNode(node);
   }
 
   @Override
@@ -30,7 +38,7 @@ public class CommonmarkMarkdownMapper implements MarkdownMapper {
     if (ast == null) {
       return "";
     }
-    var doc = NodeMappingFactory.mapNode(ast);
+    var doc = nodeMappingFactory.mapNode(ast);
     return renderer.render(doc);
   }
 }
