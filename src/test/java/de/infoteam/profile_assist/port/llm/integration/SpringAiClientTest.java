@@ -11,7 +11,6 @@ import de.infoteam.profile_assist.domain.entity.Project;
 import de.infoteam.profile_assist.domain.entity.Skills;
 import de.infoteam.profile_assist.port.llm.entity.OptimizationResultImpl;
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;

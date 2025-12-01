@@ -66,17 +66,16 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       File configurationFile = new File(testRunFolder, "configuration.json");
       Files.writeString(configurationFile.toPath(), objectMapper.writeValueAsString(configuration));
 
-      Project optimizedProject;
       for (Project prj : unoptimizedPersona.projectHistory()) {
-        optimizedProject = chatUseCase.optimizeProjectDescription(prj);
-        assertThat(optimizedProject.description()).isNotBlank();
+       var optimizationResult = chatUseCase.optimizeProjectDescription(prj);
+        assertThat(optimizationResult.result().description()).isNotBlank();
         File personaFile =
             new File(
                 testRunFolder,
                 "optimized-project_" + unoptimizedPersona.projectHistory().indexOf(prj) + ".json");
         Files.writeString(
             personaFile.toPath(),
-            objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(optimizedProject));
+            objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(optimizationResult.result()));
       }
     } catch (IOException e) {
       throw new RuntimeException(e);
