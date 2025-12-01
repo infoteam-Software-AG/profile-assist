@@ -1,20 +1,36 @@
 {
   "id": "3f0a1c2e-4d5b-7f6a-8c9d-0e1f2a3b4c5d",
   "jobTitle": "Software Developer",
-  "skills": [
-    "Java",
-    "Spring Boot",
-    "Hibernate",
-    "REST",
-    "Microservices",
-    "Docker",
-    "Kubernetes",
-    "PostgreSQL",
-    "AWS",
-    "Scrum",
-    "Git",
-    "CI/CD"
-  ],
+  "name": "Lukas Weber",
+  "educations": [],
+  "yearsOfExperience": 5,
+  "jobHistory": [],
+  "coreCompetencies": [],
+  "skills": {
+    "businessSectors": [],
+    "languages": [],
+    "programmingLanguages": [
+      "Java"
+    ],
+    "methodicalExpertise": [
+      "REST",
+      "Microservices",
+      "Scrum",
+      "CI/CD"
+    ],
+    "tools": [
+      "Spring Boot",
+      "Hibernate",
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "AWS"
+    ],
+    "operatingSystems": [],
+    "databases": [
+      "PostgreSQL"
+    ]
+  },
   "certificates": [
     "AWS Certified Solutions Architect – Associate 05/2022",
     "Oracle Certified Professional, Java SE 8 Programmer 07/2021",
@@ -33,7 +49,14 @@
         "Kubernetes",
         "PostgreSQL",
         "GitLab CI/CD"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     },
     {
       "name": "Implementierung einer datenbankgestützten Analyseplattform für FinTech",
@@ -46,7 +69,14 @@
         "OAuth 2.0",
         "REST",
         "Git"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     },
     {
       "name": "Automatisierung des CI/CD-Pipelines mit Kubernetes und Docker",
@@ -60,7 +90,14 @@
         "Snyk",
         "Grafana",
         "Git"
-      ]
+      ],
+      "timePeriod": "",
+      "businessSector": "",
+      "teamSize": "",
+      "role": "",
+      "specializedFocus": "",
+      "personalContributions": [],
+      "methodologies": []
     }
   ],
   "startingDate": "2020-01-01",

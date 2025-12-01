@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: profile-assist
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-5.1
+          temperature: 0.8

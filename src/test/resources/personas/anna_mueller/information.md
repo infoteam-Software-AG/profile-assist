@@ -1,5 +1,7 @@
 ## Anna Müller - Senior Java Developer
 
+This is a purely fictional test persona, it has no connection to any real person and is the product of the creator's imagination.
+
 ### Background: ###
 
 Anna is an experienced software developer with over 7 years of professional experience. She specialises in

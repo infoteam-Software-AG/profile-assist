@@ -5,8 +5,9 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
+import de.infoteam.profile_assist.domain.entity.OptimizationResult;
 import de.infoteam.profile_assist.domain.entity.Project;
-import de.infoteam.profile_assist.port.llm.entity.OptimizationResult;
+import de.infoteam.profile_assist.port.llm.entity.OptimizationResultImpl;
 import de.infoteam.profile_assist.port.llm.integration.SpringAiClient;
 import java.util.Collections;
 import org.junit.jupiter.api.DisplayName;
@@ -14,6 +15,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
@@ -21,20 +23,38 @@ class SpringAiOptimizeProjectDescriptionUseCaseTest {
 
   @InjectMocks SpringAiOptimizeProjectDescriptionUseCase springAiOptimizeProjectDescriptionUseCase;
 
+  @Spy
+  @SuppressWarnings("unused") // required for @InjectMocks
+  OptimizeProjectDescriptionPromptProvider promptProvider =
+      new OptimizeProjectDescriptionPromptProvider();
+
   @Mock SpringAiClient springAiClient;
 
   @Test
   @DisplayName("OptimizeProjectDescription should return correct Project")
   void testOptimizeProjectDescription() {
+    var optimizedProject = projectBuilder().build();
     when(springAiClient.sendPrompt(eq(Project.class), anyString(), anyString()))
-        .thenReturn(
-            new OptimizationResult<>(new Project("name", "description", Collections.emptyList())));
+        .thenReturn(new OptimizationResultImpl<>(optimizedProject));
 
-    Project actual =
+    OptimizationResult<Project> actual =
         springAiOptimizeProjectDescriptionUseCase.optimizeProjectDescription(
-            new Project("name", "unoptimizedDescription", Collections.emptyList()));
+            optimizedProject.toBuilder().description("unoptimized description").build());
 
-    Project expected = new Project("name", "description", Collections.emptyList());
-    then(actual).isEqualTo(expected);
+    then(actual.result()).isEqualTo(optimizedProject);
+  }
+
+  private static Project.ProjectBuilder projectBuilder() {
+    return Project.builder()
+        .name("name")
+        .description("description")
+        .technologies(Collections.emptyList())
+        .timePeriod("timePeriod")
+        .businessSector("industry")
+        .teamSize(3)
+        .role("Senior Developer")
+        .specializedFocus("focus")
+        .methodologies(Collections.emptyList())
+        .personalContributions(Collections.emptyList());
   }
 }
