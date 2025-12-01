@@ -11,7 +11,7 @@ public record Project(
     @NonNull List<String> technologies,
     @NonNull String timePeriod,
     @NonNull String businessSector,
-    @NonNull String teamSize,
+    int teamSize,
     @NonNull String role,
     @NonNull String specializedFocus,
     @NonNull List<String> personalContributions,

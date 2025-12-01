@@ -139,7 +139,7 @@
       ],
       "timePeriod": "1924 – heute",
       "businessSector": "Laborautomatisierung",
-      "teamSize": "2-4",
+      "teamSize": 3,
       "role": "Technischer Projektleiter, Leadentwickler",
       "specializedFocus": "",
       "personalContributions": [
@@ -200,7 +200,7 @@
       ],
       "timePeriod": "1921 - heute",
       "businessSector": "Medizintechnik",
-      "teamSize": "2-4",
+      "teamSize": 3,
       "role": "Technischer Projektleiter, Architekt",
       "specializedFocus": "",
       "personalContributions": [
@@ -232,7 +232,7 @@
       ],
       "timePeriod": "1921 – 1921",
       "businessSector": "Medizintechnik",
-      "teamSize": "2-3",
+      "teamSize": 2,
       "role": "Einsatz in Semesterferien im Bereich Softwareentwicklung",
       "specializedFocus": "",
       "personalContributions": [
@@ -256,7 +256,7 @@
       ],
       "timePeriod": "1921 – 1921",
       "businessSector": "Data Science",
-      "teamSize": "2",
+      "teamSize": 2,
       "role": "Student",
       "specializedFocus": "",
       "personalContributions": [
@@ -285,7 +285,7 @@
       ],
       "timePeriod": "1919 – 1920",
       "businessSector": "Hochschule",
-      "teamSize": "4",
+      "teamSize": 4,
       "role": "Entwickler",
       "specializedFocus": "",
       "personalContributions": [
@@ -317,7 +317,7 @@
       ],
       "timePeriod": "1918 – 1919",
       "businessSector": "Medizintechnik",
-      "teamSize": "4-7",
+      "teamSize": 6,
       "role": "Einsatz in Semesterferien im Bereich Softwareentwicklung",
       "specializedFocus": "",
       "personalContributions": [
@@ -345,7 +345,7 @@
       ],
       "timePeriod": "1916 – 1916",
       "businessSector": "Informationsverdichtung",
-      "teamSize": "8",
+      "teamSize": 8,
       "role": "Softwareentwickler",
       "specializedFocus": "",
       "personalContributions": [
@@ -369,7 +369,7 @@
       ],
       "timePeriod": "1921 – 1921",
       "businessSector": "",
-      "teamSize": "",
+      "teamSize": 1,
       "role": "",
       "specializedFocus": "",
       "personalContributions": [
@@ -387,7 +387,7 @@
       ],
       "timePeriod": "1920 – 1921",
       "businessSector": "",
-      "teamSize": "",
+      "teamSize": 1,
       "role": "",
       "specializedFocus": "",
       "personalContributions": [
@@ -405,7 +405,7 @@
       ],
       "timePeriod": "1920 – 1921",
       "businessSector": "",
-      "teamSize": "",
+      "teamSize": 1,
       "role": "",
       "specializedFocus": "",
       "personalContributions": [
@@ -423,7 +423,7 @@
       ],
       "timePeriod": "1919 – 1920",
       "businessSector": "",
-      "teamSize": "",
+      "teamSize": 1,
       "role": "",
       "specializedFocus": "",
       "personalContributions": [
@@ -441,7 +441,7 @@
       ],
       "timePeriod": "1918 – 1921",
       "businessSector": "",
-      "teamSize": "",
+      "teamSize": 1,
       "role": "",
       "specializedFocus": "",
       "personalContributions": [
@@ -452,6 +452,6 @@
       ]
     }
   ],
-  "startingDate": "Nach Vereinbarung",
-  "lastUpdate": "28.02.1925"
+  "startingDate": "1925-02-01",
+  "lastUpdate": "1925-02-28"
 }

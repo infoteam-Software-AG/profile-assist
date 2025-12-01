@@ -14,7 +14,7 @@ class ProjectTest {
   static final List<String> TECHNOLOGIES = List.of("Java", "Spring Boot");
   static final String TIME_PERIOD = "timePeriod";
   static final String BUSINESS_SECTOR = "businessSector";
-  static final String TEAM_SIZE = "teamSize";
+  static final int TEAM_SIZE = 42;
   static final String ROLE = "Role";
   static final String SPECIALIZED_FOCUS = "specializedFocus";
   static final List<String> PERSONAL_CONTRIBUTIONS =
@@ -137,25 +137,6 @@ class ProjectTest {
                     TIME_PERIOD,
                     null,
                     TEAM_SIZE,
-                    ROLE,
-                    SPECIALIZED_FOCUS,
-                    PERSONAL_CONTRIBUTIONS,
-                    METHODOLOGIES))
-        .isInstanceOf(NullPointerException.class);
-  }
-
-  @DisplayName("When teamSize is null, then the constructor shall raise an exception")
-  @Test
-  void constructorThrowsExceptionIfTeamSizeIsNull() {
-    assertThatThrownBy(
-            () ->
-                new Project(
-                    NAME,
-                    DESCRIPTION,
-                    TECHNOLOGIES,
-                    TIME_PERIOD,
-                    BUSINESS_SECTOR,
-                    null,
                     ROLE,
                     SPECIALIZED_FOCUS,
                     PERSONAL_CONTRIBUTIONS,
