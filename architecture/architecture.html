@@ -707,9 +707,9 @@ The goal is to develop an open, maintainable, and testable software solution tha
 <div class="sect2">
 <h3 id="_micro_architecture">4.1. Micro-Architecture</h3>
 <div class="paragraph">
-<p>To address the need for clear separation between business logic and external concerns, we adopt the hexagonal architecture (also known as "Ports and Adapters" pattern) as our fundamental solution strategy.
+<p>To address the need for clear separation between business logic and external concerns, we adopt the hexagonal architecture as our fundamental solution strategy.
 This architecture ensures that core domain logic is isolated from technical details such as user interfaces, databases, messaging, and other external systems.
-By organizing the application around a central domain model with well-defined ports (interfaces) for interaction, and adapters that handle communication with the outside world, we achieve several strategic goals:</p>
+By organizing the application around a central domain model with well-defined ports (interfaces) for interaction, and their implementations that handle communication with the outside world, we achieve several strategic goals:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -729,7 +729,7 @@ By organizing the application around a central domain model with well-defined po
 </div>
 <div class="paragraph">
 <p>In summary, the hexagonal architecture guides our solution strategy by providing a resilient, modular, and evolvable foundation for our system.
-All dependencies flow inwards to the domain model, with application logic shielded from technology-specific changes by the use of abstract ports and concrete adapters, consistent with the principles of sustainable enterprise software architecture.​</p>
+All dependencies flow inwards to the domain model, with application logic shielded from technology-specific changes by the use of abstract ports and concrete adapters, consistent with the principles of sustainable enterprise software architecture.</p>
 </div>
 <div class="paragraph">
 <p>See also: <a href="https://www.youtube.com/watch?v=cPH5AiqLQTo">Video explaining Hexagonal Architecture with Spring Boot</a></p>
@@ -1055,7 +1055,7 @@ Parameters, return types, and fields that may be null must be annotated with <co
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-11-21 11:33:51 UTC
+Last updated 2025-12-02 11:48:50 UTC
 </div>
 </div>
 </body>
