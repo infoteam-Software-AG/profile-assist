@@ -24,6 +24,7 @@ class SpringAiOptimizeProjectDescriptionUseCaseTest {
   @InjectMocks SpringAiOptimizeProjectDescriptionUseCase springAiOptimizeProjectDescriptionUseCase;
 
   @Spy
+  @SuppressWarnings("unused") // required for @InjectMocks
   OptimizeProjectDescriptionPromptProvider promptProvider =
       new OptimizeProjectDescriptionPromptProvider();
 
@@ -32,16 +33,28 @@ class SpringAiOptimizeProjectDescriptionUseCaseTest {
   @Test
   @DisplayName("OptimizeProjectDescription should return correct Project")
   void testOptimizeProjectDescription() {
+    var optimizedProject = projectBuilder().build();
     when(springAiClient.sendPrompt(eq(Project.class), anyString(), anyString()))
-        .thenReturn(
-            new OptimizationResultImpl<>(
-                new Project("name", "description", Collections.emptyList())));
+        .thenReturn(new OptimizationResultImpl<>(optimizedProject));
 
     OptimizationResult<Project> actual =
         springAiOptimizeProjectDescriptionUseCase.optimizeProjectDescription(
-            new Project("name", "unoptimizedDescription", Collections.emptyList()));
+            optimizedProject.toBuilder().description("unoptimized description").build());
 
-    Project expected = new Project("name", "description", Collections.emptyList());
-    then(actual.result()).isEqualTo(expected);
+    then(actual.result()).isEqualTo(optimizedProject);
+  }
+
+  private static Project.ProjectBuilder projectBuilder() {
+    return Project.builder()
+        .name("name")
+        .description("description")
+        .technologies(Collections.emptyList())
+        .timePeriod("timePeriod")
+        .businessSector("industry")
+        .teamSize(3)
+        .role("Senior Developer")
+        .specializedFocus("focus")
+        .methodologies(Collections.emptyList())
+        .personalContributions(Collections.emptyList());
   }
 }

@@ -2,3 +2,10 @@ Project details:
 - name:  {name}
 - description: {description}
 - technologies: {technologies}
+
+
+Please provide:
+1. Professionalize the project descriptions, if needed but stay within 1-3 sentences.
+2. Do not remove any information provided.
+3. Add and mark intrinsic Technologies in project technology list with an (i) but don't mark Technologies, that were already listed
+4. if you don't know what technologies were used specifically don't give examples
