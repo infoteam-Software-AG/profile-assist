@@ -452,6 +452,7 @@
                             <configuration>
                                 <projectType>application</projectType>
                                 <outputFormat>json</outputFormat>
+                                <outputName>cyclonedx-sbom-json</outputName>
                             </configuration>
                         </execution>
                     </executions>
