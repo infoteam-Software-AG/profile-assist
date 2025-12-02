@@ -13,7 +13,7 @@ public class StrongEmphasisStrategy implements MappingStrategy {
     org.commonmark.node.Text newText = (org.commonmark.node.Text) node.getFirstChild();
     return new StrongEmphasis(
         ((org.commonmark.node.StrongEmphasis) node).getOpeningDelimiter(),
-        newText.getLiteral()); // todo: passt das?
+        newText.getLiteral());
   }
 
   @Override
