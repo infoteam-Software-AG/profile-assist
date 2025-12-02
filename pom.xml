@@ -193,6 +193,20 @@
             <plugin>
                 <groupId>org.cyclonedx</groupId>
                 <artifactId>cyclonedx-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>makeBom</goal>
+                        </goals>
+                        <configuration>
+                            <projectType>application</projectType>
+                            <outputFormat>json</outputFormat>
+                            <outputName>bom</outputName>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
 
@@ -440,22 +454,7 @@
                 <!-- ***** end: asciidoc related plugins ***** -->
 
                 <!-- ***** start: sbom related plugins ***** -->
-                <plugin>
-                    <groupId>org.cyclonedx</groupId>
-                    <artifactId>cyclonedx-maven-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <phase>verify</phase>
-                            <goals>
-                                <goal>makeBom</goal>
-                            </goals>
-                            <configuration>
-                                <projectType>application</projectType>
-                                <outputFormat>json</outputFormat>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
+
                 <!-- ***** end: sbom related plugins ***** -->
             </plugins>
         </pluginManagement>
