@@ -1,3 +1,7 @@
+/**
+ * (C)2025 infoteam Software AG
+ */
+
 package de.infoteam.profile_assist.port.llm.integration;
 
 import org.springframework.ai.chat.client.ChatClient;

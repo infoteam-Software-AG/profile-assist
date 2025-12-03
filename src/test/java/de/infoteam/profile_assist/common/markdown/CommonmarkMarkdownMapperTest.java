@@ -1,3 +1,7 @@
+/**
+ * (C)2025 infoteam Software AG
+ */
+
 package de.infoteam.profile_assist.common.markdown;
 
 import static org.assertj.core.api.Assertions.assertThat;
