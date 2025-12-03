@@ -1,3 +1,7 @@
+/**
+ * (C)2025 infoteam Software AG
+ */
+
 package de.infoteam.profile_assist.domain.control;
 
 import de.infoteam.profile_assist.domain.entity.OptimizationResult;

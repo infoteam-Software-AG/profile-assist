@@ -1,3 +1,7 @@
+/**
+ * (C)2025 infoteam Software AG
+ */
+
 package de.infoteam.profile_assist.port.llm.entity;
 
 import static de.infoteam.profile_assist.port.llm.entity.Prompt.RESOURCE_NOT_FOUND_MESSAGE;

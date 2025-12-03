@@ -1,3 +1,7 @@
+/**
+ * (C)2025 infoteam Software AG
+ */
+
 package de.infoteam.profile_assist.integration.archunit;
 
 import static com.tngtech.archunit.library.Architectures.onionArchitecture;
