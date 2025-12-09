@@ -22,7 +22,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.core.env.Environment;
 
 @SpringBootTest
 @Slf4j
@@ -34,8 +33,6 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   @Autowired private SpringAiOptimizeProjectDescriptionUseCase chatUseCase;
 
   @Autowired private ObjectMapper objectMapper;
-
-  @Autowired private Environment environment;
 
   private Persona readPersonaJson(String personaName) throws IOException {
     try (InputStream in =
@@ -51,9 +48,6 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   @ValueSource(strings = {"anna_mueller", "beate_laurenz"})
   void askForPersonaProjectDiscriptionOptimization_shouldUpdateUpdateTimestamp(String personaName) {
 
-    String temperature = environment.getProperty("spring.ai.openai.chat.options.temperature", "-");
-    String model = environment.getProperty("spring.ai.openai.chat.options.model", "-");
-    Configuration configuration = new Configuration(model, temperature);
     try {
       Persona unoptimizedPersona = readPersonaJson(personaName);
 
@@ -68,8 +62,6 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
                   + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"))
                   + File.separator);
       testRunFolder.mkdirs();
-      File configurationFile = new File(testRunFolder, "configuration.json");
-      Files.writeString(configurationFile.toPath(), objectMapper.writeValueAsString(configuration));
 
       for (Project prj : unoptimizedPersona.projectHistory()) {
         var optimizationResult = chatUseCase.optimizeProjectDescription(prj);
