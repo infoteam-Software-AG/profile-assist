@@ -245,6 +245,9 @@
                             <googleJavaFormat>
                                 <style>GOOGLE</style>
                             </googleJavaFormat>
+                            <licenseHeader>
+                                <file>${project.basedir}/license-header-template.txt</file>
+                            </licenseHeader>
                             <removeUnusedImports/>
                             <forbidWildcardImports/>
                             <importOrder/>
