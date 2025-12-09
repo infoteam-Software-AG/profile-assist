@@ -92,12 +92,8 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   @ParameterizedTest
   @ValueSource(strings = {"anna_mueller"})
   void optimizePersonaProjects(String personaName) {
-    String temperature = environment.getProperty("spring.ai.openai.chat.options.temperature", "-");
-    String model = environment.getProperty("spring.ai.openai.chat.options.model", "-");
-    Configuration configuration = new Configuration(model, temperature);
     try {
       Persona unoptimizedPersona = readPersonaJson(personaName);
-
       Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
 
       File testRunFolder =
@@ -111,10 +107,9 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
                   + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"))
                   + File.separator);
       testRunFolder.mkdirs();
-      File configurationFile = new File(testRunFolder, "configuration.json");
-      Files.writeString(configurationFile.toPath(), objectMapper.writeValueAsString(configuration));
       List<Project> optimizedProjects = new ArrayList<>();
       for (Project prj : unoptimizedPersona.projectHistory()) {
+        assertThat(prj.description()).isNotBlank();
         var optimizationResult = chatUseCase.optimizeProjectDescription(prj);
         optimizedProjects.add(optimizationResult.result());
       }
