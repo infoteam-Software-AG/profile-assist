@@ -30,7 +30,6 @@
         <jruby.version>9.4.12.1</jruby.version>
         <archUnit.version>1.4.1</archUnit.version>
         <jacoco.version>0.8.14</jacoco.version>
-        <spring-jdbc.version>6.2.13</spring-jdbc.version>
         <jspecify.version>1.0.0</jspecify.version>
         <commonmark.version>0.27.0</commonmark.version>
         <!-- """"" end: version properties """"" -->
@@ -96,14 +95,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring-jdbc.version}</version>
         </dependency>
 
         <dependency>
