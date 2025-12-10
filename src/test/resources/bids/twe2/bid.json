@@ -1,0 +1,27 @@
+{
+  "description": "The internal service areas face significant pressure to change, with low levels of standardization and digitalization, leaving them unable to meet current and future demands. A digital service portal is intended to create efficient, transparent, and user-friendly processes, unify service quality, reduce administrative workload, and improve employee satisfaction. It will serve as a central access point for all target groups, providing information, chatbot support, and automated routing for requests that cannot be resolved directly. This establishes the foundation for extensive automation of transactional processes and positions the organization for improved performance and future readiness.",
+  "requiredSkills": [
+    "Holistic digitalization competence across strategy, organization, and technology",
+    "Program and portfolio management expertise (IT architecture, project and portfolio management)",
+    "Business process analysis and optimization",
+    "Requirements analysis and functional specification",
+    "Design Thinking and user-centered design (including Persona development)",
+    "Product management and macro-level architecture design",
+    "Creation of business logic, interfaces, and conceptual solution designs",
+    "Quality assurance of requirements and conceptual documentation",
+    "Workshop facilitation and stakeholder communication, including management reporting",
+    "Support for software architecture, development, and project management",
+    "Accessibility compliance",
+    "Java Spring Boot and microservice architecture development",
+    "Event-driven and API-based architecture design",
+    "SQL experience with Oracle or MariaDB",
+    "DevOps experience (Kubernetes, CI/CD, automation tools)",
+    "Experience with cloud-native platforms (OpenShift, Kubernetes, Docker)",
+    "Knowledge of XÖV standards",
+    "Agile development experience with Scrum"
+  ],
+  "optionalSkills": [
+    "UI development with JavaScript or Angular",
+    "Unit testing experience"
+  ]
+}
