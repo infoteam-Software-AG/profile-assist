@@ -42,7 +42,7 @@ class SpringAiOptimizeProjectDescriptionUseCaseTest {
 
     OptimizationResult<Project> actual =
         springAiOptimizeProjectDescriptionUseCase.optimizeProjectDescription(
-            optimizedProject.toBuilder().description("unoptimized description").build());
+            optimizedProject.toBuilder().description("unoptimized description").build(), "");
 
     then(actual.result()).isEqualTo(optimizedProject);
   }

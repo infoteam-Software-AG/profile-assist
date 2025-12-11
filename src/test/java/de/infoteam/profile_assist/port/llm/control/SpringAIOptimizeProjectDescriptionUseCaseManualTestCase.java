@@ -6,6 +6,7 @@ package de.infoteam.profile_assist.port.llm.control;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import de.infoteam.profile_assist.domain.entity.CallForBids;
 import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
 import java.io.File;
@@ -28,8 +29,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @Disabled
 class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
 
-  private record Configuration(String model, String temperature) {}
-
   @Autowired private SpringAiOptimizeProjectDescriptionUseCase chatUseCase;
 
   @Autowired private ObjectMapper objectMapper;
@@ -41,6 +40,16 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
             .getResourceAsStream(
                 "personas" + File.separator + personaName + File.separator + "persona.json")) {
       return objectMapper.readValue(in, Persona.class);
+    }
+  }
+
+  private CallForBids readBidJson(String bidName) throws IOException {
+    try (InputStream in =
+           Thread.currentThread()
+             .getContextClassLoader()
+             .getResourceAsStream(
+               "bids" + File.separator + bidName + File.separator + "bid.json")) {
+      return objectMapper.readValue(in, CallForBids.class);
     }
   }
 
@@ -64,7 +73,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       testRunFolder.mkdirs();
 
       for (Project prj : unoptimizedPersona.projectHistory()) {
-        var optimizationResult = chatUseCase.optimizeProjectDescription(prj);
+        var optimizationResult = chatUseCase.optimizeProjectDescription(prj, "");
         assertThat(optimizationResult.result().description()).isNotBlank();
         File personaFile =
             new File(
@@ -88,6 +97,8 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       Persona unoptimizedPersona = readPersonaJson(personaName);
       Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
 
+      CallForBids callForBids = readBidJson("twe2");
+
       File testRunFolder =
           new File(
               "target"
@@ -102,7 +113,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       List<Project> optimizedProjects = new ArrayList<>();
       for (Project prj : unoptimizedPersona.projectHistory()) {
         assertThat(prj.description()).isNotBlank();
-        var optimizationResult = chatUseCase.optimizeProjectDescription(prj);
+        var optimizationResult = chatUseCase.optimizeProjectDescription(prj, callForBids.description());
         optimizedProjects.add(optimizationResult.result());
       }
       optimizedPersona.projectHistory(optimizedProjects);
