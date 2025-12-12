@@ -6,11 +6,11 @@ package de.infoteam.profile_assist.port.llm.control;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import de.infoteam.profile_assist.domain.entity.CallForBids;
 import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.file.Files;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -28,28 +28,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 @Disabled
 class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
 
-  private record Configuration(String model, String temperature) {}
-
   @Autowired private SpringAiOptimizeProjectDescriptionUseCase chatUseCase;
 
   @Autowired private ObjectMapper objectMapper;
 
-  private Persona readPersonaJson(String personaName) throws IOException {
-    try (InputStream in =
-        Thread.currentThread()
-            .getContextClassLoader()
-            .getResourceAsStream(
-                "personas" + File.separator + personaName + File.separator + "persona.json")) {
-      return objectMapper.readValue(in, Persona.class);
-    }
-  }
-
   @ParameterizedTest
   @ValueSource(strings = {"anna_mueller", "beate_laurenz"})
-  void askForPersonaProjectDiscriptionOptimization_shouldUpdateUpdateTimestamp(String personaName) {
+  void askForPersonaProjectDescriptionOptimization_shouldUpdateUpdateTimestamp(String personaName) {
 
     try {
-      Persona unoptimizedPersona = readPersonaJson(personaName);
+      Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
 
       File testRunFolder =
           new File(
@@ -64,7 +52,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       testRunFolder.mkdirs();
 
       for (Project prj : unoptimizedPersona.projectHistory()) {
-        var optimizationResult = chatUseCase.optimizeProjectDescription(prj);
+        var optimizationResult = chatUseCase.optimizeProjectDescription(prj, "");
         assertThat(optimizationResult.result().description()).isNotBlank();
         File personaFile =
             new File(
@@ -85,8 +73,10 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   @ValueSource(strings = {"anna_mueller"})
   void optimizePersonaProjects(String personaName) {
     try {
-      Persona unoptimizedPersona = readPersonaJson(personaName);
+      Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
       Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
+
+      CallForBids callForBids = new JsonReader().readBidJson("twe2");
 
       File testRunFolder =
           new File(
@@ -102,7 +92,8 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       List<Project> optimizedProjects = new ArrayList<>();
       for (Project prj : unoptimizedPersona.projectHistory()) {
         assertThat(prj.description()).isNotBlank();
-        var optimizationResult = chatUseCase.optimizeProjectDescription(prj);
+        var optimizationResult =
+            chatUseCase.optimizeProjectDescription(prj, callForBids.description());
         optimizedProjects.add(optimizationResult.result());
       }
       optimizedPersona.projectHistory(optimizedProjects);
