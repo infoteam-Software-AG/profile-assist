@@ -11,7 +11,6 @@ import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.file.Files;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -33,31 +32,14 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
 
   @Autowired private ObjectMapper objectMapper;
 
-  private Persona readPersonaJson(String personaName) throws IOException {
-    try (InputStream in =
-        Thread.currentThread()
-            .getContextClassLoader()
-            .getResourceAsStream(
-                "personas" + File.separator + personaName + File.separator + "persona.json")) {
-      return objectMapper.readValue(in, Persona.class);
-    }
-  }
-
-  private CallForBids readBidJson(String bidName) throws IOException {
-    try (InputStream in =
-        Thread.currentThread()
-            .getContextClassLoader()
-            .getResourceAsStream("bids" + File.separator + bidName + File.separator + "bid.json")) {
-      return objectMapper.readValue(in, CallForBids.class);
-    }
-  }
+  @Autowired private JsonReader jsonReader;
 
   @ParameterizedTest
   @ValueSource(strings = {"anna_mueller", "beate_laurenz"})
   void askForPersonaProjectDiscriptionOptimization_shouldUpdateUpdateTimestamp(String personaName) {
 
     try {
-      Persona unoptimizedPersona = readPersonaJson(personaName);
+      Persona unoptimizedPersona = jsonReader.readPersonaJson(personaName);
 
       File testRunFolder =
           new File(
@@ -93,10 +75,10 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   @ValueSource(strings = {"anna_mueller"})
   void optimizePersonaProjects(String personaName) {
     try {
-      Persona unoptimizedPersona = readPersonaJson(personaName);
+      Persona unoptimizedPersona = jsonReader.readPersonaJson(personaName);
       Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
 
-      CallForBids callForBids = readBidJson("twe2");
+      CallForBids callForBids = jsonReader.readBidJson("twe2");
 
       File testRunFolder =
           new File(
