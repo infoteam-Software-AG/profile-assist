@@ -3,21 +3,20 @@
 // For full license text see: https://github.com/infoteam-Software-AG/profile-assist/blob/main/LICENSE
 package de.infoteam.profile_assist.port.llm.control;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import de.infoteam.profile_assist.domain.entity.CallForBids;
 import de.infoteam.profile_assist.domain.entity.Persona;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+
+import de.infoteam.profile_assist.integration.JacksonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.stereotype.Component;
 
-@SpringBootTest
 @Component
 public class JsonReader {
 
-  @Autowired private ObjectMapper objectMapper;
+  @Autowired private JacksonConfig jacksonConfig;
 
   public Persona readPersonaJson(String personaName) throws IOException {
     try (InputStream in =
@@ -25,7 +24,7 @@ public class JsonReader {
             .getContextClassLoader()
             .getResourceAsStream(
                 "personas" + File.separator + personaName + File.separator + "persona.json")) {
-      return objectMapper.readValue(in, Persona.class);
+      return jacksonConfig.objectMapper().readValue(in, Persona.class);
     }
   }
 
@@ -34,7 +33,7 @@ public class JsonReader {
         Thread.currentThread()
             .getContextClassLoader()
             .getResourceAsStream("bids" + File.separator + bidName + File.separator + "bid.json")) {
-      return objectMapper.readValue(in, CallForBids.class);
+      return jacksonConfig.objectMapper().readValue(in, CallForBids.class);
     }
   }
 }
