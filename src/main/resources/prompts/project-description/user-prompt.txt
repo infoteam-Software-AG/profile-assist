@@ -14,4 +14,4 @@ Please provide:
 4. Do not remove any information provided.
 5. Add and mark intrinsic Technologies in project technology list with an (i) but don't mark Technologies, that were already listed
 6. if you don't know what technologies were used specifically don't give examples
-7. Don't make the project description too similar to rhe project requirements
+7. Don't make the project description too similar to the project requirements

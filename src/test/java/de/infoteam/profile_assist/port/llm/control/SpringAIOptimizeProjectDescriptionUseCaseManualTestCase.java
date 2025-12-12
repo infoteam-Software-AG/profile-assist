@@ -32,14 +32,12 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
 
   @Autowired private ObjectMapper objectMapper;
 
-  @Autowired private JsonReader jsonReader;
-
   @ParameterizedTest
   @ValueSource(strings = {"anna_mueller", "beate_laurenz"})
-  void askForPersonaProjectDiscriptionOptimization_shouldUpdateUpdateTimestamp(String personaName) {
+  void askForPersonaProjectDescriptionOptimization_shouldUpdateUpdateTimestamp(String personaName) {
 
     try {
-      Persona unoptimizedPersona = jsonReader.readPersonaJson(personaName);
+      Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
 
       File testRunFolder =
           new File(
@@ -75,10 +73,10 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   @ValueSource(strings = {"anna_mueller"})
   void optimizePersonaProjects(String personaName) {
     try {
-      Persona unoptimizedPersona = jsonReader.readPersonaJson(personaName);
+      Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
       Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
 
-      CallForBids callForBids = jsonReader.readBidJson("twe2");
+      CallForBids callForBids = new JsonReader().readBidJson("twe2");
 
       File testRunFolder =
           new File(
