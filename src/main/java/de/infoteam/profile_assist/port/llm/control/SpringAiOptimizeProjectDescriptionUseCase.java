@@ -7,9 +7,7 @@ import de.infoteam.profile_assist.domain.control.OptimizeProjectDescriptionUseCa
 import de.infoteam.profile_assist.domain.entity.OptimizationResult;
 import de.infoteam.profile_assist.domain.entity.Project;
 import de.infoteam.profile_assist.port.llm.integration.SpringAiClient;
-
 import java.util.Map;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -18,24 +16,25 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @RequiredArgsConstructor
 public class SpringAiOptimizeProjectDescriptionUseCase
-  implements OptimizeProjectDescriptionUseCase {
+    implements OptimizeProjectDescriptionUseCase {
 
   private final SpringAiClient springAiClient;
   private final OptimizeProjectDescriptionPromptProvider promptProvider;
 
   @Override
-  public OptimizationResult<Project> optimizeProjectDescription(Project project, String bidProjectDescription) {
+  public OptimizationResult<Project> optimizeProjectDescription(
+      Project project, String bidProjectDescription) {
     return springAiClient.sendPrompt(
-      Project.class,
-      promptProvider.systemPrompt().get(),
-      promptProvider
-        .userPrompt()
-        .withVariables(
-          () ->
-            Map.of(
-              "bidProjectDescription", bidProjectDescription,
-              "name", project.name(),
-              "description", project.description(),
-              "technologies", project.technologies())));
+        Project.class,
+        promptProvider.systemPrompt().get(),
+        promptProvider
+            .userPrompt()
+            .withVariables(
+                () ->
+                    Map.of(
+                        "bidProjectDescription", bidProjectDescription,
+                        "name", project.name(),
+                        "description", project.description(),
+                        "technologies", project.technologies())));
   }
 }

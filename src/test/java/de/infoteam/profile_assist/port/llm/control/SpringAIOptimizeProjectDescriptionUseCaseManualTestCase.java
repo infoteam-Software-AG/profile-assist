@@ -45,10 +45,9 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
 
   private CallForBids readBidJson(String bidName) throws IOException {
     try (InputStream in =
-           Thread.currentThread()
-             .getContextClassLoader()
-             .getResourceAsStream(
-               "bids" + File.separator + bidName + File.separator + "bid.json")) {
+        Thread.currentThread()
+            .getContextClassLoader()
+            .getResourceAsStream("bids" + File.separator + bidName + File.separator + "bid.json")) {
       return objectMapper.readValue(in, CallForBids.class);
     }
   }
@@ -113,7 +112,8 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       List<Project> optimizedProjects = new ArrayList<>();
       for (Project prj : unoptimizedPersona.projectHistory()) {
         assertThat(prj.description()).isNotBlank();
-        var optimizationResult = chatUseCase.optimizeProjectDescription(prj, callForBids.description());
+        var optimizationResult =
+            chatUseCase.optimizeProjectDescription(prj, callForBids.description());
         optimizedProjects.add(optimizationResult.result());
       }
       optimizedPersona.projectHistory(optimizedProjects);
