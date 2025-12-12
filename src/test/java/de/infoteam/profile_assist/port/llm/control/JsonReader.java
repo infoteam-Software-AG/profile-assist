@@ -5,11 +5,10 @@ package de.infoteam.profile_assist.port.llm.control;
 
 import de.infoteam.profile_assist.domain.entity.CallForBids;
 import de.infoteam.profile_assist.domain.entity.Persona;
+import de.infoteam.profile_assist.integration.JacksonConfig;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-
-import de.infoteam.profile_assist.integration.JacksonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
