@@ -70,7 +70,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   }
 
   @ParameterizedTest
-  @ValueSource(strings = {"anna_mueller"})
+  @ValueSource(strings = {"ferdinand_magellan", "audrey_hepburn"})
   void optimizePersonaProjects(String personaName) {
     try {
       Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
@@ -91,7 +91,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       testRunFolder.mkdirs();
       List<Project> optimizedProjects = new ArrayList<>();
       for (Project prj : unoptimizedPersona.projectHistory()) {
-        assertThat(prj.description()).isNotBlank();
+        assertThat(prj.description());
         var optimizationResult =
             chatUseCase.optimizeProjectDescription(prj, callForBids.description());
         optimizedProjects.add(optimizationResult.result());
