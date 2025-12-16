@@ -17,3 +17,7 @@ include::../../_includes/concept/bid-folder-structure.puml[Bid folder Structure]
 ----
 include::../../_includes/concept/bid-uml.puml[Bid UML]
 ----
+
+== Mapping
+The data in each bid (optional as well as required skills) map to the personas skills, certificates and technologies of past projects.
+
