@@ -91,7 +91,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       testRunFolder.mkdirs();
       List<Project> optimizedProjects = new ArrayList<>();
       for (Project prj : unoptimizedPersona.projectHistory()) {
-        if (prj.description() != null && !prj.description().isEmpty()) {
+        if (!prj.description().isEmpty()) {
           var optimizationResult =
               chatUseCase.optimizeProjectDescription(prj, callForBids.description());
           optimizedProjects.add(optimizationResult.result());
