@@ -70,7 +70,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   }
 
   @ParameterizedTest
-  @ValueSource(strings = {"anna_mueller"})
+  @ValueSource(strings = {"ferdinand_magellan", "audrey_hepburn"})
   void optimizePersonaProjects(String personaName) {
     try {
       Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
@@ -91,10 +91,14 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       testRunFolder.mkdirs();
       List<Project> optimizedProjects = new ArrayList<>();
       for (Project prj : unoptimizedPersona.projectHistory()) {
-        assertThat(prj.description()).isNotBlank();
-        var optimizationResult =
-            chatUseCase.optimizeProjectDescription(prj, callForBids.description());
-        optimizedProjects.add(optimizationResult.result());
+        if (!prj.description().isEmpty()) {
+          var optimizationResult =
+              chatUseCase.optimizeProjectDescription(prj, callForBids.description());
+          optimizedProjects.add(optimizationResult.result());
+        } else {
+          log.warn("Project couldn't be optimized because description is empty");
+          optimizedProjects.add(prj);
+        }
       }
       optimizedPersona.projectHistory(optimizedProjects);
       optimizedPersona.build();
