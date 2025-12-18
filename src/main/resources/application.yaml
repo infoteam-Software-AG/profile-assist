@@ -6,5 +6,5 @@ spring:
       api-key: ${OPENAI_API_KEY}
       chat:
         options:
-          model: gpt-5.1
+          model: gpt-5.2
           temperature: 0.8
