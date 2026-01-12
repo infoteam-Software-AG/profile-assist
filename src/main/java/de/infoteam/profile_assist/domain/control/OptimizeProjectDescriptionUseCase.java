@@ -11,5 +11,5 @@ public interface OptimizeProjectDescriptionUseCase {
   OptimizationResult<Project> optimizeProjectDescription(
       Project project, String requiredProjectDescription);
 
-  void searchMissingProjectSkills(Persona persona);
+  OptimizationResult<String> searchMissingProjectSkills(Persona persona);
 }

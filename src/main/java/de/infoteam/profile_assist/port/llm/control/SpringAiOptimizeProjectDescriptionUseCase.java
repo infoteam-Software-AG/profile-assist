@@ -41,7 +41,7 @@ public class SpringAiOptimizeProjectDescriptionUseCase
   }
 
   @Override
-  public void searchMissingProjectSkills(Persona persona) {
+  public OptimizationResult<String> searchMissingProjectSkills(Persona persona) {
     OptimizationResultImpl<String> result =
         springAiClient.sendPrompt(
             String.class,
@@ -57,5 +57,6 @@ public class SpringAiOptimizeProjectDescriptionUseCase
         "The Following Skills are in the Persona overview but not in a Project: {}, Persona: {}",
         result.result(),
         persona.name());
+    return result;
   }
 }

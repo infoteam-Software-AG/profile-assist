@@ -92,9 +92,9 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       List<Project> optimizedProjects = new ArrayList<>();
       for (Project prj : unoptimizedPersona.projectHistory()) {
         if (!prj.description().isEmpty()) {
-          var optimizationResult =
-              chatUseCase.optimizeProjectDescription(prj, callForBids.description());
-          optimizedProjects.add(optimizationResult.result());
+          //var optimizationResult =
+          //    chatUseCase.optimizeProjectDescription(prj, callForBids.description());
+          //optimizedProjects.add(optimizationResult.result());
         } else {
           log.warn("Project couldn't be optimized because description is empty");
           optimizedProjects.add(prj);
