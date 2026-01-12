@@ -53,7 +53,7 @@ public class SpringAiOptimizeProjectDescriptionUseCase
                         Map.of(
                             "skills", persona.skills(),
                             "projects", persona.projectHistory())));
-    log.info(
+    log.warn(
         "The Following Skills are in the Persona overview but not in a Project: {}, Persona: {}",
         result.result(),
         persona.name());
