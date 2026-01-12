@@ -55,16 +55,16 @@ class SpringAiOptimizeProjectDescriptionUseCaseTest {
   @Test
   @DisplayName("SearchMissingProjectSkills should return correct Result")
   void testSearchMissingProjectSkills() {
-    String RESULT = "JavaScript, TypeScript, Java, C++, SQL";
+    final String EXPECTED = "JavaScript, TypeScript, Java, C++, SQL";
 
     when(springAiClient.sendPrompt(eq(String.class), anyString(), anyString()))
-        .thenReturn(new OptimizationResultImpl<>(RESULT));
+        .thenReturn(new OptimizationResultImpl<>(EXPECTED));
 
     OptimizationResult<String> actual =
         springAiOptimizeProjectDescriptionUseCase.searchMissingProjectSkills(
             personaBuilder().build());
 
-    then(actual.result()).isEqualTo(RESULT);
+    then(actual.result()).isEqualTo(EXPECTED);
   }
 
   private static Project.ProjectBuilder projectBuilder() {
