@@ -9,4 +9,6 @@ public interface PromptProvider {
   Prompt systemPrompt();
 
   Prompt userPrompt();
+
+  Prompt userPromptSkills();
 }
