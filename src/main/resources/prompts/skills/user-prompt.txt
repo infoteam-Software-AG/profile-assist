@@ -1,0 +1,2 @@
+Check if the {skills}.programmingLanguages are part of the {projects}. If not return a warning log with the missing items.
+Just List the missing items as a simple list

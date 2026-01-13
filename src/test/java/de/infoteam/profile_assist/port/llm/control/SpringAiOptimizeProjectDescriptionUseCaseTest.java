@@ -9,10 +9,15 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
 import de.infoteam.profile_assist.domain.entity.OptimizationResult;
+import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
+import de.infoteam.profile_assist.domain.entity.Skills;
 import de.infoteam.profile_assist.port.llm.entity.OptimizationResultImpl;
 import de.infoteam.profile_assist.port.llm.integration.SpringAiClient;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.UUID;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -47,6 +52,21 @@ class SpringAiOptimizeProjectDescriptionUseCaseTest {
     then(actual.result()).isEqualTo(optimizedProject);
   }
 
+  @Test
+  @DisplayName("SearchMissingProjectSkills should return correct Result")
+  void testSearchMissingProjectSkills() {
+    final String EXPECTED = "JavaScript, TypeScript, Java, C++, SQL";
+
+    when(springAiClient.sendPrompt(eq(String.class), anyString(), anyString()))
+        .thenReturn(new OptimizationResultImpl<>(EXPECTED));
+
+    OptimizationResult<String> actual =
+        springAiOptimizeProjectDescriptionUseCase.searchMissingProjectSkills(
+            personaBuilder().build());
+
+    then(actual.result()).isEqualTo(EXPECTED);
+  }
+
   private static Project.ProjectBuilder projectBuilder() {
     return Project.builder()
         .name("name")
@@ -59,5 +79,29 @@ class SpringAiOptimizeProjectDescriptionUseCaseTest {
         .specializedFocus("focus")
         .methodologies(Collections.emptyList())
         .personalContributions(Collections.emptyList());
+  }
+
+  private static Persona.PersonaBuilder personaBuilder() {
+    return Persona.builder()
+        .id(UUID.randomUUID())
+        .jobTitle("jobTitle")
+        .name("name")
+        .educations(new ArrayList<>())
+        .yearsOfExperience(20)
+        .jobHistory(new ArrayList<>())
+        .coreCompetencies(new ArrayList<>())
+        .certificates(new ArrayList<>())
+        .skills(
+            new Skills(
+                new ArrayList<>(),
+                new ArrayList<>(),
+                new ArrayList<>(),
+                new ArrayList<>(),
+                new ArrayList<>(),
+                new ArrayList<>(),
+                new ArrayList<>()))
+        .projectHistory(new ArrayList<>())
+        .startingDate(LocalDate.MIN)
+        .lastUpdate(LocalDate.MIN);
   }
 }

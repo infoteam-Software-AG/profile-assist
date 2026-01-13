@@ -100,6 +100,8 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
           optimizedProjects.add(prj);
         }
       }
+
+      chatUseCase.searchMissingProjectSkills(unoptimizedPersona);
       optimizedPersona.projectHistory(optimizedProjects);
       optimizedPersona.build();
       File personaFile = new File(testRunFolder, "optimized-persona.json");

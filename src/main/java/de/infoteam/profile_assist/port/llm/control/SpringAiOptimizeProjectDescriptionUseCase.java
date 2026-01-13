@@ -5,7 +5,9 @@ package de.infoteam.profile_assist.port.llm.control;
 
 import de.infoteam.profile_assist.domain.control.OptimizeProjectDescriptionUseCase;
 import de.infoteam.profile_assist.domain.entity.OptimizationResult;
+import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
+import de.infoteam.profile_assist.port.llm.entity.OptimizationResultImpl;
 import de.infoteam.profile_assist.port.llm.integration.SpringAiClient;
 import java.util.Map;
 import lombok.RequiredArgsConstructor;
@@ -36,5 +38,25 @@ public class SpringAiOptimizeProjectDescriptionUseCase
                         "name", project.name(),
                         "description", project.description(),
                         "technologies", project.technologies())));
+  }
+
+  @Override
+  public OptimizationResult<String> searchMissingProjectSkills(Persona persona) {
+    OptimizationResultImpl<String> result =
+        springAiClient.sendPrompt(
+            String.class,
+            promptProvider.systemPrompt().get(),
+            promptProvider
+                .userPromptSkills()
+                .withVariables(
+                    () ->
+                        Map.of(
+                            "skills", persona.skills(),
+                            "projects", persona.projectHistory())));
+    log.warn(
+        "The Following Skills are in the Persona overview but not in a Project: {}, Persona: {}",
+        result.result(),
+        persona.name());
+    return result;
   }
 }
