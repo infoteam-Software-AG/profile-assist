@@ -14,14 +14,12 @@ import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.bean.override.mockito.MockitoSpyBean;
 
-@SuppressWarnings("removal")
 @AnalyzeClasses(
     packages = "de.infoteam.profile_assist",
     importOptions = {ImportOption.OnlyIncludeTests.class})
@@ -36,8 +34,6 @@ public class EnforceDisableAnnotationsUnitTestsArchTest {
           .notBeAnnotatedWith(SpringBootTest.class)
           .andShould()
           .notBeAnnotatedWith(MockitoBean.class)
-          .andShould()
-          .notBeAnnotatedWith(MockBean.class)
           .andShould()
           .notBeAnnotatedWith(MockitoSpyBean.class)
           .andShould()
