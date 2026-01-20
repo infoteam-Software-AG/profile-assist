@@ -159,6 +159,19 @@ class CommonmarkMarkdownMapperTest {
     assertThat(result).isEqualTo(expected);
   }
 
+  @DisplayName("When empty AST is mapped to Markdown, then empty String preserved")
+  @Test
+  void whenEmptyAstIsMappedToMarkdown_thenEmptyStringIsPreserved() {
+    // Given
+
+    // When
+    String result = mapper.toMarkdown(null);
+
+    // Then
+    String expected = "";
+    assertThat(result).isEqualTo(expected);
+  }
+
   @DisplayName(
       "When document is created manually and mapped to markdown and back, then structure stays intact")
   @Test
