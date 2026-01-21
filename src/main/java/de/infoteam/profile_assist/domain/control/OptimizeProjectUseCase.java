@@ -8,5 +8,5 @@ import de.infoteam.profile_assist.domain.entity.Project;
 
 public interface OptimizeProjectUseCase {
   OptimizationResult<Project> optimizeProjectDescription(
-      Project project, String requiredProjectDescription);
+      Project project, String requiredProjectDescription, String conversationID);
 }
