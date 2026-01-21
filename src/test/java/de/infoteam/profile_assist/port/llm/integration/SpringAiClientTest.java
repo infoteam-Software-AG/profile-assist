@@ -19,14 +19,16 @@ import java.util.List;
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.memory.ChatMemory;
 
 class SpringAiClientTest {
 
   @Test
   void sendPrompt() {
     ChatClient chatClient = mock(ChatClient.class, RETURNS_DEEP_STUBS);
+    ChatMemory chatMemory = mock(ChatMemory.class, RETURNS_DEEP_STUBS);
 
-    SpringAiClient springAiClient = new SpringAiClient(chatClient);
+    SpringAiClient springAiClient = new SpringAiClient(chatClient, chatMemory);
 
     Project project =
         new Project(
@@ -68,7 +70,7 @@ class SpringAiClientTest {
         .thenReturn(unoptimizedPersona);
 
     OptimizationResultImpl<Persona> optimizedPersona =
-        springAiClient.sendPrompt(Persona.class, "systemprompt", "userprompt");
+        springAiClient.sendPrompt(Persona.class, "systemprompt", "userprompt", "");
 
     then(optimizedPersona.result()).isNotNull();
   }
