@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -37,6 +38,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   void askForPersonaProjectDescriptionOptimization_shouldUpdateUpdateTimestamp(String personaName) {
 
     try {
+      String conversationID = UUID.randomUUID().toString();
       Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
 
       File testRunFolder =
@@ -52,7 +54,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       testRunFolder.mkdirs();
 
       for (Project prj : unoptimizedPersona.projectHistory()) {
-        var optimizationResult = chatUseCase.optimizeProjectDescription(prj, "");
+        var optimizationResult = chatUseCase.optimizeProjectDescription(prj, "", conversationID);
         assertThat(optimizationResult.result().description()).isNotBlank();
         File personaFile =
             new File(
@@ -73,6 +75,8 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   @ValueSource(strings = {"ferdinand_magellan", "audrey_hepburn"})
   void optimizePersonaProjects(String personaName) {
     try {
+
+      String conversationID = UUID.randomUUID().toString();
       Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
       Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
 
@@ -93,7 +97,8 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       for (Project prj : unoptimizedPersona.projectHistory()) {
         if (!prj.description().isEmpty()) {
           var optimizationResult =
-              chatUseCase.optimizeProjectDescription(prj, callForBids.description());
+              chatUseCase.optimizeProjectDescription(
+                  prj, callForBids.description(), conversationID);
           optimizedProjects.add(optimizationResult.result());
         } else {
           log.warn("Project couldn't be optimized because description is empty");

@@ -37,12 +37,12 @@ class SpringAiOptimizeProjectDescriptionUseCaseTest {
   @DisplayName("OptimizeProjectDescription should return correct Project")
   void testOptimizeProjectDescription() {
     var optimizedProject = projectBuilder().build();
-    when(springAiClient.sendPrompt(eq(Project.class), anyString(), anyString()))
+    when(springAiClient.sendPrompt(eq(Project.class), anyString(), anyString(), anyString()))
         .thenReturn(new OptimizationResultImpl<>(optimizedProject));
 
     OptimizationResult<Project> actual =
         springAiOptimizeProjectDescriptionUseCase.optimizeProjectDescription(
-            optimizedProject.toBuilder().description("unoptimized description").build(), "");
+            optimizedProject.toBuilder().description("unoptimized description").build(), "", "");
 
     then(actual.result()).isEqualTo(optimizedProject);
   }

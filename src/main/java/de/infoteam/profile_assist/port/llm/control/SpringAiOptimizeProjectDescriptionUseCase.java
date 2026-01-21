@@ -23,7 +23,7 @@ public class SpringAiOptimizeProjectDescriptionUseCase
 
   @Override
   public OptimizationResult<Project> optimizeProjectDescription(
-      Project project, String bidProjectDescription) {
+      Project project, String bidProjectDescription, String conversationID) {
     return springAiClient.sendPrompt(
         Project.class,
         promptProvider.systemPrompt().get(),
@@ -35,6 +35,7 @@ public class SpringAiOptimizeProjectDescriptionUseCase
                         "bidProjectDescription", bidProjectDescription,
                         "name", project.name(),
                         "description", project.description(),
-                        "technologies", project.technologies())));
+                        "technologies", project.technologies())),
+        conversationID);
   }
 }
