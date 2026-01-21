@@ -22,7 +22,7 @@ public class SpringAiClient {
         chatClient
             .prompt()
             .advisors(a -> a.param(ChatMemory.CONVERSATION_ID, conversationID))
-            .system(systemPrompt)
+            .advisors(a -> a.param(ChatMemory.CONVERSATION_ID, conversationID)).system(systemPrompt)
             .user(userPrompt)
             .call()
             .entity(resultEntity));
