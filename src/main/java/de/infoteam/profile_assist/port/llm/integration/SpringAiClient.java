@@ -4,12 +4,11 @@
 package de.infoteam.profile_assist.port.llm.integration;
 
 import de.infoteam.profile_assist.port.llm.entity.OptimizationResultImpl;
+import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
-
-import java.util.UUID;
 
 @Service
 @SessionScope
@@ -17,13 +16,16 @@ import java.util.UUID;
 public class SpringAiClient {
   private final ChatClient chatClient;
 
-  private final String sessionId =  UUID.randomUUID().toString();
+  private final String sessionId = UUID.randomUUID().toString();
 
   public <T> OptimizationResultImpl<T> sendPrompt(
-    Class<T> resultEntity, String systemPrompt, String userPrompt) {
+      Class<T> resultEntity, String systemPrompt, String userPrompt) {
     return new OptimizationResultImpl<>(
-      chatClient.prompt()
-        .user(u -> u.text("")
-        .metadata("sessionId", sessionId)).system(systemPrompt).user(userPrompt).call().entity(resultEntity));
+        chatClient
+            .prompt()
+            .user(u -> u.text(systemPrompt).metadata("sessionId", sessionId))
+            .user(userPrompt)
+            .call()
+            .entity(resultEntity));
   }
 }
