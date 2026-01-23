@@ -1,0 +1,860 @@
+{
+  "id": "d7cf1f0e-6c93-4981-9b0b-66b4c0489fe6",
+  "jobTitle": "System Engineer",
+  "name": "Frodo Beutlin",
+  "educations": [
+    {
+      "timePeriod": "1998 - 2000",
+      "name": "Staatlich geprüfter Informatiker",
+      "location": "b.i.b. International College, Bergisch Gladbach"
+    }
+  ],
+  "yearsOfExperience": 26,
+  "jobHistory": [
+    {
+      "timePeriod": "2024 - heute",
+      "name": "System Engineer"
+    },
+    {
+      "timePeriod": "2020 - 2024",
+      "name": "Senior Software Engineer"
+    },
+    {
+      "timePeriod": "2020 - 2020",
+      "name": "Leitender Software Entwickler Java"
+    },
+    {
+      "timePeriod": "2017 - 2020",
+      "name": "Senior Consultant Java"
+    },
+    {
+      "timePeriod": "2015 - 2016",
+      "name": "Delivery Manager Offshore, Senior Consultant Java"
+    },
+    {
+      "timePeriod": "2011 - 2014",
+      "name": "Team Manager, Senior Consultant Java"
+    },
+    {
+      "timePeriod": "2009 - 2011",
+      "name": "Anwendungsentwickler Java, Berater"
+    },
+    {
+      "timePeriod": "2007 - 2009",
+      "name": "Berater – Architecture, Methods & Testing"
+    },
+    {
+      "timePeriod": "2003 - 2007",
+      "name": "IT-Admin, Entwickler, Application Manager"
+    },
+    {
+      "timePeriod": "2001 - 2002",
+      "name": "Softwareentwickler Java"
+    }
+  ],
+  "coreCompetencies": [
+    "Kenntnisse von Programmiersprachen (Java, PHP, Angular, TypeScript) und Entwicklungstools (Intellij, Eclipse, Git, Maven, Ant, Jira, Confluence)",
+    "Problemlösungs- und analytische Fähigkeiten, Eigenmotivation, selbstständige Einarbeitung, Ergebnisorientierung und strukturierte Arbeitsweise",
+    "Fähigkeiten zur Kommunikation und Zusammenarbeit mit allen Arten von Stakeholdern",
+    "Kenntnisse des gesamten Softwareentwicklungsprozesses von Anforderungsanalyse, Entwurf über Implementierung, Test, etc. bis hin zum Deployment und Betrieb",
+    "Fähigkeiten im Teil-Projektmanagement",
+    "Kenntnisse der Grundlagen des Designs",
+    "Kenntnisse in der Testautomatisierung",
+    "Kenntnisse von Datenbanksystemen und Betriebssystemen"
+
+  ],
+  "certificates": [
+    "ITIL V3 Foundation Certification",
+    "IBM Certified System Administrator – WebSphere Application Server, ND V6.1"
+  ],
+  "skills": {
+    "businessSectors": [
+      "Industrie",
+      "Medizintechnik",
+      "IT Security / Kryptografie",
+      "Versicherung",
+      "GKV",
+      "Leasing",
+      "Öffentlicher Dienst",
+      "IT / IT Datenmanagement",
+      "Energiewirtschaft",
+      "Verlag",
+      "Pharma",
+      "Retail",
+      "Telekom"
+    ],
+    "languages": [
+      "Deutsch (Muttersprache)",
+      "Englisch (Fließend)",
+      "Spanisch (Grundkenntnisse)"
+    ],
+    "programmingLanguages": [
+      "Java (J2SE, JEE)",
+      "JavaScript",
+      "TypeScript",
+      "Jython/Python",
+      "Shell",
+      "C/C++",
+      "SQL"
+    ],
+    "methodicalExpertise": [
+      "Anforderungsaufnahme, -klärung und -dokumentation",
+      "Agile Softwareentwicklung",
+      "Agile Entwicklungsmethoden",
+      "Wasserfallmodell",
+      "CI/CD",
+      "UML"
+    ],
+    "tools": [
+      "Angular",
+      "Spring",
+      "Spring Boot",
+      "Testcontainers",
+      "(X)HTML",
+      "CSS3",
+      "Apache Kafka",
+      "XML",
+      "Maven 2",
+      "NodeJS",
+      "JUnit 4/5",
+      "Eclipse RCP",
+      "XSL-FO",
+      "JAXB",
+      "jQuery",
+      "XQuery / MobileXQuery",
+      "SAP Hybris",
+      "SAP Solution Manager / WebUI",
+      "Master Data Management",
+      "LSMW",
+      "Eclipse",
+      "Rational Software Architect",
+      "IntelliJ IDEA",
+      "Microsoft Visual Studio (Code)",
+      "ARToolkit",
+      "Android Studio",
+      "MS Office, Star Office, Open Office",
+      "Jakarta-Ant",
+      "SVN (Subversion)",
+      "MKS",
+      "WinSCP",
+      "IBM InfoSphere DataStage",
+      "UC4",
+      "RQM",
+      "IBM InfoSphere Information Server",
+      "Selenium"
+    ],
+    "operatingSystems": [
+      "Windows",
+      "Android",
+      "iOS",
+      "MacOS",
+      "Amazon Linux 2/Ubuntu"
+    ],
+    "databases": [
+      "mySQL",
+      "SQlite",
+      "PostgreSQL"
+    ]
+  },
+  "projectHistory": [
+    {
+      "name": "QS App",
+      "description": "Das Projekt umfasst die Entwicklung einer Spring-Anwendung mit Angular Oberfläche, mit der Qualitätsmanagementbeauftragte Mitarbeitende, Rollen, Schulungen und Dokumente verwalten. Schulungen können abgeschlossen, Informationen für Audits exportiert und Benachrichtigungen automatisch versendet werden. In einem agilen Team werden dabei die Aufgaben geschätzt, geplant und umgesetzt. Um die Komponenten und Akzeptanzkriterien abzusichern, werden Unit Tests mit JUnit durchgeführt.",
+      "technologies": [
+        "Java OpenJDK 11",
+        "Spring",
+        "Spring-Boot",
+        "Intellij Idea",
+        "Eclipse",
+        "Visual Studio Code",
+        "TypeScript",
+        "Angular",
+        "Material",
+        "Azure DevOps",
+        "Git", "Maven",
+        "MS SQL Server",
+        "Mockito",
+        "JUnit",
+        "OpenApi 3.0/Swagger",
+        "Liquibase",
+        "Lombok"
+      ],
+      "timePeriod": "2025 – heute",
+      "businessSector": "Medizintechnik",
+      "teamSize": 4,
+      "role": "Senior Entwickler",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Weiterentwicklung und Verbesserungen von Komponenten und Features",
+        "Entwicklung neuer Features",
+        "Wartung"
+      ],
+      "methodologies": [
+        "Agil"
+      ]
+    },
+    {
+      "name": "Energy App",
+      "description": "Weiterentwicklung und Wartung der Anwendung starlet. starlet ist die Plattform für alle digitalen Weiterentwicklungen in der Kommunikation mit den Partnern des Kunden.",
+      "technologies": [
+        "Java OpenJDK 8",
+        "Eclipse",
+        "JUnit 5",
+        "HTML",
+        "NodeJS",
+        "JavaScript",
+        "TypeScript",
+        "CSS3",
+        "Angular",
+        "Oracle VM VirtualBox",
+        "Ant", "Ubuntu Linux",
+        "WinSCP",
+        "VisualCode",
+        "MySQL"
+      ],
+      "timePeriod": "2024 - heute",
+      "businessSector": "Energie",
+      "teamSize": 2,
+      "role": "Senior Entwickler",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Weiterentwicklung und Verbesserungen von Komponenten und Features",
+        "Entwicklung neuer Features",
+        "Wartung"
+      ],
+      "methodologies": [
+        "Agil",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "SCADA Api Interface",
+      "description": "Neuentwicklung der SCADA (Supervisory Control and Data Acquisition) Schnittstelle für die vorhandene Hidrosmart Anwendung für die zentrale Überwachung, Steuerung und Visualisierung von verteilten technischen Anlagen (hier Pumpen) und Prozessen in Echtzeit mittels Sensoren. Um die Komponenten und Akzeptanzkriterien abzusichern, werden Unit Tests mit JUnit und Mockito durchgeführt.",
+      "technologies": [
+        "Java OpenJDK 8",
+        "Intellij Idea",
+        "Eclipse",
+        "Docker",
+        "Azure DevOps",
+        "Git",
+        "Maven",
+        "Modbus",
+        "MQTT",
+        "Mockito",
+        "JUnit",
+        "Ant"
+      ],
+      "timePeriod": "2025 - 2025",
+      "businessSector": "Industrie",
+      "teamSize": 3,
+      "role": "Senior Entwickler",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Evaluation der vorhandenen Sourcen beim Kunden, aufgrund Wegfalles des bisherigen Dienstleisters",
+        "Neuentwicklung der SCADA Schnittstelle"
+      ],
+      "methodologies": [
+        "Agil"
+      ]
+    },
+    {
+      "name": "Public Service App",
+      "description": "Neuentwicklung eines Systems, um die neu erstandene Aufgabenverteilung bei der Förderung der beruflichen Weiterbildung sowie für Maßnahmen der beruflichen Rehabilitation (Reha) zu ermöglichen. Dabei werden die Daten zu den FbW und Reha Fällen zwischen den Jobcentern und Agenturen für Arbeit ausgetauscht. In einem SCRUM Team werden dabei die Aufgaben für die kommenden Sprints geschätzt, geplant und umgesetzt. Dafür werden Erweiterungen der Fachschemata, der Schnittstellen, Datenbanken und Anpassungen am Java Backend vorgenommen. Um die Komponenten und Akzeptanzkriterien abzusichern, werden Unit Tests mit JUnit und REST Tests mit Spring Test durchgeführt.",
+      "technologies": [
+        "JavaEE 11/17",
+        "IntelliJ-Community Edition",
+        "WebStorm",
+        "REST",
+        "Maven 2",
+        "OAuth",
+        "OracleDB",
+        "Docker/Podman",
+        "Kubernetes",
+        "Playwright",
+        "Spring Boot 3",
+        "Lombok",
+        "Jira",
+        "Confluence",
+        "Github Actions",
+        "Swagger/OpenAPI",
+        "JUnit 5",
+        "CSS3"
+      ],
+      "timePeriod": "2024 - 2024",
+      "businessSector": "Öffentlicher Dienst",
+      "teamSize": 10,
+      "role": "Senior Entwickler",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Entwicklung von Front- und Backend-Lösungen und -komponenten",
+        "DevOps Tätigkeiten, wie Anpassen des Lifecycles, Skripten, etc",
+        "Konzeption der o.a. Komponenten"
+      ],
+      "methodologies": [
+        "Scrum",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Internal Profile App",
+      "description": "Die App wird es ermöglichen, rasch auf einzelne Fähigkeiten der Mitarbeiter zuzugreifen und diese gezielt für entsprechende Projekte zu verwalten. Das Ziel ist es, eine umfassende und benutzerfreundliche Plattform zu schaffen, die es dem Unternehmen ermöglicht, die individuellen Fähigkeiten seiner Mitarbeiter effektiv zu nutzen und für passende Projekte gezielt einzusetzen. In einem agilen Team werden dabei die Aufgaben geschätzt, geplant und umgesetzt. Um die Komponenten und Akzeptanzkriterien abzusichern, werden Unit Tests mit JUnit und Gui-Tests mittels Playwright durchgeführt.",
+      "technologies": [
+        "JavaEE 17",
+        "IntelliJ",
+        "REST",
+        "Maven 2",
+        "JUnit5",
+        "CSS3",
+        "TypeScript",
+        "Angular",
+        "HTML",
+        "NodeJS",
+        "JavaScript",
+        "OAuth",
+        "PostgreSQL",
+        "Docker",
+        "Kubernetes",
+        "Playwright",
+        "Spring Boot 3",
+        "Lombok",
+        "Jira",
+        "Confluence",
+        "Github Actions"
+      ],
+      "timePeriod": "2024 – 2024",
+      "businessSector": "IT",
+      "teamSize": 4,
+      "role": "Senior Entwickler",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Entwicklung von Front- und Backend-Lösungen und -komponenten",
+        "DevOps Tätigkeiten, wie Anpassen des Lifecycles, Skripten, etc",
+        "Konzeption der o.a. Komponenten"
+      ],
+      "methodologies": [
+        "Agil",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Security Infrastructure",
+      "description": "Weiterentwicklung der Produkte im Bereich Security Infrastructure/PKI auf Basis von Java bzw. u.a. Spring/Spring Boot im agilen Kontext. Ebenfalls zuständig für die Entwicklung einer Spring Anwendung für Integration der Software MaToS (Management of Tokens Service) eines Schwesterunternehmens in cv Produkte mittels der zur Verfügung gestellten API.",
+      "technologies": [
+        "Intellij Idea",
+        "Java Zulu 11/17",
+        "Spring",
+        "Spring Boot",
+        "SpringDoc",
+        "JUnit 5",
+        "Apache Kafka",
+        "CSS3",
+        "REST",
+        "Gradle",
+        "JIRA",
+        "Flowable",
+        "BPMN 2.0",
+        "BouncyCastle",
+        "TestRail",
+        "OpenAPI 3.0/Swagger",
+        "Tomcat",
+        "H2",
+        "Docker/Podman",
+        "Git",
+        "Gitlab",
+        "Confluence",
+        "ActiveMQ",
+        "Utimaco HSM",
+        "Trustway Proteccio"
+      ],
+      "timePeriod": "2020 – 2024",
+      "businessSector": "IT Security / Kryptografie",
+      "teamSize": 6,
+      "role": "Senior Software Engineer",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Weiterentwicklung" ,
+        "Entwicklung neuer Features" ,
+        "Bugfixing" ,
+        "Dokumentation" ,
+        "Testunterstützung" ,
+        "Einarbeitung in das Thema PKCS11 und Aufbau Confluence Knowledge-Base" ,
+        "Evaluierung spezifischer Software und Entwicklung Applikation zur Einbindung in eigene Anwendungen"
+      ],
+      "methodologies": [
+        "Agil",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Address validation App",
+      "description": "Neuentwicklung und Migration der Software adressware (Software für die automatisierte Validierung von Adressen) auf Basis von aktuelleren Methoden und Softwarekomponenten (Greenfield). In einem agilen Team werden dabei die Aufgaben geschätzt, geplant und umgesetzt. Um die Komponenten und Akzeptanzkriterien abzusichern, werden Unit Tests mit JUnit durchgeführt.",
+      "technologies": [
+        "Java OpenJDK 11",
+        "GWT",
+        "Spring Boot",
+        "JUnit 5",
+        "CSS3",
+        "HTML",
+        "REST",
+        "Polymer",
+        "Gradle",
+        "Eclipse",
+        "Tomcat",
+        "OpenXava"
+      ],
+      "timePeriod": "2020 – 2020",
+      "businessSector": "IT-Datenmanagement",
+      "teamSize": 3,
+      "role": "Leitender Softwareentwickler",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Erstellung eines Konzepts für die neue Version",
+        "Evaluierung und Erstellung von UML-Diagrammen der vorhandenen Versionen",
+        "Technische Beratung",
+        "Erstellung verschiedener Client-Prototypen",
+        "Evaluierung verschiedener Frameworks auf Verwendbarkeit für die neue addressware Version",
+        "Knowledge Transfer",
+        "Durchführung und Protokollierung von Architektur- und Status Meetings"
+      ],
+      "methodologies": [
+        "Agil"
+      ]
+    },
+    {
+      "name": "ERP Konsolidierung",
+      "description": "Migration von SAP-Stammdaten von Version R3 auf S4/HANA. Dieses erfolgte aufgrund maximaler Kompatibilität, geringerem Risiko, sauberer Datenstrukturen und einer schnelleren, standardisierten Projektabwicklung mittels SAP-Bordmitteln.",
+      "technologies": [
+        "MS Excel",
+        "SAP",
+        "LSMW",
+        "MS SharePoint",
+        "FortiClient VPN"
+      ],
+      "timePeriod": "2019 – 2019",
+      "businessSector": "Pharma",
+      "teamSize": 4,
+      "role": "Technischer Berater",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Cut-over-Plan erstellen, übersetzen und anpassen Master Data Migration von R/3 nach S/4 HANA",
+        "Einladen Materialstammdaten",
+        "Einladen Stücklisten",
+        "Einladen von Kreditlimitdaten",
+        "Massenpflege von Stammdaten in SAP"
+      ],
+      "methodologies": [
+        "Wasserfallmodell"
+      ]
+    },
+    {
+      "name": "Implementierung des Enterprise Content Management (ECM) Systems",
+      "description": "Ablöse der Archivierungsaltsysteme durch die das selbst entwickelte ECM und Archivierungslösung Scanview in permanenter Absprache mit dem Kunden und vielen weiteren Stakeholdern. Hierbei erfolgte die Entwicklung maßgeblich in einem Entwicklungszentrum in Indien.",
+      "technologies": [
+        "Scanview",
+        "HP Application Lifecycle Management",
+        "MS Word",
+        "MS Excel",
+        "Neoload",
+        "AFP",
+        "SharePoint",
+        "SoapUI",
+        "TTWOS",
+        "IIS",
+        "Webservices",
+        "PowerShell Scripting"
+      ],
+      "timePeriod": "2018 – 2019",
+      "businessSector": "Telekommunikation",
+      "teamSize": 20,
+      "role": "Stellv. Projektleiter, Technischer Architekt und Berater",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Anforderungsaufnahme, -klärung und -dokumentation",
+        "Mitarbeit an den IDD-Dokumenten (interface Beschreibung)",
+        "Abstimmung zu den Deliverys",
+        "Organisation der entsprechenden Tools zum Life Cycle Management",
+        "Softwarelieferung",
+        "Erstellung der Testcase Dokumente",
+        "Unterstützung bei der Testdurchführung",
+        "Knowledge Transfer"
+      ],
+      "methodologies": [
+        "Agil",
+        "Wasserfallmodell"
+      ]
+    },
+    {
+      "name": "Demo APP Augmented Reality Erweiterung",
+      "description": "Die für Demonstrationszwecke auf Messen usw. erstellte Anwendung sollte durch Augmented Reality erweitert werden, um die Möglichkeiten dieser Technologie (AR) im Zusammenspiel mit IoT in Verbindung mit SAP als Backend aufzuzeigen. Es wurde weiterhin geprüft, wieweit eine Integration von Alexa Skills in die Anwendung machbar wäre.",
+      "technologies": [
+        "Android Studio",
+        "KudanAR",
+        "Android",
+        "Java",
+        "Bitbucket/Git",
+        "JUnit 5",
+        "Angular",
+        "HTML",
+        "NodeJS",
+        "JavaScript",
+        "AppBlade",
+        "Vuforia",
+        "ARToolkit",
+        "ARCore",
+        "Unity",
+        "C++",
+        "OpenGL",
+        "AWS",
+        "Alexa Skills"
+      ],
+      "timePeriod": "2017 – 2018",
+      "businessSector": "Retail",
+      "teamSize": 5,
+      "role": "Technischer Berater und Entwickler",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Erweiterung und Optimierung vorhandener DemoApp durch AR-Komponente",
+        "Evaluierung verschiedenster AR-Frameworks und Konzepte",
+        "Entwicklung eines AR-Prototypen",
+        "Integration in vorhandene ACS-Demoanwendung und in den Buildprozess",
+        "Überprüfung Machbarkeit der Integration von Alexa Skills in vorhandene Demoanwendung"
+      ],
+      "methodologies": [
+        "Agil",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "DMS Projekt: 'Introduction of new document management system Scanview'",
+      "description": "Vorbereitungsprojekt für die Ablöse der Archivierungsaltsysteme durch die von Allgeier entwickelte ECM und Archivierungslösung Scanview (siehe Projekt ‘ECM’)",
+      "technologies": [
+        "Scanview",
+        "MS Word",
+        "MS Excel",
+        "Neoload",
+        "AFP",
+        "Sharepoint",
+        "SoapUI"
+      ],
+      "timePeriod": "2017 – 2017",
+      "businessSector": "Telekommunikation",
+      "teamSize": 20,
+      "role": "Technischer Architekt und Berater",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Erstellung Requirement & Solution Definition Document (SDD) Tätigkeiten",
+        "Anforderungsaufnahme, -klärung und -dokumentation",
+        "Evaluierung der aktuell eingesetzten Software und Identifizierung der Schnittstellen in Zusammenhang mit Kunden und weiteren Steakholdern (z.B. IBM) anhand von Meetings und Workshops",
+        "Anwendung der Ergebnisse auf Scanview",
+        "Fachliche Beratung des Kunden bezüglich Schnittstellen und weitere Themengebiete bei der Erstellung des SDD-Dokuments"
+      ],
+      "methodologies": [
+        "Agil",
+        "Wasserfallmodell"
+      ]
+    },
+    {
+      "name": "Master Data Management (MDM) Services",
+      "description": "Übernahme der Master Data Management (MDM) Services vom Kunden durch uns als externen Dienstleister und anschließendem Betrieb dessen. Transition erfolgte im intensiven Austausch mit den Stakeholdern des Kunden mittels regelmäßigen Meetings und Präsentation des Fortschrittes.",
+      "technologies": [
+        "MS SQL Server",
+        "SQL",
+        "SharePoint",
+        "SAP",
+        "HPSM",
+        "Tools GBox Manager",
+        "MARTY und OTT",
+        "Word",
+        "SAP Solution Manager / WebUI"
+      ],
+      "timePeriod": "2015 – 2016",
+      "businessSector": "Pharma",
+      "teamSize": 5,
+      "role": "Technischer Architekt und Subject Matter Expert",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Transition vom Kunden zu Ciber und Betrieb der MDM-Services",
+        "Erstellung der Service Beschreibung und der Dokumentation"
+      ],
+      "methodologies": [
+        "ITIL"
+      ]
+    },
+    {
+      "name": "CSSP",
+      "description": "Verschiedenste Rollen und Tätigkeiten bei der Einführung eines SAP Hybris WebShops beim Kunden unter Einbindung von externen Offshore Entwicklungsressourcen in Indien.",
+      "technologies": [
+        "SAP Hybris",
+        "Java Spring",
+        "JAXB",
+        "Ant",
+        "Oracle DB",
+        "SVN",
+        "MS Word",
+        "MS Visio",
+        "UML",
+        "Oracle Virtualbox"
+      ],
+      "timePeriod": "2015 – 2016",
+      "businessSector": "Verlag",
+      "teamSize": 3,
+      "role": "Architekt, Entwickler, Product Owner, Scrum Master und Koordinator Offshore Ressourcen",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Aufnahme Anforderungen",
+        "Mitarbeit bei Kunden-Workshops",
+        "Erstellung Grobkonzept Web-Technologie",
+        "Erstellung des Feinkonzepts",
+        "Unterstützung und Anleitung bei der Erstellung von Hybris-Changes interner Kollegen",
+        "Migration und Erweiterung"
+      ],
+      "methodologies": [
+        "Scrum"
+      ]
+    },
+    {
+      "name": "EEG-Portal für Kunde",
+      "description": "Weiterentwicklung eines Portals zum Abbilden der EEG-Prozesse (Erneuerbare Energien Gesetz) für Kunden des Kunden. Um die Komponenten und Akzeptanzkriterien abzusichern, wurden u.a. die erstellten Oberflächen mittels Selenium Tests durchgeführt.",
+      "technologies": [
+        "Java Spring",
+        "Struts/Tiles",
+        "SVN",
+        "Hibernate-Framework",
+        "Oracle DB",
+        "WinSCP",
+        "PuTTY",
+        "Windows 7",
+        "Linux",
+        "Selenium",
+        "MS Word"
+      ],
+      "timePeriod": "2014 – 2014",
+      "businessSector": "Energiewirtschaft",
+      "teamSize": 4,
+      "role": "Senior Developer und stellv. Application Manager",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Weiterentwicklung und Optimierung des eingesetzten EEG-Portals",
+        "Konzeption und Erstellen des Selenium Test Frameworks",
+        "Erstellen von Lastenheften",
+        "Erstellen von Technical Designs"
+      ],
+      "methodologies": [
+        "Wasserfallmodell"
+      ]
+    },
+    {
+      "name": "Functional Application Management - Consultant",
+      "description": "Functional Application Management (FAM) Onsite mit 24/7 Standby für die Gas Systeme. Weiterentwicklung der eingesetzten Software auf Basis von Java RCP Eclipse. Zusätzlich Übernahme der Tätigkeit des Single Point of Contacts (SPoC) für die eingesetzten Systeme (Beschreibung unter Aufgaben).",
+      "technologies": [
+        "Maven 2",
+        "XML",
+        "Oracle DB",
+        "Hudson",
+        "SVN",
+        "Sonar",
+        "Excel",
+        "VBA",
+        "Hibernate-Framework",
+        "VMware Service Manager",
+        "TeamCity",
+        "Citrix",
+        "WinSCP",
+        "PuTTY",
+        "Windows XP",
+        "Windows 7",
+        "Linux",
+        "Java Spring",
+        "Eclipse RCP",
+        "JAXB"
+      ],
+      "timePeriod": "2012 – 2014",
+      "businessSector": "Energiewirtschaft",
+      "teamSize": 4,
+      "role": "Functional Application Management – Consultant",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Entgegennahme, Klassifizierung und Dokumentation von Incidents, Service Requests, Changes usw. Auf Basis von ITIL-Prozessen",
+        "Überwachung der Service-Level-Agreements.",
+        "Migration des Clients von Windows XP nach Windows 7",
+        "Anleiten der Junioren und Übernahme von Teilaufgaben des Projekt-Leads",
+        "Interims Technical Lead"
+      ],
+      "methodologies": [
+        "ITIL, ASL"
+      ]
+    },
+    {
+      "name": "Evaluierung und Einarbeitung in verschiedene Themengebiete",
+      "description": "Evaluierung und Dokumentation der Software SAP Hybris und in das Thema MarkLogic für Partnerschaft bei dem derzeitigen Arbeitgeber",
+      "technologies": [
+        "SAP Hybris",
+        "Eclipse",
+        "MS PowerPoint",
+        "VMware",
+        "Java Spring MVC",
+        "Linux",
+        "MarkLogic Server 5.0",
+        "Eclipse",
+        "XQuery",
+        "HTML",
+        "XML",
+        "MobileXQuery"
+      ],
+      "timePeriod": "2011 – 2012",
+      "businessSector": "Verschiedene",
+      "teamSize": 1,
+      "role": "Berater",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Evaluierung und Dokumentation der Software SAP Hybris",
+        "Evaluierung und Dokumentation der Software MarkLogic"
+      ],
+      "methodologies": [
+        "Wasserfallmodell"
+      ]
+    },
+    {
+      "name": "Entwickler SAP MII",
+      "description": "Erstellung einer SAP MII Umgebung zum Verknüpfen des neuen ERP-Systems mit den Produktionsanlagen für eine automatisierte, fehlerfreie, unkomplizierte und zeitnahe Übermittlung von Daten (DB2) zwischen den beiden Systemebenen.",
+      "technologies": [
+        "SAP MII",
+        "HMTL",
+        "JavaScript",
+        "CSS",
+        "DB2",
+        "SQL",
+        "XML",
+        "XSLT"
+      ],
+      "timePeriod": "2011 – 2011",
+      "businessSector": "Ernährungsmittelindustrie",
+      "teamSize": 2,
+      "role": "Entwickler",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Erstellung der o.a. SAP MII Umgebung mittels der vorhanden SAP Tools",
+        "Anpassen der HMTL, JavaScript und CSS Komponenten"
+      ],
+      "methodologies": [
+        "Wasserfallmodell"
+      ]
+    },
+    {
+      "name": "Administrator IIS/DataStage",
+      "description": "Bei dem Projekt ging es darum Daten verschiedener Quellen mittels dem ETL Tool DataStage aus verschiedenen Quellen in unterschiedliche Zielsysteme zu verschieben und zu transformieren, darunter Data Warehouses, operative Datenspeicher, Echtzeitdienste und Unternehmensanwendungen.",
+      "technologies": [
+        "UC4",
+        "MS Project",
+        "RQM",
+        "SVN",
+        "WinSCP",
+        "PuTTY",
+        "AIX",
+        "InfoSphere Information Servers (DataStage",
+        "QualityStage",
+        "InformationAnalyzer",
+        "DB2)"
+      ],
+      "timePeriod": "2011 – 2011",
+      "businessSector": "Gesundheitswesen/Health",
+      "teamSize": 15,
+      "role": "Administrator IIS/DataStage",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Erweiterung der vorh. E-/ Q-Umgebung des InfoSphere Information Servers auf M-/ P-Umgebung",
+        "Einspielen von FixPacks + Updates",
+        "Pflegen von UserAccounts in IIS",
+        "Monitoring",
+        "Starten + Überwachen von UC4-Jobs",
+        "Coachen weiterer Mitarbeiter",
+        "Sammeln von Performancedaten"
+      ],
+      "methodologies": [
+        "Wasserfallmodell"
+      ]
+    },
+    {
+      "name": "Anwendungsentwickler Java",
+      "description": "Das Projekt diente der Migration von Java EE Anwendungen von einem WebSphere Application Server Version 5.1 auf die damalig aktuelle Version 7 zu migrieren. Dieses Wissen sollte zudem an die internen Kollegen des Kunden weitergegeben werden.",
+      "technologies": [
+        "WebSphere Application Server",
+        "Rational Software Architect 7.5",
+        "MKS Client",
+        "WinSCP",
+        "PuTTY",
+        "MS Powerpoint",
+        "MS Word", "MS Excel",
+        "Windows Vista",
+        "Python/Jython",
+        "Batch",
+        "Apache Ant"
+      ],
+      "timePeriod": "2009 – 2010",
+      "businessSector": "Gesundheitswesen/Health",
+      "teamSize": 10,
+      "role": "Administrator / Berater",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Migration IBM WebSphere Application Server 5.1 auf Version 7 bzw. auch dessen Anwendungen etc.",
+        "Deployen und Skripten von Anwendungen",
+        "Performance-Tests",
+        "Aufbau einer Skripting-Umgebung (Jython)",
+        "Unterstützung und Coaching der internen Kollegen",
+        "Erstellung Anweisungen für Installationen, etc."
+      ],
+      "methodologies": [
+        "Wasserfallmodell"
+      ]
+    },
+    {
+      "name": "Entwickler Archivportal IBMIICE / WebSphere",
+      "description": "In dem Projekt wurde der IBM Content Integrator implementiert. Der Content Integrator integriert vorhandenen Inhalt, wie Bilder, Dokumente und Workflowprozesse, aus unterschiedlichen und voneinander unabhängigen umgebungsspezifischen Repositorys. Der Content Integrator läuft als eigene JEE Anwendung auf einem WebSphere Application Server.",
+      "technologies": [
+        "IBM Content Integrator 8.5 (ehemals IBM WebSphere IICE)",
+        "DB2 V9.5", "Archivconnector",
+        "WebSphere Application Server 7.0"
+      ],
+      "timePeriod": "2009 – 2009",
+      "businessSector": "Transportation",
+      "teamSize": 3,
+      "role": "Administrator / Berater",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Implementierung Lastverteilung mit Network Deployment",
+        "Parallelisierung der Archivconnector Instanzen",
+        "Erstellung Grobkonzept und Installationsanleitung",
+        "Anpassung Archivconnector",
+        "Weiterentwicklung des Archivportals der Deutschen Bahn auf Basis IBM IICE/WebSphere"
+      ],
+      "methodologies": [
+        "Wasserfallmodell"
+      ]
+    },
+    {
+      "name": "Angebotssystem Kranken",
+      "description": "Implementierung und Erweiterung eines Angebotssystems anhand der Vorgaben aus der VVG-Reform Informationspflichtverordnung",
+      "technologies": [
+        "Eclipse RCP",
+        "SWT",
+        "JFace",
+        "XSL-FO",
+        "PDF über FOP"
+      ],
+      "timePeriod": "2007 – 2007",
+      "businessSector": "Gesundheitswesen/Health",
+      "teamSize": 5,
+      "role": "Entwickler",
+      "specializedFocus": "",
+      "personalContributions": [
+        "Erweiterung Angebotssystem mittels Eclipse RCP, SWT u. JFace",
+        "Erstellung einer Erweiterung zum Exportieren von PDF-Dokumenten mittels XSL-FO und PDF über FOP"
+      ],
+      "methodologies": [
+        "Wasserfallmodell"
+      ]
+    }
+  ],
+  "startingDate": "2023-04-01",
+  "lastUpdate": "2026-01-22"
+}
