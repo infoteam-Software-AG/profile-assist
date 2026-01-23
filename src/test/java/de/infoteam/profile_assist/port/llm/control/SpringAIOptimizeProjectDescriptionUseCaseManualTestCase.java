@@ -33,7 +33,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   @Autowired private ObjectMapper objectMapper;
 
   @ParameterizedTest
-  @ValueSource(strings = {"anna_mueller", "beate_laurenz"})
+  @ValueSource(strings = {"ferdinand_magellan", "audrey_hepburn", "frodo_beutlin"})
   void askForPersonaProjectDescriptionOptimization_shouldUpdateUpdateTimestamp(String personaName) {
 
     try {
@@ -70,7 +70,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
   }
 
   @ParameterizedTest
-  @ValueSource(strings = {"ferdinand_magellan", "audrey_hepburn"})
+  @ValueSource(strings = {"ferdinand_magellan", "audrey_hepburn", "frodo_beutlin"})
   void optimizePersonaProjects(String personaName) {
     try {
       Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
