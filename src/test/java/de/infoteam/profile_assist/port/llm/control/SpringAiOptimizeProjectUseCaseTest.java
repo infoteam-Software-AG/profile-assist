@@ -27,9 +27,11 @@ import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-class SpringAiOptimizeProjectDescriptionUseCaseTest {
+class SpringAiOptimizeProjectUseCaseTest {
 
-  @InjectMocks SpringAiOptimizeProjectDescriptionUseCase springAiOptimizeProjectDescriptionUseCase;
+  @InjectMocks SpringAiOptimizeProjectUseCase springAiOptimizeProjectDescriptionUseCase;
+
+  @InjectMocks SpringAiSearchMissingProjectSkillsUseCase springAiSearchMissingProjectSkillsUseCase;
 
   @Spy
   @SuppressWarnings("unused") // required for @InjectMocks
@@ -61,7 +63,7 @@ class SpringAiOptimizeProjectDescriptionUseCaseTest {
         .thenReturn(new OptimizationResultImpl<>(EXPECTED));
 
     OptimizationResult<String> actual =
-        springAiOptimizeProjectDescriptionUseCase.searchMissingProjectSkills(
+        springAiSearchMissingProjectSkillsUseCase.searchMissingProjectSkills(
             personaBuilder().build());
 
     then(actual.result()).isEqualTo(EXPECTED);
