@@ -4,12 +4,9 @@
 package de.infoteam.profile_assist.domain.control;
 
 import de.infoteam.profile_assist.domain.entity.OptimizationResult;
-import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
 
-public interface OptimizeProjectDescriptionUseCase {
+public interface OptimizeProjectUseCase {
   OptimizationResult<Project> optimizeProjectDescription(
       Project project, String requiredProjectDescription);
-
-  OptimizationResult<String> searchMissingProjectSkills(Persona persona);
 }

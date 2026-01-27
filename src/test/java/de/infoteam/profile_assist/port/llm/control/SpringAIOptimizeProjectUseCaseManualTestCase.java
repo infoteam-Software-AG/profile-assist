@@ -26,9 +26,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 @Slf4j
 @Disabled
-class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
+class SpringAIOptimizeProjectUseCaseManualTestCase {
 
-  @Autowired private SpringAiOptimizeProjectDescriptionUseCase chatUseCase;
+  @Autowired private SpringAiOptimizeProjectUseCase optimizeProjectUseCase;
+
+  @Autowired private SpringAiSearchMissingProjectSkillsUseCase searchMissingProjectSkillsUseCase;
 
   @Autowired private ObjectMapper objectMapper;
 
@@ -52,7 +54,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       testRunFolder.mkdirs();
 
       for (Project prj : unoptimizedPersona.projectHistory()) {
-        var optimizationResult = chatUseCase.optimizeProjectDescription(prj, "");
+        var optimizationResult = optimizeProjectUseCase.optimizeProjectDescription(prj, "");
         assertThat(optimizationResult.result().description()).isNotBlank();
         File personaFile =
             new File(
@@ -93,7 +95,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
       for (Project prj : unoptimizedPersona.projectHistory()) {
         if (!prj.description().isEmpty()) {
           var optimizationResult =
-              chatUseCase.optimizeProjectDescription(prj, callForBids.description());
+              optimizeProjectUseCase.optimizeProjectDescription(prj, callForBids.description());
           optimizedProjects.add(optimizationResult.result());
         } else {
           log.warn("Project couldn't be optimized because description is empty");
@@ -101,7 +103,7 @@ class SpringAIOptimizeProjectDescriptionUseCaseManualTestCase {
         }
       }
 
-      chatUseCase.searchMissingProjectSkills(unoptimizedPersona);
+      searchMissingProjectSkillsUseCase.searchMissingProjectSkills(unoptimizedPersona);
       optimizedPersona.projectHistory(optimizedProjects);
       optimizedPersona.build();
       File personaFile = new File(testRunFolder, "optimized-persona.json");
