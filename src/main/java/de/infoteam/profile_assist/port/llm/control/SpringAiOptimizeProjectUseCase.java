@@ -16,8 +16,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class SpringAiOptimizeProjectUseCase
-    implements OptimizeProjectUseCase {
+public class SpringAiOptimizeProjectUseCase implements OptimizeProjectUseCase {
 
   private final SpringAiClient springAiClient;
   private final OptimizeProjectDescriptionPromptProvider promptProvider;
@@ -25,25 +24,27 @@ public class SpringAiOptimizeProjectUseCase
   @Override
   public OptimizationResult<Project> optimizeProjectDescription(
       Project project, String bidProjectDescription) {
-    var result = springAiClient.sendPrompt(
-        Project.class,
-        promptProvider.systemPrompt().get(),
-        promptProvider
-            .userPrompt()
-            .withVariables(
-                () ->
-                    Map.of(
-                        "bidProjectDescription", bidProjectDescription,
-                        "name", project.name(),
-                        "description", project.description(),
-                        "technologies", project.technologies())));
+    var result =
+        springAiClient.sendPrompt(
+            Project.class,
+            promptProvider.systemPrompt().get(),
+            promptProvider
+                .userPrompt()
+                .withVariables(
+                    () ->
+                        Map.of(
+                            "bidProjectDescription", bidProjectDescription,
+                            "name", project.name(),
+                            "description", project.description(),
+                            "technologies", project.technologies())));
 
-    return new OptimizationResultImpl<>(project.toBuilder()
-      .description(result.result().description())
-      .technologies(result.result().technologies())
-      .personalContributions(result.result().personalContributions())
-      .methodologies(result.result().methodologies())
-      .specializedFocus(result.result().specializedFocus())
-      .build());
+    return new OptimizationResultImpl<>(
+        project.toBuilder()
+            .description(result.result().description())
+            .technologies(result.result().technologies())
+            .personalContributions(result.result().personalContributions())
+            .methodologies(result.result().methodologies())
+            .specializedFocus(result.result().specializedFocus())
+            .build());
   }
 }

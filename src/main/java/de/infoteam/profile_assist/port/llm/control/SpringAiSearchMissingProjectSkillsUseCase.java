@@ -3,18 +3,15 @@
 // For full license text see: https://github.com/infoteam-Software-AG/profile-assist/blob/main/LICENSE
 package de.infoteam.profile_assist.port.llm.control;
 
-import de.infoteam.profile_assist.domain.control.OptimizeProjectUseCase;
 import de.infoteam.profile_assist.domain.control.SearchMissingProjectSkillsUseCase;
 import de.infoteam.profile_assist.domain.entity.OptimizationResult;
 import de.infoteam.profile_assist.domain.entity.Persona;
-import de.infoteam.profile_assist.domain.entity.Project;
 import de.infoteam.profile_assist.port.llm.entity.OptimizationResultImpl;
 import de.infoteam.profile_assist.port.llm.integration.SpringAiClient;
+import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
 
 @Service
 @Slf4j
