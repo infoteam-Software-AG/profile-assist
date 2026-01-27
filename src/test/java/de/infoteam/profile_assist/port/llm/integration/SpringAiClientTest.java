@@ -4,6 +4,7 @@
 package de.infoteam.profile_assist.port.llm.integration;
 
 import static org.assertj.core.api.BDDAssertions.then;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.RETURNS_DEEP_STUBS;
 import static org.mockito.Mockito.mock;
@@ -64,7 +65,9 @@ class SpringAiClientTest {
             LocalDate.now(),
             LocalDate.now());
 
-    when(chatClient.prompt().system(anyString()).user(anyString()).call().entity(Persona.class))
+    when(chatClient.prompt()
+      .system(anyString()).user(u -> u.text("userPrompt").metadata("sessionId", anyString()))
+      .call().entity(Persona.class))
         .thenReturn(unoptimizedPersona);
 
     OptimizationResultImpl<Persona> optimizedPersona =
