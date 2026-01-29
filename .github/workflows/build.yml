@@ -53,21 +53,20 @@ jobs:
     defaults:
       run:
         working-directory: ./frontend
-    strategy:
-      matrix:
-        node-version: [ 22.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          cache-dependency-path: frontend/package-lock.json
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
+          node-version: '21.x'
+      - name: Install dependencies
+        run: npm ci # Use npm ci for faster installs and CI consistency
+      - name: Build Angular project
+        run: npm run build -- --configuration production # Update to match your build script
+      - name: Run tests
+        run: npm test
   generate-sbom-html:
     permissions:
       contents: write
