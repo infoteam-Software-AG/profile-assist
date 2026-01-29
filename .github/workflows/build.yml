@@ -6,7 +6,7 @@ on:
   pull_request:
     types: [ opened, synchronize, reopened ]
 jobs:
-  build:
+  build-backend:
     permissions:
       contents: read
     name: Build and analyze
@@ -47,11 +47,31 @@ jobs:
         with:
           name: cyclonedx-sbom-json
           path: ./target/bom.json
+
+  build-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.x'
+      - name: Install dependencies
+        run: npm ci --ignore-scripts # Use npm ci for faster installs and CI consistency
+      - name: Build Angular project
+        run: npm run build -- --configuration production # Update to match your build script
+      - name: Run tests
+        run: npm test
   generate-sbom-html:
     permissions:
       contents: write
     name: Generate SBOM HTML
-    needs: build
+    needs: build-backend
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' # ensure the sbom is only deployed on main
     steps:
@@ -80,7 +100,7 @@ jobs:
       contents: write
     name: Deploy Github pages
     needs:
-      - build
+      - build-backend
       - generate-sbom-html
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' # ensure the documentation is only deployed on main
