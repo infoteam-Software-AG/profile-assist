@@ -62,9 +62,9 @@ jobs:
         with:
           node-version: '22.x'
       - name: Install dependencies
-        run: npm ci # Use npm ci for faster installs and CI consistency
+        run: npm ci --ingore-scripts # Use npm ci for faster installs and CI consistency
       - name: Build Angular project
-        run: npm run build -- --configuration production # Update to match your build script
+        run: npm run build --configuration production # Update to match your build script
       - name: Run tests
         run: npm test
   generate-sbom-html:
