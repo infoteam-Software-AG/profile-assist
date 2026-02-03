@@ -17,7 +17,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -57,7 +56,8 @@ class SpringAIOptimizeProjectUseCaseManualTestCase {
       testRunFolder.mkdirs();
 
       for (Project prj : unoptimizedPersona.projectHistory()) {
-        var optimizationResult = optimizeProjectUseCase.optimizeProjectDescription(prj, "", conversationID);
+        var optimizationResult =
+            optimizeProjectUseCase.optimizeProjectDescription(prj, "", conversationID);
         assertThat(optimizationResult.result().description()).isNotBlank();
         File personaFile =
             new File(
