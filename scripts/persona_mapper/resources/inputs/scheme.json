@@ -1,0 +1,33 @@
+{
+    "id": null,
+    "jobTitle": null,
+    "name": null,
+    "educations": null,
+    "yearsOfExperience": null,
+    "jobHistory": null,
+    "coreCompetencies": null,
+    "certificates": null,
+    "skills": {
+        "businessSectors": null,
+        "languages": null,
+        "programmingLanguages": null,
+        "methodicalExpertise": null,
+        "tools": null,
+        "operatingSystems": null,
+        "databases": null
+    },
+    "projectHistory": {
+        "name": null,
+        "description": null,
+        "technologies": null,
+        "timePeriod": null,
+        "businessSector": null,
+        "teamSize": null,
+        "role": null,
+        "specializedFocus": null,
+        "personalContributions": null,
+        "methodologies": null
+    },
+    "startingDate": null,
+    "lastUpdate": null
+}
