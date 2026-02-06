@@ -7,7 +7,6 @@ import lombok.Builder;
 import lombok.NonNull;
 
 @Builder(toBuilder = true)
-public record SkillMatrix(@NonNull String name, int level)
-    implements BuilderSupport<SkillMatrix> {
+public record SkillMatrix(@NonNull String name, int level) implements BuilderSupport<SkillMatrix> {
   public static class SkillMatrixBuilder implements BuilderSupport.Builder<SkillMatrix> {}
 }
