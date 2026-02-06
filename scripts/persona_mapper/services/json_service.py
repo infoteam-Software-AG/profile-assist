@@ -1,4 +1,6 @@
 import json
+from pathlib import Path
+
 
 class JsonService:
 
@@ -17,6 +19,9 @@ class JsonService:
             raise e
         
     def write_persona_to_json(self, persona_json_str: str) -> None:
+        path = Path(self.output_path)
+        if not path.exists():
+            path.mkdir(parents=True, exist_ok=True)
         with open(f"{self.output_path}/{self.output_filename}", 'w') as json_file:
             loaded_json_str = json.loads(persona_json_str)
             json.dump(loaded_json_str, json_file, indent=4)
