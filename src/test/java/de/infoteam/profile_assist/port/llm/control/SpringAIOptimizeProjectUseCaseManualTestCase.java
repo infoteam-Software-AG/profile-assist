@@ -116,7 +116,8 @@ class SpringAIOptimizeProjectUseCaseManualTestCase {
       throw new RuntimeException(e);
     }
   }
-//"ferdinand_magellan", "audrey_hepburn",
+
+  // "ferdinand_magellan", "audrey_hepburn",
   @ParameterizedTest
   @ValueSource(strings = {"frodo_beutlin"})
   void optimizePersonaProjectsWithoutBid(String personaName) {
@@ -125,21 +126,20 @@ class SpringAIOptimizeProjectUseCaseManualTestCase {
       Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
 
       File testRunFolder =
-        new File(
-          "target"
-            + File.separator
-            + "manualTestResults"
-            + File.separator
-            + personaName
-            + File.separator
-            + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"))
-            + File.separator);
+          new File(
+              "target"
+                  + File.separator
+                  + "manualTestResults"
+                  + File.separator
+                  + personaName
+                  + File.separator
+                  + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"))
+                  + File.separator);
       testRunFolder.mkdirs();
       List<Project> optimizedProjects = new ArrayList<>();
       for (Project prj : unoptimizedPersona.projectHistory()) {
         if (!prj.description().isEmpty()) {
-          var optimizationResult =
-            optimizeProjectUseCase.optimizeProjectDescriptionWithoutBid(prj);
+          var optimizationResult = optimizeProjectUseCase.optimizeProjectDescriptionWithoutBid(prj);
           optimizedProjects.add(optimizationResult.result());
         } else {
           log.warn("Project couldn't be optimized because description is empty");
@@ -151,10 +151,10 @@ class SpringAIOptimizeProjectUseCaseManualTestCase {
       optimizedPersona.build();
       File personaFile = new File(testRunFolder, "optimized-persona-without-bid.json");
       Files.writeString(
-        personaFile.toPath(),
-        objectMapper
-          .writerWithDefaultPrettyPrinter()
-          .writeValueAsString(optimizedPersona.build()));
+          personaFile.toPath(),
+          objectMapper
+              .writerWithDefaultPrettyPrinter()
+              .writeValueAsString(optimizedPersona.build()));
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
