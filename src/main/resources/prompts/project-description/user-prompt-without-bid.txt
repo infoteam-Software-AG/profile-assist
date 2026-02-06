@@ -12,3 +12,4 @@ Please provide:
 5. Do not remove any information provided.
 6. if you don't know what technologies were used specifically don't give examples
 7. Don't make the project description too similar to the project requirements
+8. Don't clear any values!
