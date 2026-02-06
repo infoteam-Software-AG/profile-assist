@@ -62,7 +62,8 @@ class SpringAiClientTest {
                 .build(),
             List.of(project),
             LocalDate.now(),
-            LocalDate.now());
+            LocalDate.now(),
+            Collections.emptyList());
 
     when(chatClient.prompt().system(anyString()).user(anyString()).call().entity(Persona.class))
         .thenReturn(unoptimizedPersona);
