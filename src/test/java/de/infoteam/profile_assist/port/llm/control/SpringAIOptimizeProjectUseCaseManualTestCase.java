@@ -116,4 +116,47 @@ class SpringAIOptimizeProjectUseCaseManualTestCase {
       throw new RuntimeException(e);
     }
   }
+//"ferdinand_magellan", "audrey_hepburn",
+  @ParameterizedTest
+  @ValueSource(strings = {"frodo_beutlin"})
+  void optimizePersonaProjectsWithoutBid(String personaName) {
+    try {
+      Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
+      Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
+
+      File testRunFolder =
+        new File(
+          "target"
+            + File.separator
+            + "manualTestResults"
+            + File.separator
+            + personaName
+            + File.separator
+            + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"))
+            + File.separator);
+      testRunFolder.mkdirs();
+      List<Project> optimizedProjects = new ArrayList<>();
+      for (Project prj : unoptimizedPersona.projectHistory()) {
+        if (!prj.description().isEmpty()) {
+          var optimizationResult =
+            optimizeProjectUseCase.optimizeProjectDescriptionWithoutBid(prj);
+          optimizedProjects.add(optimizationResult.result());
+        } else {
+          log.warn("Project couldn't be optimized because description is empty");
+          optimizedProjects.add(prj);
+        }
+      }
+
+      optimizedPersona.projectHistory(optimizedProjects);
+      optimizedPersona.build();
+      File personaFile = new File(testRunFolder, "optimized-persona-without-bid.json");
+      Files.writeString(
+        personaFile.toPath(),
+        objectMapper
+          .writerWithDefaultPrettyPrinter()
+          .writeValueAsString(optimizedPersona.build()));
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+  }
 }

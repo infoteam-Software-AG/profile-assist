@@ -47,4 +47,29 @@ public class SpringAiOptimizeProjectUseCase implements OptimizeProjectUseCase {
             .specializedFocus(result.result().specializedFocus())
             .build());
   }
+
+  @Override
+  public OptimizationResult<Project> optimizeProjectDescriptionWithoutBid(Project project) {
+    var result =
+      springAiClient.sendPrompt(
+        Project.class,
+        promptProvider.systemPrompt().get(),
+        promptProvider
+          .userPromptWithoutBid()
+          .withVariables(
+            () ->
+              Map.of(
+                "name", project.name(),
+                "description", project.description(),
+                "technologies", project.technologies())));
+
+    return new OptimizationResultImpl<>(
+      project.toBuilder()
+        .description(result.result().description())
+        .technologies(result.result().technologies())
+        .personalContributions(result.result().personalContributions())
+        .methodologies(result.result().methodologies())
+        .specializedFocus(result.result().specializedFocus())
+        .build());
+  }
 }
