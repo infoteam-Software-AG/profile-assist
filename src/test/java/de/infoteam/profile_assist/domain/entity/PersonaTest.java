@@ -36,6 +36,7 @@ class PersonaTest {
   static final List<Project> PROJECT_HISTORY = Collections.emptyList();
   static final LocalDate STARTING_DATE = LocalDate.now();
   static final LocalDate LAST_UPDATE = LocalDate.now();
+  static final List<SkillMatrix> SKILL_MATRIX_LIST = Collections.emptyList();
 
   @DisplayName("When values are valid, then record should be created")
   @Test
@@ -53,7 +54,8 @@ class PersonaTest {
             SKILLS,
             PROJECT_HISTORY,
             STARTING_DATE,
-            LAST_UPDATE);
+            LAST_UPDATE,
+            SKILL_MATRIX_LIST);
 
     assertThat(result.id()).isEqualTo(ID);
     assertThat(result.jobTitle()).isEqualTo(JOB_TITLE);
@@ -86,7 +88,8 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -107,7 +110,8 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -128,7 +132,8 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -149,7 +154,8 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -170,7 +176,8 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -191,7 +198,8 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -212,7 +220,8 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -233,7 +242,8 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -254,7 +264,8 @@ class PersonaTest {
                     null,
                     PROJECT_HISTORY,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -275,7 +286,8 @@ class PersonaTest {
                     SKILLS,
                     null,
                     STARTING_DATE,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -296,7 +308,8 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     null,
-                    LAST_UPDATE))
+                    LAST_UPDATE,
+                    SKILL_MATRIX_LIST))
         .isInstanceOf(NullPointerException.class);
   }
 
@@ -317,6 +330,29 @@ class PersonaTest {
                     SKILLS,
                     PROJECT_HISTORY,
                     STARTING_DATE,
+                    null,
+                    SKILL_MATRIX_LIST))
+        .isInstanceOf(NullPointerException.class);
+  }
+
+  @DisplayName("When skillMatrixList is null, then the constructor shall raise an exception")
+  @Test
+  void constructorThrowsExceptionIfSkillMatrixListIsNull() {
+    assertThatThrownBy(
+            () ->
+                new Persona(
+                    ID,
+                    JOB_TITLE,
+                    NAME,
+                    EDUCATIONS,
+                    YEARS_OF_EXPERIENCE,
+                    JOB_HISTORY,
+                    CORE_COMPETENCIES,
+                    CERTIFICATES,
+                    SKILLS,
+                    PROJECT_HISTORY,
+                    STARTING_DATE,
+                    LAST_UPDATE,
                     null))
         .isInstanceOf(NullPointerException.class);
   }
