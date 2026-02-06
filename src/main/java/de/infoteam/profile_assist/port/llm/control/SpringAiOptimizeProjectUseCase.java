@@ -59,9 +59,12 @@ public class SpringAiOptimizeProjectUseCase implements OptimizeProjectUseCase {
                 .withVariables(
                     () ->
                         Map.of(
-                            "name", project.name(),
-                            "description", project.description(),
-                            "technologies", project.technologies())));
+                            "name",
+                            project.name(),
+                            "description",
+                            project.description(),
+                            "technologies",
+                            project.technologies())));
 
     return new OptimizationResultImpl<>(
         project.toBuilder()

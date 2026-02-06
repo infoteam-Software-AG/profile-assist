@@ -1,15 +1,15 @@
-Project details:
+Project details to process:
 - name:  {name}
 - description: {description}
 - technologies: {technologies}
 
-
-Please provide:
-1. Professionalize the project descriptions, if needed but stay within 1-3 sentence.
-2. Ensure there are no typos, grammar, or formatting issues.
-3. Add only technologies which are in the project description
-4. Don't just append the project requirements
-5. Do not remove any information provided.
-6. if you don't know what technologies were used specifically don't give examples
-7. Don't make the project description too similar to the project requirements
-8. Don't clear any values!
+1. Professionalize the project descriptions into 1-3 cohesive sentences. Do not add any new information, context, or assumptions if they are not explicitly mentioned in the source
+2. Use a professional, varied vocabulary to avoid repeating the same verbs.
+3. Fix all typos, grammar, or formatting issues while maintaining the original meaning. Also specifically correct misspelled software/tools based on industry standard.
+4. Remove obvious placeholder text or random character strings (e.g. "asdf...") that do not provide any semantic meaning, while ensuring all actual project information is preserved.
+5. Strictly adhere to the provided information: Do not remove any functional details or process steps.
+6. Use only the technologies explicitly listed. Do not specialize generic terms. However, you MUST correct the spelling of the listed technologies.
+7. Standardize Technology Names: Use the official spelling for tools.
+8. Don't just append the project requirements or use repetitive phrasing.
+9. Do not remove any information provided.
+10. Don't clear any values!
