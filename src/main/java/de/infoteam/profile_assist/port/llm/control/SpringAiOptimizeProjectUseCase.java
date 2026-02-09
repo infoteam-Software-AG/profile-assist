@@ -64,7 +64,21 @@ public class SpringAiOptimizeProjectUseCase implements OptimizeProjectUseCase {
                             "description",
                             project.description(),
                             "technologies",
-                            project.technologies())));
+                            project.technologies(),
+                            "timePeriod",
+                            project.timePeriod(),
+                            "businessSector",
+                            project.businessSector(),
+                            "teamSize",
+                            project.teamSize(),
+                            "role",
+                            project.role(),
+                            "specializedFocus",
+                            project.specializedFocus(),
+                            "personalContributions",
+                            project.personalContributions(),
+                            "methodologies",
+                            project.methodologies())));
 
     return new OptimizationResultImpl<>(
         project.toBuilder()
