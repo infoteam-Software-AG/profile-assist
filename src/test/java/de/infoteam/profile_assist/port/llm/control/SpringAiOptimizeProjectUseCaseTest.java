@@ -56,7 +56,7 @@ class SpringAiOptimizeProjectUseCaseTest {
 
   @Test
   @DisplayName("OptimizeProjectDescriptionWithoutBid should return correct Project")
-  void OptimizeProjectDescriptionWithoutBid() {
+  void testOptimizeProjectDescriptionWithoutBid() {
     var optimizedProject = projectBuilder().build();
     when(springAiClient.sendPrompt(eq(Project.class), anyString(), anyString()))
         .thenReturn(new OptimizationResultImpl<>(optimizedProject));
