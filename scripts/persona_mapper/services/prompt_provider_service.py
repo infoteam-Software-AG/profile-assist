@@ -1,7 +1,7 @@
 import json
 
 mappings = {
-    "name": "name",
+    "name": "Name",
     "educations": "Studium / Ausbildung",
     "yearsOfExperience": "yearsOfExperience",
     "jobHistory":  "Beruflicher Werdegang",
