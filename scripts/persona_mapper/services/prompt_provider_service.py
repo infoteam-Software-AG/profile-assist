@@ -31,8 +31,8 @@ project_mappings = {
     "buisnessSector": "Branche",
     "teamSize": "Teamgröße",
     "role": "Projektrolle",
-    "specializedFocus": "specializedFocus",
-    "personalContributions": "personalContributians", 
+    "specializedFocus": "",
+    "personalContributions": "Tätigkeiten", 
     "methodologies": "Methoden",
 }
 
