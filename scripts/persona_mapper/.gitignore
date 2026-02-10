@@ -1,0 +1,4 @@
+resources/inputs/input.txt
+out/*.json
+*.pyc
+.venv/*
