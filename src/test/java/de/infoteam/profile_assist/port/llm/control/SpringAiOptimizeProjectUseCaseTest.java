@@ -59,11 +59,11 @@ class SpringAiOptimizeProjectUseCaseTest {
   void OptimizeProjectDescriptionWithoutBid() {
     var optimizedProject = projectBuilder().build();
     when(springAiClient.sendPrompt(eq(Project.class), anyString(), anyString()))
-      .thenReturn(new OptimizationResultImpl<>(optimizedProject));
+        .thenReturn(new OptimizationResultImpl<>(optimizedProject));
 
     OptimizationResult<Project> actual =
-      springAiOptimizeProjectDescriptionUseCase.optimizeProjectDescriptionWithoutBid(
-        optimizedProject.toBuilder().description("unoptimized description").build());
+        springAiOptimizeProjectDescriptionUseCase.optimizeProjectDescriptionWithoutBid(
+            optimizedProject.toBuilder().description("unoptimized description").build());
 
     then(actual.result()).isEqualTo(optimizedProject);
   }
