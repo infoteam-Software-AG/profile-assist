@@ -128,7 +128,7 @@
   "projectHistory": [
     {
       "name": "Toolentwicklung für eine Cloud-Anwendung",
-      "description": "Automatisierte, Erstellung und Portieren verschiedener Tools zur Datenverarbeitung in die Kloud",
+      "description": "Automatisierung, Erstellung und Portierung verschiedener Tools zur Datenverarbeitung in die Cloud",
       "technologies": [
         "Python",
         "AWS",
@@ -143,9 +143,9 @@
       "role": "Technischer Projektleiter, Leadentwickler",
       "specializedFocus": "",
       "personalContributions": [
-        "Technische Projetleitung",
-        "Erstellung von Anfrderungen",
-        "Implementierung verschiedener Tools mit Pyton und Integeration in eine AWS-Umgebung"
+        "Technische Projektleitung",
+        "Erstellung von Anforderungen",
+        "Implementierung verschiedener Tools mit Python und Integration in eine AWS-Umgebung"
       ],
       "methodologies": [
         "Scrum",

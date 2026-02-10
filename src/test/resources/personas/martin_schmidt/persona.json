@@ -1,7 +1,7 @@
 {
   "id": "e04bb26e-758c-48a6-810b-b6cfb0ba17bc",
   "jobTitle": "Senior Engineer",
-  "name": "Ferdinand Magellan",
+  "name": "Martin Schmidt",
   "educations": [
     {
       "timePeriod": "1867 - 1870",
@@ -180,7 +180,7 @@
       "businessSector": "Industrie",
       "teamSize": "",
       "role": "Entwickler",
-      "specializedFocus": "Erstellung von Yocto Rezepten für die Integration von Treibern und Tools. Entwicklung von Testtools.",
+      "specializedFocus": "Erstellung von Yocto rezeten, für die Integration von Treibern und Tools. Entwicklung von Testtools.",
       "personalContributions": [
         "Treiber angepasst",
         "Yocto Rezepte erstellt für Treiber, Test- u. Anwen-dungssoftware",

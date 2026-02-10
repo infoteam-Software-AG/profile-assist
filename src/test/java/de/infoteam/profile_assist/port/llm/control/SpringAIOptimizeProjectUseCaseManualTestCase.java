@@ -118,7 +118,7 @@ class SpringAIOptimizeProjectUseCaseManualTestCase {
   }
 
   @ParameterizedTest
-  @ValueSource(strings = {"frodo_beutlin", "audrey_hepburn", "ferdinand_magellan"})
+  @ValueSource(strings = {"martin_schmidt"})
   void optimizePersonaProjectsWithoutBid(String personaName) {
     try {
       Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
