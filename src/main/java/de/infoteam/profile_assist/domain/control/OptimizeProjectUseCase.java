@@ -9,4 +9,6 @@ import de.infoteam.profile_assist.domain.entity.Project;
 public interface OptimizeProjectUseCase {
   OptimizationResult<Project> optimizeProjectDescription(
       Project project, String requiredProjectDescription);
+
+  OptimizationResult<Project> optimizeProjectDescriptionWithoutBid(Project project);
 }

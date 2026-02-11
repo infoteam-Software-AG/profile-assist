@@ -1,0 +1,47 @@
+Project details to process:
+
+- name: {name}
+- description: {description}
+- technologies: {technologies}
+- timePeriod: {timePeriod}
+- businessSector: {businessSector}
+- teamSize: {teamSize}
+- role: {role}
+- specializedFocus: {specializedFocus}
+- personalContributions: {personalContributions}
+- methodologies: {methodologies}
+
+GENERAL RULE (HIGHEST PRIORITY):
+For every field:
+- If the value is non-empty in the input, it MUST be non-empty in the output.
+- Never remove, clear, shorten, or empty any value.
+- Default behavior is to copy the value unchanged.
+
+ALLOWED EDITS (STRICTLY LIMITED):
+1. Description:
+   - You may rewrite ONLY the description into 1–3 professional sentences.
+   - Do not add or remove information.
+
+2. String typo correction:
+   - You may fix obvious spelling or typing mistakes in any field
+     ONLY if the correction is unambiguous.
+   - This includes short technical descriptions
+     (e.g. specializedFocus, personalContributions).
+   - If there is any doubt, leave the value unchanged.
+
+3. Technologies:
+   - You may correct spelling to official tool names.
+   - Do not add, remove, or merge items.
+
+FORBIDDEN ACTIONS:
+- Do NOT expand, normalize, reinterpret, or reclassify values.
+- Do NOT rewrite categorical labels.
+- Do NOT modify lists unless correcting a clear typo in an item.
+- Do NOT change list lengths.
+- Do NOT infer meaning.
+- Do NOT improve wording outside the description.
+
+OUTPUT RULES:
+- Return the same fields and structure.
+- Preserve field order.
+- Do not explain your changes.
