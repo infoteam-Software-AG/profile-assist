@@ -55,6 +55,20 @@ class SpringAiOptimizeProjectUseCaseTest {
   }
 
   @Test
+  @DisplayName("OptimizeProjectDescriptionWithoutBid should return correct Project")
+  void testOptimizeProjectDescriptionWithoutBid() {
+    var optimizedProject = projectBuilder().build();
+    when(springAiClient.sendPrompt(eq(Project.class), anyString(), anyString()))
+        .thenReturn(new OptimizationResultImpl<>(optimizedProject));
+
+    OptimizationResult<Project> actual =
+        springAiOptimizeProjectDescriptionUseCase.optimizeProjectDescriptionWithoutBid(
+            optimizedProject.toBuilder().description("unoptimized description").build());
+
+    then(actual.result()).isEqualTo(optimizedProject);
+  }
+
+  @Test
   @DisplayName("SearchMissingProjectSkills should return correct Result")
   void testSearchMissingProjectSkills() {
     final String EXPECTED = "JavaScript, TypeScript, Java, C++, SQL";
