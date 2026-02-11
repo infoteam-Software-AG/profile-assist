@@ -1,6 +1,7 @@
 ## Martin Schmidt - Senior Engineer
 
 This profile is an anonymised real profile.
+It's special modified with typos to test the AI features. Copy of "Frodo Beutlin"
 
 ### Initial evaluation: ###
 

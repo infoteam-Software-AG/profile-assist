@@ -118,6 +118,7 @@ class SpringAiOptimizeProjectUseCaseTest {
                 new ArrayList<>()))
         .projectHistory(new ArrayList<>())
         .startingDate(LocalDate.MIN)
-        .lastUpdate(LocalDate.MIN);
+        .lastUpdate(LocalDate.MIN)
+        .skillMatrixList(new ArrayList<>());
   }
 }

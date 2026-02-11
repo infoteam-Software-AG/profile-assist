@@ -22,7 +22,8 @@ public record Persona(
     @NonNull Skills skills,
     @NonNull List<Project> projectHistory,
     @NonNull LocalDate startingDate,
-    @NonNull LocalDate lastUpdate)
+    @NonNull LocalDate lastUpdate,
+    @NonNull List<SkillMatrix> skillMatrixList)
     implements BuilderSupport<Persona> {
 
   public static class PersonaBuilder implements BuilderSupport.Builder<Persona> {}
