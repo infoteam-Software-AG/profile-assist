@@ -5,13 +5,13 @@
   "educations": [
     {
       "timePeriod": "05/2001-04/2005",
-      "title": "Informatik (ohne Abschluss)",
-      "institution": "Fachhochschule Carl-Friedrich-Gauss Kaiserslautern"
+      "name": "Informatik (ohne Abschluss)",
+      "location": "Fachhochschule Carl-Friedrich-Gauss Kaiserslautern"
     },
     {
       "timePeriod": "05/1997-05/1998",
-      "title": "Fachinformatiker Digital & Print",
-      "institution": "Computerhilfe Darmstadt"
+      "name": "Fachinformatiker Digital & Print",
+      "location": "Computerhilfe Darmstadt"
     }
   ],
   "yearsOfExperience": null,
