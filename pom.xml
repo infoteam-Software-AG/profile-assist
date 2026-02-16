@@ -31,7 +31,7 @@
         <archUnit.version>1.4.1</archUnit.version>
         <jacoco.version>0.8.14</jacoco.version>
         <jspecify.version>1.0.0</jspecify.version>
-        <commonmark.version>0.27.0</commonmark.version>
+        <commonmark.version>0.27.1</commonmark.version>
         <!-- """"" end: version properties """"" -->
 
         <asciidoc.outputDirectory>${project.basedir}/target/docs</asciidoc.outputDirectory>
