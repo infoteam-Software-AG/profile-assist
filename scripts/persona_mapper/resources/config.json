@@ -5,5 +5,5 @@
         "output_filename": "generated_persona.json"
     },
     "input_path": "resources/inputs/input.txt",
-    "prompt_template_path": "resources/prompts/prompt_template.txt"
+    "prompt_template_path": "resources/prompts/prompt.txt"
 }
