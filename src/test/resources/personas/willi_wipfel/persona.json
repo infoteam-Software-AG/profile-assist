@@ -1,0 +1,487 @@
+{
+    "id": "7c63aa13-f5d7-45b2-843d-e677361927a5",
+    "jobTitle": "Senior System Engineer",
+    "name": "Willi Wipfel",
+    "educations": [
+        {
+            "timePeriod": "05/2001 - 04/2005",
+            "degree": "Informatik (ohne Abschluss)",
+            "institution": "Fachhochschule Carl-Friedrich-Gauss Kaiserslautern"
+        },
+        {
+            "timePeriod": "05/1997 - 05/1998",
+            "degree": "Fachinformatiker Digital & Print",
+            "institution": "Computerhilfe Darmstadt"
+        }
+    ],
+    "yearsOfExperience": null,
+    "jobHistory": [
+        {
+            "timePeriod": "07/2018 - heute",
+            "title": "Senior System Engineer",
+            "company": "SchneeSoft AG"
+        },
+        {
+            "timePeriod": "08/2014 - 06/2018",
+            "title": "Geschaeftsfuehrender Gesellschafter",
+            "company": "SoftDev GmbH & Co. KG"
+        },
+        {
+            "timePeriod": "03/2006 - 07/2013",
+            "title": "Inhaber",
+            "company": "SoftDev GbR"
+        },
+        {
+            "timePeriod": "12/2001 - 02/2006",
+            "title": "Freiberuflicher Anwendungsentwickler",
+            "company": "Freelancer"
+        },
+        {
+            "timePeriod": "11/1999 - 11/2001",
+            "title": "Softwareentwickler",
+            "company": "Men @ Work GmbH"
+        }
+    ],
+    "coreCompetencies": [
+        "Java Web Applications - Backend",
+        "Java Persistence API",
+        "Spring Boot"
+    ],
+    "certificates": [
+        {
+            "timePeriod": "05/2020",
+            "name": "Qualitaetsgetriebene Entwicklung an einem Spring Boot Beispiel"
+        },
+        {
+            "timePeriod": "01/2019",
+            "name": "Methoden im Agilen Software Engineering"
+        },
+        {
+            "timePeriod": "07/2018",
+            "name": "Scrum Grundlagen-Schulung"
+        }
+    ],
+    "skills": {
+        "businessSectors": [
+            "Oeffentliche Verwaltung",
+            "Schreibwaren",
+            "IT-Branche",
+            "Telekommunikationsbranche",
+            "IT-Dienstleistungen",
+            "Haushaltsgeraete",
+            "Kochutensilien",
+            "Gewerbliche Oekokontobetreiber",
+            "Spielwaren"
+        ],
+        "languages": [
+            "Deutsch (Muttersprache)",
+            "Englisch (Fliessend)"
+        ],
+        "programmingLanguages": [
+            "Java",
+            "XML",
+            "XSL",
+            "XSL-FO",
+            "JavaScript",
+            "TypeScript",
+            "HTML",
+            "CSS",
+            "C#"
+        ],
+        "methodicalExpertise": [
+            "Agile Development",
+            "Feature Driven Development"
+        ],
+        "tools": [
+            "WebStorm",
+            "Eclipse",
+            "IntelliJ Idea",
+            "Git",
+            "BitBucket",
+            "Jira",
+            "Confluence",
+            "Docker",
+            "DC/OS",
+            "Kubernetes",
+            "Rancher",
+            "Visual Studio Code",
+            "Adobe Photoshop",
+            "Visual Studio Express",
+            "Redmine",
+            "Angular",
+            "Spring Boot",
+            "Liquibase",
+            "OAuth 2.0",
+            "JWT",
+            "JPA/Hibernate",
+            "RAIA-Komponentenbibliothek",
+            "JSON",
+            "Junit",
+            "Pulse Framework",
+            "Apache POI",
+            "Apache Tomcat",
+            "Apache HTTP Server",
+            "JAXB",
+            "Servlets",
+            "Jersey",
+            "Quartz",
+            "Ehcache",
+            "NGINX",
+            "Helm",
+            "Hibernate",
+            "JAI",
+            "JDBC",
+            "Maven",
+            "RESTful",
+            "Spring",
+            "WebStorm",
+            "Wespe3"
+        ],
+        "operatingSystems": [
+            "Windows",
+            "Linux"
+        ],
+        "databases": [
+            "MySQL",
+            "Microsoft SQL Server"
+        ]
+    },
+    "projectHistory": [
+        {
+            "name": "Stellen- und Ressourcenverwaltung",
+            "description": "Die urspruenglichen Anwendungen sind als Prototyp konzipiert worden. Sie sind im Laufe der letzten Jahre gewachsen und weiterentwickelt worden. Jetzt sollen die Anwendungen in eine zukunftsfaehige Architektur ueberfuehrt und in die anderen Geschaeftsanwendungen integriert werden",
+            "technologies": [
+                "Java",
+                "Angular",
+                "RAIA",
+                "Material-UI",
+                "TypeScript",
+                "HTML",
+                "CSS",
+                "Spring Boot",
+                "Spring Security",
+                "Wespe3",
+                "RESTful Backends in Spring Boot",
+                "Batchbetrieb in Spring Boot",
+                "Liquibase",
+                "OAuth 2.0",
+                "JWT",
+                "JPA",
+                "JDBC",
+                "JSON",
+                "WebStorm",
+                "Eclipse",
+                "IntelliJ Idea",
+                "Git",
+                "BitBucket",
+                "Jira",
+                "Confluence",
+                "Docker",
+                "DC/OS",
+                "Kubernetes/Rancher",
+                "Helm",
+                "Maven"
+            ],
+            "timePeriod": "02/2020 - heute",
+            "businessSector": "Oeffentliche Verwaltung",
+            "teamSize": 9,
+            "role": "Softwareentwickler",
+            "specializedFocus": null,
+            "personalContributions": [
+                "Konzipieren der Verwaltungsoberflaechen, REST-Schnittstellen und Datenbanktabellen fuer diverse Ressourcenverwaltungsmodule",
+                "Erstellung von Angular-SPA-Frontend- und Spring-Boot-RESTful-Backend Modulen fuer:",
+                "Zukuenftigen Bedarf",
+                "Geplante Stellen",
+                "Stellenzuweisungen",
+                "Einnahmen aus Privatwirtschaft",
+                "Beschaeftigungen",
+                "Mitarbeiter",
+                "Organisationseinheiten/Bereiche",
+                "Rollen & Rechte",
+                "Konzipieren und Erstellen der REST-Controller-, Service- und Datenzugriffs-Schichten fuer die Backend-Module",
+                "Analyse und technische Dokumentation der fachlichen Anforderungen fuer die Module",
+                "Testen der Module",
+                "Bearbeiten von Helm-Skripten fuer das Deployment in Kubernetes/Rancher",
+                "Bereitstellen eines Batch-Betriebs fuer regelmaessig wiederkehrende Aufgaben im Spring-Boot-Backend",
+                "Konzipieren und Umsetzen eines RESTful-Spring-Boot-Projekts fuer das Verwalten und Abfragen der Stammdaten die in diversen anderen Projekten verwendet werden"
+            ],
+            "methodologies": [
+                "Agile Development"
+            ]
+        },
+        {
+            "name": "Internes Verwaltungstool",
+            "description": "Weiterentwicklung eines firmeninternen Verwaltungstools",
+            "technologies": [
+                "Eclipse",
+                "Visual Studio Code",
+                "Spring Boot",
+                "Angular",
+                "MySQL",
+                "Junit",
+                "Docker"
+            ],
+            "timePeriod": "12/2019 - 02/2020",
+            "businessSector": "IT-Dienstleistungen",
+            "teamSize": 3,
+            "role": "Softwareentwickler",
+            "specializedFocus": null,
+            "personalContributions": [
+                "Aufnehmen der Requirements",
+                "Konzipieren der fuer die Umsetzung benoetigten Aenderungen an der grafischen Benutzeroberflaeche sowie an den REST-Schnittstellen und am Datenmodell",
+                "Implementieren der Aenderungen der betroffenen Angular-Komponenten sowie der Erweiterung der Spring Boot REST-Schnittstellen und der zugehoerigen Services, Repositories und Entities",
+                "Erstellen der SQL-Queries zum Erweitern der Datenbank-Tabellen",
+                "Erstellen/Erweitern der Code-Dokumentation",
+                "Erstellen/Anpassen von JUnit-Tests"
+            ],
+            "methodologies": [
+                "Feature Driven Development"
+            ]
+        },
+        {
+            "name": "Haushaltsgeraetereparaturservice",
+            "description": "Entwicklung eines Online-Reparaturservice zur einfachen und transparenten Abwicklung von Reparaturauftraegen fuer Haushaltsgeraete. Kunden koennen Reparaturen selbstaendig anlegen, den aktuellen Bearbeitungsstatus verfolgen, ueber ein integriertes Nachrichtensystem mit dem Service kommunizieren und automatisch generierte RMA-Scheine herunterladen. Ereignisbasierte E-Mail-Benachrichtigungen informieren alle Beteiligten ueber relevante Schritte. Kostenpflichtige Reparatur- und Austauschangebote lassen sich direkt ueber die Plattform annehmen oder ablehnen; die Zahlungsabwicklung erfolgt ueber dem angebundenen Payment-Gateway von Wirecard. Der Datenaustausch mit dem firmeneigenen SAP-System wird ueber XML- und Textdateien realisiert. Fuer die Serviceabteilung stehen umfassende Administrationsoberflaechen zur Bearbeitung und Nachverfolgung von Anfragen und Problemen zur Verfuegung.",
+            "technologies": [
+                "Eclipse",
+                "Confluence",
+                "Jira",
+                "Orbiter Framework",
+                "MySQL",
+                "Apache POI",
+                "Apache Tomcat",
+                "Apache HTTP Server",
+                "JPA/Hibernate",
+                "JAXB",
+                "Junit",
+                "Java",
+                "XML",
+                "XSL",
+                "XSL-FO",
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "timePeriod": "11/2011 - 06/2018",
+            "businessSector": "Haushaltsgeraete",
+            "teamSize": 8,
+            "role": "Softwareentwickler, Projektleiter",
+            "specializedFocus": null,
+            "personalContributions": [
+                "Kommunikation mit dem Kunden zur Konzeption der Basisversion und der nachfolgenden Ausbaustufen",
+                "Formulieren der Requirements und Erstellen der Angebote",
+                "Definieren der Schnittstellen fuer den Datenaustausch mit SAP",
+                "Erstellen der Java-Services, -Entities und -DAOs sowie der benoetigten DTOs fuer die Nutzer- und Verwaltungsoberflaechen, fuer den Emailversand, die PDF-Generierung, die Zahlungsabwicklung, den Datenaustausch mit SAP, etc.",
+                "Erstellen der benoetigten SQL-Skripte zum Erstellen/Anpassen der Datenbank-Tabellen",
+                "Erstellen der XSLT-Stylesheets zur Transformation der von den Backend-Services gelieferten Daten fuer Nutzer-/Verwaltungsoberflaechen, SAP-Schnittstellen, PDFs, Emails, etc.",
+                "Erstellen des fuer die Oberflaechen benoetigten HTML-, CSS- und JavaScript-Codes",
+                "Erstellen der Code-Dokumentation und der benoetigten Anleitungen fuer Nutzer- und Verwaltungsoberflaechen",
+                "Anleiten und Koordinieren der an der Realisierung des Projekts beteiligten Kollegen"
+            ],
+            "methodologies": [
+                "Feature Driven Development"
+            ]
+        },
+        {
+            "name": "Orbiter - Java Web Application Framework (Open Source)",
+            "description": "Das Java-Webframework Orbiter wurde entwickelt, um die schnelle und unkomplizierte Umsetzung massgeschneiderter Websites und Webanwendungen zu ermoeglichen. Zu den zentralen Funktionen gehoeren: Integriertes Benutzermanagement mit Rollen- und Rechtesystem, WebDAV-basiertes Dateisystem fuer digitale Assets, Automatisches Parsen und Validieren von Requests ueber Request-Beans, Laufzeitueberwachung und dynamische Aktualisierung von Konfigurationen, Bereitstellung sofort nutzbarer Module wie CMS oder Shop, Bundle-Konzept zur modularen Strukturierung von Controllern und Joblets, Automatische Generierung von Actions und Berechtigungen, Umfangreiche Locale-Unterstuetzung fuer Internationalisierung, AJAX-basierte Administrationsoberflaeche, Flexibles Templating mittels XSL-Stylesheets. Das Framework bietet damit eine modulare, skalierbare Basis fuer vielseitige Webanwendungen.",
+            "technologies": [
+                "Orbiter Framework",
+                "MySQL",
+                "Apache POI",
+                "Servlets",
+                "Jersey",
+                "Quartz",
+                "Ehcache",
+                "JPA/Hibernate",
+                "JAXB",
+                "Junit",
+                "Java",
+                "XML",
+                "XSL",
+                "XSL-FO",
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "Eclipse"
+            ],
+            "timePeriod": "04/2004 - 06/2018",
+            "businessSector": "IT-Dienstleistungen",
+            "teamSize": 8,
+            "role": "Softwareentwickler",
+            "specializedFocus": null,
+            "personalContributions": [
+                "Konzipieren und planen neuer Features/Komponenten und Bundles fuer das Web-Framework",
+                "Programmieren von Java-Controllern, -Services und -Joblets",
+                "Umsetzen von Entities und DAOs fuer die Persistenzschicht",
+                "Erstellen des fuer die Oberflaechen benoetigten HTML-, CSS- und JavaScript-Codes und der benoetigten XSLT-Templates",
+                "Erstellen von Unit-Tests",
+                "Erstellen von Code-Dokumentation und von Anleitungsdokumenten fuer die Nutzung der Verwaltungsoberflaechen"
+            ],
+            "methodologies": [
+                "Feature Driven Development"
+            ]
+        },
+        {
+            "name": "Registrierung und Verwaltung eines wiederkehrenden weltweiten Events",
+            "description": "Zur Reduzierung des Administrationsaufwands wurde eine Eventorganisation um einen Registrierungsprozess erweitert sowie eine vollstaendige Verwaltungsoberflaeche entwickelt. Alle ehemals manuellen Vorgaenge werden nun zentral ueber eine integrierte Administrationsoberflaeche gesteuert. Ergaenzend generiert das System bei Bedarf automatische E-Mail-Benachrichtigungen, etwa zur Bestaetigung des Registrierungsabschlusses, bei Aenderungen oder Absagen von Events sowie zur Bereitstellung der Kontaktdaten des jeweiligen Event-Masters.",
+            "technologies": [
+                "Eclipse",
+                "Orbiter Framework",
+                "MySQL",
+                "Apache POI",
+                "Apache Tomcat",
+                "Servlets",
+                "Jersey",
+                "NGINX",
+                "JPA/Hibernate",
+                "JAXB",
+                "Java",
+                "XML",
+                "XSLT",
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "timePeriod": "01/2014 - 06/2018",
+            "businessSector": "Kochutensilien",
+            "teamSize": 8,
+            "role": "Softwareentwickler, Projektleiter",
+            "specializedFocus": null,
+            "personalContributions": [
+                "Kommunikation mit dem Kunden zur Konzeption der verschiedenen Ausbaustufen und zur Aufnahme der Requirements",
+                "Erstellen von Angeboten",
+                "Implementieren der Java-Backend-Services, -Entities, und -DAOs sowie der benoetigten -DTOs fuer die Nutzer- und Verwaltungsoberflaechen und fuer den Emailversand",
+                "Erstellen der SQL-Skripte zum Erstellen/Editieren der Datenbank-Tabellen",
+                "Schreiben der XSLT-Stylesheets zur Transformation der von den Backend-Services gelieferten Daten fuer Nutzer-/Verwaltungsoberflaechen und Emails",
+                "Erstellen des benoetigten HTML-, CSS- und JavaScript-Codes",
+                "Schreiben von Code-Dokumentation",
+                "Koordinieren der an der Umsetzung beteiligten Kollegen"
+            ],
+            "methodologies": [
+                "Feature Driven Development"
+            ]
+        },
+        {
+            "name": "Oeko-Ausgleichsflaechenboerse",
+            "description": "Es wurde eine Plattform fuer den Handel mit Oekopunkten und Ausgleichsflaechen entwickelt. Ziel war es, Nutzern entweder das eigenstaendige Erstellen von Angeboten zu ermoeglichen oder diese Aufgabe an den Betreiber zu uebertragen. Registrierte Nutzer konnten Angebote anlegen, die oeffentlich in der Oeko-Grundstuecksboerse sichtbar waren. Interessenten traten ausschliesslich ueber diese Boerse mit den Anbietern in Kontakt.",
+            "technologies": [
+                "Eclipse",
+                "Orbiter Framework",
+                "MySQL",
+                "Apache PI",
+                "Apache Tomcat",
+                "Servlets",
+                "Jersey",
+                "NGINX",
+                "JPA/Hibernate",
+                "JAXB",
+                "Java",
+                "XML",
+                "XSLT",
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "timePeriod": "02/2013 - 05/2017",
+            "businessSector": "Gewerbliche Oekokontobetreiber",
+            "teamSize": 8,
+            "role": "Softwareentwickler, Projektleiter",
+            "specializedFocus": null,
+            "personalContributions": [
+                "Kommunikation mit dem Kunden und Aufnahme der Requirements",
+                "Erstellen von Angeboten",
+                "Implementieren der Controller-/Service-Schicht sowie der Persistenz-Schicht fuer das Backend",
+                "Schreiben von XSLT-Stylesheets zur Transformation der vom Backend gelieferten Daten fuer die Nutzer- und Verwaltungsoberflaechen und die versendeten Emails",
+                "Anbinden einer Bezahlschnittstelle der Hausbank des Unternehmens",
+                "Schreiben der SQL-Queries fuer die Bearbeitung der benoetigten Tabellen in der Datenbank",
+                "Koordination der an der Umsetzung beteiligten Kollegen"
+            ],
+            "methodologies": [
+                "Feature Driven Development"
+            ]
+        },
+        {
+            "name": "Mediendatenbank",
+            "description": "Fuer die Speicherung, Verwaltung und Bereitstellung von Produktabbildungen, Datenblaettern und Videos wurde eine neue Mediendatenbank entwickelt, die sowohl intern als auch extern genutzt werden kann. Zusaetzlich sollte sie die Lokalisierung von Produktinformationen (z. B. Namen, Texte, Verfuegbarkeiten) an die jeweiligen Landesgesellschaften delegieren und deren Bearbeitungsstand zentral nachvollziehbar machen. Kern des Systems war ein zentrales Control-Servlet, das Anfragen entgegennahm, Berechtigungen pruefte und die Ausgabe via XSLT steuerte. Die Geschaeftslogik war in modularen Controllern organisiert, waehrend der Datenzugriff ueber DAO-Klassen mittels JDBC erfolgte.",
+            "technologies": [
+                "Adobe Photoshop",
+                "Eclipse",
+                "Visual Studio Express",
+                "Orbiter Framework",
+                "MySQL",
+                "Apache HTTP Server",
+                "Apache POI",
+                "Apache Tomcat",
+                "Servlets",
+                "JAI",
+                "JDBC",
+                "Junit",
+                "Java",
+                "XML",
+                "XSLT",
+                "JavaScript",
+                "HTML",
+                "C#",
+                "CSS"
+            ],
+            "timePeriod": "09/2013 - 03/2016",
+            "businessSector": "Spielwaren",
+            "teamSize": 8,
+            "role": "Softwareentwickler, Projektleiter",
+            "specializedFocus": null,
+            "personalContributions": [
+                "Kommunikation mit dem Kunden zum Klaeren der Anforderungen und zur Planung der Umsetzung",
+                "Erstellen von Angeboten",
+                "Implementieren der Controller, Services, DAOs und Entities des Java-Backends",
+                "Programmieren einer C#-Schnittstelle zur Steuerung einer Adobe Photoshop Installation auf dem Server fuer die exakte Umrechnung der Bilddokumente in die verschiedenen Bildformate, Farbraeume, Aufloesungen, etc.",
+                "Schreiben der SQL-Queries fuer die Bearbeitung der benoetigten Tabellen in der Datenbank",
+                "Erstellen von XSLT-Stylesheets, HTML, CSS und JavaScript fuer das Frontend",
+                "Schreiben von Code-Dokumentation und von Anleitungen fuer die Benutzer",
+                "Programmieren von Unit-Tests"
+            ],
+            "methodologies": [
+                "Feature Driven Development"
+            ]
+        },
+        {
+            "name": "Berater-App-System (Spielwarenmesse)",
+            "description": "Fuer den Messeauftritt auf der Spielwarenmesse wurde ein umfassendes Berater-App-System entwickelt, bestehend aus einer Windows-Tablet-App (Adobe Air), einem Lead-Management, einem Autorensystem sowie einem personalisierten Download-Portal. Lead-Management: Von den Beratern in der App erfasste Informationen wurden in Echtzeit zwischen allen Tablets synchronisiert. Das Backoffice konnte Leads ergaenzen, korrigieren, Reports erstellen und Datenexports fuer CRM-Systeme generieren. Zudem lieferte das System die Datenbasis fuer das Download-Portal. Autorensystem: Das Autorensystem ermoeglichte die Erstellung und Verwaltung von Themenbereichen und Praesentationen im vorgegebenen Corporate Design. Praesentationen bestanden aus bildbasierten \"Folien\" und interaktiven Elementen, aehnlich dem Aufbau von PowerPoint. Inhalte wurden per Delta-Update an die Tablets verteilt, sodass Aktualisierungen auch waehrend des Messetages moeglich waren. Download-Portal: Fuer jeden beratenen Besucher wurden personalisierte Download-Seiten erzeugt. Nach Fertigstellung erhielt der Besucher eine E-Mail mit Zugriff auf seine persoenliche Download-Seite.",
+            "technologies": [
+                "Eclipse",
+                "Redmine",
+                "Jira",
+                "Orbiter Framework",
+                "MySQL",
+                "Apache HTTP Server",
+                "Apache POI",
+                "Apache Tomcat",
+                "JPA/Hibernate",
+                "JAXB",
+                "Java",
+                "XML",
+                "XSL",
+                "XSL-FO",
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "timePeriod": "10/2013 - 09/2016",
+            "businessSector": "Spielwaren",
+            "teamSize": 8,
+            "role": "Softwareentwickler",
+            "specializedFocus": null,
+            "personalContributions": [
+                "Programmieren von Controllern, Services, DAOs, Entities und DTOs fuer das Backend",
+                "Implementieren diverser spezieller Komponenten mithilfe von Apache POI zum Erstellen der verschiedensten Excel-Report-Dokumente",
+                "Kommunikation mit dem Kunden zu Koordinierung des Projektfortschritts und zur Planung neuer/geaenderter Anforderungen",
+                "Erstellen von XSLT-Templates um mithilfe von XSL-FO die personalisierten Foliensaetze fuer die Besucher zu erstellen",
+                "Schreiben HTML, CSS und JavaScript fuer die Verwendung in den XSLT-Templates in den Nutzeroberflaechen"
+            ],
+            "methodologies": [
+                "Feature Driven Development"
+            ]
+        }
+    ],
+    "startingDate": "Nach Vereinbarung",
+    "lastUpdate": "26.01.2026"
+}
