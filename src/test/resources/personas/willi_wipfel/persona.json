@@ -1,41 +1,45 @@
 {
-  "id": "e589b763-98ed-4ba0-8e7e-6cb55f8e2ec7",
+  "id": "7c63aa13-f5d7-45b2-843d-e677361927a5",
   "jobTitle": "Senior System Engineer",
   "name": "Willi Wipfel",
   "educations": [
     {
-      "timePeriod": "05/2001-04/2005",
-      "name": "Informatik (ohne Abschluss)",
-      "location": "Fachhochschule Carl-Friedrich-Gauss Kaiserslautern"
+      "timePeriod": "05/2001 - 04/2005",
+      "degree": "Informatik (ohne Abschluss)",
+      "institution": "Fachhochschule Carl-Friedrich-Gauss Kaiserslautern"
     },
     {
-      "timePeriod": "05/1997-05/1998",
-      "name": "Fachinformatiker Digital & Print",
-      "location": "Computerhilfe Darmstadt"
+      "timePeriod": "05/1997 - 05/1998",
+      "degree": "Fachinformatiker Digital & Print",
+      "institution": "Computerhilfe Darmstadt"
     }
   ],
-  "skillMatrixList": [],
-  "yearsOfExperience": 25,
+  "yearsOfExperience": null,
   "jobHistory": [
     {
-      "timePeriod": "07/2018-heute",
-      "name": "Senior System Engineer"
+      "timePeriod": "07/2018 - heute",
+      "title": "Senior System Engineer",
+      "company": "SchneeSoft AG"
     },
     {
-      "timePeriod": "08/2014-06/2018",
-      "name": "Geschaeftsfuehrender Gesellschafter"
+      "timePeriod": "08/2014 - 06/2018",
+      "title": "Geschaeftsfuehrender Gesellschafter",
+      "company": "SoftDev GmbH & Co. KG"
     },
     {
-      "timePeriod": "03/2006-07/2013",
-      "name": "Inhaber"
+      "timePeriod": "03/2006 - 07/2013",
+      "title": "Inhaber",
+      "company": "SoftDev GbR"
     },
     {
-      "timePeriod": "12/2001-02/2006",
-      "name": "Freiberuflicher Anwendungsentwickler"
+      "timePeriod": "12/2001 - 02/2006",
+      "title": "Freiberuflicher Anwendungsentwickler",
+      "company": "Freelancer"
     },
     {
-      "timePeriod": "11/1999-11/2001",
-      "name": "Softwareentwickler"
+      "timePeriod": "11/1999 - 11/2001",
+      "title": "Softwareentwickler",
+      "company": "Men @ Work GmbH"
     }
   ],
   "coreCompetencies": [
@@ -44,16 +48,30 @@
     "Spring Boot"
   ],
   "certificates": [
-    "Qualitaetsgetriebene Entwicklung an einem Spring Boot Beispiel",
-    "Methoden im Agilen Software Engineering",
-    "Scrum Grundlagen-Schulung"
+    {
+      "timePeriod": "05/2020",
+      "name": "Qualitaetsgetriebene Entwicklung an einem Spring Boot Beispiel"
+    },
+    {
+      "timePeriod": "01/2019",
+      "name": "Methoden im Agilen Software Engineering"
+    },
+    {
+      "timePeriod": "07/2018",
+      "name": "Scrum Grundlagen-Schulung"
+    }
   ],
   "skills": {
     "businessSectors": [
       "Oeffentliche Verwaltung",
       "Schreibwaren",
       "IT-Branche",
-      "Telekommunikationsbranche"
+      "Telekommunikationsbranche",
+      "IT-Dienstleistungen",
+      "Haushaltsgeraete",
+      "Kochutensilien",
+      "Gewerbliche Oekokontobetreiber",
+      "Spielwaren"
     ],
     "languages": [
       "Deutsch (Muttersprache)",
@@ -164,11 +182,11 @@
         "Helm",
         "Maven"
       ],
-      "timePeriod": "02/2020-heute",
+      "timePeriod": "02/2020 - heute",
       "businessSector": "Oeffentliche Verwaltung",
-      "teamSize": "9",
+      "teamSize": 9,
       "role": "Softwareentwickler",
-      "specializedFocus": "",
+      "specializedFocus": null,
       "personalContributions": [
         "Konzipieren der Verwaltungsoberflaechen, REST-Schnittstellen und Datenbanktabellen fuer diverse Ressourcenverwaltungsmodule",
         "Erstellung von Angular-SPA-Frontend- und Spring-Boot-RESTful-Backend Modulen fuer:",
@@ -203,11 +221,11 @@
         "Junit",
         "Docker"
       ],
-      "timePeriod": "12/2019-02/2020",
+      "timePeriod": "12/2019 - 02/2020",
       "businessSector": "IT-Dienstleistungen",
-      "teamSize": "3",
+      "teamSize": 3,
       "role": "Softwareentwickler",
-      "specializedFocus": "",
+      "specializedFocus": null,
       "personalContributions": [
         "Aufnehmen der Requirements",
         "Konzipieren der fuer die Umsetzung benoetigten Aenderungen an der grafischen Benutzeroberflaeche sowie an den REST-Schnittstellen und am Datenmodell",
@@ -221,7 +239,7 @@
       ]
     },
     {
-      "name": "Schreibgeraetereparatur",
+      "name": "Haushaltsgeraetereparaturservice",
       "description": "Entwicklung eines Online-Reparaturservice zur einfachen und transparenten Abwicklung von Reparaturauftraegen fuer Haushaltsgeraete. Kunden koennen Reparaturen selbstaendig anlegen, den aktuellen Bearbeitungsstatus verfolgen, ueber ein integriertes Nachrichtensystem mit dem Service kommunizieren und automatisch generierte RMA-Scheine herunterladen. Ereignisbasierte E-Mail-Benachrichtigungen informieren alle Beteiligten ueber relevante Schritte. Kostenpflichtige Reparatur- und Austauschangebote lassen sich direkt ueber die Plattform annehmen oder ablehnen; die Zahlungsabwicklung erfolgt ueber dem angebundenen Payment-Gateway von Wirecard. Der Datenaustausch mit dem firmeneigenen SAP-System wird ueber XML- und Textdateien realisiert. Fuer die Serviceabteilung stehen umfassende Administrationsoberflaechen zur Bearbeitung und Nachverfolgung von Anfragen und Problemen zur Verfuegung.",
       "technologies": [
         "Eclipse",
@@ -243,11 +261,11 @@
         "HTML",
         "CSS"
       ],
-      "timePeriod": "11/2011-06/2018",
+      "timePeriod": "11/2011 - 06/2018",
       "businessSector": "Haushaltsgeraete",
-      "teamSize": "8",
+      "teamSize": 8,
       "role": "Softwareentwickler, Projektleiter",
-      "specializedFocus": "",
+      "specializedFocus": null,
       "personalContributions": [
         "Kommunikation mit dem Kunden zur Konzeption der Basisversion und der nachfolgenden Ausbaustufen",
         "Formulieren der Requirements und Erstellen der Angebote",
@@ -265,7 +283,7 @@
     },
     {
       "name": "Orbiter - Java Web Application Framework (Open Source)",
-      "description": "Das Java-Webframework Orbiter wurde entwickelt, um die schnelle und unkomplizierte Umsetzung massgeschneiderter Websites und Webanwendungen zu ermoeglichen. \nZu den zentralen Funktionen gehoeren:\n\u2022 Integriertes Benutzermanagement mit Rollen- und Rechtesystem\n\u2022 WebDAV-basiertes Dateisystem fuer digitale Assets\n\u2022 Automatisches Parsen und Validieren von Requests ueber Request-Beans\n\u2022 Laufzeitueberwachung und dynamische Aktualisierung von Konfigurationen\n\u2022 Bereitstellung sofort nutzbarer Module wie CMS oder Shop\n\u2022 Bundle-Konzept zur modularen Strukturierung von Controllern und Joblets\n\u2022 Automatische Generierung von Actions und Berechtigungen\n\u2022 Umfangreiche Locale-Unterstuetzung fuer Internationalisierung\n\u2022 AJAX-basierte Administrationsoberflaeche\n\u2022 Flexibles Templating mittels XSL-Stylesheets\nDas Framework bietet damit eine modulare, skalierbare Basis fuer vielseitige Webanwendungen.",
+      "description": "Das Java-Webframework Orbiter wurde entwickelt, um die schnelle und unkomplizierte Umsetzung massgeschneiderter Websites und Webanwendungen zu ermoeglichen. Zu den zentralen Funktionen gehoeren: Integriertes Benutzermanagement mit Rollen- und Rechtesystem, WebDAV-basiertes Dateisystem fuer digitale Assets, Automatisches Parsen und Validieren von Requests ueber Request-Beans, Laufzeitueberwachung und dynamische Aktualisierung von Konfigurationen, Bereitstellung sofort nutzbarer Module wie CMS oder Shop, Bundle-Konzept zur modularen Strukturierung von Controllern und Joblets, Automatische Generierung von Actions und Berechtigungen, Umfangreiche Locale-Unterstuetzung fuer Internationalisierung, AJAX-basierte Administrationsoberflaeche, Flexibles Templating mittels XSL-Stylesheets. Das Framework bietet damit eine modulare, skalierbare Basis fuer vielseitige Webanwendungen.",
       "technologies": [
         "Orbiter Framework",
         "MySQL",
@@ -286,11 +304,11 @@
         "CSS",
         "Eclipse"
       ],
-      "timePeriod": "04/2004-06/2018",
+      "timePeriod": "04/2004 - 06/2018",
       "businessSector": "IT-Dienstleistungen",
-      "teamSize": "8",
+      "teamSize": 8,
       "role": "Softwareentwickler",
-      "specializedFocus": "",
+      "specializedFocus": null,
       "personalContributions": [
         "Konzipieren und planen neuer Features/Komponenten und Bundles fuer das Web-Framework",
         "Programmieren von Java-Controllern, -Services und -Joblets",
@@ -305,7 +323,7 @@
     },
     {
       "name": "Registrierung und Verwaltung eines wiederkehrenden weltweiten Events",
-      "description": "Zur Reduzierung des Administrationsaufwands wurde eine Eventorganisation um einen Registrierungsprozess erweitert sowie eine vollstaendige Verwaltungsoberflaeche entwickelt.\nAlle ehemals manuellen Vorgaenge werden nun zentral ueber eine integrierte Administrationsoberflaeche gesteuert. Ergaenzend generiert das System bei Bedarf automatische E-Mail-Benachrichtigungen, etwa zur Bestaetigung des Registrierungsabschlusses, bei Aenderungen oder Absagen von Events sowie zur Bereitstellung der Kontaktdaten des jeweiligen Event-Masters.",
+      "description": "Zur Reduzierung des Administrationsaufwands wurde eine Eventorganisation um einen Registrierungsprozess erweitert sowie eine vollstaendige Verwaltungsoberflaeche entwickelt. Alle ehemals manuellen Vorgaenge werden nun zentral ueber eine integrierte Administrationsoberflaeche gesteuert. Ergaenzend generiert das System bei Bedarf automatische E-Mail-Benachrichtigungen, etwa zur Bestaetigung des Registrierungsabschlusses, bei Aenderungen oder Absagen von Events sowie zur Bereitstellung der Kontaktdaten des jeweiligen Event-Masters.",
       "technologies": [
         "Eclipse",
         "Orbiter Framework",
@@ -324,11 +342,11 @@
         "HTML",
         "CSS"
       ],
-      "timePeriod": "01/2014-06/2018",
+      "timePeriod": "01/2014 - 06/2018",
       "businessSector": "Kochutensilien",
-      "teamSize": "8",
+      "teamSize": 8,
       "role": "Softwareentwickler, Projektleiter",
-      "specializedFocus": "",
+      "specializedFocus": null,
       "personalContributions": [
         "Kommunikation mit dem Kunden zur Konzeption der verschiedenen Ausbaustufen und zur Aufnahme der Requirements",
         "Erstellen von Angeboten",
@@ -364,11 +382,11 @@
         "HTML",
         "CSS"
       ],
-      "timePeriod": "02/2013-05/2017",
+      "timePeriod": "02/2013 - 05/2017",
       "businessSector": "Gewerbliche Oekokontobetreiber",
-      "teamSize": "8",
+      "teamSize": 8,
       "role": "Softwareentwickler, Projektleiter",
-      "specializedFocus": "",
+      "specializedFocus": null,
       "personalContributions": [
         "Kommunikation mit dem Kunden und Aufnahme der Requirements",
         "Erstellen von Angeboten",
@@ -384,7 +402,7 @@
     },
     {
       "name": "Mediendatenbank",
-      "description": "Fuer die Speicherung, Verwaltung und Bereitstellung von Produktabbildungen, Datenblaettern und Videos wurde eine neue Mediendatenbank entwickelt, die sowohl intern als auch extern genutzt werden kann. Zusaetzlich sollte sie die Lokalisierung von Produktinformationen (z. B. Namen, Texte, Verfuegbarkeiten) an die jeweiligen Landesgesellschaften delegieren und deren Bearbeitungsstand zentral nachvollziehbar machen.\nKern des Systems war ein zentrales Control-Servlet, das Anfragen entgegennahm, Berechtigungen pruefte und die Ausgabe via XSLT steuerte. Die Geschaeftslogik war in modularen Controllern organisiert, waehrend der Datenzugriff ueber DAO-Klassen mittels JDBC erfolgte.",
+      "description": "Fuer die Speicherung, Verwaltung und Bereitstellung von Produktabbildungen, Datenblaettern und Videos wurde eine neue Mediendatenbank entwickelt, die sowohl intern als auch extern genutzt werden kann. Zusaetzlich sollte sie die Lokalisierung von Produktinformationen (z. B. Namen, Texte, Verfuegbarkeiten) an die jeweiligen Landesgesellschaften delegieren und deren Bearbeitungsstand zentral nachvollziehbar machen. Kern des Systems war ein zentrales Control-Servlet, das Anfragen entgegennahm, Berechtigungen pruefte und die Ausgabe via XSLT steuerte. Die Geschaeftslogik war in modularen Controllern organisiert, waehrend der Datenzugriff ueber DAO-Klassen mittels JDBC erfolgte.",
       "technologies": [
         "Adobe Photoshop",
         "Eclipse",
@@ -406,11 +424,11 @@
         "C#",
         "CSS"
       ],
-      "timePeriod": "09/2013-03/2016",
+      "timePeriod": "09/2013 - 03/2016",
       "businessSector": "Spielwaren",
-      "teamSize": "8",
+      "teamSize": 8,
       "role": "Softwareentwickler, Projektleiter",
-      "specializedFocus": "",
+      "specializedFocus": null,
       "personalContributions": [
         "Kommunikation mit dem Kunden zum Klaeren der Anforderungen und zur Planung der Umsetzung",
         "Erstellen von Angeboten",
@@ -427,7 +445,7 @@
     },
     {
       "name": "Berater-App-System (Spielwarenmesse)",
-      "description": "Fuer den Messeauftritt auf der Spielwarenmesse wurde ein umfassendes Berater-App-System entwickelt, bestehend aus einer Windows-Tablet-App (Adobe Air), einem Lead-Management, einem Autorensystem sowie einem personalisierten Download-Portal.\nLead-Management:\nVon den Beratern in der App erfasste Informationen wurden in Echtzeit zwischen allen Tablets synchronisiert. Das Backoffice konnte Leads ergaenzen, korrigieren, Reports erstellen und Datenexports fuer CRM-Systeme generieren. Zudem lieferte das System die Datenbasis fuer das Download-Portal.\n\nAutorensystem:\nDas Autorensystem ermoeglichte die Erstellung und Verwaltung von Themenbereichen und Praesentationen im vorgegebenen Corporate Design. Praesentationen bestanden aus bildbasierten \"Folien\" und interaktiven Elementen, aehnlich dem Aufbau von PowerPoint. Inhalte wurden per Delta-Update an die Tablets verteilt, sodass Aktualisierungen auch waehrend des Messetages moeglich waren.\n\nDownload-Portal:\nFuer jeden beratenen Besucher wurden personalisierte Download-Seiten erzeugt. Nach Fertigstellung erhielt der Besucher eine E-Mail mit Zugriff auf seine persoenliche Download-Seite.",
+      "description": "Fuer den Messeauftritt auf der Spielwarenmesse wurde ein umfassendes Berater-App-System entwickelt, bestehend aus einer Windows-Tablet-App (Adobe Air), einem Lead-Management, einem Autorensystem sowie einem personalisierten Download-Portal. Lead-Management: Von den Beratern in der App erfasste Informationen wurden in Echtzeit zwischen allen Tablets synchronisiert. Das Backoffice konnte Leads ergaenzen, korrigieren, Reports erstellen und Datenexports fuer CRM-Systeme generieren. Zudem lieferte das System die Datenbasis fuer das Download-Portal. Autorensystem: Das Autorensystem ermoeglichte die Erstellung und Verwaltung von Themenbereichen und Praesentationen im vorgegebenen Corporate Design. Praesentationen bestanden aus bildbasierten \"Folien\" und interaktiven Elementen, aehnlich dem Aufbau von PowerPoint. Inhalte wurden per Delta-Update an die Tablets verteilt, sodass Aktualisierungen auch waehrend des Messetages moeglich waren. Download-Portal: Fuer jeden beratenen Besucher wurden personalisierte Download-Seiten erzeugt. Nach Fertigstellung erhielt der Besucher eine E-Mail mit Zugriff auf seine persoenliche Download-Seite.",
       "technologies": [
         "Eclipse",
         "Redmine",
@@ -447,11 +465,11 @@
         "HTML",
         "CSS"
       ],
-      "timePeriod": "10/2013-09/2016",
+      "timePeriod": "10/2013 - 09/2016",
       "businessSector": "Spielwaren",
-      "teamSize": "8",
+      "teamSize": 8,
       "role": "Softwareentwickler",
-      "specializedFocus": "",
+      "specializedFocus": null,
       "personalContributions": [
         "Programmieren von Controllern, Services, DAOs, Entities und DTOs fuer das Backend",
         "Implementieren diverser spezieller Komponenten mithilfe von Apache POI zum Erstellen der verschiedensten Excel-Report-Dokumente",
@@ -464,6 +482,6 @@
       ]
     }
   ],
-  "startingDate": "2026-01-26",
-  "lastUpdate": "2026-01-26"
+  "startingDate": "Nach Vereinbarung",
+  "lastUpdate": "26.01.2026"
 }
