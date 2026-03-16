@@ -15,6 +15,9 @@ public class OptimizeProjectDescriptionPromptProvider implements PromptProvider 
   private final Prompt userPromptWithoutBid =
       new Prompt("prompts/project-description/user-prompt-without-bid.txt");
 
+  private final Prompt userSkillsMapping =
+      new Prompt("prompts/project-description/user-skills-map-prompt.txt");
+
   @Override
   public Prompt systemPrompt() {
     return systemPrompt;
@@ -33,5 +36,10 @@ public class OptimizeProjectDescriptionPromptProvider implements PromptProvider 
   @Override
   public Prompt userPromptWithoutBid() {
     return userPromptWithoutBid;
+  }
+
+  @Override
+  public Prompt userSkillsMappingPrompt() {
+    return userSkillsMapping;
   }
 }

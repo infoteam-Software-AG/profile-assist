@@ -5,10 +5,13 @@ package de.infoteam.profile_assist.domain.control;
 
 import de.infoteam.profile_assist.domain.entity.OptimizationResult;
 import de.infoteam.profile_assist.domain.entity.Project;
+import de.infoteam.profile_assist.domain.entity.Skills;
 
 public interface OptimizeProjectUseCase {
   OptimizationResult<Project> optimizeProjectDescription(
       Project project, String requiredProjectDescription);
 
   OptimizationResult<Project> optimizeProjectDescriptionWithoutBid(Project project);
+
+  OptimizationResult<Project> optimizeProjectWithPersonaSkills(Skills skills, Project project);
 }

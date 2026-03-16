@@ -1,0 +1,22 @@
+Skills:
+- skillsBusinessSectors: {skillsBusinessSectors}
+- languages: {languages}
+- programmingLanguages: {programmingLanguages}
+- methodicalExpertise: {methodicalExpertise}
+- tools: {tools}
+- operatingSystems: {operatingSystems}
+- databases: {databases}
+
+Project history:
+- name: {name}
+- description: {description}
+- technologies: {technologies}
+- timePeriod: {timePeriod}
+- businessSector: {businessSector}
+- teamSize: {teamSize}
+- role: {role}
+- specializedFocus: {specializedFocus}
+- personalContributions: {personalContributions}
+- methodologies: {methodologies}
+
+If you find any skills, that are applicable but not present in the history add them with an (i)

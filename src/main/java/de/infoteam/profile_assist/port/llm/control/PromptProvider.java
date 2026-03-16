@@ -13,4 +13,6 @@ public interface PromptProvider {
   Prompt userPromptSkills();
 
   Prompt userPromptWithoutBid();
+
+  Prompt userSkillsMappingPrompt();
 }

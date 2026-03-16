@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 infoteam Software AG
+// SPDX-License-Identifier: Apache-2.0
+// For full license text see: https://github.com/infoteam-Software-AG/profile-assist/blob/main/LICENSE
 package de.infoteam.profile_assist.integration.testoutput;
 
 import java.io.PrintStream;
@@ -21,16 +24,15 @@ public interface MarkdownOutput {
     }
     var lines = new ArrayList<String>();
     while (line.length() > 80) {
-        var charAtEnd = line.charAt(80);
-        if (Character.isWhitespace(charAtEnd)) {
-          lines.add(line.substring(0, 80).trim());
-          line = line.substring(80).trim();
-        } else {
-          var nearestWhitespace = findNearestWhitespaceIndex(line, 80);
-          lines.add(line.substring(0, nearestWhitespace).trim());
-          line = line.substring(nearestWhitespace).trim();
-        }
-
+      var charAtEnd = line.charAt(80);
+      if (Character.isWhitespace(charAtEnd)) {
+        lines.add(line.substring(0, 80).trim());
+        line = line.substring(80).trim();
+      } else {
+        var nearestWhitespace = findNearestWhitespaceIndex(line, 80);
+        lines.add(line.substring(0, nearestWhitespace).trim());
+        line = line.substring(nearestWhitespace).trim();
+      }
     }
 
     return lines.stream();
