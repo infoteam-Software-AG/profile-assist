@@ -17,6 +17,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
+import de.infoteam.profile_assist.integration.testoutput.ProjectMarkdownDiffCreator;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -164,40 +166,27 @@ class SpringAIOptimizeProjectUseCaseManualTestCase {
   @ValueSource(strings = {"martin_schmidt"})
   void mapSkillsToProjectHistory(String personaName) {
     try {
+      ProjectMarkdownDiffCreator diff = new ProjectMarkdownDiffCreator("before.md", "after.md");
       Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
       Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
 
-      File testRunFolder =
-          new File(
-              "target"
-                  + File.separator
-                  + "manualTestResults"
-                  + File.separator
-                  + personaName
-                  + File.separator
-                  + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"))
-                  + File.separator);
-      testRunFolder.mkdirs();
-      List<Project> optimizedProjects = new ArrayList<>();
+
       Skills skills = unoptimizedPersona.skills();
       for (Project prj : unoptimizedPersona.projectHistory()) {
         if (!prj.description().isEmpty()) {
           var optimizationResult =
               optimizeProjectUseCase.optimizeProjectWithPersonaSkills(skills, prj);
-          optimizedProjects.add(optimizationResult.result());
+          try{
+            diff.addDiffToFiles(prj, optimizationResult.result());
+          }catch(Exception e){
+            System.out.println(e.getLocalizedMessage());
+          }
+
         } else {
           log.warn("Project couldn't be optimized because description is empty");
-          optimizedProjects.add(prj);
+
         }
       }
-      optimizedPersona.projectHistory(optimizedProjects);
-      optimizedPersona.build();
-      File personaFile = new File(testRunFolder, "optimized-project-with-skills.json");
-      Files.writeString(
-          personaFile.toPath(),
-          objectMapper
-              .writerWithDefaultPrettyPrinter()
-              .writeValueAsString(optimizedPersona.build()));
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
