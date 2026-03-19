@@ -26,10 +26,12 @@ public class ProjectMarkdownOutput implements MarkdownOutput {
     out.println(HEADLINE_TEMPLATE.formatted(project.name()));
     out.println();
     out.println("Beschreibung: ");
+    out.println();
     var printableProjectDescription = MarkdownOutput.ensureLineLength(project.description());
     out.println(printableProjectDescription);
     out.println();
-    out.println("Tools");
+    out.println("Tools: ");
+    out.println();
     var projectTechnologies =
         MarkdownOutput.ensureLineLength(convertTechnologiesToString(project.technologies()));
     out.println(projectTechnologies);
