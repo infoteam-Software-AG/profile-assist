@@ -5,7 +5,11 @@ package de.infoteam.profile_assist.integration.testoutput;
 
 import de.infoteam.profile_assist.domain.entity.Project;
 import java.util.List;
+
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class ProjectMarkdownOutputTest {
 
@@ -31,5 +35,21 @@ Aenean massa dui, semper ac velit ac, vulputate sagittis tortor. Nam pellentesqu
     var projectMarkdownOutput = new ProjectMarkdownOutput(project);
 
     projectMarkdownOutput.output(System.out);
+  }
+
+  @ParameterizedTest
+  @ValueSource(strings = {"Alle meine zuhausis lieben Strings formattieren mit ganzem Herzen. Es ist so super toll das zu debuggen. Yay! "})
+  void testEnsureLineLength(String testStr){
+    int beforeAlphCount = getNonWhitespaceCharCount(testStr);
+    var after = MarkdownOutput.ensureLineLength(testStr);
+    Assert.assertEquals(beforeAlphCount, getNonWhitespaceCharCount(after));
+  }
+
+  private int getNonWhitespaceCharCount(String input){
+    var nonWhiteSpaceCount = 0;
+    for(char c : input.toCharArray()){
+      if(!Character.isWhitespace(c)) nonWhiteSpaceCount++;
+    }
+    return nonWhiteSpaceCount;
   }
 }

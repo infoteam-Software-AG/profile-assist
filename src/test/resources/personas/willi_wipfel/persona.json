@@ -221,7 +221,7 @@
       ]
     },
     {
-      "name": "Schreibgeraetereparatur",
+      "name": "Haushaltsgeraetereparatur",
       "description": "Entwicklung eines Online-Reparaturservice zur einfachen und transparenten Abwicklung von Reparaturauftraegen fuer Haushaltsgeraete. Kunden koennen Reparaturen selbstaendig anlegen, den aktuellen Bearbeitungsstatus verfolgen, ueber ein integriertes Nachrichtensystem mit dem Service kommunizieren und automatisch generierte RMA-Scheine herunterladen. Ereignisbasierte E-Mail-Benachrichtigungen informieren alle Beteiligten ueber relevante Schritte. Kostenpflichtige Reparatur- und Austauschangebote lassen sich direkt ueber die Plattform annehmen oder ablehnen; die Zahlungsabwicklung erfolgt ueber dem angebundenen Payment-Gateway von Wirecard. Der Datenaustausch mit dem firmeneigenen SAP-System wird ueber XML- und Textdateien realisiert. Fuer die Serviceabteilung stehen umfassende Administrationsoberflaechen zur Bearbeitung und Nachverfolgung von Anfragen und Problemen zur Verfuegung.",
       "technologies": [
         "Eclipse",

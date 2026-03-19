@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public interface MarkdownOutput {
-  void output(PrintStream out);
+  int output(PrintStream out);
+  void printNEmptyLines(int n, PrintStream out);
 
   static String ensureLineLength(String textblock) {
     return Arrays.stream(textblock.split(System.lineSeparator()))
@@ -18,35 +19,29 @@ public interface MarkdownOutput {
         .collect(Collectors.joining(System.lineSeparator()));
   }
 
+
+
   private static Stream<String> handleLine(String line) {
     if (line.length() <= 80) {
       return Stream.of(line);
     }
     var lines = new ArrayList<String>();
-    while (line.length() > 80) {
-      var charAtEnd = line.charAt(80);
-      if (Character.isWhitespace(charAtEnd)) {
-        lines.add(line.substring(0, 80).trim());
-        line = line.substring(80).trim();
-      } else {
-        var nearestWhitespace = findNearestWhitespaceIndex(line, 80);
-        lines.add(line.substring(0, nearestWhitespace).trim());
-        line = line.substring(nearestWhitespace).trim();
+    var words = line.split(" ");
+    StringBuilder builder = new StringBuilder();
+    for(String word : words){
+      if(word.length() + builder.length() < 80){
+        builder.append(word.concat(" "));
+      }
+      else{
+        builder.append(System.lineSeparator());
+        lines.add(builder.toString());
+        builder.setLength(0);
+        builder.append(word.concat(" "));
       }
     }
-
+    if (builder.length() > 0){
+      lines.add(builder.toString());
+    }
     return lines.stream();
-  }
-
-  static int findNearestWhitespaceIndex(String line, final int index) {
-    var currentIndex = index;
-    while (currentIndex > 0) {
-      var charAtEnd = line.charAt(currentIndex);
-      if (Character.isWhitespace(charAtEnd)) {
-        return currentIndex;
-      }
-      currentIndex--;
-    }
-    return index;
   }
 }

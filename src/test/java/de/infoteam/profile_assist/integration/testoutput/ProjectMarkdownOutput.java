@@ -16,20 +16,32 @@ public class ProjectMarkdownOutput implements MarkdownOutput {
   private final Project project;
 
   @Override
-  public void output(PrintStream out) {
+  public void printNEmptyLines(int n, PrintStream out){
+    for(int i = 0; i < n; i++){
+      out.println();
+    }
+  }
+
+  @Override
+  public int output(PrintStream out) {
     out.println(HEADLINE_TEMPLATE.formatted(project.name()));
     out.println();
-    out.println(MarkdownOutput.ensureLineLength(project.description()));
+    var printableProjectDescription = MarkdownOutput.ensureLineLength(project.description());
+    out.println(printableProjectDescription);
     out.println();
-    out.println(MarkdownOutput.ensureLineLength(convertTechnologiesToString(project.technologies())));
+    var projectTechnologies = MarkdownOutput.ensureLineLength(convertTechnologiesToString(project.technologies()));
+    out.println(projectTechnologies);
     out.println();
+    return printableProjectDescription.split(System.lineSeparator()).length + projectTechnologies.split(System.lineSeparator()).length;
   }
 
   private static String convertTechnologiesToString(List<String> technologies){
     StringBuilder builder = new StringBuilder();
     for(var tech : technologies){
       builder.append(tech);
-      builder.append(", ");
+      if(!technologies.getLast().equals(tech)) {
+        builder.append(", ");
+      }
     }
     return builder.toString();
   }

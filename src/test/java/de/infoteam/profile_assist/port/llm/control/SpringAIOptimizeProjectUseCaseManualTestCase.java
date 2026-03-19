@@ -18,7 +18,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.infoteam.profile_assist.integration.testoutput.MarkdownOutput;
 import de.infoteam.profile_assist.integration.testoutput.ProjectMarkdownDiffCreator;
+import de.infoteam.profile_assist.integration.testoutput.ProjectMarkdownOutput;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -163,13 +165,11 @@ class SpringAIOptimizeProjectUseCaseManualTestCase {
   }
 
   @ParameterizedTest
-  @ValueSource(strings = {"martin_schmidt"})
+  @ValueSource(strings = {"willi_wipfel"})
   void mapSkillsToProjectHistory(String personaName) {
     try {
       ProjectMarkdownDiffCreator diff = new ProjectMarkdownDiffCreator("before.md", "after.md");
       Persona unoptimizedPersona = new JsonReader().readPersonaJson(personaName);
-      Persona.PersonaBuilder optimizedPersona = unoptimizedPersona.toBuilder();
-
 
       Skills skills = unoptimizedPersona.skills();
       for (Project prj : unoptimizedPersona.projectHistory()) {

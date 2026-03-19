@@ -44,7 +44,13 @@ public class ProjectMarkdownDiffCreator {
     PrintStream beforeStream = new PrintStream(new FileOutputStream(getOrGenerateFile(beforeFileName), true));
     PrintStream afterStream = new PrintStream(new FileOutputStream(getOrGenerateFile(afterFileName), true));
 
-    beforeOutput.output(beforeStream);
-    afterOutput.output(afterStream);
+    var beforePrintedLines = beforeOutput.output(beforeStream);
+    var afterPrintedLines = afterOutput.output(afterStream);
+    var lineAmountDiff = afterPrintedLines - beforePrintedLines;
+    if(lineAmountDiff > 0){
+      beforeOutput.printNEmptyLines(lineAmountDiff, beforeStream);
+    }else{
+      afterOutput.printNEmptyLines(Math.abs(lineAmountDiff), afterStream);
+    }
   }
 }
