@@ -11,6 +11,7 @@ import java.util.stream.Stream;
 
 public interface MarkdownOutput {
   int output(PrintStream out);
+
   void printNEmptyLines(int n, PrintStream out);
 
   static String ensureLineLength(String textblock) {
@@ -19,8 +20,6 @@ public interface MarkdownOutput {
         .collect(Collectors.joining(System.lineSeparator()));
   }
 
-
-
   private static Stream<String> handleLine(String line) {
     if (line.length() <= 80) {
       return Stream.of(line);
@@ -28,18 +27,17 @@ public interface MarkdownOutput {
     var lines = new ArrayList<String>();
     var words = line.split(" ");
     StringBuilder builder = new StringBuilder();
-    for(String word : words){
-      if(word.length() + builder.length() < 80){
+    for (String word : words) {
+      if (word.length() + builder.length() < 80) {
         builder.append(word.concat(" "));
-      }
-      else{
+      } else {
         builder.append(System.lineSeparator());
         lines.add(builder.toString());
         builder.setLength(0);
         builder.append(word.concat(" "));
       }
     }
-    if (builder.length() > 0){
+    if (builder.length() > 0) {
       lines.add(builder.toString());
     }
     return lines.stream();

@@ -10,6 +10,7 @@ import de.infoteam.profile_assist.domain.entity.CallForBids;
 import de.infoteam.profile_assist.domain.entity.Persona;
 import de.infoteam.profile_assist.domain.entity.Project;
 import de.infoteam.profile_assist.domain.entity.Skills;
+import de.infoteam.profile_assist.integration.testoutput.ProjectMarkdownDiffCreator;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -17,10 +18,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-
-import de.infoteam.profile_assist.integration.testoutput.MarkdownOutput;
-import de.infoteam.profile_assist.integration.testoutput.ProjectMarkdownDiffCreator;
-import de.infoteam.profile_assist.integration.testoutput.ProjectMarkdownOutput;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -176,15 +173,14 @@ class SpringAIOptimizeProjectUseCaseManualTestCase {
         if (!prj.description().isEmpty()) {
           var optimizationResult =
               optimizeProjectUseCase.optimizeProjectWithPersonaSkills(skills, prj);
-          try{
+          try {
             diff.addDiffToFiles(prj, optimizationResult.result());
-          }catch(Exception e){
+          } catch (Exception e) {
             System.out.println(e.getLocalizedMessage());
           }
 
         } else {
           log.warn("Project couldn't be optimized because description is empty");
-
         }
       }
     } catch (IOException e) {

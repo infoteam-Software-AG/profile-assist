@@ -6,7 +6,6 @@ package de.infoteam.profile_assist.integration.testoutput;
 import de.infoteam.profile_assist.domain.entity.Project;
 import java.io.PrintStream;
 import java.util.List;
-
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -16,8 +15,8 @@ public class ProjectMarkdownOutput implements MarkdownOutput {
   private final Project project;
 
   @Override
-  public void printNEmptyLines(int n, PrintStream out){
-    for(int i = 0; i < n; i++){
+  public void printNEmptyLines(int n, PrintStream out) {
+    for (int i = 0; i < n; i++) {
       out.println();
     }
   }
@@ -29,17 +28,19 @@ public class ProjectMarkdownOutput implements MarkdownOutput {
     var printableProjectDescription = MarkdownOutput.ensureLineLength(project.description());
     out.println(printableProjectDescription);
     out.println();
-    var projectTechnologies = MarkdownOutput.ensureLineLength(convertTechnologiesToString(project.technologies()));
+    var projectTechnologies =
+        MarkdownOutput.ensureLineLength(convertTechnologiesToString(project.technologies()));
     out.println(projectTechnologies);
     out.println();
-    return printableProjectDescription.split(System.lineSeparator()).length + projectTechnologies.split(System.lineSeparator()).length;
+    return printableProjectDescription.split(System.lineSeparator()).length
+        + projectTechnologies.split(System.lineSeparator()).length;
   }
 
-  private static String convertTechnologiesToString(List<String> technologies){
+  private static String convertTechnologiesToString(List<String> technologies) {
     StringBuilder builder = new StringBuilder();
-    for(var tech : technologies){
+    for (var tech : technologies) {
       builder.append(tech);
-      if(!technologies.getLast().equals(tech)) {
+      if (!technologies.getLast().equals(tech)) {
         builder.append(", ");
       }
     }
