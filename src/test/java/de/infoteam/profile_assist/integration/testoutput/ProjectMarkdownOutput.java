@@ -23,7 +23,7 @@ public class ProjectMarkdownOutput implements MarkdownOutput {
 
   @Override
   public int output(PrintStream out) {
-    out.println(HEADLINE_TEMPLATE.formatted(project.name()));
+    out.printf((HEADLINE_TEMPLATE) + "%n", project.name());
     out.println();
     out.println("Beschreibung: ");
     out.println();
@@ -51,7 +51,6 @@ public class ProjectMarkdownOutput implements MarkdownOutput {
     return surroundParenthesis(
         builder.toString(), "**"); // Boldens Parentethis (AI-reasoning) in Markdown
   }
-
 
   public static String surroundParenthesis(String text, String surround) {
     return text.replace("(", surround.concat("(")).replace(")", ")".concat(surround));

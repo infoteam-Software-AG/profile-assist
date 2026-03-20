@@ -5,7 +5,6 @@ package de.infoteam.profile_assist.integration.testoutput;
 
 import de.infoteam.profile_assist.domain.entity.Project;
 import java.util.List;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
