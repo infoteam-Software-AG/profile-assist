@@ -48,10 +48,11 @@ public class ProjectMarkdownOutput implements MarkdownOutput {
         builder.append(", ");
       }
     }
-    return surroundParenthesis(builder.toString(), "**"); //Boldens Parentethis (AI-reasoning) in Markdown
+    return surroundParenthesis(
+        builder.toString(), "**"); // Boldens Parentethis (AI-reasoning) in Markdown
   }
 
-  public static String surroundParenthesis(String text, String suround){
+  public static String surroundParenthesis(String text, String suround) {
     return text.replace("(", "**(").replace(")", ")**");
   }
 }
