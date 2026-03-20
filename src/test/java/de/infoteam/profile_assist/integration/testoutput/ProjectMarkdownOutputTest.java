@@ -6,6 +6,7 @@ package de.infoteam.profile_assist.integration.testoutput;
 import de.infoteam.profile_assist.domain.entity.Project;
 import java.util.List;
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -48,7 +49,7 @@ Aenean massa dui, semper ac velit ac, vulputate sagittis tortor. Nam pellentesqu
   void testEnsureLineLength(String testStr) {
     int beforeAlphCount = getNonWhitespaceCharCount(testStr);
     var after = MarkdownOutput.ensureLineLength(testStr);
-    Assert.assertEquals(beforeAlphCount, getNonWhitespaceCharCount(after));
+    Assertions.assertEquals(beforeAlphCount, getNonWhitespaceCharCount(after));
   }
 
   private int getNonWhitespaceCharCount(String input) {
@@ -66,6 +67,6 @@ Aenean massa dui, semper ac velit ac, vulputate sagittis tortor. Nam pellentesqu
         "Test if parentheses get surrounded by **: **(this should be surrounded)**";
 
     var resultString = ProjectMarkdownOutput.surroundParenthesis(testString, "**");
-    Assert.assertEquals(resultString, expectedResult);
+    Assertions.assertEquals(expectedResult, resultString);
   }
 }

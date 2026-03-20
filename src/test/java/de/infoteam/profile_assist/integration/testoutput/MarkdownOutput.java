@@ -45,7 +45,7 @@ public interface MarkdownOutput {
         reasoningLock = false;
       }
     }
-    if (builder.length() > 0) {
+    if (!builder.isEmpty()) {
       lines.add(builder.toString());
     }
     return lines.stream();
