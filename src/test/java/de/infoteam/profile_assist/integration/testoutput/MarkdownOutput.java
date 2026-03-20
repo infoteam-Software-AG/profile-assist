@@ -27,14 +27,21 @@ public interface MarkdownOutput {
     var lines = new ArrayList<String>();
     var words = line.split(" ");
     StringBuilder builder = new StringBuilder();
+    boolean reasoningLock = false; //used so boldening syntax for ai reasoning doesn't break on newline
     for (String word : words) {
-      if (word.length() + builder.length() < 80) {
+      if(word.contains("(")){
+        reasoningLock = true;
+      }
+      if (reasoningLock || word.length() + builder.length() < 80) {
         builder.append(word.concat(" "));
       } else {
         builder.append(System.lineSeparator());
         lines.add(builder.toString());
         builder.setLength(0);
         builder.append(word.concat(" "));
+      }
+      if(word.contains(")")){ //reasoning is over
+        reasoningLock = false;
       }
     }
     if (builder.length() > 0) {

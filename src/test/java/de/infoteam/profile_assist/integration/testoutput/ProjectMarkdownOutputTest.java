@@ -39,7 +39,11 @@ Aenean massa dui, semper ac velit ac, vulputate sagittis tortor. Nam pellentesqu
   @ParameterizedTest
   @ValueSource(
       strings = {
-        "Alle meine zuhausis lieben Strings formattieren mit ganzem Herzen. Es ist so super toll das zu debuggen. Yay! "
+        """
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit in justo ac maximus. Pellentesque sit amet tempus metus. Nulla fermentum auctor ipsum in vulputate. Praesent gravida scelerisque nisi non dapibus. Ut blandit dui eget est tempus semper. Proin mattis lectus nec porta condimentum. Donec ultricies vulputate ligula, nec rutrum purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque ac ligula at ipsum blandit dictum. Vivamus condimentum pretium massa, sit amet bibendum neque consequat vel.
+
+Aenean massa dui, semper ac velit ac, vulputate sagittis tortor. Nam pellentesque arcu mauris, eget pellentesque nisi auctor nec. Proin finibus sapien eget libero finibus, eu aliquet ante tristique. Integer quis velit orci. Vestibulum nisi odio, placerat quis eros at, hendrerit varius urna. Etiam in convallis orci. Integer tincidunt faucibus dictum. Praesent mi urna, suscipit sit amet nibh ac, luctus porttitor libero. Maecenas eget nibh id risus convallis tempus. Sed nec enim volutpat felis varius accumsan posuere nec justo. Vestibulum eget leo magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+"""
       })
   void testEnsureLineLength(String testStr) {
     int beforeAlphCount = getNonWhitespaceCharCount(testStr);
@@ -53,5 +57,16 @@ Aenean massa dui, semper ac velit ac, vulputate sagittis tortor. Nam pellentesqu
       if (!Character.isWhitespace(c)) nonWhiteSpaceCount++;
     }
     return nonWhiteSpaceCount;
+  }
+
+  @Test
+  void testSurroundedParanthesis(){
+    var testString =
+      "Test if parentheses get surrounded by **: (this should be surrounded)";
+    var expectedResult =
+      "Test if parentheses get surrounded by **: **(this should be surrounded)**";
+
+    var resultString = ProjectMarkdownOutput.surroundParenthesis(testString, "**");
+    Assert.assertEquals(resultString, expectedResult);
   }
 }
