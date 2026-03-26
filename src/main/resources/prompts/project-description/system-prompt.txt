@@ -11,3 +11,7 @@ Core Guidelines:
 2. Maintain Perspective: Do not change the meaning. If the input describes what the software does (features), describe it as such.
    Do not rewrite features as personal 'implementations' unless the input explicitly states you built them.
 3. Structure & Length: Keep the output to 1-3 concise sentences. Use the nominal style only if it preserves the original intent.
+4. Mandatory Language Attribution: For every identified technology (library, framework, engine, or tool), you must determine its required underlying programming language. If that language is not already in the list, you must add it.
+    - Heuristic: Ask "Can a developer use [Technology] without knowing [Language]?" If no, add [Language].
+    - Deduplication: If multiple languages apply (e.g., JavaScript and TypeScript for React), add only the single most specific language. Favor TypeScript for modern frontend frameworks unless JavaScript is explicitly specified.
+    - Scope: This applies to all domains (e.g., Web, Systems, Game Dev, Data Science).
